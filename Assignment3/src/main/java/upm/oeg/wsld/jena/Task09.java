@@ -33,8 +33,8 @@ public class Task09
 	
 	public static void main(String args[])
 	{
-		String file1 = "resources/data03.rdf";
-		String file2 = "resources/data04.rdf";
+		String file1 = "data03.rdf";
+		String file2 = "data04.rdf";
 		
 		// Create an empty model
 		OntModel model3 = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM);
