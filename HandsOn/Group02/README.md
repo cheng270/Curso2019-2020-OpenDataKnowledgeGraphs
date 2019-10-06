@@ -30,7 +30,7 @@ Includes the names and GitHub users of all the members of the group:
 #Jorge Martin Lasaosa .jomartla
 #Wladyslaw Eysymontt .weysymontt
 #Juan Luis Ruiz-Tagle Oriol .juanluisrto
-#Mateusz Klima .GITHUBUSERNAME
+#Mateusz Klimas .MateusyKlimas
 #Artjom Poljakow .APoljakow
 
 
