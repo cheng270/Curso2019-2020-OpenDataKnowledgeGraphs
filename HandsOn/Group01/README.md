@@ -3,5 +3,5 @@
 Name and GitHub username:
 * Margarita Martínez -
 * Ignacio Martínez - nachomcapella
-* Miguel Pérez - 
+* Miguel Pérez - miguelperezmateo
 * Daniel Saiz - 
