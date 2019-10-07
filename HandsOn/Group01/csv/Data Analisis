@@ -1,24 +1,24 @@
-Fields; Types; Ranges; Description;
-ID-EVENTO; Integer
-TITULO5; String;
-PRECIO; Float;
-GRATUITO; Boolean;
-LARGA-DURACION; Boolean
-DIAS-SEMANA
-DIAS-EXCLUIDOS 
-FECHA
-FECHA-FIN
-HORA
-DESCRIPCION
-CONTENT-URL
-TITULO-ACTIVIDAD
-URL-ACTIVIDAD	
-URL-INSTALACION
-NOMBRE-INSTALACION
-COORDENADA-X	
-COORDENADA-Y	
-LATITUD
-LONGITUD
-DISTRITO
-TIPO
-AUDIENCIA
+Fields; Types; Ranges; Description
+ID-EVENTO; Number; 7,200,000.00 — 11,100,000.00; ID's of each event
+TITULO; Text; Undefined; Titles of each event
+PRECIO; Text;  Undefined; Brief Description of prices
+GRATUITO; Boolean; 0-1; The event is free or not
+LARGA-DURACION; Boolean; 0-1; The event lasts for long term 
+DIAS-SEMANA; Text; Combination of LMXJVSD letters; Combination of available days of the week for this event
+DIAS-EXCLUIDOS; Text; Undefined; Calendar Days making the exception
+FECHA; Text; Undefined; Starting date of the event
+FECHA-FIN; Text; Undefined; Ending date of the event
+HORA; Text; 00:00 - 23:59; Starting hour of the event
+DESCRIPCION; Text; Undefined; Description of the event
+CONTENT-URL; Text; Undefined; URL Content with the event
+TITULO-ACTIVIDAD; Text; Undefined; Second name for the event
+URL-ACTIVIDAD; Text; Undefined; URL of the event's activities
+URL-INSTALACION; Text; Undefined; URL of the event's activities
+NOMBRE-INSTALACION; Text; Undefined; Name of the Facility
+COORDENADA-X; Number; 433,000.00 — 452,000.00; Coordinate X Of The Location of the activity	
+COORDENADA-Y; Number; 4,465,000.00 — 4,486,000.00; Coordinate Y of the Location of the activity
+LATITUD; Number; 40.33 — 40.52 Latitude Of The Location of the activity	
+LONGITUD; Number; -3.79 — -3.57 Longitude of the Location of the activity
+DISTRITO; Text; Undefined; Disctrict of the town where the event takes place
+TIPO; Text; Undefined; Type of event
+AUDIENCIA; Text; Undefined; User group for whom the activity is meant to be
