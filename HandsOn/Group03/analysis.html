@@ -1,109 +1,180 @@
-<table>
-  <tr>
-    <th>Column</th>
-    <th>Type</th>
-    <th>Comment/Range</th>
-    <th>Problems</th>
-  </tr>
-  
-<!--  Start Rows-->
-  
-  <tr>
-    <td>Date</td>
-    <td>Time (Date)</td>
-    <td>01012015-01052018</td>
-    <td>Can't see whether there is missing data</td>
-  </tr>
-  <tr>
-    <td>BEN</td>
-    <td>Decimal</td>
-    <td>0.00 - 22.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-  <tr>
-    <td>CO</td>
-    <td>Decimal</td>
-    <td>0.10 - 4.91</td>
-    <td>Outliers, missing data</td>
-  </tr>
-  <tr>
-    <td>EBE</td>
-    <td>Decimal</td>
-    <td>0.00 - 39.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-  <tr>
-    <td>NMHC</td>
-    <td>Decimal</td>
-    <td>0.00 - 9.07</td>
-    <td>Outliers, missing data</td>
-  </tr>
-  <tr>
-    <td>NO</td>
-    <td>Integer</td>
-    <td>0.00 - 1200.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-    <tr>
-    <td>NO_2</td>
-    <td>Integer</td>
-    <td>0.00 - 430.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-      <tr>
-    <td>0_3</td>
-    <td>Integer</td>
-    <td>0.00 - 240.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-      <tr>
-    <td>PM10</td>
-    <td>Integer</td>
-    <td>0.00 - 420.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-      <tr>
-    <td>PM25</td>
-    <td></td>
-    <td>0.00 - 220.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-      <tr>
-    <td>SO_2</td>
-    <td>Integer</td>
-    <td>1 - 99</td>
-    <td>Outliers, missing data</td>
-  </tr>
-      <tr>
-    <td>TCH</td>
-    <td>Decimal</td>
-    <td>0.00-11.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-      <tr>
-    <td>TOL</td>
-    <td>Decimal</td>
-    <td>0.00 - 140.00</td>
-    <td>Outliers, missing data</td>
-  </tr>
-      <tr>
-    <td>Station</td>
-    <td>Integer/Text</td>
-    <td>Not Unique. 24 values that represent stations</td>
-    <td>Not clear which number refers to which station</td>
-  </tr>
-      <tr>
-    <td>CH4</td>
-    <td>Decimal</td>
-    <td>0.01 - 3.93</td>
-    <td>Outliers, missing Data</td>
-  </tr>
-      <tr>
-    <td>Nox</td>
-    <td>Decimal</td>
-    <td>0.00 - 1800.00</td>
-    <td>Outliers, missing Data</td>
-  </tr>
-</table>
+<!doctype html>
+<html lang="en">
 
-</body>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Analysis</title>
+
+    <meta name="description" content="Analysis">
+    <meta name="author" content="Group03">
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+      }
+      th {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body style="padding:0 5%">
+    <h2>Analysis of the dataset</h2>
+    <table>
+      <tr>
+        <th>Column</th>
+        <th>Type</th>
+        <th>Comment/Range</th>
+        <th>Problems</th>
+      </tr>
+
+    <!--  Start Rows-->
+
+      <tr>
+        <td>Date</td>
+        <td>Time (Date)</td>
+        <td>01012015-01052018</td>
+        <td>Can't see whether there is missing data</td>
+      </tr>
+      <tr>
+        <td>BEN</td>
+        <td>Decimal</td>
+        <td>0.00 - 22.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>CO</td>
+        <td>Decimal</td>
+        <td>0.10 - 4.91</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>EBE</td>
+        <td>Decimal</td>
+        <td>0.00 - 39.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>NMHC</td>
+        <td>Decimal</td>
+        <td>0.00 - 9.07</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>NO</td>
+        <td>Integer</td>
+        <td>0.00 - 1200.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+        <tr>
+        <td>NO_2</td>
+        <td>Integer</td>
+        <td>0.00 - 430.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>0_3</td>
+        <td>Integer</td>
+        <td>0.00 - 240.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>PM10</td>
+        <td>Integer</td>
+        <td>0.00 - 420.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>PM25</td>
+        <td></td>
+        <td>0.00 - 220.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>SO_2</td>
+        <td>Integer</td>
+        <td>1 - 99</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>TCH</td>
+        <td>Decimal</td>
+        <td>0.00-11.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>TOL</td>
+        <td>Decimal</td>
+        <td>0.00 - 140.00</td>
+        <td>Outliers, missing data</td>
+      </tr>
+      <tr>
+        <td>Station</td>
+        <td>Integer/Text</td>
+        <td>Not Unique. 24 values that represent stations</td>
+        <td>Not clear which number refers to which station</td>
+      </tr>
+      <tr>
+        <td>CH4</td>
+        <td>Decimal</td>
+        <td>0.01 - 3.93</td>
+        <td>Outliers, missing Data</td>
+      </tr>
+      <tr>
+        <td>Nox</td>
+        <td>Decimal</td>
+        <td>0.00 - 1800.00</td>
+        <td>Outliers, missing Data</td>
+      </tr>
+    </table>
+
+    <h2>Resource Naming Strategy</h2>
+      <p>
+        The resource naming strategy defined for the data follows the best practices and
+        tips provided by the Cool URIs guide [Sauermann and Cyganiak, 2008].
+        <br>
+        <br>
+        According to the principles stated above, <b>hash URIs</b>
+        will be used for our ontology since it is rather small.
+        <br>
+        <br>
+        According to the same good practices, <b>slash URIs</b> will
+				be used for our resource as it is a relatively large dataset.
+        Furthermore, thinking about the application and the source of these data,
+        their quantity could grow considerably in a short time, as they are detected by sensors.
+				The content negotiation chosen for the 303 redirection due to the slash
+				URIs is the forwarding to a generic document, since we expect the
+				different representations to transmit similar information in different
+				forms (as advised by the already mentioned Cool URIs)
+        <br>
+        <br>
+        The URI domain chosen is <b>http://www.airqualitymadrid.es</b>.
+        We opted for this type of URI after checking that it was free.
+        In this way we can assume to have direct control.
+        <br>
+        <br>
+        Ontology model classes:
+        <br>
+        following the tips, the classes in the ontology will
+        have the form of <i>http://www.airqualitymadrid.es/ontology/<ontologyName>#<className></i>
+        <br>
+        <br>
+        Ontology model properties:
+        <br>
+        following the tips, the classes in the ontology will
+        have the form of <i>http://www.airqualitymadrid.es/ontology/<ontologyName>#<propertyName></i>
+        <br>
+        <br>
+        Instances:
+        <br>
+        following the tips, the instances in the ontology will
+        have the form of <i>http://www.airqualitymadrid.es/resource/<className>#<identifier></i>
+        <br>
+        <br>
+      </p>
+
+  </body>
+</html>
