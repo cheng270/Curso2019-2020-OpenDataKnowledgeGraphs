@@ -1,18 +1,137 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-  <title>Analysis</title>
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
 
-  <meta name="description" content="Analysis">
-  <meta name="author" content="Group03">
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 </head>
+<body>
 
-<body style="padding:0 5%">
-  <h2>Analysis</h2>
+<h2>Analysis of Dataset</h2>
 
-  <h3></h3>
-  <p></p>
+<p>The Dataset analyzed consist of the different datasets 2015-2018 and consist of <b>698808</b> rows.</p>
+<p></p>
+
+<table>
+  <tr>
+    <th>Column</th>
+    <th>Type</th>
+    <th>Comment/Range</th>
+    <th>Problems</th>
+  </tr>
+  
+<!--  Start Rows-->
+  
+  <tr>
+    <td>Date</td>
+    <td>2015-2018</td>
+    <td>Germany</td>
+    <td>Missing data</td>
+  </tr>
+  <tr>
+    <td>BEN</td>
+    <td>Decimal</td>
+    <td>0.00 - 22.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+  <tr>
+    <td>CO</td>
+    <td>Decimal</td>
+    <td>0.10 - 4.91</td>
+    <td>Outliers, missing data</td>
+  </tr>
+  <tr>
+    <td>EBE</td>
+    <td>Decimal</td>
+    <td>0.00 - 39.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+  <tr>
+    <td>NMHC</td>
+    <td>Decimal</td>
+    <td>0.00 - 9.07</td>
+    <td>Outliers, missing data</td>
+  </tr>
+  <tr>
+    <td>NO</td>
+    <td>Integer</td>
+    <td>0.00 - 1200.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+    <tr>
+    <td>NO_2</td>
+    <td>Integer</td>
+    <td>0.00 - 430.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+      <tr>
+    <td>0_3</td>
+    <td>Integer</td>
+    <td>0.00 - 240.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+      <tr>
+    <td>PM10</td>
+    <td>Integer</td>
+    <td>0.00 - 420.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+      <tr>
+    <td>PM25</td>
+    <td></td>
+    <td>0.00 - 220.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+      <tr>
+    <td>SO_2</td>
+    <td>Integer</td>
+    <td>1 - 99</td>
+    <td>Outliers, missing data</td>
+  </tr>
+      <tr>
+    <td>TCH</td>
+    <td>Decimal</td>
+    <td>0.00-11.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+      <tr>
+    <td>TOL</td>
+    <td>Decimal</td>
+    <td>0.00 - 140.00</td>
+    <td>Outliers, missing data</td>
+  </tr>
+      <tr>
+    <td>Station</td>
+    <td>Integer/Text</td>
+    <td>Not Unique. 24 values that represent stations</td>
+    <td>Not clear which number refers to which station</td>
+  </tr>
+      <tr>
+    <td>CH4</td>
+    <td>Decimal</td>
+    <td>0.01 - 3.93</td>
+    <td>Outliers, missing Data</td>
+  </tr>
+      <tr>
+    <td>Nox</td>
+    <td>Decimal</td>
+    <td>0.00 - 1800.00</td>
+    <td>Outliers, missing Data</td>
+  </tr>
+</table>
+
 </body>
-</html>
