@@ -27,11 +27,11 @@ This is the directory where students have to upload their materials related to t
 * /selfAssessmentHandsOn2.md - A Markdown document with the hands-on 2 self-assessment
 
 Includes the names and GitHub users of all the members of the group:
-#Jorge Martin Lasaosa .jomartla
-#Wladyslaw Eysymontt .weysymontt
-#Juan Luis Ruiz-Tagle Oriol .juanluisrto
-#Mateusz Klimas .MateusyKlimas
-#Artjom Poljakow .APoljakow
+* Jorge Martin Lasaosa - _jomartla_
+* Wladyslaw Eysymontt - _weysymontt_
+* Juan Luis Ruiz-Tagle Oriol - _juanluisrto_
+* Mateusz Klimas - _MateuszKlimas_
+* Artjom Poljakow - _APoljakow_
 
 
 
