@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dataset requirements</title>
+
+  <meta name="description" content="Dataset requirements">
+  <meta name="author" content="Group04">
+</head>
+
+<body style="padding:0 5%">
+  <h2>Dataset requirements</h2>
+
+  <h3>Requirements satisfied</h3>
+  <ul>
+    <li>
+      <h4>R1. Data is in the smart city domain.</h4>
+      <p>The dataset shows the <b>wi-fi spot distribution</b> in New York city, which is one of the
+      available domains to be covered.</p>
+    </li>
+    <li>
+      <h4>R2. Data is available as a CSV file.</h4>
+      <p>Every file in the dataset has a CSV format.</p>
+    </li>
+    <li>
+      <h4>R3. Data has an open license so it can be published.</h4>
+      <p>The dataset has an open license, as it's stated below.</p>
+    </li>
+    <li>
+      <h4>R4. Data can be easily linked with generic real-world entities (e.g., locations).</h4>
+      <p>The dataset has many entities that can be linked, as it's stated below.</p>
+    </li>
+  </ul>
+
+  <h3>License</h3>
+  <p>All the data present in this dataset comes from "New York City Open
+    Data" website (<a href="https://opendata.cityofnewyork.us/">link</a>).<br>
+  The data is regulated according to the "New York City Open Data Terms of Use"
+  (<a href="https://www1.nyc.gov/home/terms-of-use.page">link</a>)
+  , which allow for <b>free commercial
+   and non-commercial use</b>, and provide no liability on the data.<br>
+This dataset is also available in Kaggle (<a href="https://www.kaggle.com/new-york-city/nyc-public-wifi">link</a>)
+, where the type of license is stated (CC0: Public Domain).
+  </p>
+
+  <h3>Entities that can be linked with other datasets</h3>
+
+  <ul>
+    <li>()
+      <h4>Locations</h4>
+      <p>
+        <i>Latitude and Longitude </i>
+        <br>
+        Positions of the wi-fi spots. They can be linked to a dataset of places(boroughs and zipcodes) in New York City.
+      </p>
+    </li>
+    <li>
+      <h4>Provider</h4>
+      <i>Carrier ID</i>
+      <br>
+      Connection carriers of the wi-fi spots. Together with the spot's position
+      can be linked to other parameters (i.e. intensity, ratings, cost)
+    </li>
+  </ul>
+  <h3>Other dataset that can be linked to the entities</h3>
+  <p>We can use information that can be correlated to the position and carrier of the wi-fi spots</p>
+  <ul>
+    <li>Intensity</li>
+    <li>Ratings</li>
+    <li>Cost</li>
+  </ul>
+</body>
+</html>
