@@ -1,9 +1,7 @@
-   # Group Users
-
-#### Name - github username:
-
-* Alejandro Cobo Cabornero      -      Alejandro-Cobo    _(Leader)_
-* Oussama Tahiri Alaoui     -       oussama-talaoui
-* Shanshan cheng  -  Cheng270
-* Xiao Luo  -   XiaoLuo95
-* Yifu Qiu - YifuQiu
+Team Member
+==================
+**Name Surname        - Github Username**  
+Elisa Mateos        - EliMateos  
+Sebastian Skoczen   - sebastianskoczen  
+Serena Alderisi     - aserena7  
+Yassir Al Bahri     - yassalbahri  
