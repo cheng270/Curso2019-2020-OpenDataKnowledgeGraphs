@@ -36,7 +36,7 @@
       <tr>
         <td>Date</td>
         <td>Time (Date)</td>
-        <td>01012015-01052018</td>
+        <td>01/01/2015-01/05/2018</td>
         <td>Can't see whether there is missing data</td>
       </tr>
       <tr>
@@ -130,51 +130,69 @@
         <td>Outliers, missing Data</td>
       </tr>
     </table>
-
-    <h2>Resource Naming Strategy</h2>
-      <p>
-        The resource naming strategy defined for the data follows the best practices and
-        tips provided by the Cool URIs guide [Sauermann and Cyganiak, 2008].
-        <br>
-        <br>
-        According to the principles stated above, <b>hash URIs</b>
-        will be used for our ontology since it is rather small.
-        <br>
-        <br>
-        According to the same good practices, <b>slash URIs</b> will
-				be used for our resource as it is a relatively large dataset.
-        Furthermore, thinking about the application and the source of these data,
-        their quantity could grow considerably in a short time, as they are detected by sensors.
-				The content negotiation chosen for the 303 redirection due to the slash
-				URIs is the forwarding to a generic document, since we expect the
-				different representations to transmit similar information in different
-				forms (as advised by the already mentioned Cool URIs)
-        <br>
-        <br>
-        The URI domain chosen is <b>http://www.airqualitymadrid.es</b>.
-        We opted for this type of URI after checking that it was free.
-        In this way we can assume to have direct control.
-        <br>
-        <br>
-        Ontology model classes:
-        <br>
-        following the tips, the classes in the ontology will
-        have the form of <i>http://www.airqualitymadrid.es/ontology/<ontologyName>#<className></i>
-        <br>
-        <br>
-        Ontology model properties:
-        <br>
-        following the tips, the classes in the ontology will
-        have the form of <i>http://www.airqualitymadrid.es/ontology/<ontologyName>#<propertyName></i>
-        <br>
-        <br>
-        Instances:
-        <br>
-        following the tips, the instances in the ontology will
-        have the form of <i>http://www.airqualitymadrid.es/resource/<className>#<identifier></i>
-        <br>
-        <br>
-      </p>
+    <p>
+      <h2>Resource Naming Strategy</h2>
+      The resource naming strategy defined for the data follows the best practices and
+      tips provided by the Cool URIs guide [Sauermann and Cyganiak, 2008].
+      <br>
+      <br>
+      According to the principles stated above, <b>hash URIs</b>
+      will be used for our ontology since it is rather small.
+      <br>
+      <br>
+      According to the same good practices, <b>slash URIs</b> will
+			be used for our resource as it is a relatively large dataset.
+      Furthermore, thinking about the application and the source of these data,
+      their quantity could grow considerably in a short time, as they are detected by sensors.
+			The content negotiation chosen for the 303 redirection due to the slash
+			URIs is the forwarding to a generic document, since we expect the
+			different representations to transmit similar information in different
+			forms (as advised by the already mentioned Cool URIs).
+      <br>
+      <br>
+      The URI domain chosen is <b>http://www.airqualitymadrid.es</b>.
+      We opted for this type of URI after checking that it was free.
+      In this way we can assume to have direct control.
+      <br>
+      <br>
+      <ul>
+        <li>
+          Ontology model classes:
+          <br>
+          following the tips, have the form of
+          <i>http://www.airqualitymadrid.es/ontologies/&lt;ontologyName&gt;#&lt;ClassName&gt;</i>
+          <br>
+          <br>
+        </li>
+        <li>
+          Ontology model properties:
+          <br>
+          the classes in the ontology will have the form of
+          <i>http://www.airqualitymadrid.es/ontologies/&lt;ontologyName&gt;#&lt;propertyName&gt;</i>
+          <br>
+          <br>
+        </li>
+        <li>
+          Instances:
+          <br>
+          the instances in the ontology will have the form of
+          <i>http://www.airqualitymadrid.es/resource/&lt;className&gt;#&lt;identifier&gt;</i>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </p>
+    <p>
+      <h2>License of the dataset to be generated</h2>
+      The license of the dataset that is going to be generated will be as open as possible,
+      respecting the license of the dataset initially used to generate the new one.
+      <br>
+      <i>These general conditions allow the reuse of documents and data submitted for commercial and non-commercial purposes.
+      Reuse is understood as the use of documents for commercial or non-commercial purposes,
+      provided that such use does not constitute a public administrative activity.
+      For example, authorized reuse includes activities such as copying, dissemination, modification, adaptation, extraction, reordering and
+      combination of information.</i>
+    </p>
 
   </body>
 </html>
