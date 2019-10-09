@@ -1,0 +1,142 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "codedResultInterpretation.interpretation",
+    "description": "Remove column codedResultInterpretation.interpretation"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "resultQualifier.notation",
+    "expression": "jython:if value == \"<\":\n  return \"insufficient\"\nelif value == \">\":\n  return \"excess\"\nelse:\n  return \"normal\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column resultQualifier.notation using expression jython:if value == \"<\":\n  return \"insufficient\"\nelif value == \">\":\n  return \"excess\"\nelse:\n  return \"normal\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.notation",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column determinand.notation using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "result",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column result using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.samplingPoint.northing",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sample.samplingPoint.northing using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.samplingPoint.easting",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sample.samplingPoint.easting using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "@id",
+    "expression": "jython:leng = len(value)\nfinished = 0\nwhile leng > 0 and finished == 0:\n  if value[leng-1] == '/':\n    finished = 1\n  leng-=1\nreturn value[leng+1:]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column @id using expression jython:leng = len(value)\nfinished = 0\nwhile leng > 0 and finished == 0:\n  if value[leng-1] == '/':\n    finished = 1\n  leng-=1\nreturn value[leng+1:]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.samplingPoint",
+    "expression": "jython:leng = len(value)\nfinished = 0\nwhile leng > 0 and finished == 0:\n  if value[leng-1] == '/':\n    finished = 1\n  leng-=1\nreturn value[leng+1:]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sample.samplingPoint using expression jython:leng = len(value)\nfinished = 0\nwhile leng > 0 and finished == 0:\n  if value[leng-1] == '/':\n    finished = 1\n  leng-=1\nreturn value[leng+1:]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "sample.samplingPoint",
+    "description": "Remove column sample.samplingPoint"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "timerange",
+          "name": "sample.sampleDateTime",
+          "expression": "value",
+          "columnName": "sample.sampleDateTime",
+          "from": 1517577480000,
+          "to": 1,
+          "selectTime": true,
+          "selectNonTime": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "sample.sampleDateTime",
+    "expression": "jython:if value[len(value)-1] == \"Z\":\n  return value\nelse:\n  value = value + \"Z\"\n  return value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sample.sampleDateTime using expression jython:if value[len(value)-1] == \"Z\":\n  return value\nelse:\n  value = value + \"Z\"\n  return value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.sampleDateTime",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sample.sampleDateTime using expression value.toDate()"
+  }
+]
