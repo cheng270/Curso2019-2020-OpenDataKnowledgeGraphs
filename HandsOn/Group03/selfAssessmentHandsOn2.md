@@ -4,7 +4,7 @@
 
 **The “analysis.html” file:**
 
-- [ ] Includes the potential license of the dataset to be generated
+- [x] Includes the potential license of the dataset to be generated
 - [x] Includes the resource naming strategy
 
 **The resource naming strategy:**
@@ -21,7 +21,7 @@
 - [x] Follows the resource naming strategy
 - [x] Contains at least one class
 - [x] Contains at least one object property (where the value of the property is a resource)
-- [ ] Contains at least one datatype property (where the value of the property is a string literal, usually typed)
+- [x] Contains at least one datatype property (where the value of the property is a string literal, usually typed)
 - [x] Defines the domain of all the properties (the origin of the property)
 - [x] Defines the range of all the properties (the destination of the property)
 - [x] Defines all class names starting with a capital letter
