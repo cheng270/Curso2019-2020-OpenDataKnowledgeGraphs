@@ -4,89 +4,88 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-6> .
+@base <http://www.semanticweb.org/ontologies/pedestrianflow> .
 
-<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-6> rdf:type owl:Ontology .
+<http://www.semanticweb.org/ontologies/pedestrianflow> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.disit.org/km4city/schema#hasDistrict
-<http://www.disit.org/km4city/schema#hasDistrict> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain <http://www.disit.org/km4city/schema#Direction> ;
-                                                  rdfs:range <http://www.disit.org/km4city/schema#Direction> .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#hasDistrict
+:hasDistrict rdf:type owl:ObjectProperty ;
+             rdfs:domain :Direction ;
+             rdfs:range :District .
 
 
-###  http://www.disit.org/km4city/schema#hasLocation
-<http://www.disit.org/km4city/schema#hasLocation> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain <http://www.disit.org/km4city/schema#Direction> ;
-                                                  rdfs:range <http://www.disit.org/km4city/schema#Location> .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:domain :Direction ;
+             rdfs:range :Location .
 
 
-###  http://www.disit.org/km4city/schema#hasPedestriansInAMoment
-<http://www.disit.org/km4city/schema#hasPedestriansInAMoment> rdf:type owl:ObjectProperty ;
-                                                              rdfs:subPropertyOf owl:topObjectProperty ;
-                                                              rdfs:domain :Measure ;
-                                                              rdfs:range <http://www.disit.org/km4city/schema#PedestriansInAMoment> .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#hasPederastiansInAMoment
+:hasPederastiansInAMoment rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Measure ;
+                          rdfs:range :PedestriansInAMoment .
 
 
-###  http://www.disit.org/km4city/schema#hasPostalCode
-<http://www.disit.org/km4city/schema#hasPostalCode> rdf:type owl:ObjectProperty ;
-                                                    rdfs:domain <http://www.disit.org/km4city/schema#Direction> ;
-                                                    rdfs:range <http://www.disit.org/km4city/schema#PostalCode> .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#hasPostalCode
+:hasPostalCode rdf:type owl:ObjectProperty ;
+               rdfs:domain :Direction ;
+               rdfs:range :PostalCode .
 
 
-###  http://www.disit.org/km4city/schema#hasStreetName
-<http://www.disit.org/km4city/schema#hasStreetName> rdf:type owl:ObjectProperty ;
-                                                    rdfs:domain <http://www.disit.org/km4city/schema#Direction> ;
-                                                    rdfs:range :StreetName .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#hasStreetName
+:hasStreetName rdf:type owl:ObjectProperty ;
+               rdfs:domain :Direction ;
+               rdfs:range :StreetName .
 
 
-###  http://www.disit.org/km4city/schema#hasTime
-<http://www.disit.org/km4city/schema#hasTime> rdf:type owl:ObjectProperty ;
-                                              rdfs:domain <http://www.disit.org/km4city/schema#PedestriansInAMoment> ;
-                                              rdfs:range <http://www.disit.org/km4city/schema#Time> .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#hasTime
+:hasTime rdf:type owl:ObjectProperty ;
+         rdfs:domain :PedestriansInAMoment ;
+         rdfs:range :Time .
 
 
-###  http://www.disit.org/km4city/schema#isTakenAt
-<http://www.disit.org/km4city/schema#isTakenAt> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain :Measure ;
-                                                rdfs:range <http://www.disit.org/km4city/schema#Direction> .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#isTakenAt
+:isTakenAt rdf:type owl:ObjectProperty ;
+           rdfs:domain :Measure ;
+           rdfs:range :Direction .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.disit.org/km4city/schema#DistrictNumber
-<http://www.disit.org/km4city/schema#DistrictNumber> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:domain :District ;
-                                                     rdfs:range xsd:int .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#DistrictNumber
+:DistrictNumber rdf:type owl:DatatypeProperty ;
+                rdfs:domain :District ;
+                rdfs:range xsd:int .
 
 
-###  http://www.disit.org/km4city/schema#Latitude
-<http://www.disit.org/km4city/schema#Latitude> rdf:type owl:DatatypeProperty ;
-                                               rdfs:domain <http://www.disit.org/km4city/schema#Location> ;
-                                               rdfs:range xsd:float .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#Latitude
+:Latitude rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Location ;
+          rdfs:range xsd:float .
 
 
-###  http://www.disit.org/km4city/schema#Longitude
-<http://www.disit.org/km4city/schema#Longitude> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain <http://www.disit.org/km4city/schema#Location> ;
-                                                rdfs:range xsd:float .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#Longitude
+:Longitude rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Location ;
+           rdfs:range xsd:float .
 
 
-###  http://www.disit.org/km4city/schema#NumberOfPersons
-<http://www.disit.org/km4city/schema#NumberOfPersons> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:domain <http://www.disit.org/km4city/schema#PedestriansInAMoment> ;
-                                                      rdfs:range xsd:int .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#NumberOfPersons
+:NumberOfPersons rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :PedestriansInAMoment ;
+                 rdfs:range xsd:int .
 
 
-###  http://www.disit.org/km4city/schema#StreetNumber
-<http://www.disit.org/km4city/schema#StreetNumber> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain :StreetName ;
-                                                   rdfs:range xsd:string .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#StreetNumber
+:StreetNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain :StreetName ;
+              rdfs:range xsd:int .
 
 
 #################################################################
@@ -95,44 +94,44 @@
 
 ###  http://www.disit.org/km4city/schema#Date
 <http://www.disit.org/km4city/schema#Date> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://www.disit.org/km4city/schema#Time> .
-
-
-###  http://www.disit.org/km4city/schema#Direction
-<http://www.disit.org/km4city/schema#Direction> rdf:type owl:Class .
+                                           rdfs:subClassOf :Time .
 
 
 ###  http://www.disit.org/km4city/schema#Hour
 <http://www.disit.org/km4city/schema#Hour> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://www.disit.org/km4city/schema#Time> .
+                                           rdfs:subClassOf :Time .
 
 
-###  http://www.disit.org/km4city/schema#Location
-<http://www.disit.org/km4city/schema#Location> rdf:type owl:Class .
+###  http://www.semanticweb.org/ontologies/pedestrianflow#Direction
+:Direction rdf:type owl:Class .
 
 
-###  http://www.disit.org/km4city/schema#PedestriansInAMoment
-<http://www.disit.org/km4city/schema#PedestriansInAMoment> rdf:type owl:Class .
-
-
-###  http://www.disit.org/km4city/schema#PostalCode
-<http://www.disit.org/km4city/schema#PostalCode> rdf:type owl:Class .
-
-
-###  http://www.disit.org/km4city/schema#Time
-<http://www.disit.org/km4city/schema#Time> rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-6#District
+###  http://www.semanticweb.org/ontologies/pedestrianflow#District
 :District rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-6#Measure
+###  http://www.semanticweb.org/ontologies/pedestrianflow#Location
+:Location rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/pedestrianflow#Measure
 :Measure rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-6#StreetName
+###  http://www.semanticweb.org/ontologies/pedestrianflow#PedestriansInAMoment
+:PedestriansInAMoment rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/pedestrianflow#PostalCode
+:PostalCode rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/pedestrianflow#StreetName
 :StreetName rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/pedestrianflow#Time
+:Time rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
