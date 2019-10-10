@@ -350,5 +350,217 @@
         }
       ]
     }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.bostonbikenetwork.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "streetseg",
+          "uri": "http://www.bostonbikenetwork.com/resource/StreetSegment/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "bbn",
+          "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"StreetSegment/\"+value",
+          "isRowNumberCell": false,
+          "columnName": "street_name_URI",
+          "rdfTypes": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#Street_segment",
+              "curie": "bbn:Street_segment"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_exisFacil",
+              "curie": "bbn:has_exisFacil",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "ExisFacil"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_LTS",
+              "curie": "bbn:has_LTS",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LTS"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_segment_id",
+              "curie": "bbn:has_segment_id",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "OBJECTID"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_shape_length",
+              "curie": "bbn:has_shape_length",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Shape__Length"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_street_name",
+              "curie": "bbn:has_street_name",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NAM"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "street_name_URI"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.bostonbikenetwork.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "streetseg",
+          "uri": "http://www.bostonbikenetwork.com/resource/StreetSegment/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "bbn",
+          "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"StreetSegment/\"+value",
+          "isRowNumberCell": false,
+          "columnName": "street_name_URI",
+          "rdfTypes": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#Street_segment",
+              "curie": "bbn:Street_segment"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_exisFacil",
+              "curie": "bbn:has_exisFacil",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "ExisFacil"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_LTS",
+              "curie": "bbn:has_LTS",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LTS"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_segment_id",
+              "curie": "bbn:has_segment_id",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "OBJECTID"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_shape_length",
+              "curie": "bbn:has_shape_length",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Shape__Length"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_street_name",
+              "curie": "bbn:has_street_name",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NAM"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "street_name_URI"
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

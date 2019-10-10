@@ -29,4 +29,4 @@
 - [X] Uses the correct datatype (e.g., values of 0-1 may be booleans and not integers, not every string made of numbers is a number)
 
 ##Comments on the self-assessment##
-_All the points were addressed and resolved, apart from partially point 2.3, which needs more attention._
+_All the points were addressed and resolved._
