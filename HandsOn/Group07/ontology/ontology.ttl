@@ -1,160 +1,99 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
-     xml:base="http://www.airqualitymadrid.es/ontologies/airqualitymadrid"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid"/>
+@prefix : <http://www.airqualitymadrid.es/ontologies/airqualitymadrid#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.airqualitymadrid.es/ontologies/airqualitymadrid> .
 
+<http://www.airqualitymadrid.es/ontologies/airqualitymadrid> rdf:type owl:Ontology .
 
+#################################################################
+#    Object Properties
+#################################################################
 
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#collectedBy
+:collectedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :Measurement ;
+             rdfs:range :PollutionSensor .
 
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant
+:hasPollutant rdf:type owl:ObjectProperty ;
+              rdfs:domain :Measurement ;
+              rdfs:range :Pollutant .
 
 
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#collectedBy -->
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn
+:placedIn rdf:type owl:ObjectProperty ;
+          rdfs:domain :PollutionSensor ;
+          rdfs:range :Address .
 
-    <owl:ObjectProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#collectedBy">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement"/>
-        <rdfs:range rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor"/>
-    </owl:ObjectProperty>
 
+#################################################################
+#    Data properties
+#################################################################
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress
+:hasAddress rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Address ;
+            rdfs:range xsd:string .
 
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant -->
 
-    <owl:ObjectProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement"/>
-        <rdfs:range rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant"/>
-    </owl:ObjectProperty>
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude
+:hasLatitude rdf:type owl:DatatypeProperty ;
+             rdfs:domain :PollutionSensor ;
+             rdfs:range xsd:float .
 
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude
+:hasLongitude rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PollutionSensor ;
+              rdfs:range xsd:float .
 
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor"/>
-        <rdfs:range rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address"/>
-    </owl:ObjectProperty>
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate
+:hasMeasurementDate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Measurement ;
+                    rdfs:range xsd:dateTime .
 
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue
+:hasMeasurementValue rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Measurement ;
+                     rdfs:range xsd:float .
 
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName
+:hasPollutantName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Pollutant ;
+                  rdfs:range xsd:string .
 
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation
+:hasSensorElevation rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PollutionSensor ;
+                    rdfs:range xsd:integer .
 
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress -->
 
-    <owl:DatatypeProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+#################################################################
+#    Classes
+#################################################################
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address
+:Address rdf:type owl:Class .
 
 
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude -->
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement
+:Measurement rdf:type owl:Class .
 
-    <owl:DatatypeProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant
+:Pollutant rdf:type owl:Class .
 
 
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude -->
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor
+:PollutionSensor rdf:type owl:Class .
 
-    <owl:DatatypeProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
 
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue -->
-
-    <owl:DatatypeProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation">
-        <rdfs:domain rdf:resource="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address -->
-
-    <owl:Class rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address"/>
-
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement -->
-
-    <owl:Class rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement"/>
-
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant -->
-
-    <owl:Class rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant"/>
-
-
-
-    <!-- http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor -->
-
-    <owl:Class rdf:about="http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor"/>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
