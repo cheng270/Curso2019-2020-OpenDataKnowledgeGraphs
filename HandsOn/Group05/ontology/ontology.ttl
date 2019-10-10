@@ -14,25 +14,19 @@
 
 ###  http://group05.com/ontology/Water-Quality#hasDeterminand
 :hasDeterminand rdf:type owl:ObjectProperty ;
-                rdfs:domain :Sample ;
+                rdfs:domain :Measurement ;
                 rdfs:range :Determinand .
 
 
 ###  http://group05.com/ontology/Water-Quality#hasSamplingPoint
 :hasSamplingPoint rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Sample ;
+                  rdfs:domain :Measurement ;
                   rdfs:range :SamplingPoint .
 
 
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://group05.com/ontology/Water-Quality#determinandLabel
-:determinandLabel rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Determinand ;
-                  rdfs:range xsd:string .
-
 
 ###  http://group05.com/ontology/Water-Quality#determinandNotation
 :determinandNotation rdf:type owl:DatatypeProperty ;
@@ -42,7 +36,7 @@
 
 ###  http://group05.com/ontology/Water-Quality#hasDateTime
 :hasDateTime rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Sample ;
+             rdfs:domain :Measurement ;
              rdfs:range xsd:dateTime .
 
 
@@ -60,7 +54,7 @@
 
 ###  http://group05.com/ontology/Water-Quality#hasMaterialType
 :hasMaterialType rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Sample ;
+                 rdfs:domain :Measurement ;
                  rdfs:range xsd:string .
 
 
@@ -72,13 +66,13 @@
 
 ###  http://group05.com/ontology/Water-Quality#hasPurpose
 :hasPurpose rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Sample ;
+            rdfs:domain :Measurement ;
             rdfs:range xsd:string .
 
 
 ###  http://group05.com/ontology/Water-Quality#hasResult
 :hasResult rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Sample ;
+           rdfs:domain :Measurement ;
            rdfs:range xsd:decimal .
 
 
@@ -90,7 +84,7 @@
 
 ###  http://group05.com/ontology/Water-Quality#isComplianceSample
 :isComplianceSample rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Sample ;
+                    rdfs:domain :Measurement ;
                     rdfs:range xsd:boolean .
 
 
@@ -98,12 +92,6 @@
 :samplingPointLabel rdf:type owl:DatatypeProperty ;
                     rdfs:domain :SamplingPoint ;
                     rdfs:range xsd:string .
-
-
-###  http://group05.com/ontology/Water-Quality#samplingPointNotation
-:samplingPointNotation rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :SamplingPoint ;
-                       rdfs:range xsd:string .
 
 
 #################################################################
@@ -114,8 +102,8 @@
 :Determinand rdf:type owl:Class .
 
 
-###  http://group05.com/ontology/Water-Quality#Sample
-:Sample rdf:type owl:Class .
+###  http://group05.com/ontology/Water-Quality#Measurement
+:Measurement rdf:type owl:Class .
 
 
 ###  http://group05.com/ontology/Water-Quality#SamplingPoint
