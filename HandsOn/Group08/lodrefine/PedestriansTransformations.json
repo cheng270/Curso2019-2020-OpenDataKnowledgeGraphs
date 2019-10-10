@@ -1,0 +1,101 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column OBSERVACIONES_DIRECCION",
+    "columnName": "OBSERVACIONES_DIRECCION"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "#N/A",
+                "l": "#N/A"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "NOMBRE_VIAL",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "NOMBRE_VIAL"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column HORA to HOUR",
+    "oldColumnName": "HORA",
+    "newColumnName": "HOUR"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column FECHA to DATE",
+    "oldColumnName": "FECHA",
+    "newColumnName": "DATE"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column IDENTIFICADOR to IDENTIFICATOR",
+    "oldColumnName": "IDENTIFICADOR",
+    "newColumnName": "IDENTIFICATOR"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column PEATONES to PEDESTRIANS",
+    "oldColumnName": "PEATONES",
+    "newColumnName": "PEDESTRIANS"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column NÚMERO_DISTRITO to DISTRICT_NUMBER",
+    "oldColumnName": "NÚMERO_DISTRITO",
+    "newColumnName": "DISTRICT_NUMBER"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column DISTRITO to DISTRICT",
+    "oldColumnName": "DISTRITO",
+    "newColumnName": "DISTRICT"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column NOMBRE_VIAL to STREET_NAME",
+    "oldColumnName": "NOMBRE_VIAL",
+    "newColumnName": "STREET_NAME"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column NÚMERO to STREET_NUMBER",
+    "oldColumnName": "NÚMERO",
+    "newColumnName": "STREET_NUMBER"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column CÓDIGO_POSTAL to POSTAL_CODE",
+    "oldColumnName": "CÓDIGO_POSTAL",
+    "newColumnName": "POSTAL_CODE"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column LATITUD to LATITUDE",
+    "oldColumnName": "LATITUD",
+    "newColumnName": "LATITUDE"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column LONGITUD to LENGTH",
+    "oldColumnName": "LONGITUD",
+    "newColumnName": "LENGTH"
+  }
+]
