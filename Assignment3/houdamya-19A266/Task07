@@ -60,7 +60,23 @@ public class Task07
 		
 		
 		// ** TASK 7.3: Make the necessary changes to get as well indirect instances and subclasses. TIP: you need some inference... **
-		
 	
+		ExtendedIterator iinstances = person.listInstances(false);
+		
+		while (iinstances.hasNext())
+		{
+			Individual iinst = (Individual) iinstances.next();
+			if( !iinst.hasRDFType(person, true) )
+			System.out.println("Indirect Instance of Person: "+iinst.getURI());
+		}
+		
+		ExtendedIterator isubclasses = person.listSubClasses(false);
+		
+		while (isubclasses.hasNext())
+		{
+			OntClass isubclass = (OntClass) isubclasses.next();
+			if( !isubclass.asClass().isSameAs(person) )
+			System.out.println("Indirect Subclass of Person: "+isubclass.getURI());
+		}
 	}
 }

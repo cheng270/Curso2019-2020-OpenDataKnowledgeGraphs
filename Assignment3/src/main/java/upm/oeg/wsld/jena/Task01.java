@@ -20,7 +20,7 @@ public class Task01
 	 */
 	public static void main(String args[])
 	{
-		String filename = "example1.rdf";
+		String filename = "resources/example1.rdf";
 		
 		// Create an empty model
 		Model model = ModelFactory.createDefaultModel();
@@ -38,10 +38,10 @@ public class Task01
 		model.write(System.out);
 
 		// ** TASK 1.1: Now write the model in Turtle form **
-		model.write(System.out, "JSON-LD");
+		model.write(System.out, "TURTLE");
 		
 		// ** TASK 1.2: Read a new model and merge it with the previous one **
-		String filename2 = "example2.rdf";
+		String filename2 = "resources/example2.rdf";
 		InputStream in2 = FileManager.get().open(filename2);
 
 		if (in2 == null)
