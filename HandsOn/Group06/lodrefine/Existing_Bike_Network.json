@@ -1,0 +1,354 @@
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column aa at index 3 based on column STREET_NAM using expression grel:replaceChars(value, \" \", \"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "aa",
+    "columnInsertIndex": 3,
+    "baseColumnName": "STREET_NAM",
+    "expression": "grel:replaceChars(value, \" \", \"-\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.bostonbikenetwork.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "bbn",
+          "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column aa to street_name_URI",
+    "oldColumnName": "aa",
+    "newColumnName": "street_name_URI"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column ROADINVENT",
+    "columnName": "ROADINVENT"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column FUNCTIONAL using expression grel:if(value == \"0\", \"local\",\nif(value == \"1\", \"interstate\",\nif(value == \"2\", \"principal arterial\",\nif(value == \"3\", \"rural minor arterial\",\nif(value == \"5\", \"urban minor arterial or rural major collector\",\nif(value == \"6\", \"urban collector or rural minor collector\", \"unknown\"))))))",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "FUNCTIONAL",
+    "expression": "grel:if(value == \"0\", \"local\",\nif(value == \"1\", \"interstate\",\nif(value == \"2\", \"principal arterial\",\nif(value == \"3\", \"rural minor arterial\",\nif(value == \"5\", \"urban minor arterial or rural major collector\",\nif(value == \"6\", \"urban collector or rural minor collector\", \"unknown\"))))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column JURISDICTI using expression grel:if(value == \"0\", \"unaccepted\",\nif(value == \"1\", \"Massachussets Highway Department\",\nif(value == \"2\", \"City or Town accepted road\",\nif(value == \"3\", \"Department of Conservation and Recreation\",\nif(value == \"4\", \"Massachussets Turnpike Authority\",\nif(value == \"B\", \"State College or University\",\nif(value == \"H\", \"Private\",\nif(value == \"M\", \"MBTA\",\nif(value == \"5\", \"Massachussets Port Authority\", \"unknown\")))))))))",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "JURISDICTI",
+    "expression": "grel:if(value == \"0\", \"unaccepted\",\nif(value == \"1\", \"Massachussets Highway Department\",\nif(value == \"2\", \"City or Town accepted road\",\nif(value == \"3\", \"Department of Conservation and Recreation\",\nif(value == \"4\", \"Massachussets Turnpike Authority\",\nif(value == \"B\", \"State College or University\",\nif(value == \"H\", \"Private\",\nif(value == \"M\", \"MBTA\",\nif(value == \"5\", \"Massachussets Port Authority\", \"unknown\")))))))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Divided using expression grel:if(value == \"1\", \"yes\", \"no\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Divided",
+    "expression": "grel:if(value == \"1\", \"yes\", \"no\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column LTS using expression grel:if(value == \"4\", \"LTS 4\",\nif(value == \"3\", \"LTS 3\",\nif(value == \"2\", \"LTS 2\",\nif(value == \"1\", \"LTS 1\", \"unknown\"))))",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "LTS",
+    "expression": "grel:if(value == \"4\", \"LTS 4\",\nif(value == \"3\", \"LTS 3\",\nif(value == \"2\", \"LTS 2\",\nif(value == \"1\", \"LTS 1\", \"unknown\"))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.bostonbikenetwork.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "bbn",
+          "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"StreetSegment/\"+value",
+          "isRowNumberCell": false,
+          "columnName": "street_name_URI",
+          "rdfTypes": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#Street_segment",
+              "curie": "bbn:Street_segment"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_exisFacil",
+              "curie": "bbn:has_exisFacil",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "ExisFacil"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_LTS",
+              "curie": "bbn:has_LTS",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LTS"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_segment_id",
+              "curie": "bbn:has_segment_id",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "OBJECTID"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_shape_length",
+              "curie": "bbn:has_shape_length",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Shape__Length"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_street_name",
+              "curie": "bbn:has_street_name",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NAM"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column STREET_NAM",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "STREET_NAM",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          " "
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "isBlank(value)",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "STREET_NAM",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "STREET_NAM"
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.bostonbikenetwork.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "bbn",
+          "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"StreetSegment/\"+value",
+          "isRowNumberCell": false,
+          "columnName": "street_name_URI",
+          "rdfTypes": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#Street_segment",
+              "curie": "bbn:Street_segment"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_exisFacil",
+              "curie": "bbn:has_exisFacil",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "ExisFacil"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_LTS",
+              "curie": "bbn:has_LTS",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LTS"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_segment_id",
+              "curie": "bbn:has_segment_id",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "OBJECTID"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_shape_length",
+              "curie": "bbn:has_shape_length",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "Shape__Length"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_street_name",
+              "curie": "bbn:has_street_name",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NAM"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "street_name_URI"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

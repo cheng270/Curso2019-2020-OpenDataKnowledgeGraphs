@@ -1,0 +1,177 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ﻿X using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "﻿X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Y using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column ﻿X to longitude",
+    "oldColumnName": "﻿X",
+    "newColumnName": "longitude"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Y to latitude",
+    "oldColumnName": "Y",
+    "newColumnName": "latitude"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column lat",
+    "columnName": "lat"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column long",
+    "columnName": "long"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column nbBikes",
+    "columnName": "nbBikes"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column nbEmptyDocks",
+    "columnName": "nbEmptyDocks"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column latestUpdateTime",
+    "columnName": "latestUpdateTime"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column OBJECTID",
+    "columnName": "OBJECTID"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column station_name_URI at index 4 based on column name using expression grel:if(indexOf(value, \" -\") != -1,\nreplaceChars(substring(value, 0, indexOf(value, \" -\")), \" \", \"-\"),\nreplaceChars(value, \" \", \"-\"))",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "station_name_URI",
+    "columnInsertIndex": 4,
+    "baseColumnName": "name",
+    "expression": "grel:if(indexOf(value, \" -\") != -1,\nreplaceChars(substring(value, 0, indexOf(value, \" -\")), \" \", \"-\"),\nreplaceChars(value, \" \", \"-\"))",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.bostonbikenetwork.com/resource/",
+      "prefixes": [
+        {
+          "name": "",
+          "uri": ""
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "station_name_URI",
+          "rdfTypes": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#Station",
+              "curie": ":Station"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_longitude",
+              "curie": ":has_longitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "longitude"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_latitude",
+              "curie": ":has_latitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "latitude"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_station_id",
+              "curie": ":has_station_id",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "id"
+              }
+            },
+            {
+              "uri": "http://www.bostonbikenetwork.com/ontology/BikeOntology#has_station_name",
+              "curie": ":has_station_name",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "name"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "station_name_URI"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

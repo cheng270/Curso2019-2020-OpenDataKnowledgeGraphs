@@ -15,25 +15,35 @@
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#end_station
 :end_station rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain [ rdf:type owl:Restriction ;
-                           owl:onProperty :end_station ;
-                           owl:someValuesFrom :Bike_trip
-                         ] .
+             rdfs:domain :Bike_trip ;
+             rdfs:range :Station .
 
 
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_bike
 :has_bike rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain :Bike_trip .
+          rdfs:domain :Bike_trip ;
+          rdfs:range :Bike .
+
+
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_segment
+:has_segment rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Station ;
+             rdfs:range :Street_segment .
+
+
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_user
+:has_user rdf:type owl:ObjectProperty ;
+          rdfs:domain :Bike_trip ;
+          rdfs:range :Bike_user .
 
 
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#start_station
 :start_station rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
-               rdfs:domain [ rdf:type owl:Restriction ;
-                             owl:onProperty :street_segments ;
-                             owl:someValuesFrom :Bike_trip
-                           ] .
+               rdfs:domain :Bike_trip ;
+               rdfs:range :Station .
 
 
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#street_segments
@@ -49,11 +59,10 @@
                             ] .
 
 
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_segment
-:has_segment rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Station ;
-             rdfs:range :Street_segment .
+###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_bike
+:has_bike rdf:type owl:ObjectProperty ;
+          rdfs:domain :Bike_user ;
+          rdfs:range :Bike .
 
 
 #################################################################
@@ -67,6 +76,13 @@
           rdfs:range xsd:dateTime .
 
 
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_LTS
+:has_LTS rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Street_segment ;
+         rdfs:range xsd:int .
+
+
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_bike_id
 :has_bike_id rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
@@ -74,26 +90,45 @@
              rdfs:range xsd:int .
 
 
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_birth_year
+:has_birth_year rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Bike_trip ,
+                            :Bike_user ;
+                rdfs:range xsd:int .
+
+
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_exisFacil
+:has_exisFacil rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Street_segment ;
+               rdfs:range xsd:string .
+
+
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_functional
+:has_functional rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
+
+
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_gender
 :has_gender rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
-            rdfs:domain :Bike_trip ;
+            rdfs:domain :Bike_trip ,
+                        :Bike_user ;
             rdfs:range xsd:string .
 
 
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_latitude
 :has_latitude rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Street_segment ,
-                          :Station ;
+              rdfs:domain :Station ;
               rdfs:range xsd:float .
 
 
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_longitude
 :has_longitude rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain :Street_segment ,
-                           :Station ;
+               rdfs:domain :Station ;
                rdfs:range xsd:float .
 
 
@@ -104,9 +139,24 @@
                 rdfs:range xsd:int .
 
 
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_shape_length
+:has_shape_length rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Street_segment ;
+                  rdfs:range xsd:float .
+
+
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_station_id
+:has_station_id rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Station ;
+                rdfs:range xsd:int .
+
+
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_station_name
 :has_station_name rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Station ;
                   rdfs:range xsd:string .
 
 
@@ -115,6 +165,13 @@
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :Street_segment ;
                  rdfs:range xsd:string .
+
+
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_trip_duration
+:has_trip_duration rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Bike_trip ;
+                   rdfs:range xsd:int .
 
 
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#has_trip_id
@@ -140,63 +197,15 @@
             rdfs:range xsd:dateTime .
 
 
-###  http://www.bostonbikenetwork.com/ontology/BikeOntology#user_type
-:user_type rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty ;
-           rdfs:domain :Bike_trip ;
-           rdfs:range xsd:string .
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#subscription_type
+:subscription_type rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Bike_user ;
+                   rdfs:range xsd:string .
 
 
 ###  http://www.w3.org/2002/07/owl#topDataProperty
 owl:topDataProperty rdfs:domain :Street_segment ;
                     rdfs:range xsd:int .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_LTS
-:has_LTS rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf owl:topDataProperty ;
-         rdfs:domain :Street_segment ;
-         rdfs:range xsd:int .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_birth_year
-:has_birth_year rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain :Bike_trip ;
-                rdfs:range xsd:int .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_exisFacil
-:has_exisFacil rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain :Street_segment ;
-               rdfs:range xsd:string .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_functional
-:has_functional rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_shape_length
-:has_shape_length rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf owl:topDataProperty ;
-                  rdfs:domain :Street_segment ;
-                  rdfs:range xsd:float .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_station_id
-:has_station_id rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain :Station ;
-                rdfs:range xsd:int .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#has_trip_duration
-:has_trip_duration rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain :Bike_trip ;
-                   rdfs:range xsd:int .
 
 
 #################################################################
@@ -211,16 +220,20 @@ owl:topDataProperty rdfs:domain :Street_segment ;
 :Bike_trip rdf:type owl:Class .
 
 
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#Bike_user
+:Bike_user rdf:type owl:Class .
+
+
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#Network
 :Network rdf:type owl:Class .
 
 
+###  http://www.bostonbikenetwork.com/ontology/BikeOntology#Station
+:Station rdf:type owl:Class .
+
+
 ###  http://www.bostonbikenetwork.com/ontology/BikeOntology#Street_segment
 :Street_segment rdf:type owl:Class .
-
-
-###  urn:absolute:www.bostonbikenetwork.com/ontology/BikeOntology#Station
-:Station rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
