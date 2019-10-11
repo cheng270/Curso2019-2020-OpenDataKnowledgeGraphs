@@ -1,0 +1,138 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.smart-city.GP04-LDATA.org/>
+  a owl:Ontology ;
+  owl:versionIRI <urn:absolute:1.0> .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#haslocation>
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Location> .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#inCity>
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#partOf>
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.smart-city.GP04-LDATA.org/hasAddress>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Location> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/hasCity>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Location> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/hasCounty>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Location> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/hasState>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Location> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasEffectiveness_of_care_national_comparison>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasEfficient_use_of_medical_imaging_national_comparison>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasMortality_national_comparison>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasPatient_experience_national_comparison>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasReadmission_national_comparison>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasSafety_of_care_national_comparison>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasTimeliness_of_care_national_comparison>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasaggregateRating>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:integer .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasemergency_Services>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:boolean .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hashospital_Ownership>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hashospital_Type>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasname>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:Name .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#haspostalCode>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Location> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hasprovider_ID>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:integer .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#hastelephone>
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+  rdfs:domain <http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> ;
+  rdfs:range xsd:string .
+
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Hospital> a owl:Class .
+<http://www.smart-city.GP04-LDATA.org/city/ontology/Hospital#Location> a owl:Class .
