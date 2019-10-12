@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mariano/ontologies/2019/9/cultural-activities"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mariano/ontologies/2019/9/cultural-activities">
+    <Prefix name="" IRI="http://www.semanticweb.org/mariano/ontologies/2019/9/cultural-activities"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Actividad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actividades_calle_arte_urbano"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actividades_deportivas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actividades_para_escolares"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actos_religiosos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actos_solidarios"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audiencia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Campamentos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cine_actividades_audiovisuales"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Circo_magia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ciudad_distrito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Concursos_y_certamenes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conferencias_y_coloquios"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Congresos_y_jornadas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conmemoraciones_y_homenajes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Content_url"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cuentacuentos_titeres_marionetas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cursos_talleres"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Danza_baile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Descripcion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Evento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Evento_de_pago"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Evento_gratuito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Excursiones_itinerarios_talleres"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exposiciones"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Feria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Festivales"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiestas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiestas_carnavales"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiestas_navidad_reyes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiestas_ramadan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiestas_san_isidro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiestas_semana_santa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gastronomia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gratuito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ID_evento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Info_precio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Itinerarios_actividades_ambientales"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Joven_bono_cultural"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Larga_duracion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lgtbi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Musica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Precio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recitales_presentaciones_literarios"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Teatro_performance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Titulo_evento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Veranos_de_la_villa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ZOposiciones"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Actividades_calle_arte_urbano"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actividades_deportivas"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actividades_para_escolares"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actos_religiosos"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actos_solidarios"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Campamentos"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cine_actividades_audiovisuales"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Circo_magia"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ciudad_distrito"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concursos_y_certamenes"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conferencias_y_coloquios"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Congresos_y_jornadas"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conmemoraciones_y_homenajes"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cuentacuentos_titeres_marionetas"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cursos_talleres"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Danza_baile"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Evento_de_pago"/>
+        <Class IRI="#Evento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Evento_gratuito"/>
+        <Class IRI="#Evento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Excursiones_itinerarios_talleres"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exposiciones"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Feria"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Festivales"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiestas"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiestas_carnavales"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiestas_navidad_reyes"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiestas_ramadan"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiestas_san_isidro"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiestas_semana_santa"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gastronomia"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Itinerarios_actividades_ambientales"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joven_bono_cultural"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lgtbi"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Musica"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recitales_presentaciones_literarios"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Teatro_performance"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Veranos_de_la_villa"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ZOposiciones"/>
+        <Class IRI="#Actividad"/>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
