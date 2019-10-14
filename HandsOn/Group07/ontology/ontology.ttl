@@ -12,10 +12,10 @@
 #    Object Properties
 #################################################################
 
-###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#collectedBy
-:collectedBy rdf:type owl:ObjectProperty ;
-             rdfs:domain :Measurement ;
-             rdfs:range :PollutionSensor .
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected
+:hasCollected rdf:type owl:ObjectProperty ;
+              rdfs:domain :PollutionSensor ;
+              rdfs:range :Measurement .
 
 
 ###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant
