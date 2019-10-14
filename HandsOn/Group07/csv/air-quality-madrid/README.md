@@ -1,4 +1,10 @@
-## Content
+
+### Dataset structure
+The original dataset is made up by different csv files. There exist csv files with measurements divided by year and an additional csv file with data about the stations where data has been collected.
+
+The *madrid_2018_refined.csv* file is the one we used to perform the tasks. It has been obtained by merging data about stations and measurements collected in 2018.
+
+### Dataset description
 
 This dataset defines stations as the higher hierarchical level: each individual station history can be individually extracted from the file for further study. Not every station has the same equipment, therefore each station can measure only a certain subset of particles. The complete list of possible measurements and their explanations are:
 
