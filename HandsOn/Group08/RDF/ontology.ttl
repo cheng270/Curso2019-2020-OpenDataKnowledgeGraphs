@@ -1,137 +1,109 @@
-@prefix : <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-6#> .
+@prefix : <http://www.semanticweb.org/ontologies/pedestrianflow#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/ontologies/pedestrianflow> .
+@base <http://www.smartcityflow.org/ontologies> .
 
-<http://www.semanticweb.org/ontologies/pedestrianflow> rdf:type owl:Ontology .
+<http://www.smartcityflow.org/ontologies> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasDistrict
-:hasDistrict rdf:type owl:ObjectProperty ;
-             rdfs:domain :Direction ;
-             rdfs:range :District .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#hasDistrict
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#hasDistrict> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> ;
+                                                                                    rdfs:range <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#District> .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasLocation
-:hasLocation rdf:type owl:ObjectProperty ;
-             rdfs:domain :Direction ;
-             rdfs:range :Location .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#hasMeasure
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#hasMeasure> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Sensor> ;
+                                                                                   rdfs:range <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Measure> .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasPederastiansInAMoment
-:hasPederastiansInAMoment rdf:type owl:ObjectProperty ;
-                          rdfs:domain :Measure ;
-                          rdfs:range :PedestriansInAMoment .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#hasStreet
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#hasStreet> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> ;
+                                                                                  rdfs:range <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Street> .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasPostalCode
-:hasPostalCode rdf:type owl:ObjectProperty ;
-               rdfs:domain :Direction ;
-               rdfs:range :PostalCode .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasStreetName
-:hasStreetName rdf:type owl:ObjectProperty ;
-               rdfs:domain :Direction ;
-               rdfs:range :StreetName .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasTime
-:hasTime rdf:type owl:ObjectProperty ;
-         rdfs:domain :PedestriansInAMoment ;
-         rdfs:range :Time .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#isTakenAt
-:isTakenAt rdf:type owl:ObjectProperty ;
-           rdfs:domain :Measure ;
-           rdfs:range :Direction .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#isAtLocation
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#isAtLocation> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Sensor> ;
+                                                                                     rdfs:range <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#DistrictNumber
-:DistrictNumber rdf:type owl:DatatypeProperty ;
-                rdfs:domain :District ;
-                rdfs:range xsd:int .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#NumberPedestrians
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#NumberPedestrians> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Measure> ;
+                                                                                          rdfs:range xsd:int .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Latitude
-:Latitude rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Location ;
-          rdfs:range xsd:float .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#dateTime
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#dateTime> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Measure> ;
+                                                                                 rdfs:range xsd:dateTime .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Longitude
-:Longitude rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Location ;
-           rdfs:range xsd:float .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#districtNumber
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#districtNumber> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#District> ;
+                                                                                       rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#NumberOfPersons
-:NumberOfPersons rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :PedestriansInAMoment ;
-                 rdfs:range xsd:int .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#geoLatitude
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#geoLatitude> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> ;
+                                                                                    rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#StreetNumber
-:StreetNumber rdf:type owl:DatatypeProperty ;
-              rdfs:domain :StreetName ;
-              rdfs:range xsd:int .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#geoLongitude
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#geoLongitude> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> ;
+                                                                                     rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#postalCode
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#postalCode> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> ;
+                                                                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#streetNumber
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#streetNumber> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> ;
+                                                                                     rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.disit.org/km4city/schema#Date
-<http://www.disit.org/km4city/schema#Date> rdf:type owl:Class ;
-                                           rdfs:subClassOf :Time .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#District
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#District> rdf:type owl:Class .
 
 
-###  http://www.disit.org/km4city/schema#Hour
-<http://www.disit.org/km4city/schema#Hour> rdf:type owl:Class ;
-                                           rdfs:subClassOf :Time .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Location> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Direction
-:Direction rdf:type owl:Class .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Measure
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Measure> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#District
-:District rdf:type owl:Class .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Sensor
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Sensor> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Location
-:Location rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Measure
-:Measure rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#PedestriansInAMoment
-:PedestriansInAMoment rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#PostalCode
-:PostalCode rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#StreetName
-:StreetName rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Time
-:Time rdf:type owl:Class .
+###  http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Street
+<http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-8#Street> rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
