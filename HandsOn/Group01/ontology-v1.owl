@@ -31,13 +31,37 @@
         <Class IRI="#Actos_solidarios"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Audiencia"/>
+        <Class IRI="#Auditorio_aire_libre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Auditorio_sala_exposiciones"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aula_ecologia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Biblioteca_publica"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Campamentos"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Cento_juvenil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Centro_cultural"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Centro_deportivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Centro_sociocultural"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Cine_actividades_audiovisuales"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cineteca"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Circo_magia"/>
@@ -58,9 +82,6 @@
         <Class IRI="#Conmemoraciones_y_homenajes"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Content_url"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Cuentacuentos_titeres_marionetas"/>
     </Declaration>
     <Declaration>
@@ -70,16 +91,16 @@
         <Class IRI="#Danza_baile"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Descripcion"/>
+        <Class IRI="#Distrito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Espacio_abierto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Espacio_igualdad"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Evento"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Evento_de_pago"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Evento_gratuito"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Excursiones_itinerarios_talleres"/>
@@ -115,13 +136,16 @@
         <Class IRI="#Gastronomia"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Gratuito"/>
+        <Class IRI="#IFEMA"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ID_evento"/>
+        <Class IRI="#Imprenta_municipal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Info_precio"/>
+        <Class IRI="#Informacion_temporal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Instalacion"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Itinerarios_actividades_ambientales"/>
@@ -130,31 +154,127 @@
         <Class IRI="#Joven_bono_cultural"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Larga_duracion"/>
+        <Class IRI="#Junta_municipal"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Lgtbi"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Localizacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medialab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Museo"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Musica"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Precio"/>
+        <Class IRI="#Otro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parque"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parroquia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Planetario"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Recitales_presentaciones_literarios"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Teatro_performance"/>
+        <Class IRI="#Red_bibliotecas"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Titulo_evento"/>
+        <Class IRI="#Sala_exposicionoes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Teatro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Teatro_performance"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Veranos_de_la_villa"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ZOposiciones"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_temporal_information"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#holds_event"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_included_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_located_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_the_location_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_the_temporal_information_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#takes_place_in"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Audiencia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Descripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Dia_fin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Dia_inicio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Dias_excluidos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Dias_semana"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Hora_inicio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Larga_duracion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Nombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Precio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Titulo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#URL"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:time"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:ID"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Actividades_calle_arte_urbano"/>
@@ -177,12 +297,48 @@
         <Class IRI="#Actividad"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Auditorio_aire_libre"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Auditorio_sala_exposiciones"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aula_ecologia"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biblioteca_publica"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Campamentos"/>
         <Class IRI="#Actividad"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Cento_juvenil"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Centro_cultural"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Centro_deportivo"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Centro_sociocultural"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Cine_actividades_audiovisuales"/>
         <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cineteca"/>
+        <Class IRI="#Instalacion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Circo_magia"/>
@@ -221,12 +377,12 @@
         <Class IRI="#Actividad"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Evento_de_pago"/>
-        <Class IRI="#Evento"/>
+        <Class IRI="#Espacio_abierto"/>
+        <Class IRI="#Instalacion"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Evento_gratuito"/>
-        <Class IRI="#Evento"/>
+        <Class IRI="#Espacio_igualdad"/>
+        <Class IRI="#Instalacion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Excursiones_itinerarios_talleres"/>
@@ -273,6 +429,14 @@
         <Class IRI="#Actividad"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#IFEMA"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Imprenta_municipal"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Itinerarios_actividades_ambientales"/>
         <Class IRI="#Actividad"/>
     </SubClassOf>
@@ -281,16 +445,56 @@
         <Class IRI="#Actividad"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Junta_municipal"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Lgtbi"/>
         <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medialab"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Museo"/>
+        <Class IRI="#Instalacion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Musica"/>
         <Class IRI="#Actividad"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Otro"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parque"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parroquia"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Planetario"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Recitales_presentaciones_literarios"/>
         <Class IRI="#Actividad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Red_bibliotecas"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sala_exposicionoes"/>
+        <Class IRI="#Instalacion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Teatro"/>
+        <Class IRI="#Instalacion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Teatro_performance"/>
@@ -304,6 +508,182 @@
         <Class IRI="#ZOposiciones"/>
         <Class IRI="#Actividad"/>
     </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_temporal_information"/>
+        <ObjectProperty IRI="#is_the_temporal_information_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#holds_event"/>
+        <ObjectProperty IRI="#takes_place_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includes"/>
+        <ObjectProperty IRI="#is_included_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_located_in"/>
+        <ObjectProperty IRI="#is_the_location_of"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_temporal_information"/>
+        <Class IRI="#Evento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#holds_event"/>
+        <Class IRI="#Instalacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includes"/>
+        <Class IRI="#Actividad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_included_in"/>
+        <Class IRI="#Evento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_located_in"/>
+        <Class IRI="#Distrito"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_located_in"/>
+        <Class IRI="#Instalacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_the_location_of"/>
+        <Class IRI="#Localizacion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_the_temporal_information_of"/>
+        <Class IRI="#Informacion_temporal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#takes_place_in"/>
+        <Class IRI="#Evento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_temporal_information"/>
+        <Class IRI="#Informacion_temporal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#holds_event"/>
+        <Class IRI="#Evento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includes"/>
+        <Class IRI="#Evento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_included_in"/>
+        <Class IRI="#Actividad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_located_in"/>
+        <Class IRI="#Localizacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_the_location_of"/>
+        <Class IRI="#Distrito"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_the_location_of"/>
+        <Class IRI="#Instalacion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_the_temporal_information_of"/>
+        <Class IRI="#Evento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#takes_place_in"/>
+        <Class IRI="#Instalacion"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Audiencia"/>
+        <Class IRI="#Evento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Dia_fin"/>
+        <Class IRI="#Informacion_temporal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Dia_inicio"/>
+        <Class IRI="#Informacion_temporal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Dias_excluidos"/>
+        <Class IRI="#Informacion_temporal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Dias_semana"/>
+        <Class IRI="#Informacion_temporal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Hora_inicio"/>
+        <Class IRI="#Informacion_temporal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ID"/>
+        <Class IRI="#Evento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Larga_duracion"/>
+        <Class IRI="#Evento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Precio"/>
+        <Class IRI="#Evento"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Audiencia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Descripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Dia_fin"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Dia_inicio"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Dias_excluidos"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Dias_semana"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Hora_inicio"/>
+        <Datatype abbreviatedIRI="xsd:time"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ID"/>
+        <Datatype abbreviatedIRI="xsd:ID"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Larga_duracion"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Nombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Precio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Titulo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#URL"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
 </Ontology>
 
 
