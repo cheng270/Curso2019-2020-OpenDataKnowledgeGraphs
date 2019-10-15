@@ -1,0 +1,686 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column OBSERVACIONES_DIRECCION",
+    "columnName": "OBSERVACIONES_DIRECCION"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "#N/A",
+                "l": "#N/A"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "NOMBRE_VIAL",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "NOMBRE_VIAL"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column HORA to HOUR",
+    "oldColumnName": "HORA",
+    "newColumnName": "HOUR"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column FECHA to DATE",
+    "oldColumnName": "FECHA",
+    "newColumnName": "DATE"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column IDENTIFICADOR to IDENTIFICATOR",
+    "oldColumnName": "IDENTIFICADOR",
+    "newColumnName": "IDENTIFICATOR"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column PEATONES to PEDESTRIANS",
+    "oldColumnName": "PEATONES",
+    "newColumnName": "PEDESTRIANS"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column NÚMERO_DISTRITO to DISTRICT_NUMBER",
+    "oldColumnName": "NÚMERO_DISTRITO",
+    "newColumnName": "DISTRICT_NUMBER"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column DISTRITO to DISTRICT",
+    "oldColumnName": "DISTRITO",
+    "newColumnName": "DISTRICT"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column NOMBRE_VIAL to STREET_NAME",
+    "oldColumnName": "NOMBRE_VIAL",
+    "newColumnName": "STREET_NAME"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column NÚMERO to STREET_NUMBER",
+    "oldColumnName": "NÚMERO",
+    "newColumnName": "STREET_NUMBER"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column CÓDIGO_POSTAL to POSTAL_CODE",
+    "oldColumnName": "CÓDIGO_POSTAL",
+    "newColumnName": "POSTAL_CODE"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column LATITUD to LATITUDE",
+    "oldColumnName": "LATITUD",
+    "newColumnName": "LATITUDE"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column LONGITUD to LENGTH",
+    "oldColumnName": "LONGITUD",
+    "newColumnName": "LENGTH"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://localhost:3333/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "DISTRICT",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasNumber",
+              "curie": ":hasNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT_NUMBER"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column LOCATION at index 11 based on column LENGTH using expression grel:cells[\"LATITUDE\"].value+\";\"+cells[\"LATITUDE\"].value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "LOCATION",
+    "columnInsertIndex": 11,
+    "baseColumnName": "LENGTH",
+    "expression": "grel:cells[\"LATITUDE\"].value+\";\"+cells[\"LATITUDE\"].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://localhost:3333/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "DISTRICT",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasNumber",
+              "curie": ":hasNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT_NUMBER"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "LOCATION",
+          "rdfTypes": [],
+          "links": []
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "IDENTIFICATOR",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "isAtLocation",
+              "curie": ":isAtLocation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LOCATION"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column MEASURE at index 1 based on column DATE using expression grel:row.index+1",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "MEASURE",
+    "columnInsertIndex": 1,
+    "baseColumnName": "DATE",
+    "expression": "grel:row.index+1",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-reorder",
+    "description": "Reorder columns",
+    "columnNames": [
+      "MEASURE",
+      "IDENTIFICATOR",
+      "DATE",
+      "HOUR",
+      "LOCATION",
+      "LATITUDE",
+      "LENGTH",
+      "DISTRICT_NUMBER",
+      "DISTRICT",
+      "STREET_NAME",
+      "STREET_NUMBER",
+      "POSTAL_CODE",
+      "PEDESTRIANS"
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column MEASURE1 at index 4 based on column HOUR using expression grel:cells[\"DATE\"].value + \" \" + cells[\"HOUR\"].value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "MEASURE1",
+    "columnInsertIndex": 4,
+    "baseColumnName": "HOUR",
+    "expression": "grel:cells[\"DATE\"].value + \" \" + cells[\"HOUR\"].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column MEASURE",
+    "columnName": "MEASURE"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column MEASURE1 to MEASURE",
+    "oldColumnName": "MEASURE1",
+    "newColumnName": "MEASURE"
+  },
+  {
+    "op": "core/column-reorder",
+    "description": "Reorder columns",
+    "columnNames": [
+      "IDENTIFICATOR",
+      "MEASURE",
+      "DATE",
+      "HOUR",
+      "LOCATION",
+      "LATITUDE",
+      "LENGTH",
+      "DISTRICT_NUMBER",
+      "DISTRICT",
+      "STREET_NAME",
+      "STREET_NUMBER",
+      "POSTAL_CODE",
+      "PEDESTRIANS"
+    ]
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://localhost:3333/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "DISTRICT",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasNumber",
+              "curie": ":hasNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT_NUMBER"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "LOCATION",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasStreetName",
+              "curie": ":hasStreetName",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NAME"
+              }
+            },
+            {
+              "uri": "hasStreetNumber",
+              "curie": ":hasStreetNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NUMBER"
+              }
+            },
+            {
+              "uri": "hasDistrict",
+              "curie": ":hasDistrict",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT"
+              }
+            },
+            {
+              "uri": "hasLatitude",
+              "curie": ":hasLatitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LATITUDE"
+              }
+            },
+            {
+              "uri": "hasLength",
+              "curie": ":hasLength",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LENGTH"
+              }
+            },
+            {
+              "uri": "hasPostalCode",
+              "curie": ":hasPostalCode",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "POSTAL_CODE"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "IDENTIFICATOR",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "isAtLocation",
+              "curie": ":isAtLocation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LOCATION"
+              }
+            },
+            {
+              "uri": "hasMeasure",
+              "curie": ":hasMeasure",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "MEASURE"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "MEASURE",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasNumberOf",
+              "curie": ":hasNumberOf",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "PEDESTRIANS"
+              }
+            },
+            {
+              "uri": "hasDate",
+              "curie": ":hasDate",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DATE"
+              }
+            },
+            {
+              "uri": "hasHour",
+              "curie": ":hasHour",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "HOUR"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://localhost:3333/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "DISTRICT",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasNumber",
+              "curie": ":hasNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT_NUMBER"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "LOCATION",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasStreetName",
+              "curie": ":hasStreetName",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NAME"
+              }
+            },
+            {
+              "uri": "hasStreetNumber",
+              "curie": ":hasStreetNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NUMBER"
+              }
+            },
+            {
+              "uri": "hasDistrict",
+              "curie": ":hasDistrict",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT"
+              }
+            },
+            {
+              "uri": "hasLatitude",
+              "curie": ":hasLatitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LATITUDE"
+              }
+            },
+            {
+              "uri": "hasLength",
+              "curie": ":hasLength",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LENGTH"
+              }
+            },
+            {
+              "uri": "hasPostalCode",
+              "curie": ":hasPostalCode",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "POSTAL_CODE"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "IDENTIFICATOR",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "isAtLocation",
+              "curie": ":isAtLocation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LOCATION"
+              }
+            },
+            {
+              "uri": "hasMeasure",
+              "curie": ":hasMeasure",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "MEASURE"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "MEASURE",
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "hasNumberOf",
+              "curie": ":hasNumberOf",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "PEDESTRIANS"
+              }
+            },
+            {
+              "uri": "hasDate",
+              "curie": ":hasDate",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DATE"
+              }
+            },
+            {
+              "uri": "hasHour",
+              "curie": ":hasHour",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "HOUR"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": []
+        }
+      ]
+    }
+  }
+]
