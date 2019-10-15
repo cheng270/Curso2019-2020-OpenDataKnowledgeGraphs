@@ -1,0 +1,480 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BEN",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BEN using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CH4",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CH4 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EBE",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column EBE using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NMHC",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NMHC using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NO using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NO_2",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NO_2 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOx",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOx using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOx",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOx using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "O_3",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column O_3 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PM10",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PM10 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PM25",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PM25 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SO_2",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column SO_2 using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "PM25",
+          "expression": "value",
+          "columnName": "PM25",
+          "from": 0,
+          "to": 90,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TCH",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TCH using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "PM25",
+          "expression": "value",
+          "columnName": "PM25",
+          "from": 0,
+          "to": 90,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TOL",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TOL using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "PM25",
+          "expression": "value",
+          "columnName": "PM25",
+          "from": 0,
+          "to": 90,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "station_lon",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_lon using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "PM25",
+          "expression": "value",
+          "columnName": "PM25",
+          "from": 0,
+          "to": 90,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "station_lat",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_lat using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "PM25",
+          "expression": "value",
+          "columnName": "PM25",
+          "from": 0,
+          "to": 90,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "station_address",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_address using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "PM25",
+          "expression": "value",
+          "columnName": "PM25",
+          "from": 0,
+          "to": 90,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "station_name",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_name using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "PM25",
+          "expression": "value",
+          "columnName": "PM25",
+          "from": 0,
+          "to": 90,
+          "selectNumeric": true,
+          "selectNonNumeric": false,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "station",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "date",
+    "newColumnName": "Measurement date",
+    "description": "Rename column date to Measurement date"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Measurement date",
+    "newColumnName": "measurement_date",
+    "description": "Rename column Measurement date to measurement_date"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "station",
+    "newColumnName": "station_id",
+    "description": "Rename column station to station_id"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name",
+    "expression": "grel:replace(value,\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_name using expression grel:replace(value,\".\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name",
+    "expression": "grel:replace(value,\" \",\"_\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_name using expression grel:replace(value,\" \",\"_\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "measurement_date",
+    "expression": "grel:\"measurement_\"+row.index",
+    "onError": "set-to-blank",
+    "newColumnName": "measurement_id",
+    "columnInsertIndex": 1,
+    "description": "Create column measurement_id at index 1 based on column measurement_date using expression grel:\"measurement_\"+row.index"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name",
+    "expression": "grel:replace(value,\"ñ\",\"n\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_name using expression grel:replace(value,\"ñ\",\"n\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name",
+    "expression": "grel:replace(value,\"ó\",\"o\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column station_name using expression grel:replace(value,\"ó\",\"o\")"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  }
+]

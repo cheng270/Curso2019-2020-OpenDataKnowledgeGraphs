@@ -1,0 +1,3586 @@
+[
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#date",
+              "curie": "event:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Time (24hr)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/#LightLevelLightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://127.0.0.1:3333/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "spacerel",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "osspr",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "spacerel:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "spacerel:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "osspr",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "osspr:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "osspr:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "osspr",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "osspr:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "osspr:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
+      "prefixes": [
+        {
+          "name": "atd",
+          "uri": "https://data.nasa.gov/ontologies/atmonto/data#"
+        },
+        {
+          "name": "dbpedia-owl",
+          "uri": "http://dbpedia.org/ontology/"
+        },
+        {
+          "name": "osspr",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "npg",
+          "uri": "http://ns.nature.com/terms/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "rsctx",
+          "uri": "http://softeng.polito.it/rsctx/"
+        },
+        {
+          "name": "place",
+          "uri": "http://purl.org/ontology/places/"
+        },
+        {
+          "name": "event",
+          "uri": "http://purl.org/NET/c4dm/event.owl#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "rdfTypes": [],
+          "links": [
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Reference Number"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+              "curie": "osspr:easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Easting"
+              }
+            },
+            {
+              "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+              "curie": "osspr:northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Grid Ref: Northing"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numbernumber",
+              "curie": "npg:number",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Number of Vehicles"
+              }
+            },
+            {
+              "uri": "http://ns.nature.com/terms/numberdate",
+              "curie": "npg:date",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Accident Date"
+              }
+            },
+            {
+              "uri": "http://purl.org/NET/c4dm/event.owl#time",
+              "curie": "event:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Time (24hr)"
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/road",
+              "curie": "dbpedia-owl:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "1st Road Class & No"
+              }
+            },
+            {
+              "uri": "http://purl.org/ontology/places/road",
+              "curie": "place:road",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Road Surface"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/LightLevel",
+              "curie": "rsctx:LightLevel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Lighting Conditions"
+              }
+            },
+            {
+              "uri": "https://data.nasa.gov/ontologies/atmonto/data#weatherIntensity",
+              "curie": "atd:weatherIntensity",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Weather Conditions"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/TransportaionMean",
+              "curie": "rsctx:TransportaionMean",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Type of Vehicle"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Class"
+              }
+            },
+            {
+              "uri": "http://softeng.polito.it/rsctx/injury",
+              "curie": "rsctx:injury",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Casualty Severity"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/gender",
+              "curie": "foaf:gender",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Sex of Casualty"
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/age",
+              "curie": "foaf:age",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Age of Casualty"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
