@@ -1,0 +1,300 @@
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>_____________</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Application Requirements Specification</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>For</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Traffic Accidents&nbsp; System (TAS)</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Prepared by: </strong></p>
+<p><strong>Francisco Borrero</strong></p>
+<p><strong>Luis Eduardo Angulo</strong></p>
+<p><strong>Charis Bacolod</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Revision History</strong></p>
+<p>&nbsp;</p>
+<table width="1600">
+<tbody>
+<tr>
+<td width="403">
+<p>&nbsp;</p>
+</td>
+<td width="400">
+<p><strong>Date</strong></p>
+</td>
+<td width="400">
+<p><strong>Reason for Change</strong></p>
+</td>
+<td width="397">
+<p><strong>Version</strong></p>
+</td>
+</tr>
+<tr>
+<td width="403">
+<p>Francisco Borrero</p>
+<p>Luis Angulo</p>
+<p>Charis Bacolod</p>
+</td>
+<td width="400">
+<p>07-10-2019</p>
+</td>
+<td width="400">
+<p>Creation</p>
+</td>
+<td width="397">
+<p>1.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong> Introduction </strong></li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>1.1 Purpose</strong></p>
+<p>&nbsp;</p>
+<p>Traffic Accident System (TAS) is a system to give the best way to use&nbsp; the Madrid&nbsp; transportation&nbsp; for a final user indicating which is&nbsp; the safest&nbsp; route to a final destination considering historical&nbsp; data&nbsp; of accident happened&nbsp; in Madrid.</p>
+<p>The initial release also will show&nbsp; to&nbsp; emergency system critical points where accidents had&nbsp; happened according&nbsp; conditions to help them to be prepared for a faster response and also work on prevention to avoid&nbsp; accidents.</p>
+<p>&nbsp;</p>
+<p><strong>1.2 Document Conversions</strong></p>
+<p>&nbsp;</p>
+<p>Sections are headed in blue&nbsp; and subsections are headed in bold.</p>
+<p>&nbsp;</p>
+<p><strong>1.3 Project scope</strong></p>
+<p>&nbsp;</p>
+<p>This document describes the application requirements for traffic&nbsp;&nbsp;&nbsp;&nbsp; accident system. The intended audience of this document exclusively includes the developers, the testers, and the end-users of the system.</p>
+<p>&nbsp;</p>
+<p><strong>1.4 Overview</strong></p>
+<p>&nbsp;</p>
+<p>The remainder of this document will be used to specify the requirements of the system.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start="2">
+<li><strong> Overall Description</strong></li>
+</ol>
+<p><strong>2.1</strong> <strong>Product Perspective</strong></p>
+<p>&nbsp;</p>
+<p>The Direcci&oacute;n General de la Polic&iacute;a Municipal has access to a staggering amount of data that has been recorded since 2010 to 2018&nbsp;&nbsp; relative to Traffic accidents in the City of Madrid with victims and / or damages to heritage. Data is representative of one record per person involved in the accident (drivers, travelers, pedestrians, witnesses, etc.)</p>
+<p>&nbsp;</p>
+<p>TAS borns as a project for&nbsp; asignature&nbsp; Open Data and Knowledge Graphs&nbsp; of the&nbsp; Universidad Politecnica de Madrid coursed through the Masters in Data Science&nbsp; in order to provide Madrid transportation users&nbsp; and Madrid emergency systems a&nbsp; way to analyze this data in an efficient, effective, expandable, and user friendly way.</p>
+<p>&nbsp;</p>
+<p><strong>2.2</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Product Features</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; TAS will provide the following features</p>
+<p>&nbsp;</p>
+<ol>
+<li>Flexible: By building TAS as a hybrid application, the user is able to connect to whatever capabilities the mobile platform provides through a browser that's embedded in the app.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+<li>Reports: Once a zone or destination is given, TAS will display a list of the fastest AND safest routes based on weather and road conditions, with a comprehensive report of these conditions. TAS will also provide a historical reports of accidents that had happened on the routes.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+<li>GoogleMaps: By using Google Maps, TAS will provide a user friendly and effective way of selecting the best route towards a destination, most specially for emergency systems. TAS will provide the safest routes with the least probability of accidents considering weather, road conditions and time of day.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+<li>User friendly and intuitive: TAS will allow users to operate the system with the most minimum number of moves. TAS will record user behavior and will auto-predict user preferences. The more it is used, the more auto-prediction is fine-tuned.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+<li>Voice Command: TAS can operate on voice command which will be very useful for emergency and security vehicles.</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>2.3</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>User Classes and Characteristics</strong></p>
+<p>&nbsp;</p>
+<p>The current user class consists mostly of car drivers,&nbsp; bike drivers, pedestrian, Scooter drivers&nbsp; that have a need to find the safest way to arrive to a destination, but may also&nbsp; include&nbsp; transit officers, emergency&nbsp; systems to finding the&nbsp; critical zones&nbsp; where an accident may happen according to conditions.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Because TAS does not currently alter any data there will likely be little to no restrictions on who is authorized to use the system.</p>
+<p>&nbsp;</p>
+<p><strong>2.4</strong>&nbsp;&nbsp;&nbsp; <strong>Operating Environment</strong></p>
+<p>&nbsp;</p>
+<p>TAS is a&nbsp; mobile and web based application and will function properly in any mobile operating system and web browsers.</p>
+<p>&nbsp;</p>
+<p><strong>2.7</strong>&nbsp;&nbsp;&nbsp; <strong>Assumptions and Dependencies</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; The following is a list of assumptions:</p>
+<p>&nbsp;</p>
+<p><strong>A1. </strong>The user is familiar with Google Maps.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; The following is a list of dependencies:</p>
+<p>&nbsp;</p>
+<p><strong>D1. </strong>The user&rsquo;s browser is one of the following: Google Chrome, Firefox, Safari, or Opera</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start="3">
+<li><strong>System Features</strong></li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>3.1</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>User Friendly</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; 3.1.1 Description</p>
+<p>&nbsp;</p>
+<p>Google Maps will be&nbsp; used in order to make the application user friendly while maintaining the organization in report selection.</p>
+<p>&nbsp;</p>
+<p>3.1.2 Stimulus/Response Sequences</p>
+<p>&nbsp;</p>
+<p>The user input his&nbsp; source and destination&nbsp;&nbsp; in a combobox or select a zone in the city and then click on&nbsp; an icon, they will get a report&nbsp; about the safest way to take showing the probabilities on Google Maps.</p>
+<p>&nbsp;</p>
+<p>3.1.3 Functional Requirements</p>
+<p>&nbsp;</p>
+<p>REQ-1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The user must be using one of the following browsers: Google Chrome, Mozilla Firefox, Safari or Opera.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>3.2</strong>&nbsp;&nbsp;&nbsp; <strong>Reports</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; 3.2.1 Description</p>
+<p>&nbsp;</p>
+<p>After the user inputs his journey&nbsp; they can select the type of report that they would like to view. Because the system&rsquo;s purpose is to help select the best option with less probabilities of an accident.</p>
+<p>&nbsp;</p>
+<p>Also TAS is&nbsp;&nbsp; focus to help emergency systems&nbsp; to be&nbsp; more ready on critical points where most of the accidents happens, and also to do more prevention&nbsp; before the accidents happens.</p>
+<p>&nbsp;</p>
+<p>3.2.2 Stimulus/Response Sequences</p>
+<p>&nbsp;</p>
+<p>When the report is generated the user can toggle checkboxes that will add and remove data sets, toggle between line and dot charts, and show probabilities.</p>
+<p>&nbsp;</p>
+<p>3.2.3 Functional Requirements</p>
+<p>&nbsp;</p>
+<p>REQ-1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The user must be using one of the following browsers: Google Chrome, Mozilla Firefox, Safari or Opera.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>3.3</strong>&nbsp;&nbsp;&nbsp; <strong>Hybrid application</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; 3.4.1 Description and Priority</p>
+<p>&nbsp;</p>
+<p>The project is designed as a hybrid application so final users&nbsp; does not have to be concerned about platforms in&nbsp; order to use the system.</p>
+<p>&nbsp;</p>
+<p>3.4.3 Functional Requirements</p>
+<p>&nbsp;</p>
+<p>REQ-1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The user must be using one of the following browsers: Google Chrome, Mozilla Firefox, Safari, or Opera.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start="4">
+<li><strong> External Interfaces Requirements</strong></li>
+</ol>
+<p><strong>4.1</strong>&nbsp;&nbsp;&nbsp; <strong>User Interfaces</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>The google maps interface is familiar and easy to use.</p>
+<p><strong>&nbsp;<img src="https://1drv.ms/u/s!An3ufr8q1uAggl9-_UQBDB0OA0kn?e=CeCx9Q" alt="" /></strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>After inputting the search, the system will output the results after computing the best routes based on data from last year.</p>
+<p><strong>&nbsp;<img src="https://1drv.ms/u/s!An3ufr8q1uAgglwOCw9YNt_ybKKO?e=G6ZTSx" alt="" /></strong></p>
+<p>System will output the chosen route, with the current conditions computed against last year&rsquo;s conditions on the same day and time.</p>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp;<img src="https://1drv.ms/u/s!An3ufr8q1uAggl5WFVbz-nfFK4-3?e=Z7OvkJ" alt="" /></p>
+<p><strong>4.2</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Hardware Interfaces</strong></p>
+<p>&nbsp;</p>
+<p><em>&nbsp; TAS works on any machine that has an appropriate browser.</em></p>
+<p>&nbsp;</p>
+<p><strong>4.3</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Software Interfaces</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; HTML: Used to display information.</p>
+<p><u>&nbsp;</u></p>
+<p>&nbsp; Java: Used to retrieve information from database.</p>
+<p>&nbsp;</p>
+<p>&nbsp; Javascript: Used to organize the information into reports.</p>
+<p>&nbsp;</p>
+<p>&nbsp; Google Maps API: In order to calculate&nbsp; routes.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start="5">
+<li><strong> Other nonfunctional requirements</strong></li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>5.1</strong>&nbsp;&nbsp;&nbsp; <strong>Performance Requirements</strong></p>
+<p>&nbsp;</p>
+<p>TAS will need to be able to retrieve large amounts of data and process it &nbsp;quickly. The current the acceptable limit from when data is requested to when the report is displayed is five seconds.</p>
+<p>&nbsp;</p>
+<p><strong>5.2</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Safety Requirements</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; TAS is not currently a safety risk as it doesn&rsquo;t have rights to alter the database.</p>
+<p>&nbsp;</p>
+<p><strong>5.3</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Security Requirements</strong></p>
+<p>&nbsp;</p>
+<p>TAS does not have any security risks except potential defacing of the website which must be prevented. For required text fields TAS does not still has privileges to perform an alter&nbsp; on the database.</p>
+<p>&nbsp;</p>
+<p><strong>5.4</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Software Quality Attributes</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp; Availability: TAS needs to be constantly running after deployment.</p>
+<p>&nbsp; Usability: TAS must have an intuitive user interface.</p>
+<p>&nbsp; Expandability: TAS must be easly expanded to incorporate more charts and</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; features</p>
+<p><strong>Appendix A: Glossary</strong></p>
+<p>&nbsp;</p>
+<p>User:&nbsp;&nbsp; Any person using Traffic Accident System.</p>
+<p>&nbsp;</p>
+<p>Developer: Person who is responsible for expanding or maintaining the project.</p>
+<p>&nbsp;</p>
+<p>Alter the Database: Any action that can change data in the database such as the update, insert, and delete operations.</p>
+<p>&nbsp;</p>
+<p>Usability: The level of intuitiveness when using the user interface.</p>
+<p>&nbsp;</p>
+<p>Expandable: Implies a relatively ease when adding new features and reports into the project.</p>
+<p>&nbsp;</p>
+<p>Web Based: An application or website that is not machine specific.</p>
+<p>&nbsp;</p>
+<
+<p>&nbsp;</p>

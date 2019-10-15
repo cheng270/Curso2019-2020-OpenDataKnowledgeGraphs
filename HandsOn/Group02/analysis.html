@@ -1,0 +1,651 @@
+<h1><strong>License analysis steps:</strong></h1>
+<h1><strong>&nbsp;</strong></h1>
+<ol>
+<li>To identify the authoritative dataset publisher. Prior knowledge of who is the rightsholder is essential to assess if that data has been published by (or in behalf of) the rightsholder or an authorized distributor.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Right holder - Editor:</p>
+<p>Ayuntamiento de Madrid</p>
+<p>&nbsp;</p>
+<p>Responsable Unit:</p>
+<p>Direcci&oacute;n General de la Polic&iacute;a Municipal</p>
+<p>&nbsp;</p>
+<ol start="2">
+<li>To find the applicable license. Once having identified the authoritative dataset publisher, and assuming an access to data is obtained, the following places can be checked to determine the license:</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+<li>Browse the web page hosting the data. Typically, licensing information is provided as a text in the HTML footer (possible in separated page), as a well-known icon (e.g., Creative Commons), or as a combination of both.</li>
+</ol>
+<p>&nbsp;</p>
+<p>License</p>
+<p><a href="https://datos.madrid.es/egob/catalogo/aviso-legal">https://datos.madrid.es/egob/catalogo/aviso-legal</a></p>
+<p>Aspects that takes into account (General conditions):</p>
+<p>Autorizaci&oacute;n de reutilizaci&oacute;n y cesi&oacute;n no exclusiva de derechos de propiedad intelectual</p>
+<p>Condiciones generales para la reutilizaci&oacute;n</p>
+<p>Exclusi&oacute;n de responsabilidad</p>
+<p>Responsabilidad de las personas y/o empresas que reutilicen datos</p>
+<p>&nbsp;</p>
+<ol>
+<li>Browse the dataset metadata. For example, for RDF data, looking in the VoiD/DCAT description for structured information. DublinCore license, DublinCore rights, or XHTML license are the most common licensing elements.</li>
+</ol>
+<p>&nbsp;</p>
+<p>https://datos.madrid.es/FWProjects/egob/Catalogo/Seguridad/Ficheros/Estructura_DS_Accidentes_trafico_2010_2018.pdf</p>
+<p>&nbsp;</p>
+<ol>
+<li>Inspect the dataset<strong>, </strong>as licensing information is sometimes present within the data. Comments in XML format, explicit DublinCore labels within the data, and simple textual notes are not uncommon.</li>
+</ol>
+<p>&nbsp;</p>
+<ol>
+<li>Contact the dataset publisher if the above steps have not proven sufficient, or if doubts exist about the applicable license.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Does not apply</p>
+<p>&nbsp;</p>
+<ol start="3">
+<li>To read the license and determine if the terms are satisfactory<strong>. </strong>Licenses are legal texts written with a particular style, but they are usually not long in extent and are easily understandable. If the intended uses of the dataset match the waived rights in the license, and the required conditions are satisfied, then the resource can be used.</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><strong>Data source analysis:</strong></h1>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="116">
+<p><strong>#</strong></p>
+</td>
+<td width="308">
+<p><strong>Column</strong></p>
+</td>
+<td width="143">
+<p><strong>Type</strong></p>
+</td>
+<td width="258">
+<p><strong>Comments</strong></p>
+</td>
+<td width="265">
+<p><strong>Range</strong></p>
+</td>
+<td width="381">
+<p><strong>Problems</strong></p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>1</p>
+</td>
+<td width="308">
+<p>Fecha</p>
+</td>
+<td width="143">
+<p>Date</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>01/01/2018 - 31/12/2018</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>2</p>
+</td>
+<td width="308">
+<p>Rango_horario</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>24 opciones - un rango por hora</p>
+</td>
+<td width="265">
+<p>00:00 - 23:59</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>3</p>
+</td>
+<td width="308">
+<p>Dia_semana</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>Lunes a domingo</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>4</p>
+</td>
+<td width="308">
+<p>Distrito</p>
+</td>
+<td width="143">
+<p>Text</p>
+</td>
+<td width="258">
+<p>21 distritos de Madrid, en orden alfab&eacute;tico</p>
+</td>
+<td width="265">
+<p>Arganzuela : Villaverde</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>5</p>
+</td>
+<td width="308">
+<p>Lugar accidente</p>
+</td>
+<td width="143">
+<p>Text</p>
+</td>
+<td width="258">
+<p>4541 lugares diferentes</p>
+</td>
+<td width="265">
+<p>&nbsp;</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>6</p>
+</td>
+<td width="308">
+<p>N&deg;</p>
+</td>
+<td width="143">
+<p>Int</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>0 - 53200</p>
+</td>
+<td width="381">
+<p>Puede existir un error, valor m&aacute;ximo muy alto</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>7</p>
+</td>
+<td width="308">
+<p>N&deg; parte</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>10678 n&uacute;meros diferentes</p>
+</td>
+<td width="265">
+<p>&nbsp;</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>8</p>
+</td>
+<td width="308">
+<p>CPFA Granizo</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>9</p>
+</td>
+<td width="308">
+<p>CPFA Hielo</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>10</p>
+</td>
+<td width="308">
+<p>CPFA Lluvia</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>11</p>
+</td>
+<td width="308">
+<p>CPFA Niebla</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>12</p>
+</td>
+<td width="308">
+<p>CPFA Seco</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>13</p>
+</td>
+<td width="308">
+<p>CPFA Nieve</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>14</p>
+</td>
+<td width="308">
+<p>CPSV Mojada</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>15</p>
+</td>
+<td width="308">
+<p>CPSV Aceite</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>16</p>
+</td>
+<td width="308">
+<p>CPSV Barro</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>17</p>
+</td>
+<td width="308">
+<p>CPSV Grava Suelta</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>18</p>
+</td>
+<td width="308">
+<p>CPSV Hielo</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>19</p>
+</td>
+<td width="308">
+<p>CPSV Seca Y Limpia</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>S&iacute; - No</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>20</p>
+</td>
+<td width="308">
+<p>N&ordm; VICTIMAS</p>
+</td>
+<td width="143">
+<p>Int</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>1 : 19</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>21</p>
+</td>
+<td width="308">
+<p>TIPO ACCIDENTE</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>11 diferentes tipos de accidente</p>
+</td>
+<td width="265">
+<p>&nbsp;</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>22</p>
+</td>
+<td width="308">
+<p>Tipo Vehiculo</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>12 diferentes tipos de veh&iacute;culos</p>
+</td>
+<td width="265">
+<p>&nbsp;</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>23</p>
+</td>
+<td width="308">
+<p>TIPO PERSONA</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>Condutor, peat&oacute;n, testigo, viajero</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>24</p>
+</td>
+<td width="308">
+<p>SEXO</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>&nbsp;</p>
+</td>
+<td width="265">
+<p>Hombre, mujer, no asignado</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>25</p>
+</td>
+<td width="308">
+<p>LESIVIDAD</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>5 tipo diferentes de lesiones</p>
+</td>
+<td width="265">
+<p>&nbsp;</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="116">
+<p>26</p>
+</td>
+<td width="308">
+<p>Tramo Edad</p>
+</td>
+<td width="143">
+<p>String</p>
+</td>
+<td width="258">
+<p>18 opciones de rango de edad</p>
+</td>
+<td width="265">
+<p>&nbsp;</p>
+</td>
+<td width="381">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><strong>Resource naming strategy:</strong></h1>
+<p>&nbsp;</p>
+<p>Developing a resource naming strategy for a dataset is achieved in several steps:</p>
+<p>&nbsp;</p>
+<ol>
+<li>To choose a URI form and an appropriate content negotiation alternative. This step has to define whether hash or slash URIs are going to be used. In the case of choosing slash URIs, it is also needed to choose one of the two specified content negotiation alternatives.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Taking into account the size of the data and that we are going to build an ontology, we will use hash URIs.</p>
+<p>&nbsp;</p>
+<ol start="2">
+<li>To choose a domain for the URIs.</li>
+</ol>
+<p>&nbsp;</p>
+<p>To discuss with the teacher; since we are working with a topic of smart cities, maybe we can use their URIs domain <strong>(</strong><strong>http://smartcity.linkeddata.es/</strong><strong>), </strong>if this can not happen we have to create a PURL, for example <strong>(</strong><strong>http://purl.org/linked-data/accidents-in-Madrid</strong><strong>).</strong></p>
+<p>&nbsp;</p>
+<ol start="3">
+<li>To choose a path for the URIs. The strategy for the path of a URI should include choosing the folder on the server if necessary (e.g., <em>energycompany.com/</em><strong><em>about</em></strong>), and together with this folder the domain forms the base URI.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Two scenarios.</p>
+<ol>
+<li>Using smart cities domain: we have to create a subfolder that will be add to the domain. Example of folder name : accidents-in-Madrid</li>
+<li>Creating a purl: also, we have to create a subfolder.</li>
+</ol>
+<p>&nbsp;</p>
+<ol start="4">
+<li>To choose a pattern for ontology classes and properties in the ontology, as well as for individuals (e.g., a name of the class or property can be contained in the path of the URI of that class or property).</li>
+</ol>
+<p>&nbsp;</p>
+<p>Following the tips of the smart cities document, we will build the URIs as a follow (depending on the domain):</p>
+<p>&nbsp;</p>
+<p>Ontology model classes:</p>
+<ol>
+<li>http://smartcity.linkeddata.es/accidents-in-Madrid/ontology/&lt;ontologyName&gt;#className&gt;.</li>
+<li>http://purl.org/linked-data/accidents-in-Madrid /ontology/&lt;ontologyName&gt;#&lt;className&gt;.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Ontology model properties:</p>
+<ol>
+<li>http://smartcity.linkeddata.es/accidents-in-Madrid/ontology/&lt;ontologyName&gt;#propertyName&gt;.</li>
+<li>http://purl.org/linked-data/accidents-in-Madrid /ontology/&lt;ontologyName&gt;#&lt;propertyName&gt;.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Instances:</p>
+<ol>
+<li>http://smartcity.linkeddata.es/accidents-in-Madrid/resource/&lt;className&gt;#identifier&gt;.</li>
+<li>http://purl.org/linked-data/accidents-in-Madrid /resource/&lt;className&gt;#identifier&gt;.</li>
+</ol>
+<p>&nbsp;</p>
