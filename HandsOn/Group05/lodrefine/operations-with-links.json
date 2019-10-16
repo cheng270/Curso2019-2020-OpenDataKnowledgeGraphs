@@ -1,0 +1,5120 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column @id using expression grel:value.replace(\"http://environment.data.gov.uk/water-quality/data/\", \"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "@id",
+    "expression": "grel:value.replace(\"http://environment.data.gov.uk/water-quality/data/\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column sample.samplingPoint using expression grel:value.replace(\"http://environment.data.gov.uk/water-quality/id/\", \"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.samplingPoint",
+    "expression": "grel:value.replace(\"http://environment.data.gov.uk/water-quality/id/\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column sample.samplingPoint.notation",
+    "columnName": "sample.samplingPoint.notation"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column codedResultInterpretation.interpretation",
+    "columnName": "codedResultInterpretation.interpretation"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column sample.sampleDateTime using expression value.toDate()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.sampleDateTime",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_label",
+              "curie": "wq:Determinand_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_definition",
+              "curie": "wq:Determinand_definition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_notation",
+              "curie": "wq:Determinand_notation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.notation"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Result_value",
+              "curie": "wq:Result_value",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_unit",
+              "curie": "wq:Determinand_unit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#MaterialType_label",
+              "curie": "wq:MaterialType_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Unique_samplingPoint at index 2 based on column sample.samplingPoint using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Unique_samplingPoint",
+    "columnInsertIndex": 2,
+    "baseColumnName": "sample.samplingPoint",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/blank-down",
+    "description": "Blank down cells in column Unique_samplingPoint",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unique_samplingPoint"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_label",
+              "curie": "wq:Determinand_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_definition",
+              "curie": "wq:Determinand_definition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_notation",
+              "curie": "wq:Determinand_notation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.notation"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Result_value",
+              "curie": "wq:Result_value",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_unit",
+              "curie": "wq:Determinand_unit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#MaterialType_label",
+              "curie": "wq:MaterialType_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_easting",
+              "curie": "wq:SamplingPoint_easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_northing",
+              "curie": "wq:SamplingPoint_northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_label",
+              "curie": "wq:Determinand_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_definition",
+              "curie": "wq:Determinand_definition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_notation",
+              "curie": "wq:Determinand_notation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.notation"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Result_value",
+              "curie": "wq:Result_value",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_unit",
+              "curie": "wq:Determinand_unit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#MaterialType_label",
+              "curie": "wq:MaterialType_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_easting",
+              "curie": "wq:SamplingPoint_easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_northing",
+              "curie": "wq:SamplingPoint_northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.samplingPoint to samplingPoint",
+    "oldColumnName": "sample.samplingPoint",
+    "newColumnName": "samplingPoint"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.samplingPoint.label to samplingPoint.label",
+    "oldColumnName": "sample.samplingPoint.label",
+    "newColumnName": "samplingPoint.label"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.sampleDateTime to sampleDateTime",
+    "oldColumnName": "sample.sampleDateTime",
+    "newColumnName": "sampleDateTime"
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column determinand.label",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "2,3,5,6 TETR",
+          "2,3,5,6-Tetr"
+        ],
+        "to": "2,3,5,6 TeTr"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Unique_determinand at index 8 based on column determinand.notation using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Unique_determinand",
+    "columnInsertIndex": 8,
+    "baseColumnName": "determinand.notation",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Unique_determinand using expression grel:\"determinand/\" + value",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Unique_determinand",
+    "expression": "grel:\"determinand/\" + value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/row-reorder",
+    "description": "Reorder rows",
+    "mode": "record-based",
+    "sorting": {
+      "criteria": [
+        {
+          "reverse": false,
+          "caseSensitive": false,
+          "column": "Unique_determinand",
+          "valueType": "string",
+          "blankPosition": 2,
+          "errorPosition": 1
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/blank-down",
+    "description": "Blank down cells in column Unique_determinand",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Unique_determinand"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "determinand.notation"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "determinand.notation"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Unique_determinand",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column determinand.notation using expression value.toString()",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.notation",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Unique_determinand",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/recon",
+    "description": "Reconcile cells in column determinand.definition to type Q11173",
+    "columnName": "determinand.definition",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q11173",
+        "name": "chemical compound"
+      },
+      "autoMatch": true,
+      "columnDetails": []
+    },
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/recon",
+    "description": "Reconcile cells in column determinand.label to type Q11173",
+    "columnName": "determinand.label",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q11173",
+        "name": "chemical compound"
+      },
+      "autoMatch": true,
+      "columnDetails": []
+    },
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/recon",
+    "description": "Reconcile cells in column determinand.unit.label to type Q47574",
+    "columnName": "determinand.unit.label",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q47574",
+        "name": "unit of measurement"
+      },
+      "autoMatch": true,
+      "columnDetails": []
+    },
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column determinand.unit.label to determinand.unit",
+    "oldColumnName": "determinand.unit.label",
+    "newColumnName": "determinand.unit"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.sampledMaterialType.label to sampledMaterialType",
+    "oldColumnName": "sample.sampledMaterialType.label",
+    "newColumnName": "sampledMaterialType"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.isComplianceSample to isComplianceSample",
+    "oldColumnName": "sample.isComplianceSample",
+    "newColumnName": "isComplianceSample"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.purpose.label to purpose",
+    "oldColumnName": "sample.purpose.label",
+    "newColumnName": "purpose"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.samplingPoint.easting to samplingPoint.easting",
+    "oldColumnName": "sample.samplingPoint.easting",
+    "newColumnName": "samplingPoint.easting"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.samplingPoint.northing to samplingPoint.northing",
+    "oldColumnName": "sample.samplingPoint.northing",
+    "newColumnName": "samplingPoint.northing"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sampledMaterialType"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "purpose"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Unique_determinand",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic ammonia (Q4087) for cells containing \"Ammonia(N)\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Ammonia(N)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4087",
+      "name": "ammonia",
+      "score": 88,
+      "types": [
+        "Q11173",
+        "Q4832226"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic ammonia (Q4087) for cells containing \"Ammonia(N)\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Ammonia(N)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4087",
+      "name": "ammonia",
+      "score": 88,
+      "types": [
+        "Q11173",
+        "Q4832226"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic 2,2'-oxybisethanethiol (Q27287386) for cells containing \"2,2' Oxybise\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q103230",
+                "l": "Q103230"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "2,2' Oxybise",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27287386",
+      "name": "2,2'-oxybisethanethiol",
+      "score": 69,
+      "types": [
+        "Q11173"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic diethylene glycol (Q421902) for cells containing \"Diethylene glycol :- {2,2-Oxybisethanol}\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q103230",
+                "l": "Q103230"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Diethylene glycol :- {2,2-Oxybisethanol}",
+    "judgment": "matched",
+    "match": {
+      "id": "Q421902",
+      "name": "diethylene glycol",
+      "score": 65,
+      "types": [
+        "Q421916",
+        "Q103230",
+        "Q11173"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic nitrogen (Q627) for cells containing \"Nitrogen - N\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q185056",
+                "l": "Q185056"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Nitrogen - N",
+    "judgment": "matched",
+    "match": {
+      "id": "Q627",
+      "name": "nitrogen",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic sulfate (Q25997675) for cells containing \"Sulphate SO4\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q189567",
+                "l": "Q189567"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Sulphate SO4",
+    "judgment": "matched",
+    "match": {
+      "id": "Q25997675",
+      "name": "sulfate",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic magnesium (Q660) for cells containing \"Magnesium-Mg\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q189567",
+                "l": "Q189567"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Magnesium-Mg",
+    "judgment": "matched",
+    "match": {
+      "id": "Q660",
+      "name": "magnesium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic magnesium (Q660) for cells containing \"Magnesium\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q189567",
+                "l": "Q189567"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Magnesium",
+    "judgment": "matched",
+    "match": {
+      "id": "Q660",
+      "name": "magnesium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic sulfate (Q25997675) for cells containing \"Sulphate as SO4\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q189567",
+                "l": "Q189567"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Sulphate as SO4",
+    "judgment": "matched",
+    "match": {
+      "id": "Q25997675",
+      "name": "sulfate",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic ethylene glycol (Q194207) for cells containing \"Ethan1,2diol\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009059",
+                "l": "Q21009059"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Ethan1,2diol",
+    "judgment": "matched",
+    "match": {
+      "id": "Q194207",
+      "name": "ethylene glycol",
+      "score": 85,
+      "types": [
+        "Q6985085",
+        "Q11173",
+        "Q21009059"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic ethylene glycol (Q194207) for cells containing \"Ethylene glycol :- {Ethan-1,2-diol}\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009059",
+                "l": "Q21009059"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Ethylene glycol :- {Ethan-1,2-diol}",
+    "judgment": "matched",
+    "match": {
+      "id": "Q194207",
+      "name": "ethylene glycol",
+      "score": 67,
+      "types": [
+        "Q6985085",
+        "Q11173",
+        "Q21009059"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic Glycols (Q21761907) for cells containing \"Glycols\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009059",
+                "l": "Q21009059"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Glycols",
+    "judgment": "matched",
+    "match": {
+      "id": "Q21761907",
+      "name": "Glycols",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic Glycols (Q21761907) for cells containing \"Glycols: Total\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009059",
+                "l": "Q21009059"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Glycols: Total",
+    "judgment": "matched",
+    "match": {
+      "id": "Q21761907",
+      "name": "Glycols",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic potassium (Q703) for cells containing \"Potassium- K\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q25403900",
+                "l": "Q25403900"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Potassium- K",
+    "judgment": "matched",
+    "match": {
+      "id": "Q703",
+      "name": "potassium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic potassium (Q703) for cells containing \"Potassium\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q25403900",
+                "l": "Q25403900"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Potassium",
+    "judgment": "matched",
+    "match": {
+      "id": "Q703",
+      "name": "potassium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic nitrite ion (Q213788) for cells containing \"Nitrite-N\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q3269344",
+                "l": "Q3269344"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Nitrite-N",
+    "judgment": "matched",
+    "match": {
+      "id": "Q213788",
+      "name": "nitrite ion",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic nitrite ion (Q213788) for cells containing \"Nitrite as N\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q3269344",
+                "l": "Q3269344"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Nitrite as N",
+    "judgment": "matched",
+    "match": {
+      "id": "Q213788",
+      "name": "nitrite ion",
+      "score": 80,
+      "types": [
+        "Q3269344",
+        "Q424418"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic sodium (Q658) for cells containing \"Sodium - Na\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q407595",
+                "l": "Q407595"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Sodium - Na",
+    "judgment": "matched",
+    "match": {
+      "id": "Q658",
+      "name": "sodium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic sodium (Q658) for cells containing \"Sodium\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q407595",
+                "l": "Q407595"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Sodium",
+    "judgment": "matched",
+    "match": {
+      "id": "Q658",
+      "name": "sodium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic diethylene glycol (Q421902) for cells containing \"Diethylene glycol :- {2,2-Oxybisethanol}\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q421916",
+                "l": "Q421916"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Diethylene glycol :- {2,2-Oxybisethanol}",
+    "judgment": "matched",
+    "match": {
+      "id": "Q421902",
+      "name": "diethylene glycol",
+      "score": 65,
+      "types": [
+        "Q421916",
+        "Q103230",
+        "Q11173"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic diethylene glycol (Q421902) for cells containing \"2,2' Oxybise\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.unit: judgment",
+          "selectBlank": false,
+          "columnName": "determinand.unit",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        },
+        {
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "determinand.label: best candidate's types",
+          "selectBlank": false,
+          "columnName": "determinand.label",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q421916",
+                "l": "Q421916"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "2,2' Oxybise",
+    "judgment": "matched",
+    "match": {
+      "id": "Q421902",
+      "name": "diethylene glycol",
+      "score": 79,
+      "types": [
+        "Q421916",
+        "Q103230",
+        "Q11173"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic Mercury (Q308) for cells containing \"Mercury - Hg\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Mercury - Hg",
+    "judgment": "matched",
+    "match": {
+      "id": "Q308",
+      "name": "Mercury",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic cadmium (Q1091) for cells containing \"Cadmium - Cd\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Cadmium - Cd",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1091",
+      "name": "cadmium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic pentachlorophenol (Q423922) for cells containing \"Pentachlrphl\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Pentachlrphl",
+    "judgment": "matched",
+    "match": {
+      "id": "Q423922",
+      "name": "pentachlorophenol",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic carbon tetrachloride (Q225045) for cells containing \"Carbon tetrachloride :- {Tetrachloromethane}\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Carbon tetrachloride :- {Tetrachloromethane}",
+    "judgment": "matched",
+    "match": {
+      "id": "Q225045",
+      "name": "carbon tetrachloride",
+      "score": 69,
+      "types": [
+        "Q11173",
+        "Q21074597",
+        "Q11861249"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic mercury (Q925) for cells containing \"Mercury\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Mercury",
+    "judgment": "matched",
+    "match": {
+      "id": "Q925",
+      "name": "mercury",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic mercury (Q925) for cells containing \"Mercury - Hg\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Mercury - Hg",
+    "judgment": "matched",
+    "match": {
+      "id": "Q925",
+      "name": "mercury",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic cadmium (Q1091) for cells containing \"Cadmium\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Cadmium",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1091",
+      "name": "cadmium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic nitrate (Q49916468) for cells containing \"Nitrate-N\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Nitrate-N",
+    "judgment": "matched",
+    "match": {
+      "id": "Q49916468",
+      "name": "nitrate",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic nitrate (Q49916468) for cells containing \"Nitrate as N\" in column determinand.definition",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.definition",
+    "similarValue": "Nitrate as N",
+    "judgment": "matched",
+    "match": {
+      "id": "Q49916468",
+      "name": "nitrate",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic sulfide (Q221205) for cells containing \"Sulphide - S\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Sulphide - S",
+    "judgment": "matched",
+    "match": {
+      "id": "Q221205",
+      "name": "sulfide",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic cyanide (Q55076544) for cells containing \"Cyanide - CN\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Cyanide - CN",
+    "judgment": "matched",
+    "match": {
+      "id": "Q55076544",
+      "name": "cyanide",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic bromide ion (Q31208886) for cells containing \"Bromide Ion\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Bromide Ion",
+    "judgment": "matched",
+    "match": {
+      "id": "Q31208886",
+      "name": "bromide ion",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic chloride ion (Q108200) for cells containing \"Chloride Ion\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Chloride Ion",
+    "judgment": "matched",
+    "match": {
+      "id": "Q108200",
+      "name": "chloride ion",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic fluoride (Q44793182) for cells containing \"Fluoride - F\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Fluoride - F",
+    "judgment": "matched",
+    "match": {
+      "id": "Q44793182",
+      "name": "fluoride",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic calcium (Q706) for cells containing \"Calcium - Ca\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Calcium - Ca",
+    "judgment": "matched",
+    "match": {
+      "id": "Q706",
+      "name": "calcium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic terbutryn (Q2404338) for cells containing \"Terbutryne\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Terbutryne",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2404338",
+      "name": "terbutryn",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic chlorpropham (Q904901) for cells containing \"Chloroprophm\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Chloroprophm",
+    "judgment": "matched",
+    "match": {
+      "id": "Q904901",
+      "name": "chlorpropham",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic chromium (Q725) for cells containing \"Chromium -Cr\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Chromium -Cr",
+    "judgment": "matched",
+    "match": {
+      "id": "Q725",
+      "name": "chromium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic methylene chloride (Q421748) for cells containing \"DiClMe\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q10913792",
+                "l": "Q10913792"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "DiClMe",
+    "judgment": "matched",
+    "match": {
+      "id": "Q421748",
+      "name": "methylene chloride",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic tellurium (Q1100) for cells containing \"Tellurium\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q1190435",
+                "l": "Q1190435"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Tellurium",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1100",
+      "name": "tellurium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic dichlorobenzene (Q1209403) for cells containing \"1,2-DCB\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q1209403",
+                "l": "Q1209403"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "1,2-DCB",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1209403",
+      "name": "dichlorobenzene",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic strontium (Q938) for cells containing \"Strontium-Sr\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q1325627",
+                "l": "Q1325627"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Strontium-Sr",
+    "judgment": "matched",
+    "match": {
+      "id": "Q938",
+      "name": "strontium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic dichlorprop (Q148946) for cells containing \"Dichlorprop\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q134856",
+                "l": "Q134856"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Dichlorprop",
+    "judgment": "matched",
+    "match": {
+      "id": "Q148946",
+      "name": "dichlorprop",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic fenoprop (Q3092689) for cells containing \"Fenoprop\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q134856",
+                "l": "Q134856"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Fenoprop",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3092689",
+      "name": "fenoprop",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic uranium (Q1098) for cells containing \"Uranium - U\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q1369686",
+                "l": "Q1369686"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Uranium - U",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1098",
+      "name": "uranium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic trichloroethane (Q161268) for cells containing \"1,1,1-TCA\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q201448",
+                "l": "Q201448"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "1,1,1-TCA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q161268",
+      "name": "trichloroethane",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic 1,1-dichloroethylene (Q161284) for cells containing \"1,1-Dichloro\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009053",
+                "l": "Q21009053"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "1,1-Dichloro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q161284",
+      "name": "1,1-dichloroethylene",
+      "score": 86,
+      "types": [
+        "Q11173",
+        "Q21009053",
+        "Q21074597",
+        "Q407595"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic Dichloropropane (Q5272485) for cells containing \"1,3 -DICHLOR\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009056",
+                "l": "Q21009056"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "1,3 -DICHLOR",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5272485",
+      "name": "Dichloropropane",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic trimethylbenzenes (Q2453386) for cells containing \"1,2,4-Trimet\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009057",
+                "l": "Q21009057"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "1,2,4-Trimet",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2453386",
+      "name": "trimethylbenzenes",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic 4-chloro-2-cresol (Q27105510) for cells containing \"p-C-o-Cresol\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009058",
+                "l": "Q21009058"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "p-C-o-Cresol",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27105510",
+      "name": "4-chloro-2-cresol",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic isophorone (Q415519) for cells containing \"Isophorone\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q21009058",
+                "l": "Q21009058"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Isophorone",
+    "judgment": "matched",
+    "match": {
+      "id": "Q415519",
+      "name": "isophorone",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic Azobenzene (Q27444428) for cells containing \"Azobenzene\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q27444428",
+                "l": "Q27444428"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Azobenzene",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27444428",
+      "name": "Azobenzene",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic zinc (Q758) for cells containing \"Zinc - as Zn\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q2991378",
+                "l": "Q2991378"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Zinc - as Zn",
+    "judgment": "matched",
+    "match": {
+      "id": "Q758",
+      "name": "zinc",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic nickel (Q744) for cells containing \"Nickel - Ni\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q36496",
+                "l": "Q36496"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Nickel - Ni",
+    "judgment": "matched",
+    "match": {
+      "id": "Q744",
+      "name": "nickel",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic phenol (Q130336) for cells containing \"Phenol\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q407142",
+                "l": "Q407142"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Phenol",
+    "judgment": "matched",
+    "match": {
+      "id": "Q130336",
+      "name": "phenol",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic benzo[a]pyrene (Q306051) for cells containing \"B-[a]-pyrene\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q407212",
+                "l": "Q407212"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "B-[a]-pyrene",
+    "judgment": "matched",
+    "match": {
+      "id": "Q306051",
+      "name": "benzo[a]pyrene",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic trichloroethylene (Q407936) for cells containing \"Trichloroeth\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q5457310",
+                "l": "Q5457310"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Trichloroeth",
+    "judgment": "matched",
+    "match": {
+      "id": "Q407936",
+      "name": "trichloroethylene",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic lead (Q708) for cells containing \"Lead - as Pb\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q55488100",
+                "l": "Q55488100"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Lead - as Pb",
+    "judgment": "matched",
+    "match": {
+      "id": "Q708",
+      "name": "lead",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic lithium (Q568) for cells containing \"Lithium - Li\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q55511415",
+                "l": "Q55511415"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Lithium - Li",
+    "judgment": "matched",
+    "match": {
+      "id": "Q568",
+      "name": "lithium",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic 4-chlorophenoxyacetic acid (Q4637113) for cells containing \"4-CAA\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q63436532",
+                "l": "Q63436532"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "4-CAA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4637113",
+      "name": "4-chlorophenoxyacetic acid",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic tin (Q1096) for cells containing \"Tin - as Sn\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q687521",
+                "l": "Q687521"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Tin - as Sn",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1096",
+      "name": "tin",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic aluminum (Q663) for cells containing \"Aluminium-Al\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q784823",
+                "l": "Q784823"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Aluminium-Al",
+    "judgment": "matched",
+    "match": {
+      "id": "Q663",
+      "name": "aluminum",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic chloroform (Q172275) for cells containing \"Chloroform\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q909194",
+                "l": "Q909194"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "Chloroform",
+    "judgment": "matched",
+    "match": {
+      "id": "Q172275",
+      "name": "chloroform",
+      "score": 100,
+      "types": [
+        "null"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column ChemicalCompounds at index 6 based on column determinand.label using expression grel:\"https://www.wikidata.org/wiki/\" +cell.recon.match.id",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: judgment",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "newColumnName": "ChemicalCompounds",
+    "columnInsertIndex": 6,
+    "baseColumnName": "determinand.label",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\" +cell.recon.match.id",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column determinand.notation using expression value.toNumber()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.notation",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ChemicalCompounds using expression null",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ChemicalCompounds",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sampledMaterialType"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "purpose"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Unique_determinand",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2002/07/owl#sameAs",
+              "curie": "owl:sameAs",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "ChemicalCompounds",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
