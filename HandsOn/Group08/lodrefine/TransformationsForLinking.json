@@ -682,5 +682,217 @@
         }
       ]
     }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://localhost:3333/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "DISTRICT",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#District",
+              "curie": "http://www.smartcityflow.org/ontologies#District"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasNumber",
+              "curie": "http://www.smartcityflow.org/ontologies#hasNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT_NUMBER"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "LOCATION",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#Location",
+              "curie": "http://www.smartcityflow.org/ontologies#Location"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasStreetName",
+              "curie": "http://www.smartcityflow.org/ontologies#hasStreetName",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NAME"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasStreetNumber",
+              "curie": "http://www.smartcityflow.org/ontologies#hasStreetNumber",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "STREET_NUMBER"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasDistrict",
+              "curie": "http://www.smartcityflow.org/ontologies#hasDistrict",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DISTRICT"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasLatitude",
+              "curie": "http://www.smartcityflow.org/ontologies#hasLatitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LATITUDE"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasLength",
+              "curie": "http://www.smartcityflow.org/ontologies#hasLength",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LENGTH"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasPostalCode",
+              "curie": "http://www.smartcityflow.org/ontologies#hasPostalCode",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "POSTAL_CODE"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "IDENTIFICATOR",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#Sensor",
+              "curie": "http://www.smartcityflow.org/ontologies#Sensor"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#isAtLocation",
+              "curie": "http://www.smartcityflow.org/ontologies#isAtLocation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "LOCATION"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasMeasure",
+              "curie": "http://www.smartcityflow.org/ontologies#hasMeasure",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "MEASURE"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "MEASURE",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#Measure",
+              "curie": "http://www.smartcityflow.org/ontologies#Measure"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasNumberOf",
+              "curie": "http://www.smartcityflow.org/ontologies#hasNumberOf",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "PEDESTRIANS"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasDate",
+              "curie": "http://www.smartcityflow.org/ontologies#hasDate",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "DATE"
+              }
+            },
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#hasHour",
+              "curie": "http://www.smartcityflow.org/ontologies#hasHour",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "HOUR"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "STREET_NAME",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smartcityflow.org/ontologies#Street",
+              "curie": "http://www.smartcityflow.org/ontologies#Street"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
   }
 ]
