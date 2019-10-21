@@ -13,30 +13,45 @@
 #    Object Properties
 #################################################################
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#has_victim
-:has_victim rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:domain :Accident ;
-            rdfs:range :Casualty .
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#has_casualty
+:has_casualty rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Accident ;
+              rdfs:range :Casualty .
 
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#involves
-:involves rdf:type owl:ObjectProperty ;
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#has_datetime
+:has_datetime rdf:type owl:ObjectProperty ;
+              rdfs:domain :Accident ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :date ;
+                           owl:someValuesFrom owl:rational
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :time ;
+                           owl:someValuesFrom owl:rational
+                         ] .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment
+:has_environment rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Accident ;
+                 rdfs:range :environment .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#has_time
+:has_time rdf:type owl:ObjectProperty ;
           rdfs:domain :Accident ;
-          rdfs:range :Vehicle .
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :time ;
+                       owl:someValuesFrom owl:rational
+                     ] .
 
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#takes_place_in
-:takes_place_in rdf:type owl:ObjectProperty ;
-                rdfs:domain :Accident ;
-                rdfs:range :environment .
-
-
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#victim_of
-:victim_of rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :Casualty ;
-           rdfs:range :Accident .
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#involves_vehicle
+:involves_vehicle rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Accident ;
+                  rdfs:range :Vehicle .
 
 
 #################################################################
@@ -104,13 +119,11 @@
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Lighting_Conditions
-:Lighting_Conditions rdf:type owl:Class ;
-                     rdfs:subClassOf :environment .
+:Lighting_Conditions rdf:type owl:Class .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Road_profil
-:Road_profil rdf:type owl:Class ;
-             rdfs:subClassOf :environment .
+:Road_profil rdf:type owl:Class .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Severity
@@ -128,8 +141,7 @@
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Weather_condition
-:Weather_condition rdf:type owl:Class ;
-                   rdfs:subClassOf :environment .
+:Weather_condition rdf:type owl:Class .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#environment
@@ -142,8 +154,7 @@
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#surface-condition
-:surface-condition rdf:type owl:Class ;
-                   rdfs:subClassOf :environment .
+:surface-condition rdf:type owl:Class .
 
 
 #################################################################
