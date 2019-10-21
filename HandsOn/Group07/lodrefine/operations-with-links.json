@@ -219,194 +219,9 @@
     "op": "rdf-extension/save-rdf-schema",
     "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "",
-          "uri": ""
-        },
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "poll_sens",
-          "uri": "http://www.airqualitymadrid.es/resource/pollution_sensor/"
-        },
-        {
-          "name": "meas",
-          "uri": "http://www.airqualitymadrid.es/resource/measurement/"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "poll",
-          "uri": "http://www.airqualitymadrid.es/resource/pollutant/"
-        },
-        {
-          "name": "aqm",
-          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
-        },
-        {
-          "name": "addr",
-          "uri": "http://www.airqualitymadrid.es/resource/address/"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.airqualitymadrid.es/resource/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "station_id",
-          "expression": "\"pollution_sensor/\"+value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
-              "curie": ":hasCollected",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "measurement_id",
-                "expression": "\"measurement/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
-                    "curie": ":hasMeasurementDate",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_date",
-                      "expression": "value",
-                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
-                      "isRowNumberCell": false
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
-                    "curie": ":hasPollutant",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "pollutant",
-                      "expression": "\"pollutant/\"+value",
-                      "isRowNumberCell": false,
-                      "links": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
-                          "curie": ":hasPollutantName",
-                          "target": {
-                            "nodeType": "cell-as-literal",
-                            "columnName": "pollutant_name",
-                            "expression": "value",
-                            "isRowNumberCell": false
-                          }
-                        }
-                      ],
-                      "rdfTypes": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
-                          "curie": ":Pollutant"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
-                    "curie": ":hasMeasurementValue",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_value",
-                      "expression": "value",
-                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
-                    "curie": ":Measurement"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
-              "curie": ":placedIn",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "station_name",
-                "expression": "\"address/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
-                    "curie": ":hasAddress",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "station_address",
-                      "expression": "value",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
-                    "curie": ":Address"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude",
-              "curie": ":hasLatitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lat",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude",
-              "curie": ":hasLongitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lon",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation",
-              "curie": ":hasSensorElevation",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_elevation",
-                "expression": "value",
-                "valueType": "http://www.w3.org/2001/XMLSchema#int",
-                "isRowNumberCell": false
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
-              "curie": ":PollutionSensor"
-            }
-          ]
-        }
-      ]
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
     }
   },
   {
@@ -975,6 +790,596 @@
     "op": "rdf-extension/save-rdf-schema",
     "description": "Save RDF schema skeleton",
     "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "",
+          "uri": ""
+        }
+      ],
+      "baseUri": "http://www.airqualitymadrid.es/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "links": [],
+          "rdfTypes": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "Benzene",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2270",
+      "name": "benzene",
+      "types": [
+        "Q11173",
+        "Q21009055",
+        "Q21074597"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item benzene (Q2270) for cells containing \"Benzene\" in column pollutant_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "pollutant_name",
+          "expression": "value",
+          "columnName": "pollutant_name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Hydrocarbon",
+                "l": "Hydrocarbon"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "Hydrocarbon",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43648",
+      "name": "hydrocarbon",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item hydrocarbon (Q43648) for cells containing \"Hydrocarbon\" in column pollutant_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "pollutant_name",
+          "expression": "value",
+          "columnName": "pollutant_name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Metane",
+                "l": "Metane"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "Metane",
+    "judgment": "matched",
+    "match": {
+      "id": "Q37129",
+      "name": "methane",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item methane (Q37129) for cells containing \"Metane\" in column pollutant_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "pollutant_name",
+          "expression": "value",
+          "columnName": "pollutant_name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Nitrogen Dioxide",
+                "l": "Nitrogen Dioxide"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "Nitrogen Dioxide",
+    "judgment": "matched",
+    "match": {
+      "id": "Q207895",
+      "name": "nitrogen dioxide",
+      "types": [
+        "Q11173"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item nitrogen dioxide (Q207895) for cells containing \"Nitrogen Dioxide\" in column pollutant_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "pollutant_name",
+          "expression": "value",
+          "columnName": "pollutant_name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Ozone",
+                "l": "Ozone"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "Ozone",
+    "judgment": "matched",
+    "match": {
+      "id": "Q36933",
+      "name": "ozone",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item ozone (Q36933) for cells containing \"Ozone\" in column pollutant_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "pollutant_name",
+          "expression": "value",
+          "columnName": "pollutant_name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PM 10 (excluding PM 2.5)",
+                "l": "PM 10 (excluding PM 2.5)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "PM 10 (excluding PM 2.5)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q48035980",
+      "name": "PM 10 (excluding PM 2.5)",
+      "types": [
+        ""
+      ],
+      "score": 50
+    },
+    "shareNewTopics": false,
+    "description": "Match item PM 10 (excluding PM 2.5) (Q48035980) for cells containing \"PM 10 (excluding PM 2.5)\" in column pollutant_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "pollutant_name",
+          "expression": "value",
+          "columnName": "pollutant_name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PM 2.5",
+                "l": "PM 2.5"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "PM 2.5",
+    "judgment": "matched",
+    "match": {
+      "id": "Q48035814",
+      "name": "PM 2.5",
+      "types": [
+        ""
+      ],
+      "score": 50
+    },
+    "shareNewTopics": false,
+    "description": "Match item PM 2.5 (Q48035814) for cells containing \"PM 2.5\" in column pollutant_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "pollutant_name",
+          "expression": "value",
+          "columnName": "pollutant_name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Volatile Organic Compound",
+                "l": "Volatile Organic Compound"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "pollutant_name",
+    "similarValue": "Volatile Organic Compound",
+    "judgment": "matched",
+    "match": {
+      "id": "Q910267",
+      "name": "volatile organic compound",
+      "types": [
+        ""
+      ],
+      "score": 50
+    },
+    "shareNewTopics": false,
+    "description": "Match item volatile organic compound (Q910267) for cells containing \"Volatile Organic Compound\" in column pollutant_name"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "",
+          "uri": ""
+        }
+      ],
+      "baseUri": "http://www.airqualitymadrid.es/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "station_id",
+          "expression": "\"pollution_sensor/\"+value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
+              "curie": ":hasCollected",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "measurement_id",
+                "expression": "\"measurement/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
+                    "curie": ":hasMeasurementDate",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_date",
+                      "expression": "value",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
+                    "curie": ":hasPollutant",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "pollutant",
+                      "expression": "\"pollutant/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
+                          "curie": ":hasPollutantName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "pollutant_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
+                          "curie": ":Pollutant"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
+                    "curie": ":Measurement"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
+              "curie": ":PollutionSensor"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "",
+          "uri": ""
+        }
+      ],
+      "baseUri": "http://www.airqualitymadrid.es/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "station_id",
+          "expression": "\"pollution_sensor/\"+value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
+              "curie": ":hasCollected",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "measurement_id",
+                "expression": "\"measurement/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
+                    "curie": ":hasMeasurementDate",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_date",
+                      "expression": "value",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
+                    "curie": ":hasPollutant",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "pollutant",
+                      "expression": "\"pollutant/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
+                          "curie": ":hasPollutantName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "pollutant_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
+                          "curie": ":Pollutant"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
+                    "curie": ":Measurement"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
+              "curie": ":placedIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station_name",
+                "expression": "\"address/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
+                    "curie": ":hasAddress",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "station_address",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
+                    "curie": ":Address"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
+              "curie": ":PollutionSensor"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
       "prefixes": [
         {
           "name": "",
@@ -1050,6 +1455,17 @@
                     }
                   },
                   {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
                     "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
                     "curie": ":hasPollutant",
                     "target": {
@@ -1075,17 +1491,6 @@
                           "curie": ":Pollutant"
                         }
                       ]
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
-                    "curie": ":hasMeasurementValue",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_value",
-                      "expression": "value",
-                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                      "isRowNumberCell": false
                     }
                   }
                 ],
@@ -1114,6 +1519,680 @@
                       "columnName": "station_address",
                       "expression": "value",
                       "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
+                    "curie": ":Address"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude",
+              "curie": ":hasLatitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_lat",
+                "expression": "value",
+                "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude",
+              "curie": ":hasLongitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_lon",
+                "expression": "value",
+                "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation",
+              "curie": ":hasSensorElevation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_elevation",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "isRowNumberCell": false
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
+              "curie": ":PollutionSensor"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "",
+          "uri": ""
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "wiki",
+          "uri": "https://www.wikidata.org/wiki/"
+        },
+        {
+          "name": "poll_sens",
+          "uri": "http://www.airqualitymadrid.es/resource/pollution_sensor/"
+        },
+        {
+          "name": "meas",
+          "uri": "http://www.airqualitymadrid.es/resource/measurement/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "poll",
+          "uri": "http://www.airqualitymadrid.es/resource/pollutant/"
+        },
+        {
+          "name": "aqm",
+          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
+        },
+        {
+          "name": "addr",
+          "uri": "http://www.airqualitymadrid.es/resource/address/"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
+        }
+      ],
+      "baseUri": "http://www.airqualitymadrid.es/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "station_id",
+          "expression": "\"pollution_sensor/\"+value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
+              "curie": ":hasCollected",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "measurement_id",
+                "expression": "\"measurement/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
+                    "curie": ":hasMeasurementDate",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_date",
+                      "expression": "value",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
+                    "curie": ":hasPollutant",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "pollutant",
+                      "expression": "\"pollutant/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
+                          "curie": ":hasPollutantName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "pollutant_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
+                          "curie": ":Pollutant"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
+                    "curie": ":Measurement"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
+              "curie": ":placedIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station_name",
+                "expression": "\"address/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
+                    "curie": ":hasAddress",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "station_address",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
+                    "curie": ":Address"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude",
+              "curie": ":hasLatitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_lat",
+                "expression": "value",
+                "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude",
+              "curie": ":hasLongitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_lon",
+                "expression": "value",
+                "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation",
+              "curie": ":hasSensorElevation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_elevation",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "isRowNumberCell": false
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
+              "curie": ":PollutionSensor"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "",
+          "uri": ""
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "wiki",
+          "uri": "https://www.wikidata.org/wiki/"
+        },
+        {
+          "name": "poll_sens",
+          "uri": "http://www.airqualitymadrid.es/resource/pollution_sensor/"
+        },
+        {
+          "name": "meas",
+          "uri": "http://www.airqualitymadrid.es/resource/measurement/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "poll",
+          "uri": "http://www.airqualitymadrid.es/resource/pollutant/"
+        },
+        {
+          "name": "aqm",
+          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
+        },
+        {
+          "name": "addr",
+          "uri": "http://www.airqualitymadrid.es/resource/address/"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
+        }
+      ],
+      "baseUri": "http://www.airqualitymadrid.es/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "station_id",
+          "expression": "\"pollution_sensor/\"+value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
+              "curie": ":hasCollected",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "measurement_id",
+                "expression": "\"measurement/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
+                    "curie": ":hasMeasurementDate",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_date",
+                      "expression": "value",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
+                    "curie": ":hasPollutant",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "pollutant",
+                      "expression": "\"pollutant/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
+                          "curie": ":hasPollutantName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "pollutant_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
+                          "curie": ":Pollutant"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
+                    "curie": ":Measurement"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
+              "curie": ":placedIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station_name",
+                "expression": "\"address/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
+                    "curie": ":hasAddress",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "station_address",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
+                    "curie": ":Address"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude",
+              "curie": ":hasLatitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_lat",
+                "expression": "value",
+                "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude",
+              "curie": ":hasLongitude",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_lon",
+                "expression": "value",
+                "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation",
+              "curie": ":hasSensorElevation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "station_elevation",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "isRowNumberCell": false
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
+              "curie": ":PollutionSensor"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "",
+          "uri": ""
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "wiki",
+          "uri": "https://www.wikidata.org/wiki/"
+        },
+        {
+          "name": "poll_sens",
+          "uri": "http://www.airqualitymadrid.es/resource/pollution_sensor/"
+        },
+        {
+          "name": "meas",
+          "uri": "http://www.airqualitymadrid.es/resource/measurement/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "poll",
+          "uri": "http://www.airqualitymadrid.es/resource/pollutant/"
+        },
+        {
+          "name": "aqm",
+          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
+        },
+        {
+          "name": "addr",
+          "uri": "http://www.airqualitymadrid.es/resource/address/"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
+        }
+      ],
+      "baseUri": "http://www.airqualitymadrid.es/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "station_id",
+          "expression": "\"pollution_sensor/\"+value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
+              "curie": ":hasCollected",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "measurement_id",
+                "expression": "\"measurement/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
+                    "curie": ":hasMeasurementDate",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_date",
+                      "expression": "value",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
+                    "curie": ":hasPollutant",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "pollutant",
+                      "expression": "\"pollutant/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
+                          "curie": ":hasPollutantName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "pollutant_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
+                          "curie": ":Pollutant"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
+                    "curie": ":Measurement"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
+              "curie": ":placedIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station_name",
+                "expression": "\"address/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
+                    "curie": ":hasAddress",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "station_address",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
                     }
                   }
                 ],
@@ -1172,483 +2251,23 @@
   {
     "op": "core/column-addition",
     "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
+      "facets": [],
       "mode": "row-based"
     },
     "baseColumnName": "pollutant_name",
     "expression": "grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id",
     "onError": "set-to-blank",
     "newColumnName": "pollutant_URI_from_Wikidata",
-    "columnInsertIndex": 10,
-    "description": "Create column pollutant_URI_from_Wikidata at index 10 based on column pollutant_name using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
-  },
-  {
-    "op": "rdf-extension/save-rdf-schema",
-    "description": "Save RDF schema skeleton",
-    "schema": {
-      "prefixes": [
-        {
-          "name": "",
-          "uri": ""
-        },
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "wiki",
-          "uri": "https://www.wikidata.org/wiki/"
-        },
-        {
-          "name": "poll_sens",
-          "uri": "http://www.airqualitymadrid.es/resource/pollution_sensor/"
-        },
-        {
-          "name": "meas",
-          "uri": "http://www.airqualitymadrid.es/resource/measurement/"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "poll",
-          "uri": "http://www.airqualitymadrid.es/resource/pollutant/"
-        },
-        {
-          "name": "aqm",
-          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
-        },
-        {
-          "name": "addr",
-          "uri": "http://www.airqualitymadrid.es/resource/address/"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.airqualitymadrid.es/resource/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "station_id",
-          "expression": "\"pollution_sensor/\"+value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
-              "curie": ":hasCollected",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "measurement_id",
-                "expression": "\"measurement/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
-                    "curie": ":hasMeasurementDate",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_date",
-                      "expression": "value",
-                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
-                      "isRowNumberCell": false
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
-                    "curie": ":hasPollutant",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "pollutant",
-                      "expression": "\"pollutant/\"+value",
-                      "isRowNumberCell": false,
-                      "links": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
-                          "curie": ":hasPollutantName",
-                          "target": {
-                            "nodeType": "cell-as-literal",
-                            "columnName": "pollutant_name",
-                            "expression": "value",
-                            "isRowNumberCell": false
-                          }
-                        },
-                        {
-                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
-                          "curie": "owl:sameAs",
-                          "target": {
-                            "nodeType": "cell-as-resource",
-                            "columnName": "pollutant_URI_from_Wikidata",
-                            "expression": "value",
-                            "isRowNumberCell": false,
-                            "links": [],
-                            "rdfTypes": []
-                          }
-                        }
-                      ],
-                      "rdfTypes": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
-                          "curie": ":Pollutant"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
-                    "curie": ":hasMeasurementValue",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_value",
-                      "expression": "value",
-                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
-                    "curie": ":Measurement"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
-              "curie": ":placedIn",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "station_name",
-                "expression": "\"address/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
-                    "curie": ":hasAddress",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "station_address",
-                      "expression": "value",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
-                    "curie": ":Address"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude",
-              "curie": ":hasLatitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lat",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude",
-              "curie": ":hasLongitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lon",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation",
-              "curie": ":hasSensorElevation",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_elevation",
-                "expression": "value",
-                "valueType": "http://www.w3.org/2001/XMLSchema#int",
-                "isRowNumberCell": false
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
-              "curie": ":PollutionSensor"
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "op": "rdf-extension/save-rdf-schema",
-    "description": "Save RDF schema skeleton",
-    "schema": {
-      "prefixes": [
-        {
-          "name": "",
-          "uri": ""
-        },
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "wiki",
-          "uri": "https://www.wikidata.org/wiki/"
-        },
-        {
-          "name": "poll_sens",
-          "uri": "http://www.airqualitymadrid.es/resource/pollution_sensor/"
-        },
-        {
-          "name": "meas",
-          "uri": "http://www.airqualitymadrid.es/resource/measurement/"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "poll",
-          "uri": "http://www.airqualitymadrid.es/resource/pollutant/"
-        },
-        {
-          "name": "aqm",
-          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
-        },
-        {
-          "name": "addr",
-          "uri": "http://www.airqualitymadrid.es/resource/address/"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.airqualitymadrid.es/resource/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "station_id",
-          "expression": "\"pollution_sensor/\"+value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
-              "curie": ":hasCollected",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "measurement_id",
-                "expression": "\"measurement/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
-                    "curie": ":hasMeasurementDate",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_date",
-                      "expression": "value",
-                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
-                      "isRowNumberCell": false
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
-                    "curie": ":hasPollutant",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "pollutant",
-                      "expression": "\"pollutant/\"+value",
-                      "isRowNumberCell": false,
-                      "links": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
-                          "curie": ":hasPollutantName",
-                          "target": {
-                            "nodeType": "cell-as-literal",
-                            "columnName": "pollutant_name",
-                            "expression": "value",
-                            "isRowNumberCell": false
-                          }
-                        },
-                        {
-                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
-                          "curie": "owl:sameAs",
-                          "target": {
-                            "nodeType": "cell-as-resource",
-                            "columnName": "pollutant_URI_from_Wikidata",
-                            "expression": "value",
-                            "isRowNumberCell": false,
-                            "links": [],
-                            "rdfTypes": []
-                          }
-                        }
-                      ],
-                      "rdfTypes": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
-                          "curie": ":Pollutant"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
-                    "curie": ":hasMeasurementValue",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_value",
-                      "expression": "value",
-                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
-                    "curie": ":Measurement"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
-              "curie": ":placedIn",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "station_name",
-                "expression": "\"address/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
-                    "curie": ":hasAddress",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "station_address",
-                      "expression": "value",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
-                    "curie": ":Address"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude",
-              "curie": ":hasLatitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lat",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude",
-              "curie": ":hasLongitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lon",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation",
-              "curie": ":hasSensorElevation",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_elevation",
-                "expression": "value",
-                "valueType": "http://www.w3.org/2001/XMLSchema#int",
-                "isRowNumberCell": false
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
-              "curie": ":PollutionSensor"
-            }
-          ]
-        }
-      ]
-    }
+    "columnInsertIndex": 11,
+    "description": "Create column pollutant_URI_from_Wikidata at index 11 based on column pollutant_name using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
   },
   {
     "op": "core/recon",
     "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
+      "facets": [],
       "mode": "row-based"
     },
-    "columnName": "station_name",
+    "columnName": "neighbourhood_name",
     "config": {
       "mode": "standard-service",
       "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
@@ -1662,35 +2281,81 @@
       "columnDetails": [],
       "limit": 0
     },
-    "description": "Reconcile cells in column station_name to type Q10267336"
+    "description": "Reconcile cells in column neighbourhood_name to type Q10267336"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
+    "expression": "grel:replace(value,\"Recoletas\",\"Recoletos\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighbourhood_name using expression grel:replace(value,\"Recoletas\",\"Recoletos\")"
   },
   {
     "op": "core/recon-judge-similar-cells",
     "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
+      "facets": [],
       "mode": "row-based"
     },
-    "columnName": "station_name",
+    "columnName": "neighbourhood_name",
+    "similarValue": "Recoletos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3814551",
+      "name": "Recoletos",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Recoletos (Q3814551) for cells containing \"Recoletos\" in column neighbourhood_name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
+    "expression": "grel:replace(value,\"Case_de_Campo\",\"Casa_de_Campo\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighbourhood_name using expression grel:replace(value,\"Case_de_Campo\",\"Casa_de_Campo\")"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
+    "similarValue": "Casa_de_Campo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16302441",
+      "name": "Casa de Campo",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casa de Campo (Q16302441) for cells containing \"Casa_de_Campo\" in column neighbourhood_name"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
     "similarValue": "Cuatro_Caminos",
     "judgment": "matched",
     "match": {
@@ -1702,47 +2367,27 @@
       "score": 57
     },
     "shareNewTopics": false,
-    "description": "Match item Cuatro Caminos (Q5824684) for cells containing \"Cuatro_Caminos\" in column station_name"
+    "description": "Match item Cuatro Caminos (Q5824684) for cells containing \"Cuatro_Caminos\" in column neighbourhood_name"
   },
   {
     "op": "core/recon-judge-similar-cells",
     "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
+      "facets": [],
       "mode": "row-based"
     },
-    "columnName": "station_name",
-    "similarValue": "Casa_de_Campo",
+    "columnName": "neighbourhood_name",
+    "similarValue": "Alameda_de_Osuna",
     "judgment": "matched",
     "match": {
-      "id": "Q16302441",
-      "name": "Casa de Campo",
+      "id": "Q760737",
+      "name": "Alameda de Osuna",
       "types": [
         "Q10267336"
       ],
-      "score": 46
+      "score": 88
     },
     "shareNewTopics": false,
-    "description": "Match item Casa de Campo (Q16302441) for cells containing \"Casa_de_Campo\" in column station_name"
+    "description": "Match item Alameda de Osuna (Q760737) for cells containing \"Alameda_de_Osuna\" in column neighbourhood_name"
   },
   {
     "op": "core/recon-judge-similar-cells",
@@ -1750,17 +2395,17 @@
       "facets": [
         {
           "type": "list",
-          "name": "pollutant_name: judgment",
+          "name": "neighbourhood_name: judgment",
           "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
+          "columnName": "neighbourhood_name",
           "invert": false,
           "omitBlank": false,
           "omitError": false,
           "selection": [
             {
               "v": {
-                "v": "matched",
-                "l": "matched"
+                "v": "none",
+                "l": "none"
               }
             }
           ],
@@ -1770,8 +2415,8 @@
       ],
       "mode": "row-based"
     },
-    "columnName": "station_name",
-    "similarValue": "Farolillo",
+    "columnName": "neighbourhood_name",
+    "similarValue": "Isidro",
     "judgment": "matched",
     "match": {
       "id": "Q3813733",
@@ -1782,7 +2427,7 @@
       "score": 100
     },
     "shareNewTopics": false,
-    "description": "Match item San Isidro (Q3813733) for cells containing \"Farolillo\" in column station_name"
+    "description": "Match item San Isidro (Q3813733) for cells containing \"Isidro\" in column neighbourhood_name"
   },
   {
     "op": "core/recon-judge-similar-cells",
@@ -1790,108 +2435,9 @@
       "facets": [
         {
           "type": "list",
-          "name": "pollutant_name: judgment",
+          "name": "neighbourhood_name: judgment",
           "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Avda_Ramon_y_Cajal",
-    "judgment": "matched",
-    "match": {
-      "id": "Q3814573",
-      "name": "Hispanoamérica",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Hispanoamérica (Q3814573) for cells containing \"Avda_Ramon_y_Cajal\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Escuelas_Aguirre",
-    "judgment": "matched",
-    "match": {
-      "id": "Q3814551",
-      "name": "Recoletos",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Recoletos (Q3814551) for cells containing \"Escuelas_Aguirre\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
+          "columnName": "neighbourhood_name",
           "invert": false,
           "omitBlank": false,
           "omitError": false,
@@ -1909,373 +2455,19 @@
       ],
       "mode": "row-based"
     },
-    "columnName": "station_name",
-    "similarValue": "Urb_Embajada",
-    "judgment": "matched",
-    "match": {
-      "id": "Q807230",
-      "name": "Barajas",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Barajas (Q807230) for cells containing \"Urb_Embajada\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Pza_de_Espana",
-    "judgment": "matched",
-    "match": {
-      "id": "Q1326261",
-      "name": "plaza de España",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item plaza de España (Q1326261) for cells containing \"Pza_de_Espana\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Arturo_Soria",
-    "judgment": "matched",
-    "match": {
-      "id": "Q18475981",
-      "name": "Colina",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Colina (Q18475981) for cells containing \"Arturo_Soria\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Pza_del_Carmen",
-    "judgment": "matched",
-    "match": {
-      "id": "Q2465181",
-      "name": "Sol",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Sol (Q2465181) for cells containing \"Pza_del_Carmen\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Moratalaz",
-    "judgment": "matched",
-    "match": {
-      "id": "Q10391533",
-      "name": "Vinateros",
-      "types": [
-        "Q10267336"
-      ],
-      "score": 32
-    },
-    "shareNewTopics": false,
-    "description": "Match item Vinateros (Q10391533) for cells containing \"Moratalaz\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Barrio_del_Pilar",
+    "columnName": "neighbourhood_name",
+    "similarValue": "Pilar",
     "judgment": "matched",
     "match": {
       "id": "Q3773964",
       "name": "El Pilar",
       "types": [
-        "Q10267336"
-      ],
-      "score": 88
-    },
-    "shareNewTopics": false,
-    "description": "Match item El Pilar (Q3773964) for cells containing \"Barrio_del_Pilar\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Pza_Fernández_Ladreda",
-    "judgment": "matched",
-    "match": {
-      "id": "Q3773949",
-      "name": "Abrantes",
-      "types": [
         ""
       ],
       "score": 100
     },
     "shareNewTopics": false,
-    "description": "Match item Abrantes (Q3773949) for cells containing \"Pza_Fernández_Ladreda\" in column station_name"
+    "description": "Match item El Pilar (Q3773964) for cells containing \"Pilar\" in column neighbourhood_name"
   },
   {
     "op": "core/recon-judge-similar-cells",
@@ -2283,28 +2475,9 @@
       "facets": [
         {
           "type": "list",
-          "name": "pollutant_name: judgment",
+          "name": "neighbourhood_name: judgment",
           "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
+          "columnName": "neighbourhood_name",
           "invert": false,
           "omitBlank": false,
           "omitError": false,
@@ -2322,66 +2495,7 @@
       ],
       "mode": "row-based"
     },
-    "columnName": "station_name",
-    "similarValue": "Sanchinarro",
-    "judgment": "matched",
-    "match": {
-      "id": "Q10388714",
-      "name": "Valdefuentes",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Valdefuentes (Q10388714) for cells containing \"Sanchinarro\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
+    "columnName": "neighbourhood_name",
     "similarValue": "Villaverde",
     "judgment": "matched",
     "match": {
@@ -2393,7 +2507,7 @@
       "score": 80
     },
     "shareNewTopics": false,
-    "description": "Match item Villaverde Alto, Casco Histórico de Villaverde (Q390435) for cells containing \"Villaverde\" in column station_name"
+    "description": "Match item Villaverde Alto, Casco Histórico de Villaverde (Q390435) for cells containing \"Villaverde\" in column neighbourhood_name"
   },
   {
     "op": "core/recon-judge-similar-cells",
@@ -2401,28 +2515,9 @@
       "facets": [
         {
           "type": "list",
-          "name": "pollutant_name: judgment",
+          "name": "neighbourhood_name: judgment",
           "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
+          "columnName": "neighbourhood_name",
           "invert": false,
           "omitBlank": false,
           "omitError": false,
@@ -2440,19 +2535,19 @@
       ],
       "mode": "row-based"
     },
-    "columnName": "station_name",
-    "similarValue": "Barajas_Pueblo",
+    "columnName": "neighbourhood_name",
+    "similarValue": "Casco_de_Barajas",
     "judgment": "matched",
     "match": {
-      "id": "Q21153045",
-      "name": "Barajas (pueblo)",
+      "id": "Q9701730",
+      "name": "Casco Histórico de Barajas",
       "types": [
-        ""
+        "Q10267336"
       ],
-      "score": 46.5
+      "score": 53
     },
     "shareNewTopics": false,
-    "description": "Match item Barajas (pueblo) (Q21153045) for cells containing \"Barajas_Pueblo\" in column station_name"
+    "description": "Match item Casco Histórico de Barajas (Q9701730) for cells containing \"Casco_de_Barajas\" in column neighbourhood_name"
   },
   {
     "op": "core/recon-judge-similar-cells",
@@ -2460,28 +2555,9 @@
       "facets": [
         {
           "type": "list",
-          "name": "pollutant_name: judgment",
+          "name": "neighbourhood_name: judgment",
           "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
+          "columnName": "neighbourhood_name",
           "invert": false,
           "omitBlank": false,
           "omitError": false,
@@ -2499,7 +2575,7 @@
       ],
       "mode": "row-based"
     },
-    "columnName": "station_name",
+    "columnName": "neighbourhood_name",
     "similarValue": "Vallecas",
     "judgment": "matched",
     "match": {
@@ -2511,472 +2587,20 @@
       "score": 57
     },
     "shareNewTopics": false,
-    "description": "Match item Ensanche de Vallecas (Q3847485) for cells containing \"Vallecas\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Mendez_Alvaro",
-    "judgment": "matched",
-    "match": {
-      "id": "Q2000929",
-      "name": "Arganzuela",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Arganzuela (Q2000929) for cells containing \"Mendez_Alvaro\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Parque_del_Retiro",
-    "judgment": "matched",
-    "match": {
-      "id": "Q2002296",
-      "name": "Retiro",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Retiro (Q2002296) for cells containing \"Parque_del_Retiro\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Plaza_Castilla",
-    "judgment": "matched",
-    "match": {
-      "id": "Q3813735",
-      "name": "Castilla",
-      "types": [
-        "Q10267336"
-      ],
-      "score": 73
-    },
-    "shareNewTopics": false,
-    "description": "Match item Castilla (Q3813735) for cells containing \"Plaza_Castilla\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Ensanche_de_Vallecas",
-    "judgment": "matched",
-    "match": {
-      "id": "Q3847485",
-      "name": "Ensanche de Vallecas",
-      "types": [
-        "Q10267336"
-      ],
-      "score": 80
-    },
-    "shareNewTopics": false,
-    "description": "Match item Ensanche de Vallecas (Q3847485) for cells containing \"Ensanche_de_Vallecas\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "El_Pardo",
-    "judgment": "matched",
-    "match": {
-      "id": "Q3314337",
-      "name": "El Pardo",
-      "types": [
-        "Q10267336"
-      ],
-      "score": 88
-    },
-    "shareNewTopics": false,
-    "description": "Match item El Pardo (Q3314337) for cells containing \"El_Pardo\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Tres_Olivos",
-    "judgment": "matched",
-    "match": {
-      "id": "Q31132",
-      "name": "Valverde",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Valverde (Q31132) for cells containing \"Tres_Olivos\" in column station_name"
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "none",
-                "l": "none"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "station_name",
-    "similarValue": "Juan_Carlos_I",
-    "judgment": "matched",
-    "match": {
-      "id": "Q10260772",
-      "name": "Corralejos",
-      "types": [
-        ""
-      ],
-      "score": 100
-    },
-    "shareNewTopics": false,
-    "description": "Match item Corralejos (Q10260772) for cells containing \"Juan_Carlos_I\" in column station_name"
+    "description": "Match item Ensanche de Vallecas (Q3847485) for cells containing \"Vallecas\" in column neighbourhood_name"
   },
   {
     "op": "core/column-addition",
     "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "pollutant_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "pollutant_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "station_name: judgment",
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "columnName": "station_name",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
+      "facets": [],
       "mode": "row-based"
     },
-    "baseColumnName": "station_name",
+    "baseColumnName": "neighbourhood_name",
     "expression": "grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id",
     "onError": "set-to-blank",
     "newColumnName": "neighbourhood_URI_from_Wikidata",
-    "columnInsertIndex": 4,
-    "description": "Create column neighbourhood_URI_from_Wikidata at index 4 based on column station_name using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
+    "columnInsertIndex": 6,
+    "description": "Create column neighbourhood_URI_from_Wikidata at index 6 based on column neighbourhood_name using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
   },
   {
     "op": "rdf-extension/save-rdf-schema",
@@ -3026,6 +2650,10 @@
         {
           "name": "foaf",
           "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
         }
       ],
       "baseUri": "http://www.airqualitymadrid.es/resource/",
@@ -3053,6 +2681,17 @@
                       "columnName": "measurement_date",
                       "expression": "value",
                       "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
                       "isRowNumberCell": false
                     }
                   },
@@ -3095,17 +2734,6 @@
                         }
                       ]
                     }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
-                    "curie": ":hasMeasurementValue",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_value",
-                      "expression": "value",
-                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                      "isRowNumberCell": false
-                    }
                   }
                 ],
                 "rdfTypes": [
@@ -3136,15 +2764,33 @@
                     }
                   },
                   {
-                    "uri": "http://www.w3.org/2002/07/owl#sameAs",
-                    "curie": "owl:sameAs",
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
                     "target": {
                       "nodeType": "cell-as-resource",
-                      "columnName": "neighbourhood_URI_from_Wikidata",
-                      "expression": "value",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
                       "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                          "curie": "owl:sameAs",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "columnName": "neighbourhood_URI_from_Wikidata",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "links": [],
+                            "rdfTypes": []
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
                     }
                   }
                 ],
@@ -3248,6 +2894,10 @@
         {
           "name": "foaf",
           "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
         }
       ],
       "baseUri": "http://www.airqualitymadrid.es/resource/",
@@ -3275,6 +2925,17 @@
                       "columnName": "measurement_date",
                       "expression": "value",
                       "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
+                    "curie": ":hasMeasurementValue",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "measurement_value",
+                      "expression": "value",
+                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
                       "isRowNumberCell": false
                     }
                   },
@@ -3317,17 +2978,6 @@
                         }
                       ]
                     }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
-                    "curie": ":hasMeasurementValue",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_value",
-                      "expression": "value",
-                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                      "isRowNumberCell": false
-                    }
                   }
                 ],
                 "rdfTypes": [
@@ -3358,15 +3008,33 @@
                     }
                   },
                   {
-                    "uri": "http://www.w3.org/2002/07/owl#sameAs",
-                    "curie": "owl:sameAs",
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
                     "target": {
                       "nodeType": "cell-as-resource",
-                      "columnName": "neighbourhood_URI_from_Wikidata",
-                      "expression": "value",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
                       "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                          "curie": "owl:sameAs",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "columnName": "neighbourhood_URI_from_Wikidata",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "links": [],
+                            "rdfTypes": []
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
                     }
                   }
                 ],
