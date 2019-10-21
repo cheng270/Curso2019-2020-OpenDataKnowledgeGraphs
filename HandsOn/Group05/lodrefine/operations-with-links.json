@@ -36,19 +36,6 @@
     "columnName": "codedResultInterpretation.interpretation"
   },
   {
-    "op": "core/text-transform",
-    "description": "Text transform on cells in column sample.sampleDateTime using expression value.toDate()",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "sample.sampleDateTime",
-    "expression": "value.toDate()",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10
-  },
-  {
     "op": "rdf-extension/save-rdf-schema",
     "description": "Save RDF schema skeleton",
     "schema": {
@@ -606,14 +593,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -641,8 +628,8 @@
       "criteria": [
         {
           "reverse": false,
-          "caseSensitive": false,
           "column": "Unique_determinand",
+          "caseSensitive": false,
           "valueType": "string",
           "blankPosition": 2,
           "errorPosition": 1
@@ -656,14 +643,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -1322,14 +1309,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -1564,27 +1551,6 @@
   },
   {
     "op": "core/recon",
-    "description": "Reconcile cells in column determinand.definition to type Q11173",
-    "columnName": "determinand.definition",
-    "config": {
-      "mode": "standard-service",
-      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
-      "identifierSpace": "http://www.wikidata.org/entity/",
-      "schemaSpace": "http://www.wikidata.org/prop/direct/",
-      "type": {
-        "id": "Q11173",
-        "name": "chemical compound"
-      },
-      "autoMatch": true,
-      "columnDetails": []
-    },
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    }
-  },
-  {
-    "op": "core/recon",
     "description": "Reconcile cells in column determinand.label to type Q11173",
     "columnName": "determinand.label",
     "config": {
@@ -1595,27 +1561,6 @@
       "type": {
         "id": "Q11173",
         "name": "chemical compound"
-      },
-      "autoMatch": true,
-      "columnDetails": []
-    },
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    }
-  },
-  {
-    "op": "core/recon",
-    "description": "Reconcile cells in column determinand.unit.label to type Q47574",
-    "columnName": "determinand.unit.label",
-    "config": {
-      "mode": "standard-service",
-      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
-      "identifierSpace": "http://www.wikidata.org/entity/",
-      "schemaSpace": "http://www.wikidata.org/prop/direct/",
-      "type": {
-        "id": "Q47574",
-        "name": "unit of measurement"
       },
       "autoMatch": true,
       "columnDetails": []
@@ -1880,14 +1825,14 @@
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -1921,14 +1866,14 @@
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -1962,14 +1907,14 @@
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -1981,14 +1926,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2017,79 +1962,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic diethylene glycol (Q421902) for cells containing \"Diethylene glycol :- {2,2-Oxybisethanol}\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q103230",
-                "l": "Q103230"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Diethylene glycol :- {2,2-Oxybisethanol}",
-    "judgment": "matched",
-    "match": {
-      "id": "Q421902",
-      "name": "diethylene glycol",
-      "score": 65,
-      "types": [
-        "Q421916",
-        "Q103230",
-        "Q11173"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic nitrogen (Q627) for cells containing \"Nitrogen - N\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2101,14 +1985,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2141,14 +2025,14 @@
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2160,14 +2044,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2200,14 +2084,14 @@
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2219,14 +2103,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2255,136 +2139,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic magnesium (Q660) for cells containing \"Magnesium\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q189567",
-                "l": "Q189567"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Magnesium",
-    "judgment": "matched",
-    "match": {
-      "id": "Q660",
-      "name": "magnesium",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "description": "Match topic sulfate (Q25997675) for cells containing \"Sulphate as SO4\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q189567",
-                "l": "Q189567"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Sulphate as SO4",
-    "judgment": "matched",
-    "match": {
-      "id": "Q25997675",
-      "name": "sulfate",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic ethylene glycol (Q194207) for cells containing \"Ethan1,2diol\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2396,14 +2162,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2434,79 +2200,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic ethylene glycol (Q194207) for cells containing \"Ethylene glycol :- {Ethan-1,2-diol}\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q21009059",
-                "l": "Q21009059"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Ethylene glycol :- {Ethan-1,2-diol}",
-    "judgment": "matched",
-    "match": {
-      "id": "Q194207",
-      "name": "ethylene glycol",
-      "score": 67,
-      "types": [
-        "Q6985085",
-        "Q11173",
-        "Q21009059"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic Glycols (Q21761907) for cells containing \"Glycols\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2518,14 +2223,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2554,77 +2259,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic Glycols (Q21761907) for cells containing \"Glycols: Total\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q21009059",
-                "l": "Q21009059"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Glycols: Total",
-    "judgment": "matched",
-    "match": {
-      "id": "Q21761907",
-      "name": "Glycols",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic potassium (Q703) for cells containing \"Potassium- K\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2636,14 +2282,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2672,77 +2318,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic potassium (Q703) for cells containing \"Potassium\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q25403900",
-                "l": "Q25403900"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Potassium",
-    "judgment": "matched",
-    "match": {
-      "id": "Q703",
-      "name": "potassium",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic nitrite ion (Q213788) for cells containing \"Nitrite-N\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2754,14 +2341,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2790,78 +2377,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic nitrite ion (Q213788) for cells containing \"Nitrite as N\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q3269344",
-                "l": "Q3269344"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Nitrite as N",
-    "judgment": "matched",
-    "match": {
-      "id": "Q213788",
-      "name": "nitrite ion",
-      "score": 80,
-      "types": [
-        "Q3269344",
-        "Q424418"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic sodium (Q658) for cells containing \"Sodium - Na\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -2873,14 +2400,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -2909,138 +2436,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic sodium (Q658) for cells containing \"Sodium\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q407595",
-                "l": "Q407595"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Sodium",
-    "judgment": "matched",
-    "match": {
-      "id": "Q658",
-      "name": "sodium",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "description": "Match topic diethylene glycol (Q421902) for cells containing \"Diethylene glycol :- {2,2-Oxybisethanol}\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.unit: judgment",
-          "selectBlank": false,
-          "columnName": "determinand.unit",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "matched",
-                "l": "matched"
-              }
-            }
-          ]
-        },
-        {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
-          "invert": false,
-          "selectError": false,
-          "omitError": false,
-          "name": "determinand.label: best candidate's types",
-          "selectBlank": false,
-          "columnName": "determinand.label",
-          "omitBlank": false,
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": "Q421916",
-                "l": "Q421916"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Diethylene glycol :- {2,2-Oxybisethanol}",
-    "judgment": "matched",
-    "match": {
-      "id": "Q421902",
-      "name": "diethylene glycol",
-      "score": 65,
-      "types": [
-        "Q421916",
-        "Q103230",
-        "Q11173"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic diethylene glycol (Q421902) for cells containing \"2,2' Oxybise\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.unit: judgment",
           "selectBlank": false,
-          "columnName": "determinand.unit",
+          "name": "determinand.unit: judgment",
           "omitBlank": false,
+          "columnName": "determinand.unit",
           "type": "list",
           "selection": [
             {
@@ -3052,14 +2459,14 @@
           ]
         },
         {
-          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
           "selectError": false,
           "omitError": false,
-          "name": "determinand.label: best candidate's types",
           "selectBlank": false,
-          "columnName": "determinand.label",
+          "name": "determinand.label: best candidate's types",
           "omitBlank": false,
+          "columnName": "determinand.label",
           "type": "list",
           "selection": [
             {
@@ -3094,14 +2501,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3134,14 +2541,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3174,14 +2581,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3210,100 +2617,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic carbon tetrachloride (Q225045) for cells containing \"Carbon tetrachloride :- {Tetrachloromethane}\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "isBlank(value)",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": false,
-          "name": "Unique_determinand",
-          "omitBlank": false,
-          "columnName": "Unique_determinand",
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": false,
-                "l": "false"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Carbon tetrachloride :- {Tetrachloromethane}",
-    "judgment": "matched",
-    "match": {
-      "id": "Q225045",
-      "name": "carbon tetrachloride",
-      "score": 69,
-      "types": [
-        "Q11173",
-        "Q21074597",
-        "Q11861249"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
-    "description": "Match topic mercury (Q925) for cells containing \"Mercury\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "isBlank(value)",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": false,
-          "name": "Unique_determinand",
-          "omitBlank": false,
-          "columnName": "Unique_determinand",
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": false,
-                "l": "false"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Mercury",
-    "judgment": "matched",
-    "match": {
-      "id": "Q925",
-      "name": "mercury",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic mercury (Q925) for cells containing \"Mercury - Hg\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3332,58 +2657,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic cadmium (Q1091) for cells containing \"Cadmium\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "isBlank(value)",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": false,
-          "name": "Unique_determinand",
-          "omitBlank": false,
-          "columnName": "Unique_determinand",
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": false,
-                "l": "false"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Cadmium",
-    "judgment": "matched",
-    "match": {
-      "id": "Q1091",
-      "name": "cadmium",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic nitrate (Q49916468) for cells containing \"Nitrate-N\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3412,58 +2697,18 @@
   },
   {
     "op": "core/recon-judge-similar-cells",
-    "description": "Match topic nitrate (Q49916468) for cells containing \"Nitrate as N\" in column determinand.definition",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "isBlank(value)",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": false,
-          "name": "Unique_determinand",
-          "omitBlank": false,
-          "columnName": "Unique_determinand",
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": false,
-                "l": "false"
-              }
-            }
-          ]
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "determinand.definition",
-    "similarValue": "Nitrate as N",
-    "judgment": "matched",
-    "match": {
-      "id": "Q49916468",
-      "name": "nitrate",
-      "score": 100,
-      "types": [
-        "null"
-      ]
-    },
-    "shareNewTopics": false
-  },
-  {
-    "op": "core/recon-judge-similar-cells",
     "description": "Match topic sulfide (Q221205) for cells containing \"Sulphide - S\" in column determinand.label",
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3496,14 +2741,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3536,14 +2781,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3576,14 +2821,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3616,14 +2861,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3656,14 +2901,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3696,14 +2941,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3736,14 +2981,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3776,14 +3021,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3816,14 +3061,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3856,14 +3101,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3896,14 +3141,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3936,14 +3181,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -3976,14 +3221,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4016,14 +3261,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4056,14 +3301,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4096,14 +3341,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4136,14 +3381,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4179,14 +3424,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4219,14 +3464,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4259,14 +3504,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4299,14 +3544,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4339,14 +3584,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4379,14 +3624,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4419,14 +3664,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4459,14 +3704,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4499,14 +3744,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4539,14 +3784,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4579,14 +3824,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4619,14 +3864,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4659,14 +3904,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4699,14 +3944,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4739,14 +3984,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4779,14 +4024,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: best candidate's types",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4819,14 +4064,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "determinand.label: judgment",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "determinand.label",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -4865,14 +4110,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
           "expression": "isBlank(value)",
+          "invert": false,
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
           "name": "Unique_determinand",
-          "omitBlank": false,
+          "selectBlank": false,
           "columnName": "Unique_determinand",
+          "omitBlank": false,
           "type": "list",
           "selection": [
             {
@@ -5007,6 +4252,342 @@
                 "isRowNumberCell": false,
                 "columnName": "Unique_determinand",
                 "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2002/07/owl#sameAs",
+              "curie": "owl:sameAs",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "ChemicalCompounds",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic methyl chloride (Q422709) for cells containing \"DiClMe\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q10913792",
+                "l": "Q10913792"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "DiClMe",
+    "judgment": "matched",
+    "match": {
+      "id": "Q422709",
+      "name": "methyl chloride",
+      "score": 53,
+      "types": [
+        "Q11173",
+        "Q10913792",
+        "Q21074597"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "description": "Match topic methyl chloride (Q422709) for cells containing \"DiClMe\" in column determinand.label",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "forNonBlank(cell.recon.best.type, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "determinand.label: best candidate's types",
+          "omitBlank": false,
+          "columnName": "determinand.label",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Q10913792",
+                "l": "Q10913792"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "similarValue": "DiClMe",
+    "judgment": "matched",
+    "match": {
+      "id": "Q422709",
+      "name": "methyl chloride",
+      "score": 53,
+      "types": [
+        "Q11173",
+        "Q10913792",
+        "Q21074597"
+      ]
+    },
+    "shareNewTopics": false
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column determinand_uri at index 10 based on column Unique_determinand using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "determinand_uri",
+    "columnInsertIndex": 10,
+    "baseColumnName": "Unique_determinand",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/fill-down",
+    "description": "Fill down cells in column determinand_uri",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "determinand_uri"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sampledMaterialType"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "purpose"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand_uri",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+                    "curie": "wq:Determinand"
+                  }
+                ],
                 "links": []
               }
             }
