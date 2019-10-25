@@ -1,15 +1,15 @@
 # load the original dataset, this will be used only to make visual comparisons during the flow of transformations
-originalDataset <- read.csv(file="merged_dataset.csv", header = T, sep = ",", stringsAsFactors = F)
+originalDataset <- read.csv(file="raw-data/merged_dataset.csv", header = T, sep = ",", stringsAsFactors = F)
 
 # load again the dataset, this will be modified
-workingDataset <- read.csv(file="merged_dataset.csv", header = TRUE, sep=",", stringsAsFactors = F)
+workingDataset <- read.csv(file="raw-data/merged_dataset.csv", header = TRUE, sep=",", stringsAsFactors = F)
 
 # load the needed library
 library(reshape)
 
-# filter the data on the first month of the year to reduce the dataset and make to whole project smoother
+# filter the data on the first 20 days of the first month of the year to reduce the dataset and make to whole project smoother
 workingDataset <- subset(workingDataset, 
-                         format(as.Date(date), "%m") == "01" )
+                         format(as.Date(date), "%m") == "01" & format(as.Date(date), "%d") < 20)
 
 # melt the columns about the pollutants into a new column, in order to have a single column for the pollutant
 workingDataset <- melt(workingDataset, measure.vars=c("BEN", "CH4", "CO", "EBE", "NMHC", "NO",
@@ -42,6 +42,36 @@ workingDataset$pollutant_name[workingDataset$pollutant_name == "TOL"] <- "Toluen
 # create a new column as id for the measurements and move it to the left
 workingDataset$measurement_id <- paste("Measurement", 1:nrow(workingDataset), sep="_")
 workingDataset <- workingDataset[, c(11, 1:8, 10, 9)]
+
+# create a new column with the name of the neighbourhood related to the address, to facilitate reconciliation for the addresses
+workingDataset$neighbourhood_name <- workingDataset$station_name
+workingDataset$neighbourhood_name <- as.character(workingDataset$neighbourhood_name)
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Arturo Soria"] <- "Colina"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Avda. Ramón y Cajal"] <- "Hispanoamerica"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Barajas Pueblo"] <- "Casco_de_Barajas"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Barrio del Pilar"] <- "Pilar"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Casa de Campo"] <- "Case_de_Campo"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Castellana"] <- "Castellana"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Cuatro Caminos"] <- "Cuatro_Caminos"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "El Pardo"] <- "Pardo"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Ensanche de Vallecas"] <- "Vallecas"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Escuelas Aguirre"] <- "Recoletas"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Farolillo"] <- "Isidro"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Juan Carlos I"] <- "Corralejos"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Mendez Alvaro"] <- "Atocha"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Moratalaz"] <- "Vinateros"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Parque del Retiro"] <- "Jeronimos"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Plaza Castilla"] <- "Castilla"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Pza. de España"] <- "Arguelles"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Pza. del Carmen"] <- "Sol"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Pza. Fernández Ladreda"] <- "Abrantes"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Sanchinarro"] <- "Valdefuentes"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Tres Olivos"] <- "Valverde"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Vallecas"] <- "Vallecas"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Urb. Embajada"] <- "Alameda_de_Osuna"
+workingDataset$neighbourhood_name[workingDataset$neighbourhood_name == "Villaverde"] <- "Villaverde"
+
+workingDataset <- workingDataset[, c(1:5, 12, 6:11)]
 
 # export the new dataset
 write.csv(workingDataset, file = "final_dataset.csv")
