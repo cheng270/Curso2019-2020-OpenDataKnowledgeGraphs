@@ -14,8 +14,8 @@
 **The "datasetRequirements.html" file:**
 
 - [x] Identifies the licenses of all the selected datasets
-- [ ] Identifies those entities in the selected datasets that can be linked with entities in other datasets
-- [ ] Identifies those entities in other datasets that can be linked with entities in the selected datasets 
+- [x] Identifies those entities in the selected datasets that can be linked with entities in other datasets
+- [x] Identifies those entities in other datasets that can be linked with entities in the selected datasets 
 
 **The "applicationRequirements.html” file:**
 
