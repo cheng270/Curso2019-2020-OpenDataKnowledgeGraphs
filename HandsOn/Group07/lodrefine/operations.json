@@ -201,195 +201,100 @@
     "op": "rdf-extension/save-rdf-schema",
     "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "",
-          "uri": ""
-        },
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "poll_sens",
-          "uri": "http://www.airqualitymadrid.es/resource/pollution_sensor/"
-        },
-        {
-          "name": "meas",
-          "uri": "http://www.airqualitymadrid.es/resource/measurement/"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "poll",
-          "uri": "http://www.airqualitymadrid.es/resource/pollutant/"
-        },
-        {
-          "name": "aqm",
-          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#"
-        },
-        {
-          "name": "addr",
-          "uri": "http://www.airqualitymadrid.es/resource/address/"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.airqualitymadrid.es/resource/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "station_id",
-          "expression": "\"pollution_sensor/\"+value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasCollected",
-              "curie": ":hasCollected",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "measurement_id",
-                "expression": "\"measurement/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementDate",
-                    "curie": ":hasMeasurementDate",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_date",
-                      "expression": "value",
-                      "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
-                      "isRowNumberCell": false
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutant",
-                    "curie": ":hasPollutant",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "pollutant",
-                      "expression": "\"pollutant/\"+value",
-                      "isRowNumberCell": false,
-                      "links": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName",
-                          "curie": ":hasPollutantName",
-                          "target": {
-                            "nodeType": "cell-as-literal",
-                            "columnName": "pollutant_name",
-                            "expression": "value",
-                            "isRowNumberCell": false
-                          }
-                        }
-                      ],
-                      "rdfTypes": [
-                        {
-                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant",
-                          "curie": ":Pollutant"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasMeasurementValue",
-                    "curie": ":hasMeasurementValue",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "measurement_value",
-                      "expression": "value",
-                      "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement",
-                    "curie": ":Measurement"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedIn",
-              "curie": ":placedIn",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "columnName": "station_name",
-                "expression": "\"address/\"+value",
-                "isRowNumberCell": false,
-                "links": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasAddress",
-                    "curie": ":hasAddress",
-                    "target": {
-                      "nodeType": "cell-as-literal",
-                      "columnName": "station_address",
-                      "expression": "value",
-                      "isRowNumberCell": false
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Address",
-                    "curie": ":Address"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLatitude",
-              "curie": ":hasLatitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lat",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasLongitude",
-              "curie": ":hasLongitude",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_lon",
-                "expression": "value",
-                "valueType": "https://www.w3.org/2001/XMLSchema#float",
-                "isRowNumberCell": false
-              }
-            },
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasSensorElevation",
-              "curie": ":hasSensorElevation",
-              "target": {
-                "nodeType": "cell-as-literal",
-                "columnName": "station_elevation",
-                "expression": "value",
-                "valueType": "http://www.w3.org/2001/XMLSchema#int",
-                "isRowNumberCell": false
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#PollutionSensor",
-              "curie": ":PollutionSensor"
-            }
-          ]
-        }
-      ]
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
     }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
+    "expression": "grel:replace(value, \"Recoletas\", \"Recoletos\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighbourhood_name using expression grel:replace(value, \"Recoletas\", \"Recoletos\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
+    "expression": "grel:replace(value, \"Case_de_Campo\", \"Casa_de_Campo\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighbourhood_name using expression grel:replace(value, \"Case_de_Campo\", \"Casa_de_Campo\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neighbourhood_name",
+    "newColumnName": "neighbourhood_id",
+    "description": "Rename column neighbourhood_name to neighbourhood_id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighbourhood_id",
+    "expression": "jython:if (value == \"Recoletos\"): return value\nelif (value == \"Hispanoamerica\"): return \"Hispanoamérica\"\nelif (value == \"Isidro\"): return \"San Isidro\"\nelif (value == \"Casa_de_Campo\"): return \"Casa de Campo\"\nelif (value == \"Cuatro_Caminos\"): return \"Cuatro Caminos\"\nelif (value == \"Alameda_de_Osuna\"): return \"Alameda de Osuna\"\nelif (value == \"Colina\"): return \"Colina\"\nelif (value == \"Casco_de_Barajas\"): return \"Casco Histórico de Barajas\"\nelif (value == \"Pilar\"): return \"El Pilar\"\nelif (value == \"Castellana\"): return \"Castellana\"\nelif (value == \"Pardo\"): return \"El Pardo\"\nelif (value == \"Vallecas\"): return \"Vallecas\"\nelif (value == \"Corralejos\"): return \"Corralejos\"\nelif (value == \"Atocha\"): return \"Atocha\"\nelif (value == \"Vinateros\"): return \"Vinateros\"\nelif (value == \"Jeronimos\"): return \"Jerónimos\"\nelif (value == \"Castilla\"): return \"Castilla\"\nelif (value == \"Arguelles\"): return \"Argüelles\"\nelif (value == \"Sol\"): return \"Sol\"\nelif (value == \"Abrantes\"): return \"Abrantes\"\nelif (value == \"Valdefuentes\"): return \"Valdefuentes\"\nelif (value == \"Valverde\"): return \"Valverde\"\nelif (value == \"Villaverde\"): return \"Villaverde Alto, Casco Histórico de Villaverde\"",
+    "onError": "set-to-blank",
+    "newColumnName": "neighbourhood_name",
+    "columnInsertIndex": 6,
+    "description": "Create column neighbourhood_name at index 6 based on column neighbourhood_id using expression jython:if (value == \"Recoletos\"): return value\nelif (value == \"Hispanoamerica\"): return \"Hispanoamérica\"\nelif (value == \"Isidro\"): return \"San Isidro\"\nelif (value == \"Casa_de_Campo\"): return \"Casa de Campo\"\nelif (value == \"Cuatro_Caminos\"): return \"Cuatro Caminos\"\nelif (value == \"Alameda_de_Osuna\"): return \"Alameda de Osuna\"\nelif (value == \"Colina\"): return \"Colina\"\nelif (value == \"Casco_de_Barajas\"): return \"Casco Histórico de Barajas\"\nelif (value == \"Pilar\"): return \"El Pilar\"\nelif (value == \"Castellana\"): return \"Castellana\"\nelif (value == \"Pardo\"): return \"El Pardo\"\nelif (value == \"Vallecas\"): return \"Vallecas\"\nelif (value == \"Corralejos\"): return \"Corralejos\"\nelif (value == \"Atocha\"): return \"Atocha\"\nelif (value == \"Vinateros\"): return \"Vinateros\"\nelif (value == \"Jeronimos\"): return \"Jerónimos\"\nelif (value == \"Castilla\"): return \"Castilla\"\nelif (value == \"Arguelles\"): return \"Argüelles\"\nelif (value == \"Sol\"): return \"Sol\"\nelif (value == \"Abrantes\"): return \"Abrantes\"\nelif (value == \"Valdefuentes\"): return \"Valdefuentes\"\nelif (value == \"Valverde\"): return \"Valverde\"\nelif (value == \"Villaverde\"): return \"Villaverde Alto, Casco Histórico de Villaverde\""
   },
   {
     "op": "rdf-extension/save-rdf-schema",
@@ -435,6 +340,10 @@
         {
           "name": "foaf",
           "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
         }
       ],
       "baseUri": "http://www.airqualitymadrid.es/resource/",
@@ -459,10 +368,9 @@
                     "curie": ":hasMeasurementDate",
                     "target": {
                       "nodeType": "cell-as-literal",
-                      "columnName": "measurement_date",
                       "expression": "value",
                       "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
-                      "isRowNumberCell": false
+                      "isRowNumberCell": true
                     }
                   },
                   {
@@ -530,6 +438,34 @@
                       "columnName": "station_address",
                       "expression": "value",
                       "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_name",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasNeighbourhoodName",
+                          "curie": ":hasNeighbourhoodName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "neighbourhood_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
                     }
                   }
                 ],
