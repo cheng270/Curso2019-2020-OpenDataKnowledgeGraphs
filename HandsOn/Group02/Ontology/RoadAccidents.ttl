@@ -4,149 +4,107 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix datex: <http://vocab.datex.org/terms#> .
 @base <http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology> .
 
 <http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology> rdf:type owl:Ontology ;
-                                                                    owl:versionIRI <http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology> ;
-                                                                    owl:imports <http://www.semanticweb.org/charisbacolod/ontologies/2019/9/RoadAccidents> .
+                                                                    owl:versionIRI : .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#dateTime
-:dateTime rdf:type owl:ObjectProperty .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#involvedSurfaceCondition
+:involvedSurfaceCondition rdf:type owl:ObjectProperty ;
+                          rdfs:domain datex:Accident ;
+                          rdfs:range :SurfaceCondition .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#documentID
-:documentID rdf:type owl:ObjectProperty .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#involvedWeatherCondition
+:involvedWeatherCondition rdf:type owl:ObjectProperty ;
+                          rdfs:domain datex:Accident ;
+                          rdfs:range :WeatherCondition .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#involvedIn
-:involvedIn rdf:type owl:ObjectProperty .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#noOfVictimsInvolved
-:noOfVictimsInvolved rdf:type owl:ObjectProperty .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#surfaceDuring
-:surfaceDuring rdf:type owl:ObjectProperty .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#weatherDuring
-:weatherDuring rdf:type owl:ObjectProperty .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#tookPlaceIn
+:tookPlaceIn rdf:type owl:ObjectProperty ;
+             rdfs:domain datex:Accident ;
+             rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#District> .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#accidentID
-:accidentID rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:nonNegativeInteger .
-
-
 ###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#accidentType
 :accidentType rdf:type owl:DatatypeProperty ;
+              rdfs:domain datex:Accident ;
               rdfs:range xsd:string .
 
 
 ###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#dateTime
 :dateTime rdf:type owl:DatatypeProperty ;
+          rdfs:domain datex:Accident ;
           rdfs:range xsd:dateTime .
 
 
 ###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#districtName
 :districtName rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#District> ;
               rdfs:range xsd:string .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#dryAndClean
-:dryAndClean rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:boolean .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:domain datex:Accident ;
+    rdfs:range xsd:positiveInteger .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#fog
-:fog rdf:type owl:DatatypeProperty ;
-     rdfs:range xsd:boolean .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#hail
-:hail rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:boolean .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#ice
-:ice rdf:type owl:DatatypeProperty ;
-     rdfs:range xsd:boolean .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#iceSurface
-:iceSurface rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:boolean .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#looseGravel
-:looseGravel rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:boolean .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#mud
-:mud rdf:type owl:DatatypeProperty ;
-     rdfs:range xsd:boolean .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#noOfVictims
-:noOfVictims rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:integer .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#oil
-:oil rdf:type owl:DatatypeProperty ;
-     rdfs:range xsd:boolean .
-
-
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#rain
-:rain rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:boolean .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#numberOfVictims
+:numberOfVictims rdf:type owl:DatatypeProperty ;
+                 rdfs:domain datex:Accident ;
+                 rdfs:range xsd:positiveInteger .
 
 
 ###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#streetName
 :streetName rdf:type owl:DatatypeProperty ;
+            rdfs:domain datex:Accident ;
             rdfs:range xsd:string .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#vehicleType
-:vehicleType rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:string .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#surfaceConditionName
+:surfaceConditionName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :SurfaceCondition ;
+                      rdfs:range xsd:string .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#wet
-:wet rdf:type owl:DatatypeProperty ;
-     rdfs:range xsd:boolean .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#weatherConditionName
+:weatherConditionName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :WeatherCondition ;
+                      rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#District
-:District rdf:type owl:Class ;
-          rdfs:subClassOf :Location .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#SurfaceCondition
+:SurfaceCondition rdf:type owl:Class ;
+                  owl:disjointWith :WeatherCondition .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#Location
-:Location rdf:type owl:Class .
+###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#WeatherCondition
+:WeatherCondition rdf:type owl:Class .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#Streets
-:Streets rdf:type owl:Class ;
-         rdfs:subClassOf :Location .
+###  http://vocab.datex.org/terms#Accident
+datex:Accident rdf:type owl:Class ;
+               rdfs:isDefinedBy <http://vocab.datex.org/terms> .
 
 
-###  http://smartcity.linkeddata.es/trafficAccidentsInMadrid/ontology#Type_of_accident
-:Type_of_accident rdf:type owl:Class .
+###  http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#District
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#District> rdf:type owl:Class ;
+                                                                                  rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
