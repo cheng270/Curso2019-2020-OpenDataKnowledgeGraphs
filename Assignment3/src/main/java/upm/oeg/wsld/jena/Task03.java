@@ -29,7 +29,7 @@ public class Task03
 	
 	public static void main(String args[])
 	{
-		String filename = "example3.rdf";
+		String filename = "resources/example3.rdf";
 		
 		// Create an empty model
 		Model model = ModelFactory.createDefaultModel();

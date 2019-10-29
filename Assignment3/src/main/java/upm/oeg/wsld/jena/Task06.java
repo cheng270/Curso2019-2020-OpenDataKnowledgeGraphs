@@ -27,7 +27,7 @@ public class Task06
 	
 	public static void main(String args[])
 	{
-		String filename = "example5.rdf";
+		String filename = "resources/example5.rdf";
 		
 		// Create an empty model
 		OntModel model = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM);

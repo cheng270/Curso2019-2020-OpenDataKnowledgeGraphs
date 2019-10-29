@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3DAIRQ Web App</title>
+
+	<link rel="stylesheet" type="text/css" href="../public/css/main.css">
+
+</head>
+<body>
+	<div id="canvas" className="canvas" onmousemove="onDocumentMouseMove(event)"/>
+	<div id="popup" style="display:none;" class="absolute-popup-right">
+		<h2 id="district-name">Concha Espina 224</h2>
+		<h1 id="district-postal">28010</h1>
+		<hr class="margin-left">
+		<h3>N02 CONCENTRATION</h3>
+		<h4>2,4567</h4>
+		<h3>02 CONCENTRATION</h3>
+		<h4>15,1233</h4>
+		<h3>C02 CONCENTRATION</h3>
+		<h4>4,2333</h4>
+		<h3>N0 CONCENTRATION</h3>
+		<h4>1,1234</h4>
+	</div>
+	<div class="absolute-title">
+		<hr>
+		<h1>3DAIRQ</h1>
+		<p>Mouse over the 3D model showing the different city areas and display the air quality data for each one (each area is covered by one meassure device)</p>
+	</div>
+
+	<script type="text/javascript" src="https://threejs.org/build/three.js"></script>
+	<script type="text/javascript" src="../public/js/OBJLoader.js"></script>
+	<script type="text/javascript" src="../public/js/OrbitControls.js"></script>
+	<script type="text/javascript" src="../public/js/main.js"></script>
+	<script type="text/javascript" src="../public/js/districts.js"></script>
+</body>
+</html>
