@@ -14,8 +14,7 @@ def show_home_page():
 
 @app.route("/<test>")
 def show_test_page(test):
-    data = retriever.get_stations()
-    print(data)
+    data = retriever.get_measurements_by_id_and_date()
     return render_template(test + ".html", result=data)
 
 
