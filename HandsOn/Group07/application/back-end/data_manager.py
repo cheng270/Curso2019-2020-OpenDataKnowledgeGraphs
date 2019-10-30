@@ -1,21 +1,30 @@
 from rdflib import Graph
-from struct_builder import StructBuilder
+from .struct_builder import StructBuilder
 import json
+
 
 class DataRetriever:
 
     def __init__(self):
         self.data = Graph()
-        self.data.parse("./../../rdf/rdf-with-links.ttl", format="turtle")
+        self.data.parse("./test.ttl", format="turtle")
 
-    def get_pollutants(self):
-        res = self.data.query("""select distinct ?x 
-                            WHERE 
-                            {
-                              ?x a <http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant> .
-                            }
-                            """)
-        return res
+    def get_pollutant_data(self, pollutant_id):
+        res = self.data.query("""
+            PREFIX poll: <http://www.airqualitymadrid.es/resource/pollutant/>
+            PREFIX aqm: <http://www.airqualitymadrid.es/ontologies/airqualitymadrid#>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            select distinct ?link
+            WHERE {
+                poll:""" + pollutant_id + """ a aqm:Pollutant ;
+                    owl:sameAs ?link .
+            }
+            """)
+        tmp = list()
+        for row in res:
+            el = StructBuilder.get_wikidata_link(row)
+            tmp.append(el)
+        return json.dumps(tmp)
 
     def get_stations(self):
         res = self.data.query("""

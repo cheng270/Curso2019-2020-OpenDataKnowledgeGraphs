@@ -7,6 +7,12 @@ class StructBuilder:
         return tmp[len(tmp) - 1]
 
     @staticmethod
+    def get_wikidata_link(rdf_el):
+        element = dict()
+        element['link'] = rdf_el['link'].toPython()
+        return element
+
+    @staticmethod
     def get_station_struct(rdf_el):
         element = dict()
         element['station_id'] = StructBuilder.extract_info_from_uri(rdf_el['station_id'].toPython())

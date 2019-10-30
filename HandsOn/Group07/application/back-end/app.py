@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import make_response
-from data_manager import DataRetriever
+from .data_manager import DataRetriever
 
 app = Flask(__name__, template_folder="../front-end/templates", static_folder="../front-end/static")
 retriever = DataRetriever()
@@ -22,10 +22,10 @@ def send_measurements_by_id_and_date(station_id, date):
     return retriever.get_measurements_by_id_and_date(station_id, date)
 
 
-@app.route("/<test>")
-def show_test_page(test):
-    data = retriever.get_measurements_by_id_and_date()
-    return render_template(test + ".html", result=data)
+@app.route("/pollutant/<pollutant_id>")
+def show_test_page(pollutant_id):
+    data = retriever.get_pollutant_data(pollutant_id)
+    return render_template("test.html", result=data)
 
 
 @app.errorhandler(404)
