@@ -1573,6 +1573,15 @@
     "op": "rdf-extension/save-rdf-schema",
     "description": "Save RDF schema skeleton",
     "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
       "prefixes": [
         {
           "name": "",
@@ -1735,7 +1744,7 @@
                     "curie": ":placedInNeighbourhood",
                     "target": {
                       "nodeType": "cell-as-resource",
-                      "columnName": "neighbourhood_name",
+                      "columnName": "neighbourhood_id",
                       "expression": "\"neighbourhood/\"+value",
                       "isRowNumberCell": false,
                       "links": [
