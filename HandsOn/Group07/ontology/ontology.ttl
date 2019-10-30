@@ -70,6 +70,12 @@
                      rdfs:range xsd:float .
 
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasNeighbourhoodName
+:hasNeighbourhoodName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Neighbourhood ;
+                      rdfs:range xsd:string .
+
+
 ###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasPollutantName
 :hasPollutantName rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Pollutant ;

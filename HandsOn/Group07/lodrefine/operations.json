@@ -201,6 +201,132 @@
     "op": "rdf-extension/save-rdf-schema",
     "description": "Save RDF schema skeleton",
     "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
+    "expression": "grel:replace(value, \"Recoletas\", \"Recoletos\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighbourhood_name using expression grel:replace(value, \"Recoletas\", \"Recoletos\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighbourhood_name",
+    "expression": "grel:replace(value, \"Case_de_Campo\", \"Casa_de_Campo\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighbourhood_name using expression grel:replace(value, \"Case_de_Campo\", \"Casa_de_Campo\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neighbourhood_name",
+    "newColumnName": "neighbourhood_id",
+    "description": "Rename column neighbourhood_name to neighbourhood_id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighbourhood_id",
+    "expression": "jython:if (value == \"Recoletos\"): return value\nelif (value == \"Hispanoamerica\"): return \"Hispanoamérica\"\nelif (value == \"Isidro\"): return \"San Isidro\"\nelif (value == \"Casa_de_Campo\"): return \"Casa de Campo\"\nelif (value == \"Cuatro_Caminos\"): return \"Cuatro Caminos\"\nelif (value == \"Alameda_de_Osuna\"): return \"Alameda de Osuna\"\nelif (value == \"Colina\"): return \"Colina\"\nelif (value == \"Casco_de_Barajas\"): return \"Casco Histórico de Barajas\"\nelif (value == \"Pilar\"): return \"El Pilar\"\nelif (value == \"Castellana\"): return \"Castellana\"\nelif (value == \"Pardo\"): return \"El Pardo\"\nelif (value == \"Vallecas\"): return \"Vallecas\"\nelif (value == \"Corralejos\"): return \"Corralejos\"\nelif (value == \"Atocha\"): return \"Atocha\"\nelif (value == \"Vinateros\"): return \"Vinateros\"\nelif (value == \"Jeronimos\"): return \"Jerónimos\"\nelif (value == \"Castilla\"): return \"Castilla\"\nelif (value == \"Arguelles\"): return \"Argüelles\"\nelif (value == \"Sol\"): return \"Sol\"\nelif (value == \"Abrantes\"): return \"Abrantes\"\nelif (value == \"Valdefuentes\"): return \"Valdefuentes\"\nelif (value == \"Valverde\"): return \"Valverde\"\nelif (value == \"Villaverde\"): return \"Villaverde Alto, Casco Histórico de Villaverde\"",
+    "onError": "set-to-blank",
+    "newColumnName": "neighbourhood_name",
+    "columnInsertIndex": 6,
+    "description": "Create column neighbourhood_name at index 6 based on column neighbourhood_id using expression jython:if (value == \"Recoletos\"): return value\nelif (value == \"Hispanoamerica\"): return \"Hispanoamérica\"\nelif (value == \"Isidro\"): return \"San Isidro\"\nelif (value == \"Casa_de_Campo\"): return \"Casa de Campo\"\nelif (value == \"Cuatro_Caminos\"): return \"Cuatro Caminos\"\nelif (value == \"Alameda_de_Osuna\"): return \"Alameda de Osuna\"\nelif (value == \"Colina\"): return \"Colina\"\nelif (value == \"Casco_de_Barajas\"): return \"Casco Histórico de Barajas\"\nelif (value == \"Pilar\"): return \"El Pilar\"\nelif (value == \"Castellana\"): return \"Castellana\"\nelif (value == \"Pardo\"): return \"El Pardo\"\nelif (value == \"Vallecas\"): return \"Vallecas\"\nelif (value == \"Corralejos\"): return \"Corralejos\"\nelif (value == \"Atocha\"): return \"Atocha\"\nelif (value == \"Vinateros\"): return \"Vinateros\"\nelif (value == \"Jeronimos\"): return \"Jerónimos\"\nelif (value == \"Castilla\"): return \"Castilla\"\nelif (value == \"Arguelles\"): return \"Argüelles\"\nelif (value == \"Sol\"): return \"Sol\"\nelif (value == \"Abrantes\"): return \"Abrantes\"\nelif (value == \"Valdefuentes\"): return \"Valdefuentes\"\nelif (value == \"Valverde\"): return \"Valverde\"\nelif (value == \"Villaverde\"): return \"Villaverde Alto, Casco Histórico de Villaverde\""
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
       "prefixes": [
         {
           "name": "",
@@ -241,6 +367,10 @@
         {
           "name": "foaf",
           "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
         }
       ],
       "baseUri": "http://www.airqualitymadrid.es/resource/",
@@ -336,6 +466,34 @@
                       "columnName": "station_address",
                       "expression": "value",
                       "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_id",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasNeighbourhoodName",
+                          "curie": ":hasNeighbourhoodName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "neighbourhood_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
                     }
                   }
                 ],
@@ -435,6 +593,10 @@
         {
           "name": "foaf",
           "uri": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+          "name": "neigh",
+          "uri": "http://www.airqualitymadrid.es/resource/neighbourhood/"
         }
       ],
       "baseUri": "http://www.airqualitymadrid.es/resource/",
@@ -530,6 +692,34 @@
                       "columnName": "station_address",
                       "expression": "value",
                       "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood",
+                    "curie": ":placedInNeighbourhood",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "neighbourhood_id",
+                      "expression": "\"neighbourhood/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#hasNeighbourhoodName",
+                          "curie": ":hasNeighbourhoodName",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "columnName": "neighbourhood_name",
+                            "expression": "value",
+                            "isRowNumberCell": false
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood",
+                          "curie": ":Neighbourhood"
+                        }
+                      ]
                     }
                   }
                 ],
