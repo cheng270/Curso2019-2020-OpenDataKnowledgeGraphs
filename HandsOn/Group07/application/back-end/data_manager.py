@@ -1,5 +1,5 @@
 from rdflib import Graph
-from .struct_builder import StructBuilder
+from struct_builder import StructBuilder
 import json
 
 
