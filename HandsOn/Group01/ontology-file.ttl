@@ -1,0 +1,537 @@
+@prefix : <http://www.semanticweb.org/ontologies/cultural-activities/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix individual: <http://www.semanticweb.org/ontologies/cultural-activities/resource/> .
+@prefix ontology-class: <http://www.semanticweb.org/ontologies/cultural-activities/class#> .
+@prefix ontology-property: <http://www.semanticweb.org/ontologies/cultural-activities/property#> .
+@base <http://www.semanticweb.org/ontologies/cultural-activities/> .
+
+<http://www.semanticweb.org/ontologies/cultural-activities/> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#ID
+xsd:ID rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/cultural-activities#isIncludedIn
+<http://www.semanticweb.org/ontologies/cultural-activities#isIncludedIn> rdf:type owl:ObjectProperty ;
+                                                                         owl:inverseOf ontology-property:includes ;
+                                                                         rdfs:domain ontology-class:Event ;
+                                                                         rdfs:range ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#holdsEvent
+ontology-property:holdsEvent rdf:type owl:ObjectProperty ;
+                             owl:inverseOf ontology-property:takesPlaceIn ;
+                             rdfs:domain ontology-class:Instalation ;
+                             rdfs:range ontology-class:Event .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#includes
+ontology-property:includes rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontology-class:Activity ;
+                           rdfs:range ontology-class:Event .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#isLocatedIn
+ontology-property:isLocatedIn rdf:type owl:ObjectProperty ;
+                              owl:inverseOf ontology-property:isTheLocationOf ;
+                              rdfs:domain ontology-class:Instalation ;
+                              rdfs:range ontology-class:AdministrativeArea .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#isTheLocationOf
+ontology-property:isTheLocationOf rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontology-class:AdministrativeArea ;
+                                  rdfs:range ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#takesPlaceIn
+ontology-property:takesPlaceIn rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontology-class:Event ;
+                               rdfs:range ontology-class:Instalation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#activityDescription
+ontology-property:activityDescription rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain ontology-class:Activity ;
+                                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#activityTitle
+ontology-property:activityTitle rdf:type owl:DatatypeProperty ;
+                                rdfs:domain ontology-class:Activity ;
+                                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#activityURL
+ontology-property:activityURL rdf:type owl:DatatypeProperty ;
+                              rdfs:domain ontology-class:Activity ;
+                              rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventAudience
+ontology-property:eventAudience rdf:type owl:DatatypeProperty ;
+                                rdfs:domain ontology-class:Event ;
+                                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventDescription
+ontology-property:eventDescription rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain ontology-class:Event ;
+                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventEndDay
+ontology-property:eventEndDay rdf:type owl:DatatypeProperty ;
+                              rdfs:domain ontology-class:Event ;
+                              rdfs:range xsd:date .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventExcludedDays
+ontology-property:eventExcludedDays rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain ontology-class:Event ;
+                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventID
+ontology-property:eventID rdf:type owl:DatatypeProperty ;
+                          rdfs:domain ontology-class:Event ;
+                          rdfs:range xsd:ID .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventLatitude
+ontology-property:eventLatitude rdf:type owl:DatatypeProperty ;
+                                rdfs:domain ontology-class:Instalation ;
+                                rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventLongDuration
+ontology-property:eventLongDuration rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain ontology-class:Event ;
+                                    rdfs:range xsd:base64Binary .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventName
+ontology-property:eventName rdf:type owl:DatatypeProperty ;
+                            rdfs:domain ontology-class:Event ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventPrice
+ontology-property:eventPrice rdf:type owl:DatatypeProperty ;
+                             rdfs:domain ontology-class:Event ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventStartingDay
+ontology-property:eventStartingDay rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain ontology-class:Event ;
+                                   rdfs:range xsd:date .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventStartingHour
+ontology-property:eventStartingHour rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain ontology-class:Event ;
+                                    rdfs:range xsd:time .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventTitle
+ontology-property:eventTitle rdf:type owl:DatatypeProperty ;
+                             rdfs:domain ontology-class:Event ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventURL
+ontology-property:eventURL rdf:type owl:DatatypeProperty ;
+                           rdfs:domain ontology-class:Event ;
+                           rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#eventWeekDays
+ontology-property:eventWeekDays rdf:type owl:DatatypeProperty ;
+                                rdfs:domain ontology-class:Event ;
+                                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#instalationLongitude
+ontology-property:instalationLongitude rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain ontology-class:Instalation ;
+                                       rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#instalationName
+ontology-property:instalationName rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain ontology-class:Instalation ;
+                                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/property#instalationURL
+ontology-property:instalationURL rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain ontology-class:Instalation ;
+                                 rdfs:range xsd:anyURI .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Activity
+ontology-class:Activity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#AdministrativeArea
+ontology-class:AdministrativeArea rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#AuditoryShowroom
+ontology-class:AuditoryShowroom rdf:type owl:Class ;
+                                rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Camps
+ontology-class:Camps rdf:type owl:Class ;
+                     rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CinemaAudiovisualActivities
+ontology-class:CinemaAudiovisualActivities rdf:type owl:Class ;
+                                           rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Cineteca
+ontology-class:Cineteca rdf:type owl:Class ;
+                        rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CircusMagic
+ontology-class:CircusMagic rdf:type owl:Class ;
+                           rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CityDistrict
+ontology-class:CityDistrict rdf:type owl:Class ;
+                            rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#ClassroomEcology
+ontology-class:ClassroomEcology rdf:type owl:Class ;
+                                rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CommemorationsTributes
+ontology-class:CommemorationsTributes rdf:type owl:Class ;
+                                      rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CompetitionsContests
+ontology-class:CompetitionsContests rdf:type owl:Class ;
+                                    rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#ConferencesColoquiums
+ontology-class:ConferencesColoquiums rdf:type owl:Class ;
+                                     rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CongressesDays
+ontology-class:CongressesDays rdf:type owl:Class ;
+                              rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CoursesWorkshops
+ontology-class:CoursesWorkshops rdf:type owl:Class ;
+                                rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#CulturalCenter
+ontology-class:CulturalCenter rdf:type owl:Class ;
+                              rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Dancing
+ontology-class:Dancing rdf:type owl:Class ;
+                       rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#EqualitySpace
+ontology-class:EqualitySpace rdf:type owl:Class ;
+                             rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Event
+ontology-class:Event rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Expositions
+ontology-class:Expositions rdf:type owl:Class ;
+                           rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Fair
+ontology-class:Fair rdf:type owl:Class ;
+                    rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Festivals
+ontology-class:Festivals rdf:type owl:Class ;
+                         rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Festivities
+ontology-class:Festivities rdf:type owl:Class ;
+                           rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#FestivitiesCarnivals
+ontology-class:FestivitiesCarnivals rdf:type owl:Class ;
+                                    rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#FestivitiesChristmassWiseKings
+ontology-class:FestivitiesChristmassWiseKings rdf:type owl:Class ;
+                                              rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#FestivitiesEaster
+ontology-class:FestivitiesEaster rdf:type owl:Class ;
+                                 rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#FestivitiesRamadan
+ontology-class:FestivitiesRamadan rdf:type owl:Class ;
+                                  rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#FestivitiesSanIsidro
+ontology-class:FestivitiesSanIsidro rdf:type owl:Class ;
+                                    rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Gastronomy
+ontology-class:Gastronomy rdf:type owl:Class ;
+                          rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#IFEMA
+ontology-class:IFEMA rdf:type owl:Class ;
+                     rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Instalation
+ontology-class:Instalation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#ItinerariesAmbientalActivities
+ontology-class:ItinerariesAmbientalActivities rdf:type owl:Class ;
+                                              rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Lgtbi
+ontology-class:Lgtbi rdf:type owl:Class ;
+                     rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#LibraryNetwork
+ontology-class:LibraryNetwork rdf:type owl:Class ;
+                              rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Medialab
+ontology-class:Medialab rdf:type owl:Class ;
+                        rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#MunicipalBoard
+ontology-class:MunicipalBoard rdf:type owl:Class ;
+                              rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#MunicipalPrintingPress
+ontology-class:MunicipalPrintingPress rdf:type owl:Class ;
+                                      rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Museum
+ontology-class:Museum rdf:type owl:Class ;
+                      rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Music
+ontology-class:Music rdf:type owl:Class ;
+                     rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#OpenAirAuditory
+ontology-class:OpenAirAuditory rdf:type owl:Class ;
+                               rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#OpenSpace
+ontology-class:OpenSpace rdf:type owl:Class ;
+                         rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Other
+ontology-class:Other rdf:type owl:Class ;
+                     rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Parish
+ontology-class:Parish rdf:type owl:Class ;
+                      rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Park
+ontology-class:Park rdf:type owl:Class ;
+                    rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Planetary
+ontology-class:Planetary rdf:type owl:Class ;
+                         rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#PublicLibrary
+ontology-class:PublicLibrary rdf:type owl:Class ;
+                             rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#RecitalsPresentationsLiterary
+ontology-class:RecitalsPresentationsLiterary rdf:type owl:Class ;
+                                             rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#ReligiousActs
+ontology-class:ReligiousActs rdf:type owl:Class ;
+                             rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#SchoolChildrenActivities
+ontology-class:SchoolChildrenActivities rdf:type owl:Class ;
+                                        rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Showroom
+ontology-class:Showroom rdf:type owl:Class ;
+                        rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#SocioculturalCenter
+ontology-class:SocioculturalCenter rdf:type owl:Class ;
+                                   rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#SolidaryActs
+ontology-class:SolidaryActs rdf:type owl:Class ;
+                            rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#SportActivities
+ontology-class:SportActivities rdf:type owl:Class ;
+                               rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#SportsCenter
+ontology-class:SportsCenter rdf:type owl:Class ;
+                            rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#StorytellersPuppetsMarionettes
+ontology-class:StorytellersPuppetsMarionettes rdf:type owl:Class ;
+                                              rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#StreetUrbanArtActivities
+ontology-class:StreetUrbanArtActivities rdf:type owl:Class ;
+                                        rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#Theater
+ontology-class:Theater rdf:type owl:Class ;
+                       rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#TheaterPerformance
+ontology-class:TheaterPerformance rdf:type owl:Class ;
+                                  rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#TripsItinerariesWorkshops
+ontology-class:TripsItinerariesWorkshops rdf:type owl:Class ;
+                                         rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#VeranosDeLaVilla
+ontology-class:VeranosDeLaVilla rdf:type owl:Class ;
+                                rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#YoungCultutalBond
+ontology-class:YoungCultutalBond rdf:type owl:Class ;
+                                 rdfs:subClassOf ontology-class:Activity .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#YouthCenter
+ontology-class:YouthCenter rdf:type owl:Class ;
+                           rdfs:subClassOf ontology-class:Instalation .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/class#ZOposiciones
+ontology-class:ZOposiciones rdf:type owl:Class ;
+                            rdfs:subClassOf ontology-class:Activity .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/resource/AdministrativeArea/distritoPrueba
+<http://www.semanticweb.org/ontologies/cultural-activities/resource/AdministrativeArea/distritoPrueba> rdf:type owl:NamedIndividual ,
+                                                                                                                ontology-class:AdministrativeArea ;
+                                                                                                       ontology-property:isTheLocationOf <http://www.semanticweb.org/ontologies/cultural-activities/resource/EqualitySpace/instalacionPrueba> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/resource/Camps/actividadPrueba
+<http://www.semanticweb.org/ontologies/cultural-activities/resource/Camps/actividadPrueba> rdf:type owl:NamedIndividual ,
+                                                                                                    ontology-class:Camps ;
+                                                                                           ontology-property:includes <http://www.semanticweb.org/ontologies/cultural-activities/resource/Event/eventoPrueba> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/resource/EqualitySpace/instalacionPrueba
+<http://www.semanticweb.org/ontologies/cultural-activities/resource/EqualitySpace/instalacionPrueba> rdf:type owl:NamedIndividual ,
+                                                                                                              ontology-class:EqualitySpace ;
+                                                                                                     ontology-property:holdsEvent <http://www.semanticweb.org/ontologies/cultural-activities/resource/Event/eventoPrueba> ;
+                                                                                                     ontology-property:isLocatedIn <http://www.semanticweb.org/ontologies/cultural-activities/resource/AdministrativeArea/distritoPrueba> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/resource/Event/eventoPrueba
+<http://www.semanticweb.org/ontologies/cultural-activities/resource/Event/eventoPrueba> rdf:type owl:NamedIndividual ,
+                                                                                                 ontology-class:Event ;
+                                                                                        <http://www.semanticweb.org/ontologies/cultural-activities#isIncludedIn> <http://www.semanticweb.org/ontologies/cultural-activities/resource/Camps/actividadPrueba> ;
+                                                                                        ontology-property:takesPlaceIn <http://www.semanticweb.org/ontologies/cultural-activities/resource/EqualitySpace/instalacionPrueba> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
