@@ -245,7 +245,7 @@ printPopup = (intersected, show) => {
 
 getIndex = (postal) => {
 	let index = postal.slice(-2);
-	if(index.slice(1) === "0"){
+	if(index.slice(0) === "0"){
 		return parseInt(index.slice(-1))-1
 	}else{
 		return parseInt(index)-1
