@@ -7,7 +7,7 @@ class DataRetriever:
 
     def __init__(self):
         self.data = Graph()
-        self.data.parse("./test.ttl", format="turtle")
+        self.data.parse("../../rdf/rdf.ttl", format="turtle")
 
     def get_pollutant_data(self, pollutant_id):
         res = self.data.query("""
