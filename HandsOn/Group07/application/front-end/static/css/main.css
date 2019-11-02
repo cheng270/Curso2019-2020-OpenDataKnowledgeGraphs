@@ -104,6 +104,15 @@ hr{
 	transition: opacity .2s;
 }
 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px;
+  border-radius: 50%; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: magenta; /* Green background */
+  cursor: pointer; /* Cursor on hover */  
+}
 
 
 
