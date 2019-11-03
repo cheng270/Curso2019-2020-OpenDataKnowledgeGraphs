@@ -30,6 +30,12 @@
           rdfs:range :Address .
 
 
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#placedInNeighbourhood
+:placedInNeighbourhood rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Address ;
+                       rdfs:range :Neighbourhood .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -86,6 +92,10 @@
 
 ###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Measurement
 :Measurement rdf:type owl:Class .
+
+
+###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Neighbourhood
+:Neighbourhood rdf:type owl:Class .
 
 
 ###  http://www.airqualitymadrid.es/ontologies/airqualitymadrid#Pollutant

@@ -1,12 +1,9 @@
 
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
-
     <title>Analysis</title>
-
     <meta name="description" content="Analysis">
     <meta name="author" content="Group07">
     <style>
@@ -23,7 +20,10 @@
     </style>
   </head>
   <body style="padding:0 5%">
-    <h2>Analysis of the dataset</h2>
+    <h2>Analysis of the initial dataset</h2>
+    <p>This analysis has been performed on the initial dataset. Then we realized
+       it was not reasonable to deal with a such big amount of data, so we reduced
+        the dataset and we analyzed it again.</p>
     <table>
       <tr>
         <th>Column</th>
@@ -156,6 +156,73 @@
         <td>-</td>
       </tr>
     </table>
+
+    <h2>Analysis of the final dataset</h2>
+    <p>This is the analysis repeated on the final dataset used with OpenRefine.
+        The column measurement_value now groups all the values about measurements of different pollutants,
+        we did this transformation to reduce the complexity of the RDF skeleton and to help reconciliation.
+        Though the meaning is still the same as in the previous dataset.</p>
+    <table>
+      <tr>
+        <th>Column</th>
+        <th>Type</th>
+        <th>Comment/Range</th>
+        <th>Problems</th>
+      </tr>
+
+    <!--  Start Rows-->
+
+      <tr>
+        <td>Date</td>
+        <td>Time (Date)</td>
+        <td>01/01/2018-31/01/2018</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>station_lon</td>
+        <td>Decimal</td>
+        <td>-3.77 - -3.58</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>station_lat</td>
+        <td>Decimal</td>
+        <td>40.35 - 40.52</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>station_elevation</td>
+        <td>number as text</td>
+        <td>23 unique values</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>station_name</td>
+        <td>String</td>
+        <td>24 unique values</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>station_address</td>
+        <td>String</td>
+        <td>24 unique values corresponding to station_name</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>pollutant</td>
+        <td>String</td>
+        <td>14 unique values corresponding to pollutant_name</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>measurement_value</td>
+        <td>Decimal</td>
+        <td>0.0 - 1500.0</td>
+        <td>Values belong to different pollutants, so they have different scales</td>
+      </tr>
+
+    </table>
+
     <p>
       <h2>Resource Naming Strategy</h2>
       The resource naming strategy defined for the data follows the best practices and
