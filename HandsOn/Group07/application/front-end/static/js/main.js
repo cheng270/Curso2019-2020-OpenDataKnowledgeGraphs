@@ -290,7 +290,7 @@ fillPopup = (json) => {
 	let content
 	for (i = 0; i < json.length; i++) {
   		content += "<h3>" + json[i].pollutant_id + " (" + json[i].pollutant_name + ")</h3>"
-  		content += "<h4>AVG: " + parseFloat(json[i].avg).toFixed(2) + " / MAX: " + parseFloat(json[i].max).toFixed(2) + " / MIN: " + parseFloat(json[i].min).toFixed(2) + "</h4>"
+  		content += "<h4>avg: " + parseFloat(json[i].avg).toFixed(2) + " / max: " + parseFloat(json[i].max).toFixed(2) + " / min: " + parseFloat(json[i].min).toFixed(2) + "</h4>"
 	}
 	document.getElementById("pollutants").innerHTML = content
 }
