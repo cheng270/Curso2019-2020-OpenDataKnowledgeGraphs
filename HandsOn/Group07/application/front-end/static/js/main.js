@@ -287,7 +287,7 @@ fillPopup = (json) => {
 	document.getElementById("loading").style.display = "none"
 	console.log(json)
 	console.log(typeof(json))
-	let content
+	let content = ""
 	for (i = 0; i < json.length; i++) {
   		content += "<h3>" + json[i].pollutant_id + " (" + json[i].pollutant_name + ")</h3>"
   		content += "<h4>avg: " + parseFloat(json[i].avg).toFixed(2) + " / max: " + parseFloat(json[i].max).toFixed(2) + " / min: " + parseFloat(json[i].min).toFixed(2) + "</h4>"
