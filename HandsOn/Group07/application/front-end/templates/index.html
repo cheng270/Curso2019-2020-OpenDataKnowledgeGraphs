@@ -10,23 +10,26 @@
 <body>
 <div id="canvas" className="canvas" onmousemove="onDocumentMouseMove(event)"></div>
 <div id="popup" style="display:none;" class="absolute-popup-right">
-    <h2 id="district-name">Concha Espina 224</h2>
-    <h1 id="district-postal">28010</h1>
+    <h2 id="district-name"></h2>
+    <h1 id="district-postal"></h1>
     <hr class="margin-left">
-    <h3>N02 CONCENTRATION</h3>
-    <h4>2,4567</h4>
-    <h3>02 CONCENTRATION</h3>
-    <h4>15,1233</h4>
-    <h3>C02 CONCENTRATION</h3>
-    <h4>4,2333</h4>
-    <h3>N0 CONCENTRATION</h3>
-    <h4>1,1234</h4>
+    <h5 id="loading">Loading data...</h5>
+    <div id="pollutants">
+    </div>
+    
+    
 </div>
 <div class="absolute-title">
     <hr>
     <h1>3DAIRQ</h1>
     <p>Mouse over the 3D model showing the different city areas and display the air quality data for each one (each area
         is covered by one meassure device)</p>
+    <p>You can choose the date by using the bottom slider</p>
+</div>
+
+<div class="absolute-slider">
+  <input oninput="sliderChange()" type="range" min="1" max="19" value="1" class="slider" id="date-slider">
+  <h2 id="date">2018-01-01</h2>
 </div>
 
 <script type="text/javascript" src="../static/lib/js/three.js"></script>

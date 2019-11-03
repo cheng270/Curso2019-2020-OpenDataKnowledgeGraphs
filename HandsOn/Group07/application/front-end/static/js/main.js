@@ -9,6 +9,16 @@ var material3;
 var material = []
 var vidriotest = []
 
+var day = 1
+
+
+var mooving = false;
+var moovingTimeOut;
+
+var INTERSECTED;
+
+var xhttp;
+
 init();
 animate();
 function init() {
@@ -136,7 +146,7 @@ function init() {
 //
 function animate() {
 	requestAnimationFrame(animate);
-	group.rotation.y += 0.003;
+	group.rotation.y += 0.00025;
 	render();
 }
 function render() {
@@ -151,12 +161,22 @@ var INTERSECTED = undefined
 
 
 onDocumentMouseMove = (event) => {
-	console.log("onDocumentMouseMove")
+	clearTimeout(moovingTimeOut);
+	mooving = true;
+	console.log("Mouse moove")
     //event.preventDefault();
-  
-    mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
+    
+	mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
     mouse.y = - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
     update()
+
+    moovingTimeOut = setTimeout(function(){
+  		mooving = false;
+  		console.log("Mouse stop")
+  		printPopup(INTERSECTED, true)
+  	}, 500);
+  
+    
 }
 
 update = () => {
@@ -182,7 +202,7 @@ update = () => {
 			// set a new color for closest object
 			INTERSECTED.material = material2
 			INTERSECTED.position.y += 0.03
-			printPopup(INTERSECTED, true);
+			//printPopup(INTERSECTED, true);
 			
 		}
 	}else{ // there are no intersections
@@ -206,29 +226,86 @@ update = () => {
 printPopup = (intersected, show) => {
 	//TODO: Get data, fill popup and show or hide
 	if(show){
-		//TODO: Substitute random for district name correspondign to postal code (which is what we know)
-		var index = Math.floor(Math.random() * 40)
-		document.getElementById("district-name").innerHTML = districts[index]
-		document.getElementById("district-postal").innerHTML = INTERSECTED.name
-		document.getElementById("popup").style.display = "block"
+		if(mooving === false){
+			document.getElementById("pollutants").innerHTML = ""
+			document.getElementById("loading").style.display = "block"
+			let index = getIndex(INTERSECTED.name)
+			getDeviceData(ids[index])
+			document.getElementById("district-name").innerHTML = districts[index]
+			document.getElementById("district-postal").innerHTML = INTERSECTED.name
+			document.getElementById("popup").style.display = "block"
+		}
 	}else{
+		document.getElementById("loading").style.display = "block"
+		document.getElementById("pollutants").innerHTML = ""
 		document.getElementById("popup").style.display = "none"
 	}
 	
 }
 
+getIndex = (postal) => {
+	let index = postal.slice(-2);
+	if(index.slice(0) === "0"){
+		return parseInt(index.slice(-1))-1
+	}else{
+		return parseInt(index)-1
+	}
+
+}
 
 //TODO: Handle received data
 getDeviceData = (id) => {
 
+	let startDate
+	let endDate
+	if(day < 10){
+		startDate = "2018-01-0" + day + "T00:00Z"
+		endDate = "2018-01-0" + day + "T23:00Z"
+	}else{
+		startDate = "2018-01-" + day + "T00:00Z"
+		endDate = "2018-01-" + day + "T23:00Z"
+	}
+
+	//To close the previous con in case that it exists
+	try{
+		xhttp.abort()
+	}catch(error){
+		console.error(error);
+	}
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	fillPopup(JSON.parse(xhttp.responseText))
+	    }
+	};
+
+	xhttp.open("GET", "/station_id/" + id + "/start_date/" + startDate + "/end_date/" + endDate, true);
+	xhttp.send();
 }
 
-getDevicesList = () => {
-
+fillPopup = (json) => {
+	document.getElementById("loading").style.display = "none"
+	console.log(json)
+	console.log(typeof(json))
+	let content = ""
+	for (i = 0; i < json.length; i++) {
+  		content += "<h3>" + json[i].pollutant_id + " (" + json[i].pollutant_name + ")</h3>"
+  		content += "<h4>avg: " + parseFloat(json[i].avg).toFixed(2) + " / max: " + parseFloat(json[i].max).toFixed(2) + " / min: " + parseFloat(json[i].min).toFixed(2) + "</h4>"
+	}
+	document.getElementById("pollutants").innerHTML = content
 }
 
 
+sliderChange = () =>{
 
+	day = document.getElementById("date-slider").value
+
+	if(day < 10){
+		document.getElementById("date").innerHTML = "2018-01-0" + day
+	}else{
+		document.getElementById("date").innerHTML = "2018-01-" + day
+	}
+}
 
 
 

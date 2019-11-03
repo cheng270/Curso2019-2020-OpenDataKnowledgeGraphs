@@ -4,7 +4,7 @@
 
 | Name | Surname | Github username |
 |---|---|---|
-| Carlos | Cameo Gilbert | carloscameogbrt |
+| Carlos | Cameo Gilabert | carloscameogbrt |
 | Charlotte | Felius | ccfelius |
 | Paolo | Romeo | romeopaolo |
 | Giacomo | Ziffer | GiacomoZiffer |
