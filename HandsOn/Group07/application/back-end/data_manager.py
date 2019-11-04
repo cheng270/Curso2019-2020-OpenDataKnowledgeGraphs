@@ -7,7 +7,7 @@ class DataRetriever:
 
     def __init__(self):
         self.data = Graph()
-        self.data.parse("../../rdf/rdf.ttl", format="turtle")
+        self.data.parse("../../rdf/rdf-with-links.ttl", format="turtle")
 
     def get_pollutant_data(self, pollutant_id):
         res = self.data.query("""
@@ -54,7 +54,9 @@ class DataRetriever:
             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             PREFIX sens: <http://www.airqualitymadrid.es/resource/pollution_sensor/>
             PREFIX aqm: <http://www.airqualitymadrid.es/ontologies/airqualitymadrid#>
-            select ?pollutant_id ?pollutant_name (MIN(?value) as ?min) (avg(xsd:float(xsd:string(?value))) as ?avg) (MAX(?value) as ?max) 
+            select ?pollutant_id ?pollutant_name (MIN(xsd:float(xsd:string(?value))) as ?min) 
+            (avg(xsd:float(xsd:string(?value))) as ?avg) 
+            (MAX(xsd:float(xsd:string(?value))) as ?max) 
             WHERE {
                 sens:""" + station_id + """ a aqm:PollutionSensor ;
                     aqm:hasCollected ?measurement .

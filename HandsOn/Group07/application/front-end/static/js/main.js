@@ -24,9 +24,9 @@ animate();
 function init() {
 	container = document.getElementById('canvas');
 	document.body.appendChild( container );
-	camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-	camera.position.y = 2.2
-    camera.position.z = 1.2
+	camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
+	camera.position.y = 2.7
+    camera.position.z = 3
 	// scene
 	scene = new THREE.Scene();
     
@@ -35,8 +35,8 @@ function init() {
 
 
 
-	var light = new window.THREE.DirectionalLight(0xdddddd, 1.5)
-	light.position.set( -10, 10, -10 )
+	var light = new window.THREE.DirectionalLight(0xdddddd, 2.75);
+	light.position.set( -10, 10, -10 );
 	var targetObject = new window.THREE.Object3D();
     targetObject.position.set(0,0,0)
 	light.target = targetObject
@@ -88,8 +88,8 @@ function init() {
 	material = []
 	vidriotest = []
 
-	material2 = new window.THREE.MeshPhongMaterial({color:'#ff00ff' ,transparent:true})
-    material2.opacity = 0.7
+	material2 = new window.THREE.MeshPhongMaterial({color:'#eb522d' ,transparent:true})
+    material2.opacity = 1
     material3 = new window.THREE.MeshPhongMaterial({color:'#0000ff' ,transparent:true})
     material3.opacity = 0.7
 
@@ -109,7 +109,7 @@ function init() {
 
 					if(node.isMesh){
 						vidriotest[x] = node
-		                material[x] = new window.THREE.MeshPhongMaterial({color:`hsl(200,50%,70%)` ,opacity: 0.4, transparent:true})
+		                material[x] = new window.THREE.MeshPhongMaterial({color:`grey` ,opacity: 0.75, transparent:true})
 		                if(x<10) { vidriotest[x].name = `2800${x}`}
 		                else { vidriotest[x].name = `280${x}`}
 
@@ -146,7 +146,7 @@ function init() {
 //
 function animate() {
 	requestAnimationFrame(animate);
-	group.rotation.y += 0.00025;
+	group.rotation.y += 0;
 	render();
 }
 function render() {
