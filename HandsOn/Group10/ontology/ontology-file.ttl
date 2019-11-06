@@ -1,0 +1,555 @@
+@prefix : <http://www.semanticweb.org/ontologies/cultural-activities/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix individual: <http://www.semanticweb.org/ontologies/cultural-activities/resource/> .
+@prefix ontology-class: <http://www.semanticweb.org/ontologies/cultural-activities/class#> .
+@prefix ontology-property: <http://www.semanticweb.org/ontologies/cultural-activities/property#> .
+@base <http://www.madridcultural.es/cultural-activities/> .
+
+<http://www.madridcultural.es/cultural-activities/> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#ID
+xsd:ID rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.madridcultural.es/cultural-activities/property#holdsEvent
+<http://www.madridcultural.es/cultural-activities/property#holdsEvent> rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf <http://www.madridcultural.es/cultural-activities/property#takesPlaceIn> ;
+                                                                       rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Instalation> ;
+                                                                       rdfs:range <http://www.madridcultural.es/cultural-activities/class#Event> .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#includes
+<http://www.madridcultural.es/cultural-activities/property#includes> rdf:type owl:ObjectProperty ;
+                                                                     owl:inverseOf <http://www.semanticweb.org/ontologies/cultural-activities#isIncludedIn> ;
+                                                                     rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Activity> ;
+                                                                     rdfs:range <http://www.madridcultural.es/cultural-activities/class#Event> .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#isLocatedIn
+<http://www.madridcultural.es/cultural-activities/property#isLocatedIn> rdf:type owl:ObjectProperty ;
+                                                                        owl:inverseOf <http://www.madridcultural.es/cultural-activities/property#isTheLocationOf> ;
+                                                                        rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Instalation> ;
+                                                                        rdfs:range <http://www.madridcultural.es/cultural-activities/class#AdministrativeArea> .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#isTheLocationOf
+<http://www.madridcultural.es/cultural-activities/property#isTheLocationOf> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <http://www.madridcultural.es/cultural-activities/class#AdministrativeArea> ;
+                                                                            rdfs:range <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#takesPlaceIn
+<http://www.madridcultural.es/cultural-activities/property#takesPlaceIn> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                         rdfs:range <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities#isIncludedIn
+<http://www.semanticweb.org/ontologies/cultural-activities#isIncludedIn> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                         rdfs:range <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.madridcultural.es/cultural-activities/property#activityDescription
+<http://www.madridcultural.es/cultural-activities/property#activityDescription> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Activity> ;
+                                                                                rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#activityTitle
+<http://www.madridcultural.es/cultural-activities/property#activityTitle> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Activity> ;
+                                                                          rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#activityURL
+<http://www.madridcultural.es/cultural-activities/property#activityURL> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Activity> ;
+                                                                        rdfs:range xsd:anyURI ;
+                                                                        owl:sameAs "km4c:multimediaResource" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventAudience
+<http://www.madridcultural.es/cultural-activities/property#eventAudience> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          owl:sameAs "https://schema.org/audience" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventDescription
+<http://www.madridcultural.es/cultural-activities/property#eventDescription> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                             rdfs:range xsd:string ;
+                                                                             owl:sameAs "https://schema.org/about" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventEndDay
+<http://www.madridcultural.es/cultural-activities/property#eventEndDay> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                        rdfs:range xsd:date ;
+                                                                        owl:sameAs "https://schema.org/endDate" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventExcludedDays
+<http://www.madridcultural.es/cultural-activities/property#eventExcludedDays> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                              rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventID
+<http://www.madridcultural.es/cultural-activities/property#eventID> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                    rdfs:range xsd:ID .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventLongDuration
+<http://www.madridcultural.es/cultural-activities/property#eventLongDuration> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                              rdfs:range xsd:base64Binary .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventName
+<http://www.madridcultural.es/cultural-activities/property#eventName> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                      rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventPrice
+<http://www.madridcultural.es/cultural-activities/property#eventPrice> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                       rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventStartingDay
+<http://www.madridcultural.es/cultural-activities/property#eventStartingDay> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                             rdfs:range xsd:date ;
+                                                                             owl:sameAs "https://schema.org/startDate" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventStartingHour
+<http://www.madridcultural.es/cultural-activities/property#eventStartingHour> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                              rdfs:range xsd:time ;
+                                                                              owl:sameAs "km4c:time" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventTitle
+<http://www.madridcultural.es/cultural-activities/property#eventTitle> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                       rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventURL
+<http://www.madridcultural.es/cultural-activities/property#eventURL> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                     rdfs:range xsd:anyURI ;
+                                                                     owl:sameAs "km4c:multimediaResource" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#eventWeekDays
+<http://www.madridcultural.es/cultural-activities/property#eventWeekDays> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                          rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#instalationLatitude
+<http://www.madridcultural.es/cultural-activities/property#instalationLatitude> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Instalation> ;
+                                                                                rdfs:range xsd:float ;
+                                                                                owl:sameAs "https://www.w3.org/2003/01/geo/#lat" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#instalationLongitude
+<http://www.madridcultural.es/cultural-activities/property#instalationLongitude> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Instalation> ;
+                                                                                 rdfs:range xsd:float ;
+                                                                                 owl:sameAs "https://www.w3.org/2003/01/geo/#lon" .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#instalationName
+<http://www.madridcultural.es/cultural-activities/property#instalationName> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Instalation> ;
+                                                                            rdfs:range xsd:string .
+
+
+###  http://www.madridcultural.es/cultural-activities/property#instalationURL
+<http://www.madridcultural.es/cultural-activities/property#instalationURL> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Instalation> ;
+                                                                           rdfs:range xsd:anyURI ;
+                                                                           owl:sameAs "km4c:multimediaResource" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.madridcultural.es/cultural-activities/class#Activity
+<http://www.madridcultural.es/cultural-activities/class#Activity> rdf:type owl:Class .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#AdministrativeArea
+<http://www.madridcultural.es/cultural-activities/class#AdministrativeArea> rdf:type owl:Class .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#AuditoryShowroom
+<http://www.madridcultural.es/cultural-activities/class#AuditoryShowroom> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Camps
+<http://www.madridcultural.es/cultural-activities/class#Camps> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CinemaAudiovisualActivities
+<http://www.madridcultural.es/cultural-activities/class#CinemaAudiovisualActivities> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Cineteca
+<http://www.madridcultural.es/cultural-activities/class#Cineteca> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CircusMagic
+<http://www.madridcultural.es/cultural-activities/class#CircusMagic> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CityDistrict
+<http://www.madridcultural.es/cultural-activities/class#CityDistrict> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#ClassroomEcology
+<http://www.madridcultural.es/cultural-activities/class#ClassroomEcology> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CommemorationsTributes
+<http://www.madridcultural.es/cultural-activities/class#CommemorationsTributes> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CompetitionsContests
+<http://www.madridcultural.es/cultural-activities/class#CompetitionsContests> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#ConferencesColoquiums
+<http://www.madridcultural.es/cultural-activities/class#ConferencesColoquiums> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CongressesDays
+<http://www.madridcultural.es/cultural-activities/class#CongressesDays> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CoursesWorkshops
+<http://www.madridcultural.es/cultural-activities/class#CoursesWorkshops> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#CulturalCenter
+<http://www.madridcultural.es/cultural-activities/class#CulturalCenter> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Dancing
+<http://www.madridcultural.es/cultural-activities/class#Dancing> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#EqualitySpace
+<http://www.madridcultural.es/cultural-activities/class#EqualitySpace> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Event
+<http://www.madridcultural.es/cultural-activities/class#Event> rdf:type owl:Class .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Expositions
+<http://www.madridcultural.es/cultural-activities/class#Expositions> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Fair
+<http://www.madridcultural.es/cultural-activities/class#Fair> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Festivals
+<http://www.madridcultural.es/cultural-activities/class#Festivals> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Festivities
+<http://www.madridcultural.es/cultural-activities/class#Festivities> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#FestivitiesCarnivals
+<http://www.madridcultural.es/cultural-activities/class#FestivitiesCarnivals> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#FestivitiesChristmassWiseKings
+<http://www.madridcultural.es/cultural-activities/class#FestivitiesChristmassWiseKings> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#FestivitiesEaster
+<http://www.madridcultural.es/cultural-activities/class#FestivitiesEaster> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#FestivitiesRamadan
+<http://www.madridcultural.es/cultural-activities/class#FestivitiesRamadan> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#FestivitiesSanIsidro
+<http://www.madridcultural.es/cultural-activities/class#FestivitiesSanIsidro> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Gastronomy
+<http://www.madridcultural.es/cultural-activities/class#Gastronomy> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#IFEMA
+<http://www.madridcultural.es/cultural-activities/class#IFEMA> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Instalation
+<http://www.madridcultural.es/cultural-activities/class#Instalation> rdf:type owl:Class .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#ItinerariesAmbientalActivities
+<http://www.madridcultural.es/cultural-activities/class#ItinerariesAmbientalActivities> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Lgtbi
+<http://www.madridcultural.es/cultural-activities/class#Lgtbi> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#LibraryNetwork
+<http://www.madridcultural.es/cultural-activities/class#LibraryNetwork> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Medialab
+<http://www.madridcultural.es/cultural-activities/class#Medialab> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#MunicipalBoard
+<http://www.madridcultural.es/cultural-activities/class#MunicipalBoard> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#MunicipalPrintingPress
+<http://www.madridcultural.es/cultural-activities/class#MunicipalPrintingPress> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Museum
+<http://www.madridcultural.es/cultural-activities/class#Museum> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Music
+<http://www.madridcultural.es/cultural-activities/class#Music> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#OpenAirAuditory
+<http://www.madridcultural.es/cultural-activities/class#OpenAirAuditory> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#OpenSpace
+<http://www.madridcultural.es/cultural-activities/class#OpenSpace> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Other
+<http://www.madridcultural.es/cultural-activities/class#Other> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Parish
+<http://www.madridcultural.es/cultural-activities/class#Parish> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Park
+<http://www.madridcultural.es/cultural-activities/class#Park> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Planetary
+<http://www.madridcultural.es/cultural-activities/class#Planetary> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#PublicLibrary
+<http://www.madridcultural.es/cultural-activities/class#PublicLibrary> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#RecitalsPresentationsLiterary
+<http://www.madridcultural.es/cultural-activities/class#RecitalsPresentationsLiterary> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#ReligiousActs
+<http://www.madridcultural.es/cultural-activities/class#ReligiousActs> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#SchoolChildrenActivities
+<http://www.madridcultural.es/cultural-activities/class#SchoolChildrenActivities> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Showroom
+<http://www.madridcultural.es/cultural-activities/class#Showroom> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#SocioculturalCenter
+<http://www.madridcultural.es/cultural-activities/class#SocioculturalCenter> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#SolidaryActs
+<http://www.madridcultural.es/cultural-activities/class#SolidaryActs> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#SportActivities
+<http://www.madridcultural.es/cultural-activities/class#SportActivities> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#SportsCenter
+<http://www.madridcultural.es/cultural-activities/class#SportsCenter> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#StorytellersPuppetsMarionettes
+<http://www.madridcultural.es/cultural-activities/class#StorytellersPuppetsMarionettes> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#StreetUrbanArtActivities
+<http://www.madridcultural.es/cultural-activities/class#StreetUrbanArtActivities> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#Theater
+<http://www.madridcultural.es/cultural-activities/class#Theater> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#TheaterPerformance
+<http://www.madridcultural.es/cultural-activities/class#TheaterPerformance> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#TripsItinerariesWorkshops
+<http://www.madridcultural.es/cultural-activities/class#TripsItinerariesWorkshops> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#VeranosDeLaVilla
+<http://www.madridcultural.es/cultural-activities/class#VeranosDeLaVilla> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#YoungCultutalBond
+<http://www.madridcultural.es/cultural-activities/class#YoungCultutalBond> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#YouthCenter
+<http://www.madridcultural.es/cultural-activities/class#YouthCenter> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Instalation> .
+
+
+###  http://www.madridcultural.es/cultural-activities/class#ZOposiciones
+<http://www.madridcultural.es/cultural-activities/class#ZOposiciones> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.madridcultural.es/cultural-activities/class#Activity> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.madridcultural.es/cultural-activities/resource/AdministrativeArea/distritoPrueba
+<http://www.madridcultural.es/cultural-activities/resource/AdministrativeArea/distritoPrueba> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.madridcultural.es/cultural-activities/class#AdministrativeArea> ;
+                                                                                              <http://www.madridcultural.es/cultural-activities/property#isTheLocationOf> <http://www.madridcultural.es/cultural-activities/resource/EqualitySpace/instalacionPrueba> .
+
+
+###  http://www.madridcultural.es/cultural-activities/resource/Camps/actividadPrueba
+<http://www.madridcultural.es/cultural-activities/resource/Camps/actividadPrueba> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.madridcultural.es/cultural-activities/class#Camps> ;
+                                                                                  <http://www.madridcultural.es/cultural-activities/property#includes> <http://www.madridcultural.es/cultural-activities/resource/Event/eventoPrueba> .
+
+
+###  http://www.madridcultural.es/cultural-activities/resource/EqualitySpace/instalacionPrueba
+<http://www.madridcultural.es/cultural-activities/resource/EqualitySpace/instalacionPrueba> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.madridcultural.es/cultural-activities/class#EqualitySpace> ;
+                                                                                            <http://www.madridcultural.es/cultural-activities/property#holdsEvent> <http://www.madridcultural.es/cultural-activities/resource/Event/eventoPrueba> ;
+                                                                                            <http://www.madridcultural.es/cultural-activities/property#isLocatedIn> <http://www.madridcultural.es/cultural-activities/resource/AdministrativeArea/distritoPrueba> .
+
+
+###  http://www.madridcultural.es/cultural-activities/resource/Event/eventoPrueba
+<http://www.madridcultural.es/cultural-activities/resource/Event/eventoPrueba> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.madridcultural.es/cultural-activities/class#Event> ;
+                                                                               <http://www.madridcultural.es/cultural-activities/property#takesPlaceIn> <http://www.madridcultural.es/cultural-activities/resource/EqualitySpace/instalacionPrueba> ;
+                                                                               <http://www.semanticweb.org/ontologies/cultural-activities#isIncludedIn> <http://www.madridcultural.es/cultural-activities/resource/Camps/actividadPrueba> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
