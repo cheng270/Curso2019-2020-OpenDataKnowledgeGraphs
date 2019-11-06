@@ -226,7 +226,7 @@ update = () => {
 printPopup = (intersected, show) => {
 	//TODO: Get data, fill popup and show or hide
 	if(show){
-		if(mooving === false){
+		if(mooving === false && INTERSECTED !== null){
 			document.getElementById("pollutants").innerHTML = ""
 			document.getElementById("loading").style.display = "block"
 			let index = getIndex(INTERSECTED.name)
@@ -235,11 +235,11 @@ printPopup = (intersected, show) => {
 			document.getElementById("district-postal").innerHTML = INTERSECTED.name
 			document.getElementById("popup").style.display = "block"
 		}
-	}else{
+	}/*else{
 		document.getElementById("loading").style.display = "block"
 		document.getElementById("pollutants").innerHTML = ""
 		document.getElementById("popup").style.display = "none"
-	}
+	}*/
 	
 }
 
@@ -253,7 +253,6 @@ getIndex = (postal) => {
 
 }
 
-//TODO: Handle received data
 getDeviceData = (id) => {
 
 	let startDate
@@ -283,13 +282,29 @@ getDeviceData = (id) => {
 	xhttp.send();
 }
 
+getPollutantData = (id) => {
+
+	let xhttpPollutant = new XMLHttpRequest();
+	xhttpPollutant.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	console.log(JSON.parse(xhttpPollutant.responseText))
+	    	let response = JSON.parse(xhttpPollutant.responseText)
+	    	let win = window.open(response[0].link, '_blank');
+			win.focus();
+	    }
+	};
+
+	xhttpPollutant.open("GET", "/pollutant/" + id, true);
+	xhttpPollutant.send();
+}
+
 fillPopup = (json) => {
 	document.getElementById("loading").style.display = "none"
 	console.log(json)
 	console.log(typeof(json))
 	let content = ""
 	for (i = 0; i < json.length; i++) {
-  		content += "<h3>" + json[i].pollutant_id + " (" + json[i].pollutant_name + ")</h3>"
+  		content += '<h3 onClick="getPollutantData(\'' + json[i].pollutant_id + '\')">' + json[i].pollutant_id + " (" + json[i].pollutant_name + ")</h3>"
   		content += "<h4>avg: " + parseFloat(json[i].avg).toFixed(2) + " / max: " + parseFloat(json[i].max).toFixed(2) + " / min: " + parseFloat(json[i].min).toFixed(2) + "</h4>"
 	}
 	document.getElementById("pollutants").innerHTML = content
