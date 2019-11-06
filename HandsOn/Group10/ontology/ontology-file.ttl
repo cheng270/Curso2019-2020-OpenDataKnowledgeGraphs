@@ -92,7 +92,7 @@ xsd:time rdf:type rdfs:Datatype .
 <http://www.madridcultural.es/cultural-activities/property#activityURL> rdf:type owl:DatatypeProperty ;
                                                                         rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Activity> ;
                                                                         rdfs:range xsd:anyURI ;
-                                                                        owl:sameAs "km4c:multimediaResource" .
+                                                                        owl:sameAs "http://www.disit.org/km4city/schema#multimediaResource" .
 
 
 ###  http://www.madridcultural.es/cultural-activities/property#eventAudience
@@ -151,7 +151,7 @@ xsd:time rdf:type rdfs:Datatype .
 <http://www.madridcultural.es/cultural-activities/property#eventStartingHour> rdf:type owl:DatatypeProperty ;
                                                                               rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
                                                                               rdfs:range xsd:time ;
-                                                                              owl:sameAs "km4c:time" .
+                                                                              owl:sameAs "http://www.disit.org/km4city/schema#time" .
 
 
 ###  http://www.madridcultural.es/cultural-activities/property#eventTitle
@@ -164,7 +164,7 @@ xsd:time rdf:type rdfs:Datatype .
 <http://www.madridcultural.es/cultural-activities/property#eventURL> rdf:type owl:DatatypeProperty ;
                                                                      rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
                                                                      rdfs:range xsd:anyURI ;
-                                                                     owl:sameAs "km4c:multimediaResource" .
+                                                                     owl:sameAs "http://www.disit.org/km4city/schema#multimediaResource" .
 
 
 ###  http://www.madridcultural.es/cultural-activities/property#eventWeekDays
@@ -197,7 +197,7 @@ xsd:time rdf:type rdfs:Datatype .
 <http://www.madridcultural.es/cultural-activities/property#instalationURL> rdf:type owl:DatatypeProperty ;
                                                                            rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Instalation> ;
                                                                            rdfs:range xsd:anyURI ;
-                                                                           owl:sameAs "km4c:multimediaResource" .
+                                                                           owl:sameAs "http://www.disit.org/km4city/schema#multimediaResource" .
 
 
 #################################################################
@@ -205,7 +205,8 @@ xsd:time rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://www.madridcultural.es/cultural-activities/class#Activity
-<http://www.madridcultural.es/cultural-activities/class#Activity> rdf:type owl:Class .
+<http://www.madridcultural.es/cultural-activities/class#Activity> rdf:type owl:Class ;
+                                                                  owl:sameAs "http://www.disit.org/km4city/schema#CulturalActivity" .
 
 
 ###  http://www.madridcultural.es/cultural-activities/class#AdministrativeArea
