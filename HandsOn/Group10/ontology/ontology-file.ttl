@@ -82,12 +82,6 @@ xsd:time rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  http://www.madridcultural.es/cultural-activities/property#activityDescription
-<http://www.madridcultural.es/cultural-activities/property#activityDescription> rdf:type owl:DatatypeProperty ;
-                                                                                rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Activity> ;
-                                                                                rdfs:range xsd:string .
-
-
 ###  http://www.madridcultural.es/cultural-activities/property#activityTitle
 <http://www.madridcultural.es/cultural-activities/property#activityTitle> rdf:type owl:DatatypeProperty ;
                                                                           rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Activity> ;
@@ -138,12 +132,6 @@ xsd:time rdf:type rdfs:Datatype .
 <http://www.madridcultural.es/cultural-activities/property#eventLongDuration> rdf:type owl:DatatypeProperty ;
                                                                               rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
                                                                               rdfs:range xsd:base64Binary .
-
-
-###  http://www.madridcultural.es/cultural-activities/property#eventName
-<http://www.madridcultural.es/cultural-activities/property#eventName> rdf:type owl:DatatypeProperty ;
-                                                                      rdfs:domain <http://www.madridcultural.es/cultural-activities/class#Event> ;
-                                                                      rdfs:range xsd:string .
 
 
 ###  http://www.madridcultural.es/cultural-activities/property#eventPrice
