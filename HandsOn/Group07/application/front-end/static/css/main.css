@@ -25,11 +25,13 @@ h2{
 }
 
 h3{
+	cursor: pointer;
 	color: #bbb;
 	font-weight: 100;
 	font-size: 14px;
 	margin-top: 10px;
 	margin-bottom: 0px;
+	pointer-events: all;
 }
 
 h4{
@@ -72,6 +74,7 @@ hr{
 	width: 30%;
 	padding: 20px;
 	background-color: transparent;
+	pointer-events: none;
 }
 
 .absolute-title{
@@ -81,6 +84,7 @@ hr{
 	top: 10%;
 	width: 20%;
 	background-color: transparent;
+	pointer-events: none;
 }
 
 .absolute-slider{
