@@ -945,5 +945,344 @@
     "oldColumnName": "official website",
     "newColumnName": "WEB-OFICIAL-DISTRITO",
     "description": "Rename column official website to WEB-OFICIAL-DISTRITO"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "geo",
+          "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+          "name": "km4c",
+          "uri": "http://www.disit.org/km4city/schema#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "cultOntology",
+          "uri": "http://www.madridcultural.es/cultural-activities/resource/"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.madridcultural.es/cultural-activities/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "ID-EVENTO",
+          "expression": "\"Event/\"+value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#hasId",
+              "curie": "cultOntology:hasId",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "ID-EVENTO",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#hasTitle",
+              "curie": "cultOntology:hasTitle",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "TITULO",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#costs",
+              "curie": "cultOntology:costs",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "PRECIO",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#isLongTerm",
+              "curie": "cultOntology:isLongTerm",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "LARGA-DURACION",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#daysOfWeek",
+              "curie": "cultOntology:daysOfWeek",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "DIAS-SEMANA",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#daysExcluded",
+              "curie": "cultOntology:daysExcluded",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "DIAS-EXCLUIDOS",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#startingDate",
+              "curie": "cultOntology:startingDate",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "FECHA",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#finishDate",
+              "curie": "cultOntology:finishDate",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "FECHA-FIN",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.disit.org/km4city/schema#time",
+              "curie": "km4c:time",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "HORA",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#comment",
+              "curie": "rdfs:comment",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "DESCRIPCION",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#urlEvent",
+              "curie": "cultOntology:urlEvent",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "CONTENT-URL",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#hasFacility",
+              "curie": "cultOntology:hasFacility",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "NOMBRE-INSTALACION",
+                "expression": "\"Facility/\"+value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.madridcultural.es/cultural-activities#facilityName",
+                    "curie": "cultOntology:facilityName",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "NOMBRE-INSTALACION",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.madridcultural.es/cultural-activities#facilityURL",
+                    "curie": "cultOntology:facilityURL",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "URL-INSTALACION",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+                    "curie": "geo:lat",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "LATITUD",
+                      "expression": "value",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+                    "curie": "geo:long",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "LONGITUD",
+                      "expression": "value",
+                      "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.disit.org/km4city/schema#hasDistrict",
+                    "curie": "km4c:hasDistrict",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "DISTRITO",
+                      "expression": "\"AdministrativeArea/\"+value",
+                      "isRowNumberCell": false,
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                          "curie": "owl:sameAs",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "columnName": "distrito_wikidata",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "links": [],
+                            "rdfTypes": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.madridcultural.es/cultural-activities#officialWebsite",
+                          "curie": "cultOntology:officialWebsite",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "columnName": "WEB-OFICIAL-DISTRITO",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "links": [],
+                            "rdfTypes": []
+                          }
+                        }
+                      ],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.madridcultural.es/cultural-activities#AdministrativeArea",
+                          "curie": "cultOntology:AdministrativeArea"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                    "curie": "owl:sameAs",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "instalacion_wikidata",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": []
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.disit.org/km4city/schema#Cultural_centre",
+                    "curie": "km4c:Cultural_centre"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#audience",
+              "curie": "cultOntology:audience",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "AUDIENCIA",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.madridcultural.es/cultural-activities#isPartOfActivity",
+              "curie": "cultOntology:isPartOfActivity",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "TITULO-ACTIVIDAD",
+                "expression": "cells.TIPO.value + '/' + value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.disit.org/km4city/schema#type",
+                    "curie": "km4c:type",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "TIPO",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.madridcultural.es/cultural-activities#activityName",
+                    "curie": "cultOntology:activityName",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "TITULO-ACTIVIDAD",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  },
+                  {
+                    "uri": "http://www.madridcultural.es/cultural-activities#activityURL",
+                    "curie": "cultOntology:activityURL",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "URL-ACTIVIDAD",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  }
+                ],
+                "rdfTypes": []
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.disit.org/km4city/schema#Event",
+              "curie": "km4c:Event"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
   }
 ]
