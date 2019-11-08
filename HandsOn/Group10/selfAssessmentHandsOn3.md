@@ -14,7 +14,7 @@ Every URI in the RDF files:
 - [x] Does not contain a double slash (i.e., "//")
 
 Every individual in the RDF files:
-- [] Has a label with the name of the individual
+- [ ] Has a label with the name of the individual
 - [x] Has a type
 
 Every value in the RDF files:
