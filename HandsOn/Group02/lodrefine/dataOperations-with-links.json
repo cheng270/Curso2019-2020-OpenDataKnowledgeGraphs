@@ -43945,5 +43945,586 @@
     "op": "core/column-removal",
     "columnName": "STREETS",
     "description": "Remove column STREETS"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NUM_PARTE",
+    "newColumnName": "ID",
+    "description": "Rename column NUM_PARTE to ID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "STATUS",
+    "description": "Remove column STATUS"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CPFA_HAIL",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "WEATHER_CONDITION_NAME",
+    "columnInsertIndex": 10,
+    "description": "Create column WEATHER_CONDITION_NAME at index 10 based on column CPFA_HAIL using expression grel:value"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "CPFA_HAIL",
+    "index": 10,
+    "description": "Move column CPFA_HAIL to position 10"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CPFA_NIEVE",
+    "newColumnName": "CPFA_SNOW",
+    "description": "Rename column CPFA_NIEVE to CPFA_SNOW"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CPSV_WET",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "SURFACE_CONDITION_NAME",
+    "columnInsertIndex": 17,
+    "description": "Create column SURFACE_CONDITION_NAME at index 17 based on column CPSV_WET using expression grel:value"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "CPSV_WET",
+    "index": 17,
+    "description": "Move column CPSV_WET to position 17"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "SURFACE_CONDITION_NAME",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "SURFACE_CONDITION_ID",
+    "columnInsertIndex": 17,
+    "description": "Create column SURFACE_CONDITION_ID at index 17 based on column SURFACE_CONDITION_NAME using expression grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "WEATHER_CONDITION_NAME",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "WEATHER_CONDITION_ID",
+    "columnInsertIndex": 10,
+    "description": "Create column WEATHER_CONDITION_ID at index 10 based on column WEATHER_CONDITION_NAME using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WEATHER_CONDITION_NAME",
+    "description": "Remove column WEATHER_CONDITION_NAME"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "WEATHER_CONDITION_ID",
+    "description": "Remove column WEATHER_CONDITION_ID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SURFACE_CONDITION_NAME",
+    "description": "Remove column SURFACE_CONDITION_NAME"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SURFACE_CONDITION_ID",
+    "description": "Remove column SURFACE_CONDITION_ID"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_HAIL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAIL"
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_HAIL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_HAIL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_HAIL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_ICE",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ICE"
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_ICE"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_ICE",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_ICE"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_RAIN",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAIN"
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_RAIN"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_RAIN",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_RAIN"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_FOG",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FOG"
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_FOG"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_FOG",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_FOG"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_DRY",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DRY"
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_DRY"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_DRY",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_DRY"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_SNOW",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SNOW"
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_SNOW"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPFA_SNOW",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPFA_SNOW"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_WET",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WET"
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_WET"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_WET",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_WET"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_OIL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OIL"
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_OIL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_OIL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_OIL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_MUD",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MUD"
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_MUD"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_MUD",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_MUD"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_LOOSE_GRAVEL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LOOSE GRAVEL"
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_LOOSE_GRAVEL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_LOOSE_GRAVEL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_LOOSE_GRAVEL"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_ICE",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ICE"
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_ICE"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_ICE",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_ICE"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_DRY_AND_CLEAN",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DRY AND CLEAN"
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_DRY_AND_CLEAN"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CPSV_DRY_AND_CLEAN",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column CPSV_DRY_AND_CLEAN"
   }
 ]
