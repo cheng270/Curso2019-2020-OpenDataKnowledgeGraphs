@@ -1,0 +1,174 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix air: <http://www.airqualityopendata.org#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+<http://www.airqualitymadridopendata.org#28079004> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Plaza+de+Espa%C3%B1a>;
+  air:hasElevation "635";
+  air:hasName "Pza. de España" .
+
+<http://www.airqualitymadridopendata.org#Plaza+de+Espa%C3%B1a> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079008> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#C%2F+Alcal%C3%A1>;
+  air:hasElevation "670";
+  air:hasName "Escuelas Aguirre" .
+
+<http://www.airqualitymadridopendata.org#C%2F+Alcal%C3%A1> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079011> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Avda.+Ram%C3%B3n+y+Cajal>;
+  air:hasElevation "708";
+  air:hasName "Avda. Ramón y Cajal" .
+
+<http://www.airqualitymadridopendata.org#Avda.+Ram%C3%B3n+y+Cajal> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079016> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#C%2F+Arturo+Soria>;
+  air:hasElevation "693";
+  air:hasName "Arturo Soria" .
+
+<http://www.airqualitymadridopendata.org#C%2F+Arturo+Soria> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079017> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#C%2F.+Juan+Pe%C3%B1alver>;
+  air:hasElevation "604";
+  air:hasName "Villaverde" .
+
+<http://www.airqualitymadridopendata.org#C%2F.+Juan+Pe%C3%B1alver> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079018> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Calle+Farolillo>;
+  air:hasElevation "630";
+  air:hasName "Farolillo" .
+
+<http://www.airqualitymadridopendata.org#Calle+Farolillo> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079024> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Casa+de+Campo>;
+  air:hasElevation "642";
+  air:hasName "Casa de Campo" .
+
+<http://www.airqualitymadridopendata.org#Casa+de+Campo> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079027> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#C%2F.+J%C3%BApiter%2C+21>;
+  air:hasElevation "621";
+  air:hasName "Barajas Pueblo" .
+
+<http://www.airqualitymadridopendata.org#C%2F.+J%C3%BApiter%2C+21> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079035> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Plaza+del+Carmen>;
+  air:hasElevation "659";
+  air:hasName "Pza. del Carmen" .
+
+<http://www.airqualitymadridopendata.org#Plaza+del+Carmen> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079036> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Avd.+Moratalaz>;
+  air:hasElevation "685";
+  air:hasName "Moratalaz" .
+
+<http://www.airqualitymadridopendata.org#Avd.+Moratalaz> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079038> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Avda.+Pablo+Iglesias>;
+  air:hasElevation "698";
+  air:hasName "Cuatro Caminos" .
+
+<http://www.airqualitymadridopendata.org#Avda.+Pablo+Iglesias> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079039> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Avd.+Betanzos>;
+  air:hasElevation "674";
+  air:hasName "Barrio del Pilar" .
+
+<http://www.airqualitymadridopendata.org#Avd.+Betanzos> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079040> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#C%2F+Arroyo+del+Olivar>;
+  air:hasElevation "677";
+  air:hasName "Vallecas" .
+
+<http://www.airqualitymadridopendata.org#C%2F+Arroyo+del+Olivar> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079047> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Pza.+Amanecer+Mendez+Alvaro>;
+  air:hasElevation "599";
+  air:hasName "Mendez Alvaro" .
+
+<http://www.airqualitymadridopendata.org#Pza.+Amanecer+Mendez+Alvaro> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079048> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#C%2F+Jose+Gutierrez+Abascal>;
+  air:hasElevation "676";
+  air:hasName "Castellana" .
+
+<http://www.airqualitymadridopendata.org#C%2F+Jose+Gutierrez+Abascal> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079049> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Paseo+Venezuela>;
+  air:hasElevation "662";
+  air:hasName "Parque del Retiro" .
+
+<http://www.airqualitymadridopendata.org#Paseo+Venezuela> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079050> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Plaza+Castilla>;
+  air:hasElevation "728";
+  air:hasName "Plaza Castilla" .
+
+<http://www.airqualitymadridopendata.org#Plaza+Castilla> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079054> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Avda+La+Gavia>;
+  air:hasElevation "627";
+  air:hasName "Ensanche de Vallecas" .
+
+<http://www.airqualitymadridopendata.org#Avda+La+Gavia> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079055> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Barajas+>;
+  air:hasElevation "618";
+  air:hasName "Urb. Embajada" .
+
+<http://www.airqualitymadridopendata.org#Barajas+> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079056> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#+Pza.+Fern%C3%A1ndez+Ladreda>;
+  air:hasElevation "604";
+  air:hasName "Pza. Fernández Ladreda" .
+
+<http://www.airqualitymadridopendata.org#+Pza.+Fern%C3%A1ndez+Ladreda> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079057> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#C%2F+Maria+Tudor>;
+  air:hasElevation "700";
+  air:hasName "Sanchinarro" .
+
+<http://www.airqualitymadridopendata.org#C%2F+Maria+Tudor> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079058> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Avda.+La+Guardia>;
+  air:hasElevation "615";
+  air:hasName "El Pardo" .
+
+<http://www.airqualitymadridopendata.org#Avda.+La+Guardia> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079059> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Parque+Juan+Carlos+I>;
+  air:hasElevation "660";
+  air:hasName "Juan Carlos I" .
+
+<http://www.airqualitymadridopendata.org#Parque+Juan+Carlos+I> a air:Address .
+
+<http://www.airqualitymadridopendata.org#28079060> a air:Station;
+  air:hasAddress <http://www.airqualitymadridopendata.org#Plaza+Tres+Olivos+>;
+  air:hasElevation "715";
+  air:hasName "Tres Olivos" .
+
+<http://www.airqualitymadridopendata.org#Plaza+Tres+Olivos+> a air:Address .

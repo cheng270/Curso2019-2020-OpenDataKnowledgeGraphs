@@ -309,156 +309,156 @@
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "core/column-rename",
@@ -468,1655 +468,201 @@
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
       "prefixes": [],
       "baseUri": null,
       "rootNodes": []
-    },
-    "description": "Save RDF schema skeleton"
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology# has_victim",
-              "curie": "sfroads: has_victim",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['casualty Class'] + cells['casualty severity'] + cells['Age of casualty'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology# has_victim",
-              "curie": "sfroads: has_victim",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['casualty Class'] + cells['casualty severity'] + cells['Age of casualty'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_Age",
-                    "curie": "sfroads:has_Age",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Age of Casualty",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology# has_victim",
-              "curie": "sfroads: has_victim",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Casualty Class'] + cells['Casualty Severity'] + cells['Age of Casualty'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_Age",
-                    "curie": "sfroads:has_Age",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Age of Casualty",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology# has_victim",
-              "curie": "sfroads: has_victim",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Casualty Class'] + cells['Casualty Severity'] + cells['Age of Casualty'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_Age",
-                    "curie": "sfroads:has_Age",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Age of Casualty",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#involves_vehicule",
-              "curie": "sfroads:involves_vehicule",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Type of Vehicule'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_type",
-                    "curie": "sfroads:has_type",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Type of Vehicle",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology# has_victim",
-              "curie": "sfroads: has_victim",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Casualty Class'] + cells['Casualty Severity'] + cells['Age of Casualty'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_Age",
-                    "curie": "sfroads:has_Age",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Age of Casualty",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#involves_vehicule",
-              "curie": "sfroads:involves_vehicule",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Type of Vehicule'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_type",
-                    "curie": "sfroads:has_type",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Type of Vehicle",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology# has_victim",
-              "curie": "sfroads: has_victim",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Casualty Class'] + cells['Casualty Severity'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_Age",
-                    "curie": "sfroads:has_Age",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Age of Casualty",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#involves_vehicule",
-              "curie": "sfroads:involves_vehicule",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Type of Vehicle'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_type",
-                    "curie": "sfroads:has_type",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Type of Vehicle",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_casualty",
-              "curie": "sfroads:has_casualty",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Casualty Class'] + cells['Casualty Severity'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_Age",
-                    "curie": "sfroads:has_Age",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Age of Casualty",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#involves_vehicule",
-              "curie": "sfroads:involves_vehicule",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Type of Vehicle'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_type",
-                    "curie": "sfroads:has_type",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Type of Vehicle",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_datetime",
-              "curie": "sfroads:has_datetime",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Accident Date'] + cells['Time (24hr)'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_date",
-                    "curie": "sfroads:has_date",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Accident Date",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_time",
-                    "curie": "sfroads:has_time",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Time (24hr)",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
     "schema": {
-      "prefixes": [
-        {
-          "name": "rdf",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        },
-        {
-          "name": "owl",
-          "uri": "http://www.w3.org/2002/07/owl#"
-        },
-        {
-          "name": "sfroads",
-          "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#"
-        },
-        {
-          "name": "rdfs",
-          "uri": "http://www.w3.org/2000/01/rdf-schema#"
-        },
-        {
-          "name": "foaf",
-          "uri": "http://xmlns.com/foaf/0.1/"
-        }
-      ],
-      "baseUri": "http://www.group03.org/saferoads/TrafficAccidentsontology/",
-      "rootNodes": [
-        {
-          "nodeType": "cell-as-resource",
-          "columnName": "Reference Number",
-          "expression": "value",
-          "isRowNumberCell": false,
-          "links": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_environment",
-              "curie": "sfroads:has_environment",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Road Surface Condition'] + cells['Lighting Conditions'] + cells['Weather Conditions'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_lightining_condition",
-                    "curie": "sfroads:has_lightining_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Lighting Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_weather_condition",
-                    "curie": "sfroads:has_weather_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Weather Conditions",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_surface_condition",
-                    "curie": "sfroads:has_surface_condition",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Road Surface Condition",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": [
-                  {
-                    "uri": "http://semanticscience.org/resource/SIO_000959",
-                    "curie": "http://semanticscience.org/resource/SIO_000959"
-                  }
-                ]
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_casualty",
-              "curie": "sfroads:has_casualty",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Casualty Class'] + cells['Casualty Severity'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_class",
-                    "curie": "sfroads:has_class",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Class",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_level_of_severity",
-                    "curie": "sfroads:has_level_of_severity",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Casualty Severity",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_Age",
-                    "curie": "sfroads:has_Age",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Age of Casualty",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#involves_vehicule",
-              "curie": "sfroads:involves_vehicule",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Type of Vehicle'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_type",
-                    "curie": "sfroads:has_type",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Type of Vehicle",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            },
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_datetime",
-              "curie": "sfroads:has_datetime",
-              "target": {
-                "nodeType": "cell-as-resource",
-                "expression": "sha1(cells['Accident Date'] + cells['Time (24hr)'])",
-                "isRowNumberCell": true,
-                "links": [
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_date",
-                    "curie": "sfroads:has_date",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Accident Date",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  },
-                  {
-                    "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#has_time",
-                    "curie": "sfroads:has_time",
-                    "target": {
-                      "nodeType": "cell-as-resource",
-                      "columnName": "Time (24hr)",
-                      "expression": "value",
-                      "isRowNumberCell": false,
-                      "links": [],
-                      "rdfTypes": []
-                    }
-                  }
-                ],
-                "rdfTypes": []
-              }
-            }
-          ],
-          "rdfTypes": [
-            {
-              "uri": "http://www.group03.org/saferoads/TrafficAccidentsontology#Accident",
-              "curie": "sfroads:Accident"
-            }
-          ]
-        }
-      ]
-    },
-    "description": "Save RDF schema skeleton"
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   },
   {
     "op": "core/recon",
@@ -2261,5 +807,754 @@
       "limit": 0
     },
     "description": "Reconcile cells in column Sex of Casualty to type Q48277"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Accident Date",
+    "expression": "grel:value + cells['Time (24hr)'] + cells['minutes']",
+    "onError": "set-to-blank",
+    "newColumnName": "Datetime",
+    "columnInsertIndex": 5,
+    "description": "Create column Datetime at index 5 based on column Accident Date using expression grel:value + cells['Time (24hr)'] + cells['minutes']"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Datetime",
+    "description": "Remove column Datetime"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Accident Date",
+    "expression": "grel:(value.toString('yyyy-MM-DD') + '-'+cells['Time (24hr)'].value[0] + cells['Time (24hr)'].value[1] + ':'+cells['Time (24hr)'].value[2] + cells['Time (24hr)'].value[3]).toDate('yyyy-MM-DD-hh:mm')",
+    "onError": "set-to-blank",
+    "newColumnName": "DateTime",
+    "columnInsertIndex": 5,
+    "description": "Create column DateTime at index 5 based on column Accident Date using expression grel:(value.toString('yyyy-MM-DD') + '-'+cells['Time (24hr)'].value[0] + cells['Time (24hr)'].value[1] + ':'+cells['Time (24hr)'].value[2] + cells['Time (24hr)'].value[3]).toDate('yyyy-MM-DD-hh:mm')"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Accident Date",
+    "description": "Remove column Accident Date"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Time (24hr)",
+    "description": "Remove column Time (24hr)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hour (24hr)",
+    "description": "Remove column Hour (24hr)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "minutes",
+    "description": "Remove column minutes"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Easting",
+    "expression": "jython:int(value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Longitude",
+    "columnInsertIndex": 2,
+    "description": "Create column Longitude at index 2 based on column Easting using expression jython:int(value)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Longitude",
+    "description": "Remove column Longitude"
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Easting",
+    "urlExpression": "grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?method=BNGtoLatLng&easting=\"+cells['easting']+\"&northing=\"+cells['northing']",
+    "onError": "set-to-blank",
+    "newColumnName": "lat/lon",
+    "columnInsertIndex": 2,
+    "delay": 200,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.2 [55c921b]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column lat/lon at index 2 by fetching URLs based on column Easting using expression grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?method=BNGtoLatLng&easting=\"+cells['easting']+\"&northing=\"+cells['northing']"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat/lon",
+    "description": "Remove column lat/lon"
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Easting",
+    "urlExpression": "grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?method=BNGtoLatLng&easting=\"+cells['easting'].value+\"&northing=\"+cells['northing'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "lat/lon",
+    "columnInsertIndex": 2,
+    "delay": 200,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.2 [55c921b]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column lat/lon at index 2 by fetching URLs based on column Easting using expression grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?method=BNGtoLatLng&easting=\"+cells['easting'].value+\"&northing=\"+cells['northing'].value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat/lon",
+    "description": "Remove column lat/lon"
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Easting",
+    "urlExpression": "grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?method=BNGtoLatLng&easting=\"+cells['easting'].value+\"&northing=\"+cells['northing'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "lat/long",
+    "columnInsertIndex": 2,
+    "delay": 500,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.2 [55c921b]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column lat/long at index 2 by fetching URLs based on column Easting using expression grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?method=BNGtoLatLng&easting=\"+cells['easting'].value+\"&northing=\"+cells['northing'].value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat/long",
+    "description": "Remove column lat/long"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Northing",
+    "expression": "grel:method=BNGtoLatLng&easting=\"+cells['easting'].value+\"&northing=\"+cells['northing'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "lat/lon_parameters",
+    "columnInsertIndex": 3,
+    "description": "Create column lat/lon_parameters at index 3 based on column Northing using expression grel:method=BNGtoLatLng&easting=\"+cells['easting'].value+\"&northing=\"+cells['northing'].value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat/lon_parameters",
+    "description": "Remove column lat/lon_parameters"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Northing",
+    "expression": "grel:\"method=BNGtoLatLng&easting=\"+cells['Easting'].value+\"&northing=\"+cells['Northing'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "lat/lon_parameters",
+    "columnInsertIndex": 3,
+    "description": "Create column lat/lon_parameters at index 3 based on column Northing using expression grel:\"method=BNGtoLatLng&easting=\"+cells['Easting'].value+\"&northing=\"+cells['Northing'].value"
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lat/lon_parameters",
+    "urlExpression": "grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?\"+value",
+    "onError": "set-to-blank",
+    "newColumnName": "lat/lon",
+    "columnInsertIndex": 4,
+    "delay": 200,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.2 [55c921b]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column lat/lon at index 4 by fetching URLs based on column lat/lon_parameters using expression grel:\"https://www.bgs.ac.uk/data/webservices/CoordConvert_LL_BNG.cfc?\"+value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lat/lon",
+    "expression": "jython:return value.split(\",\")[9].split(\":\")[1].split(\"}\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Latitude",
+    "columnInsertIndex": 5,
+    "description": "Create column Latitude at index 5 based on column lat/lon using expression jython:return value.split(\",\")[9].split(\":\")[1].split(\"}\")[0]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lat/lon",
+    "expression": "jython:return value.split(\",\")[4].split(\":\")[1].split(\"}\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Longitude",
+    "columnInsertIndex": 5,
+    "description": "Create column Longitude at index 5 based on column lat/lon using expression jython:return value.split(\",\")[4].split(\":\")[1].split(\"}\")[0]"
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Latitude",
+    "urlExpression": "grel:\"https://maps.googleapis.com/maps/api/geocode/json?latlng=\"+cells[\"Latitude\"].value+\",-\"+cells[\"Longitude\"].value+\"&key=AIzaSyBnchZOom660cYTra_mLJpIQcN_pD-ot5o\"",
+    "onError": "set-to-blank",
+    "newColumnName": "GeoCode",
+    "columnInsertIndex": 7,
+    "delay": 200,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.2 [55c921b]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column GeoCode at index 7 by fetching URLs based on column Latitude using expression grel:\"https://maps.googleapis.com/maps/api/geocode/json?latlng=\"+cells[\"Latitude\"].value+\",-\"+cells[\"Longitude\"].value+\"&key=AIzaSyBnchZOom660cYTra_mLJpIQcN_pD-ot5o\""
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "GeoCode",
+          "expression": "value",
+          "columnName": "GeoCode",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Latitude",
+    "urlExpression": "grel:\"http://www.mapquestapi.com/geocoding/v1/reverse?key=5squ5famKq71G4QSKpYHNeo9XVeAlW50&location=\"+cells['Latitude'].value+\",\"+cells['Longitude'].value+\"&includeRoadMetadata=true&includeNearestIntersection=true\"",
+    "onError": "store-error",
+    "newColumnName": "MapQuest_info",
+    "columnInsertIndex": 7,
+    "delay": 200,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.2 [55c921b]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column MapQuest_info at index 7 by fetching URLs based on column Latitude using expression grel:\"http://www.mapquestapi.com/geocoding/v1/reverse?key=5squ5famKq71G4QSKpYHNeo9XVeAlW50&location=\"+cells['Latitude'].value+\",\"+cells['Longitude'].value+\"&includeRoadMetadata=true&includeNearestIntersection=true\""
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "GeoCode",
+    "description": "Remove column GeoCode"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "MapQuest_info",
+    "expression": "grel:value.parseJson().results[0].locations[0].street",
+    "onError": "set-to-blank",
+    "newColumnName": "StreetName",
+    "columnInsertIndex": 8,
+    "description": "Create column StreetName at index 8 based on column MapQuest_info using expression grel:value.parseJson().results[0].locations[0].street"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "MapQuest_info",
+    "expression": "grel:value.parseJson().results[0].locations[0].adminArea6",
+    "onError": "set-to-blank",
+    "newColumnName": "Neighborhood",
+    "columnInsertIndex": 8,
+    "description": "Create column Neighborhood at index 8 based on column MapQuest_info using expression grel:value.parseJson().results[0].locations[0].adminArea6"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Neighborhood",
+    "description": "Remove column Neighborhood"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "MapQuest_info",
+    "expression": "grel:value.parseJson().results[0].locations[0].adminArea5\"",
+    "onError": "set-to-blank",
+    "newColumnName": "City",
+    "columnInsertIndex": 8,
+    "description": "Create column City at index 8 based on column MapQuest_info using expression grel:value.parseJson().results[0].locations[0].adminArea5\""
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "MapQuest_info",
+    "expression": "grel:value.parseJson().results[0].locations[0].postalCode\"",
+    "onError": "set-to-blank",
+    "newColumnName": "PostalCode",
+    "columnInsertIndex": 8,
+    "description": "Create column PostalCode at index 8 based on column MapQuest_info using expression grel:value.parseJson().results[0].locations[0].postalCode\""
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Wakefield"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wakefield"
+      },
+      {
+        "from": [
+          "Kirklees"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kirklees"
+      },
+      {
+        "from": [
+          "Otley"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Otley"
+      },
+      {
+        "from": [
+          "Leeds"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Leeds"
+      },
+      {
+        "from": [
+          "Wetherby"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wetherby"
+      },
+      {
+        "from": [
+          "Bradford"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bradford"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q515",
+        "name": "city"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column City to type Q515"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Leeds",
+    "judgment": "matched",
+    "match": {
+      "id": "Q39121",
+      "name": "Leeds",
+      "types": [
+        "Q515",
+        "Q7897276"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Leeds (Q39121) for cells containing \"Leeds\" in column City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City",
+          "expression": "value",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Bradford",
+                "l": "Bradford"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Bradford",
+    "judgment": "matched",
+    "match": {
+      "id": "Q22905",
+      "name": "Bradford",
+      "types": [
+        "Q515"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Bradford (Q22905) for cells containing \"Bradford\" in column City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City",
+          "expression": "value",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Kirklees",
+                "l": "Kirklees"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Kirklees",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1301336",
+      "name": "Mirfield",
+      "types": [
+        "Q3957",
+        "Q1115575"
+      ],
+      "score": 64
+    },
+    "shareNewTopics": false,
+    "description": "Match item Mirfield (Q1301336) for cells containing \"Kirklees\" in column City"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat/lon",
+    "description": "Remove column lat/lon"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat/lon_parameters",
+    "description": "Remove column lat/lon_parameters"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Latitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Latitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Longitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Longitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Latitude",
+    "expression": "jython:return round(value,6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Latitude using expression jython:return round(value,6)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Longitude",
+    "expression": "jython:return round(value,6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Longitude using expression jython:return round(value,6)"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MapQuest_info",
+    "description": "Remove column MapQuest_info"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    }
   }
 ]

@@ -1,0 +1,36 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "lon",
+    "description": "Remove column lon"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat",
+    "description": "Remove column lat"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "id",
+    "newColumnName": "Station",
+    "description": "Rename column id to Station"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "name",
+    "newColumnName": "Name",
+    "description": "Rename column name to Name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "address",
+    "newColumnName": "Address",
+    "description": "Rename column address to Address"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "elevation",
+    "newColumnName": "Elevation",
+    "description": "Rename column elevation to Elevation"
+  }
+]

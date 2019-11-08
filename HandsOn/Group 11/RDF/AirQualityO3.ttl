@@ -1,0 +1,180 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix air: <http://www.airqualityopendata.org#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+<http://www.airqualityopendata.org#28079004%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079004;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:0 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+<http://www.airqualityopendata.org#Not+dangerous> a air:Disease .
+
+<http://www.airqualityopendata.org#Ozone(O_3)> a air:Element .
+
+air:28079004 a air:Station .
+
+<http://www.airqualityopendata.org#28079008%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079008;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:52;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:52 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079008 a air:Station .
+
+<http://www.airqualityopendata.org#28079011%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079011;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:28079011 a air:Station .
+
+<http://www.airqualityopendata.org#28079016%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079016;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:54;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:54 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079016 a air:Station .
+
+<http://www.airqualityopendata.org#28079017%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079017;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:49;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:49 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079017 a air:Station .
+
+<http://www.airqualityopendata.org#28079018%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079018;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:57;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:57 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079018 a air:Station .
+
+<http://www.airqualityopendata.org#28079024%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079024;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:55;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:55 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079024 a air:Station .
+
+<http://www.airqualityopendata.org#28079027%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079027;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:54;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:28079027 a air:Station .
+
+<http://www.airqualityopendata.org#28079035%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079035;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:29;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:29 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079035 a air:Station .
+
+<http://www.airqualityopendata.org#28079036%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079036;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:28079036 a air:Station .
+
+<http://www.airqualityopendata.org#28079038%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079038;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:28079038 a air:Station .
+
+<http://www.airqualityopendata.org#28079039%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079039;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:59;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:59 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+<http://www.airqualityopendata.org#Not+dangerous> a air:Disease .
+
+<http://www.airqualityopendata.org#Ozone(O_3)> a air:Element .
+
+air:28079039 a air:Station .
+
+<http://www.airqualityopendata.org#28079040%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079040;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:0 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079040 a air:Station .
+
+<http://www.airqualityopendata.org#28079047%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079047;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:28079047 a air:Station .
+
+<http://www.airqualityopendata.org#28079048%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079048;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:28079048 a air:Station .
+
+<http://www.airqualityopendata.org#28079049%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079049;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:26;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:26 a air:Result;
+  air:canCause <http://www.airqualityopendata.org#Not+dangerous> .
+
+air:28079049 a air:Station .
+
+<http://www.airqualityopendata.org#28079050%2F2018-03-01+01%3A00%3A00> a air:Measurement;
+  air:isMeasuredBy air:28079050;
+  air:observes <http://www.airqualityopendata.org#Ozone(O_3)>;
+  air:resultsIn air:0;
+  air:wasTakenOn "2018-03-01 01:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+air:28079050 a air:Station .

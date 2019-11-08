@@ -1,0 +1,607 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "lon",
+    "description": "Remove column lon"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lat",
+    "description": "Remove column lat"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "id",
+    "newColumnName": "Station",
+    "description": "Rename column id to Station"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "name",
+    "newColumnName": "Name",
+    "description": "Rename column name to Name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "address",
+    "newColumnName": "Address",
+    "description": "Rename column address to Address"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "elevation",
+    "newColumnName": "Elevation",
+    "description": "Rename column elevation to Elevation"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q7543083",
+        "name": "avenue"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Address to type Q7543083"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Plaza de España",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1326261",
+      "name": "plaza de España",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item plaza de España (Q1326261) for cells containing \"Plaza de España\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "C/ Alcalá",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2424746",
+      "name": "Calle de Alcalá",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Calle de Alcalá (Q2424746) for cells containing \"C/ Alcalá\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "C/ Arturo Soria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8255504",
+      "name": "calle de Arturo Soria",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item calle de Arturo Soria (Q8255504) for cells containing \"C/ Arturo Soria\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Casa de Campo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1046524",
+      "name": "Casa de Campo",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casa de Campo (Q1046524) for cells containing \"Casa de Campo\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Plaza del Carmen",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6080406",
+      "name": "plaza del Carmen",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item plaza del Carmen (Q6080406) for cells containing \"Plaza del Carmen\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Avd. Moratalaz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2076109",
+      "name": "Moratalaz",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Moratalaz (Q2076109) for cells containing \"Avd. Moratalaz\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Avda. Pablo Iglesias",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28045035",
+      "name": "avenida de Pablo Iglesias",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item avenida de Pablo Iglesias (Q28045035) for cells containing \"Avda. Pablo Iglesias\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Avd. Betanzos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q671341",
+      "name": "Betanzos",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Betanzos (Q671341) for cells containing \"Avd. Betanzos\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "C/ Arroyo del Olivar",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29561517",
+      "name": "Calle del Arroyo del Olivar, Madrid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Calle del Arroyo del Olivar, Madrid (Q29561517) for cells containing \"C/ Arroyo del Olivar\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Pza. Amanecer Mendez Alvaro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5553104",
+      "name": "Calle de Méndez Álvaro, Madrid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Calle de Méndez Álvaro, Madrid (Q5553104) for cells containing \"Pza. Amanecer Mendez Alvaro\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Paseo Venezuela",
+    "judgment": "matched",
+    "match": {
+      "id": "Q24003773",
+      "name": "Parque del Retiro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Parque del Retiro (Q24003773) for cells containing \"Paseo Venezuela\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Plaza Castilla",
+    "judgment": "matched",
+    "match": {
+      "id": "Q786291",
+      "name": "plaza de Castilla",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item plaza de Castilla (Q786291) for cells containing \"Plaza Castilla\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Barajas ",
+    "judgment": "matched",
+    "match": {
+      "id": "Q166276",
+      "name": "Adolfo Suarez Madrid-Barajas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Adolfo Suarez Madrid-Barajas (Q166276) for cells containing \"Barajas \" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": " Pza. Fernández Ladreda",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16619985",
+      "name": "Plaza Elíptica",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Plaza Elíptica (Q16619985) for cells containing \" Pza. Fernández Ladreda\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Avda La Gavia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3820879",
+      "name": "La Gavia",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item La Gavia (Q3820879) for cells containing \"Avda La Gavia\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Avda. La Guardia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1632869",
+      "name": "La Guardia",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item La Guardia (Q1632869) for cells containing \"Avda. La Guardia\" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Plaza Tres Olivos ",
+    "judgment": "matched",
+    "match": {
+      "id": "Q608766",
+      "name": "Tres Olivos",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Tres Olivos (Q608766) for cells containing \"Plaza Tres Olivos \" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Plaza Tres Olivos ",
+    "judgment": "matched",
+    "match": {
+      "id": "Q608766",
+      "name": "Tres Olivos",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Tres Olivos (Q608766) for cells containing \"Plaza Tres Olivos \" in column Address"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "similarValue": "Parque Juan Carlos I",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1583169",
+      "name": "Juan Carlos I Park",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Juan Carlos I Park (Q1583169) for cells containing \"Parque Juan Carlos I\" in column Address"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Address",
+    "expression": "grel:\"htpps://www.wikidata.org/wiki/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "AddressLink",
+    "columnInsertIndex": 3,
+    "description": "Create column AddressLink at index 3 based on column Address using expression grel:\"htpps://www.wikidata.org/wiki/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "AddressLink",
+    "description": "Remove column AddressLink"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Address",
+    "expression": "grel:\"https://www.wikidata.org/wiki\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "AddressLink",
+    "columnInsertIndex": 3,
+    "description": "Create column AddressLink at index 3 based on column Address using expression grel:\"https://www.wikidata.org/wiki\"+cell.recon.match.id"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualitymadridopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualitymadridopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Station",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [],
+          "rdfTypes": []
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualitymadridopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualitymadridopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Station",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualitymadridopendata.org#hasAddress",
+              "curie": "air:hasAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Address",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                    "curie": "owl:sameAs",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "AddressLink",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualitymadridopendata.org#Address",
+                    "curie": "air:Address"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadridopendata.org#hasElevation",
+              "curie": "air:hasElevation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "Elevation",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualitymadridopendata.org#hasName",
+              "curie": "air:hasName",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "Name",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualitymadridopendata.org#Station",
+              "curie": "air:Station"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  }
+]
