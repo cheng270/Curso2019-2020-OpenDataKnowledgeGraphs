@@ -1,137 +1,111 @@
-@prefix : <http://www.semanticweb.org/mati/ontologies/2019/9/untitled-ontology-6#> .
+@prefix : <http://www.smartcityflow.org/ontologies/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/ontologies/pedestrianflow> .
+@base <http://www.smartcityflow.org/ontologies> .
 
-<http://www.semanticweb.org/ontologies/pedestrianflow> rdf:type owl:Ontology .
+<http://www.smartcityflow.org/ontologies> rdf:type owl:Ontology ;
+                                           owl:versionIRI <http://www.smartcityflow.org/ontologies> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasDistrict
+###  http://www.smartcityflow.org/ontologies#hasDistrict
 :hasDistrict rdf:type owl:ObjectProperty ;
-             rdfs:domain :Direction ;
+             rdfs:domain :Location ;
              rdfs:range :District .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasLocation
-:hasLocation rdf:type owl:ObjectProperty ;
-             rdfs:domain :Direction ;
-             rdfs:range :Location .
+###  http://www.smartcityflow.org/ontologies#hasMeasure
+:hasMeasure rdf:type owl:ObjectProperty ;
+            rdfs:domain :Sensor ;
+            rdfs:range :Measure .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasPederastiansInAMoment
-:hasPederastiansInAMoment rdf:type owl:ObjectProperty ;
-                          rdfs:domain :Measure ;
-                          rdfs:range :PedestriansInAMoment .
+###  http://www.smartcityflow.org/ontologies#hasStreet
+:hasStreet rdf:type owl:ObjectProperty ;
+           rdfs:domain :Location ;
+           rdfs:range :Street .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasPostalCode
-:hasPostalCode rdf:type owl:ObjectProperty ;
-               rdfs:domain :Direction ;
-               rdfs:range :PostalCode .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasStreetName
-:hasStreetName rdf:type owl:ObjectProperty ;
-               rdfs:domain :Direction ;
-               rdfs:range :StreetName .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#hasTime
-:hasTime rdf:type owl:ObjectProperty ;
-         rdfs:domain :PedestriansInAMoment ;
-         rdfs:range :Time .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#isTakenAt
-:isTakenAt rdf:type owl:ObjectProperty ;
-           rdfs:domain :Measure ;
-           rdfs:range :Direction .
+###  http://www.smartcityflow.org/ontologies#isAtLocation
+:isAtLocation rdf:type owl:ObjectProperty ;
+              rdfs:domain :Sensor ;
+              rdfs:range :Location .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#DistrictNumber
-:DistrictNumber rdf:type owl:DatatypeProperty ;
+###  http://www.smartcityflow.org/ontologies#dateTime
+:dateTime rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Measure ;
+          rdfs:range xsd:dateTime .
+
+
+###  http://www.smartcityflow.org/ontologies#districtNumber
+:districtNumber rdf:type owl:DatatypeProperty ;
                 rdfs:domain :District ;
-                rdfs:range xsd:int .
+                rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Latitude
-:Latitude rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Location ;
-          rdfs:range xsd:float .
+###  http://www.smartcityflow.org/ontologies#geoLatitude
+:geoLatitude rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Location ;
+             rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Longitude
-:Longitude rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Location ;
-           rdfs:range xsd:float .
+###  http://www.smartcityflow.org/ontologies#geoLongitude
+:geoLongitude rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Location ;
+              rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#NumberOfPersons
-:NumberOfPersons rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :PedestriansInAMoment ;
-                 rdfs:range xsd:int .
+###  http://www.smartcityflow.org/ontologies#numberPedestrians
+:numberPedestrians rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Measure ;
+                   rdfs:range xsd:int .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#StreetNumber
-:StreetNumber rdf:type owl:DatatypeProperty ;
-              rdfs:domain :StreetName ;
-              rdfs:range xsd:int .
+###  http://www.smartcityflow.org/ontologies#postalCode
+:postalCode rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Location ;
+            rdfs:range xsd:string .
+
+
+###  http://www.smartcityflow.org/ontologies#streetNumber
+:streetNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Location ;
+              rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.disit.org/km4city/schema#Date
-<http://www.disit.org/km4city/schema#Date> rdf:type owl:Class ;
-                                           rdfs:subClassOf :Time .
-
-
-###  http://www.disit.org/km4city/schema#Hour
-<http://www.disit.org/km4city/schema#Hour> rdf:type owl:Class ;
-                                           rdfs:subClassOf :Time .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Direction
-:Direction rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#District
+###  http://www.smartcityflow.org/ontologies#District
 :District rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Location
+###  http://www.smartcityflow.org/ontologies#Location
 :Location rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Measure
+###  http://www.smartcityflow.org/ontologies#Measure
 :Measure rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#PedestriansInAMoment
-:PedestriansInAMoment rdf:type owl:Class .
+###  http://www.smartcityflow.org/ontologies#Sensor
+:Sensor rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/ontologies/pedestrianflow#PostalCode
-:PostalCode rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#StreetName
-:StreetName rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/ontologies/pedestrianflow#Time
-:Time rdf:type owl:Class .
+###  http://www.smartcityflow.org/ontologies#Street
+:Street rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
