@@ -1,0 +1,967 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "City",
+    "description": "Remove column City"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NTACode",
+    "description": "Remove column NTACode"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Location(Lat Long)",
+    "description": "Remove column Location(Lat Long)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Borough",
+    "newColumnName": "Abrv_Borough",
+    "description": "Rename column Borough to Abrv_Borough"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Activated",
+    "newColumnName": "Activated_Date",
+    "description": "Rename column Activated to Activated_Date"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "OBJECTID",
+    "newColumnName": "Object_Id",
+    "description": "Rename column OBJECTID to Object_Id"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q28564",
+        "name": "public library"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Provider to type Q28564"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "Spot On Networks",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7580046",
+      "name": "Spot network substation",
+      "types": [
+        ""
+      ],
+      "score": 31
+    },
+    "shareNewTopics": false,
+    "description": "Match item Spot network substation (Q7580046) for cells containing \"Spot On Networks\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "AT&T",
+                "l": "AT&T"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "AT&T",
+    "judgment": "matched",
+    "match": {
+      "id": "Q39073021",
+      "name": "AT&T Communications",
+      "types": [
+        ""
+      ],
+      "score": 17.5
+    },
+    "shareNewTopics": false,
+    "description": "Match item AT&T Communications (Q39073021) for cells containing \"AT&T\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "BPL",
+                "l": "BPL"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "BPL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1198796",
+      "name": "Brooklyn Public Library",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Brooklyn Public Library (Q1198796) for cells containing \"BPL\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Chelsea",
+                "l": "Chelsea"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "Chelsea",
+    "judgment": "matched",
+    "match": {
+      "id": "Q240711",
+      "name": "Hotel Chelsea",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Hotel Chelsea (Q240711) for cells containing \"Chelsea\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "City Tech",
+                "l": "City Tech"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "City Tech",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3678632",
+      "name": "New York City College of Technology",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item New York City College of Technology (Q3678632) for cells containing \"City Tech\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Downtown Brooklyn",
+                "l": "Downtown Brooklyn"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "Downtown Brooklyn",
+    "judgment": "matched",
+    "match": {
+      "id": "Q632682",
+      "name": "Brooklyn Museum",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Brooklyn Museum (Q632682) for cells containing \"Downtown Brooklyn\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Harlem",
+                "l": "Harlem"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "Harlem",
+    "judgment": "matched",
+    "match": {
+      "id": "Q69954193",
+      "name": "Harlem Community Library",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Harlem Community Library (Q69954193) for cells containing \"Harlem\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "LinkNYC - Citybridge",
+                "l": "LinkNYC - Citybridge"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "LinkNYC - Citybridge",
+    "judgment": "matched",
+    "match": {
+      "id": "Q219555",
+      "name": "New York Public Library",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item New York Public Library (Q219555) for cells containing \"LinkNYC - Citybridge\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "NYCHA",
+                "l": "NYCHA"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "NYCHA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1983035",
+      "name": "New York City Housing Authority",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item New York City Housing Authority (Q1983035) for cells containing \"NYCHA\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Partner",
+                "l": "Partner"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "Partner",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2000500",
+      "name": "Partner Communications Company",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Partner Communications Company (Q2000500) for cells containing \"Partner\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "QPL",
+                "l": "QPL"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "QPL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1337750",
+      "name": "Queens Public Library",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Queens Public Library (Q1337750) for cells containing \"QPL\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "SPECTRUM",
+                "l": "SPECTRUM"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "SPECTRUM",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2961234",
+      "name": "Charter Communication",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Charter Communication (Q2961234) for cells containing \"SPECTRUM\" in column Provider"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Transit Wireless",
+                "l": "Transit Wireless"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "similarValue": "Transit Wireless",
+    "judgment": "matched",
+    "match": {
+      "id": "Q17099172",
+      "name": "Transit Wireless",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Transit Wireless (Q17099172) for cells containing \"Transit Wireless\" in column Provider"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Provider",
+          "expression": "value",
+          "columnName": "Provider",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Transit Wireless",
+                "l": "Transit Wireless"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BoroName",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q408804",
+        "name": "borough of New York City"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column BoroName to type Q408804"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BoroName",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q408804",
+        "name": "borough of New York City"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column BoroName to type Q408804"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Provider",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "schema:Provider",
+    "columnInsertIndex": 4,
+    "description": "Create column schema:Provider at index 4 based on column Provider using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "schema:Provider",
+    "description": "Remove column schema:Provider"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "BoroName",
+    "expression": "grel:\"www.wikidata.org/wiki/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "schema:Provider",
+    "columnInsertIndex": 8,
+    "description": "Create column schema:Provider at index 8 based on column BoroName using expression grel:\"www.wikidata.org/wiki/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "schema:Provider",
+    "description": "Remove column schema:Provider"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Provider",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "schema:Provider",
+    "columnInsertIndex": 4,
+    "description": "Create column schema:Provider at index 4 based on column Provider using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "BoroName",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "schema:BoroName",
+    "columnInsertIndex": 9,
+    "description": "Create column schema:BoroName at index 9 based on column BoroName using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AT&T"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AT&T"
+      }
+    ],
+    "description": "Mass edit cells in column Provider"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "City Tech"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CityTech"
+      }
+    ],
+    "description": "Mass edit cells in column Provider"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Downtown Brooklyn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DowntownBrooklyn"
+      }
+    ],
+    "description": "Mass edit cells in column Provider"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkNYC - Citybridge"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkNYCCitybridge"
+      }
+    ],
+    "description": "Mass edit cells in column Provider"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Manhattan Down Alliance"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ManhattanDownAlliance"
+      }
+    ],
+    "description": "Mass edit cells in column Provider"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Spot On Networks"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SpotOnNetworks"
+      }
+    ],
+    "description": "Mass edit cells in column Provider"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Provider",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Transit Wireless"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TransitWireless"
+      }
+    ],
+    "description": "Mass edit cells in column Provider"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  }
+]
