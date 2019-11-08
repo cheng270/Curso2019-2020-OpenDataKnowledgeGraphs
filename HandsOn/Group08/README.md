@@ -1,13 +1,8 @@
-Hands-on 2019-2020
+Pedestrian Flow project
 ==================
 
-This is the directory where students have to upload their materials related to the hands-on.
+The demo of our project can be seen in the following [DataStudio](datastudio.google.com/reporting/b3178807-28f6-4602-9ec9-cbe428dd9077)
 
-# Use of GitHub
-
-* Each group designates a leader
-* The leader forks the main repository
-* Group members fork the leader repository
 
 # GitHub structure
 
