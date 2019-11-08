@@ -918,5 +918,32 @@
       ]
     },
     "description": "Save RDF schema skeleton"
+  },
+    {
+    "op": "core/extend-reconciled-data",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "endpoint": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "extension": {
+      "properties": [
+        {
+          "id": "P856",
+          "name": null
+        }
+      ]
+    },
+    "columnInsertIndex": 20,
+    "description": "Extend data at index 20 based on column DISTRITO"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "official website",
+    "newColumnName": "WEB-OFICIAL-DISTRITO",
+    "description": "Rename column official website to WEB-OFICIAL-DISTRITO"
   }
 ]
