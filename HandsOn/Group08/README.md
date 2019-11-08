@@ -1,7 +1,7 @@
 Pedestrian Flow project
 ==================
 
-The demo of our project can be seen in the following [DataStudio](datastudio.google.com/reporting/b3178807-28f6-4602-9ec9-cbe428dd9077)
+The demo of our project can be seen in the following [DataStudio](https://datastudio.google.com/reporting/b3178807-28f6-4602-9ec9-cbe428dd9077/page/dXz3)
 
 
 # GitHub structure
