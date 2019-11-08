@@ -1,0 +1,963 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Element.",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "PM10"
+      }
+    ],
+    "description": "Mass edit cells in column Element."
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PM10",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column PM10"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "station",
+    "index": 0,
+    "description": "Move column station to position 0"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "station",
+    "expression": "grel:value+'/'+cells['date'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Measurement",
+    "columnInsertIndex": 1,
+    "description": "Create column Measurement at index 1 based on column station using expression grel:value+'/'+cells['date'].value"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Measurement",
+    "index": 0,
+    "description": "Move column Measurement to position 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "PM10",
+    "newColumnName": "Result",
+    "description": "Rename column PM10 to Result"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [],
+      "baseUri": null,
+      "rootNodes": []
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Result",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "0"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": 0
+      }
+    ],
+    "description": "Mass edit cells in column Result"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualityopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualityopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Measurement",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualityopendata.org#resultsIn",
+              "curie": "air:resultsIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Result",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#canCause",
+                    "curie": "air:canCause",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "Disease",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualityopendata.org#Disease",
+                          "curie": "air:Disease"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Result",
+                    "curie": "air:Result"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#wasTakenOn",
+              "curie": "air:wasTakenOn",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "date",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#observes",
+              "curie": "air:observes",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Element.",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Element",
+                    "curie": "air:Element"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#isMeasuredBy",
+              "curie": "air:isMeasuredBy",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Station",
+                    "curie": "air:Station"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualityopendata.org#Measurement",
+              "curie": "air:Measurement"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualityopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualityopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Measurement",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualityopendata.org#resultsIn",
+              "curie": "air:resultsIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Result",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#canCause",
+                    "curie": "air:canCause",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "Disease",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualityopendata.org#Disease",
+                          "curie": "air:Disease"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Result",
+                    "curie": "air:Result"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#wasTakenOn",
+              "curie": "air:wasTakenOn",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "date",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#observes",
+              "curie": "air:observes",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Element.",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Element",
+                    "curie": "air:Element"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#isMeasuredBy",
+              "curie": "air:isMeasuredBy",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Station",
+                    "curie": "air:Station"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualityopendata.org#Measurement",
+              "curie": "air:Measurement"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualityopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualityopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Measurement",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualityopendata.org#resultsIn",
+              "curie": "air:resultsIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Result",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#canCause",
+                    "curie": "air:canCause",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "Disease",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualityopendata.org#Disease",
+                          "curie": "air:Disease"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Result",
+                    "curie": "air:Result"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#wasTakenOn",
+              "curie": "air:wasTakenOn",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "date",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#observes",
+              "curie": "air:observes",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Element.",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Element",
+                    "curie": "air:Element"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#isMeasuredBy",
+              "curie": "air:isMeasuredBy",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Station",
+                    "curie": "air:Station"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualityopendata.org#Measurement",
+              "curie": "air:Measurement"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualityopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualityopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Measurement",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualityopendata.org#resultsIn",
+              "curie": "air:resultsIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Result",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#canCause",
+                    "curie": "air:canCause",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "Disease",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualityopendata.org#Disease",
+                          "curie": "air:Disease"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Result",
+                    "curie": "air:Result"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#wasTakenOn",
+              "curie": "air:wasTakenOn",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "date",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#observes",
+              "curie": "air:observes",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Element.",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Element",
+                    "curie": "air:Element"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#isMeasuredBy",
+              "curie": "air:isMeasuredBy",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Station",
+                    "curie": "air:Station"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualityopendata.org#Measurement",
+              "curie": "air:Measurement"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualityopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualityopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Measurement",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualityopendata.org#resultsIn",
+              "curie": "air:resultsIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Result",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#canCause",
+                    "curie": "air:canCause",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "Disease",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualityopendata.org#Disease",
+                          "curie": "air:Disease"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Result",
+                    "curie": "air:Result"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#wasTakenOn",
+              "curie": "air:wasTakenOn",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "date",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#observes",
+              "curie": "air:observes",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Element.",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Element",
+                    "curie": "air:Element"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#isMeasuredBy",
+              "curie": "air:isMeasuredBy",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Station",
+                    "curie": "air:Station"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualityopendata.org#Measurement",
+              "curie": "air:Measurement"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Element.",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3863",
+        "name": "asteroid"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Element. to type Q3863"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Element.",
+    "similarValue": "PM10",
+    "judgment": "matched",
+    "match": {
+      "id": "Q39711919",
+      "name": "PM10-bound polycyclic aromatic hydrocarbons (PAHs) in the Greater Area of Athens, Greece.",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item PM10-bound polycyclic aromatic hydrocarbons (PAHs) in the Greater Area of Athens, Greece. (Q39711919) for cells containing \"PM10\" in column Element."
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Element.",
+    "similarValue": "PM10",
+    "judgment": "matched",
+    "match": {
+      "id": "Q57270254",
+      "name": "PM10and PM2.5Compositions in California's San Joaquin Valley",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item PM10and PM2.5Compositions in California's San Joaquin Valley (Q57270254) for cells containing \"PM10\" in column Element."
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Element.",
+    "similarValue": "PM10",
+    "judgment": "matched",
+    "match": {
+      "id": "Q57232659",
+      "name": "Particulate matter",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Particulate matter (Q57232659) for cells containing \"PM10\" in column Element."
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Element.",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "ElementLinks",
+    "columnInsertIndex": 4,
+    "description": "Create column ElementLinks at index 4 based on column Element. using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "air",
+          "uri": "http://www.airqualityopendata.org#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://www.airqualityopendata.org#",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "Measurement",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.airqualityopendata.org#resultsIn",
+              "curie": "air:resultsIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Result",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#canCause",
+                    "curie": "air:canCause",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "columnName": "Disease",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "links": [],
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.airqualityopendata.org#Disease",
+                          "curie": "air:Disease"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Result",
+                    "curie": "air:Result"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#wasTakenOn",
+              "curie": "air:wasTakenOn",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "date",
+                "expression": "value",
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#observes",
+              "curie": "air:observes",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "Element.",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                    "curie": "owl:sameAs",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "columnName": "ElementLinks",
+                      "expression": "value",
+                      "isRowNumberCell": false
+                    }
+                  }
+                ],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Element",
+                    "curie": "air:Element"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.airqualityopendata.org#isMeasuredBy",
+              "curie": "air:isMeasuredBy",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "station",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.airqualityopendata.org#Station",
+                    "curie": "air:Station"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://www.airqualityopendata.org#Measurement",
+              "curie": "air:Measurement"
+            }
+          ]
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  }
+]
