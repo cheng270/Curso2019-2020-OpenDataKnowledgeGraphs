@@ -12,6 +12,9 @@ The pedestrian dataset is connected using the following connector to google stud
 The variables which are used in the connector are visible under the following link:
 [Variables](https://datastudio.google.com/datasources/81cae223-3f17-4986-a5fe-3e6e33963b35)
 
+The used rdf is provided through the following link :
+[RDF](https://onedrive.live.com/?authkey=%21AHpcyuXREHdY53U&cid=6732DC5DA2B5A3E4&id=6732DC5DA2B5A3E4%2135187&parId=root&action=locate )
+
 
 
 
