@@ -1,6 +1,6 @@
-#Hands-on assignment 3 – Self assessment#
+# Hands-on assignment 3 – Self assessment
 
-##Checklist##
+## Checklist
 
 Every RDF file:
 - [x] Uses the .ttl extension
