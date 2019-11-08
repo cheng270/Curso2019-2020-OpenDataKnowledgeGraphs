@@ -1,0 +1,1 @@
+You can view the application running in the url: https://new-york-hotspots.herokuapp.com
