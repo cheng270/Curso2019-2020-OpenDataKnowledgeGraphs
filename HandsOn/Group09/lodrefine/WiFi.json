@@ -1,0 +1,327 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "X",
+    "description": "Remove column X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Y",
+    "description": "Remove column Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SourceID",
+    "description": "Remove column SourceID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CounDist",
+    "description": "Remove column CounDist"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "BoroCD",
+    "description": "Remove column BoroCD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "BCTCB2010",
+    "description": "Remove column BCTCB2010"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "BIN",
+    "description": "Remove column BIN"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "BBL",
+    "description": "Remove column BBL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DOITT_ID",
+    "description": "Remove column DOITT_ID"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NTAName",
+    "expression": "grel:value +\" \"+cells['Name'].value +\" \"+cells['Location'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Complete_location",
+    "columnInsertIndex": 17,
+    "description": "Create column Complete_location at index 17 based on column NTAName using expression grel:value +\" \"+cells['Name'].value +\" \"+cells['Location'].value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Name",
+    "description": "Remove column Name"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Location",
+    "description": "Remove column Location"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NTAName",
+    "description": "Remove column NTAName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Complete_location",
+    "newColumnName": "Location",
+    "description": "Rename column Complete_location to Location"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CT2010",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CT2010 using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CT2010",
+    "description": "Remove column CT2010"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Borough",
+    "index": 2,
+    "description": "Move column Borough to position 2"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Borough",
+    "index": 3,
+    "description": "Move column Borough to position 3"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroCode",
+    "index": 0,
+    "description": "Move column BoroCode to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroCode",
+    "index": 1,
+    "description": "Move column BoroCode to position 1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroCode",
+    "index": 2,
+    "description": "Move column BoroCode to position 2"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroCode",
+    "index": 3,
+    "description": "Move column BoroCode to position 3"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroCode",
+    "index": 4,
+    "description": "Move column BoroCode to position 4"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Borough",
+    "index": 4,
+    "description": "Move column Borough to position 4"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroName",
+    "index": 0,
+    "description": "Move column BoroName to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroName",
+    "index": 1,
+    "description": "Move column BoroName to position 1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroName",
+    "index": 2,
+    "description": "Move column BoroName to position 2"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroName",
+    "index": 3,
+    "description": "Move column BoroName to position 3"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroName",
+    "index": 4,
+    "description": "Move column BoroName to position 4"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "BoroName",
+    "index": 5,
+    "description": "Move column BoroName to position 5"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "City",
+    "index": 9,
+    "description": "Move column City to position 9"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "City",
+    "index": 8,
+    "description": "Move column City to position 8"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "City",
+    "index": 7,
+    "description": "Move column City to position 7"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "City",
+    "index": 6,
+    "description": "Move column City to position 6"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Location",
+    "index": 13,
+    "description": "Move column Location to position 13"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Location",
+    "index": 12,
+    "description": "Move column Location to position 12"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Location",
+    "index": 11,
+    "description": "Move column Location to position 11"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Location",
+    "index": 10,
+    "description": "Move column Location to position 10"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Location",
+    "index": 9,
+    "description": "Move column Location to position 9"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Location",
+    "index": 8,
+    "description": "Move column Location to position 8"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Location",
+    "index": 7,
+    "description": "Move column Location to position 7"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "SSID",
+    "index": 0,
+    "description": "Move column SSID to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "SSID",
+    "index": 1,
+    "description": "Move column SSID to position 1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "NTACode",
+    "index": 13,
+    "description": "Move column NTACode to position 13"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "NTACode",
+    "index": 12,
+    "description": "Move column NTACode to position 12"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "NTACode",
+    "index": 11,
+    "description": "Move column NTACode to position 11"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "NTACode",
+    "index": 10,
+    "description": "Move column NTACode to position 10"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "NTACode",
+    "index": 9,
+    "description": "Move column NTACode to position 9"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "NTACode",
+    "index": 8,
+    "description": "Move column NTACode to position 8"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Activated",
+    "index": 0,
+    "description": "Move column Activated to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Activated",
+    "index": 1,
+    "description": "Move column Activated to position 1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Activated",
+    "index": 2,
+    "description": "Move column Activated to position 2"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Activated",
+    "index": 3,
+    "description": "Move column Activated to position 3"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Activated",
+    "index": 4,
+    "description": "Move column Activated to position 4"
+  }
+]

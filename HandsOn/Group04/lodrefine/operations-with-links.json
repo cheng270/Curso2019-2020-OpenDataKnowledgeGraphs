@@ -1,0 +1,2642 @@
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column Full Address at index 7 based on column County Name using expression grel:cells['Address'].value + cells['City'].value +\" \"+cells['County Name'].value+\" \"+ cells['State'].value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Full Address",
+    "columnInsertIndex": 7,
+    "baseColumnName": "County Name",
+    "expression": "grel:cells['Address'].value + cells['City'].value +\" \"+cells['County Name'].value+\" \"+ cells['State'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Hospital overall rating footnote",
+    "columnName": "Hospital overall rating footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Mortality national comparison footnote",
+    "columnName": "Mortality national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Safety of care national comparison footnote",
+    "columnName": "Safety of care national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Readmission national comparison footnote",
+    "columnName": "Readmission national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Patient experience national comparison footnote",
+    "columnName": "Patient experience national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Effectiveness of care national comparison footnote",
+    "columnName": "Effectiveness of care national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Timeliness of care national comparison footnote",
+    "columnName": "Timeliness of care national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Efficient use of medical imaging national comparison footnote",
+    "columnName": "Efficient use of medical imaging national comparison footnote"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Full Address1 at index 8 based on column Full Address using expression grel:value +\" \"+ cells['ZIP Code'].value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Full Address1",
+    "columnInsertIndex": 8,
+    "baseColumnName": "Full Address",
+    "expression": "grel:value +\" \"+ cells['ZIP Code'].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Full Address",
+    "columnName": "Full Address"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Full Address1 to Full Address",
+    "oldColumnName": "Full Address1",
+    "newColumnName": "Full Address"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.smart-US.GP04-LDATA.org/US/resource/",
+      "prefixes": [
+        {
+          "name": "ont",
+          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"Hospital/\"+value.replace(\" \",\"_\")",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital",
+              "curie": "ont:Hospital"
+            }
+          ],
+          "links": [
+            {
+              "uri": "hasprovider_ID",
+              "curie": ":hasprovider_ID",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Provider ID"
+              }
+            },
+            {
+              "uri": "hasname",
+              "curie": ":hasname",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Name"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress",
+              "curie": "ont:hasFullAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Full_Address/\"+value.replace(\" \",\"_\")",
+                "isRowNumberCell": false,
+                "columnName": "Full Address",
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress",
+                    "curie": "ont:FullAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+                    "curie": "ont:hasaddress",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"Address/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "Address",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity",
+                    "curie": "ont:hasCity",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"City/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "City",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City",
+                          "curie": "ont:City"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty",
+                          "curie": "ont:partOfCounty",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "County Name",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState",
+                          "curie": "ont:partOfState",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "State",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty",
+                    "curie": "ont:hasCounty",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "County Name",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County",
+                          "curie": "ont:County"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState",
+                    "curie": "ont:hasState",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "State",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State",
+                          "curie": "ont:State"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "haspostalCode",
+                    "curie": ":haspostalCode",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"ZIP_Code/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "ZIP Code",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "hastelephone",
+              "curie": ":hastelephone",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Phone Number"
+              }
+            },
+            {
+              "uri": "hashospital_Type",
+              "curie": ":hashospital_Type",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Type"
+              }
+            },
+            {
+              "uri": "hashospital_Ownership",
+              "curie": ":hashospital_Ownership",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Ownership"
+              }
+            },
+            {
+              "uri": "hasemergency_Services",
+              "curie": ":hasemergency_Services",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Emergency Services"
+              }
+            },
+            {
+              "uri": "hasaggregateRating",
+              "curie": ":hasaggregateRating",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital overall rating"
+              }
+            },
+            {
+              "uri": "hasMortality_national_comparison",
+              "curie": ":hasMortality_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Mortality national comparison"
+              }
+            },
+            {
+              "uri": "hasSafety_of_care_national_comparison",
+              "curie": ":hasSafety_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Safety of care national comparison"
+              }
+            },
+            {
+              "uri": "hasReadmission_national_comparison",
+              "curie": ":hasReadmission_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Readmission national comparison"
+              }
+            },
+            {
+              "uri": "hasPatient_experience_national_comparison",
+              "curie": ":hasPatient_experience_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Patient experience national comparison"
+              }
+            },
+            {
+              "uri": "hasEffectiveness_of_care_national_comparison",
+              "curie": ":hasEffectiveness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Effectiveness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasTimeliness_of_care_national_comparison",
+              "curie": ":hasTimeliness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Timeliness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasEfficient_use_of_medical_imaging_national_comparison",
+              "curie": ":hasEfficient_use_of_medical_imaging_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Efficient use of medical imaging national comparison"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+              "curie": "ont:hasaddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Address",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "resource",
+          "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+              "curie": "ont:Location"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.smart-US.GP04-LDATA.org/US/resource/",
+      "prefixes": [
+        {
+          "name": "ont",
+          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"Hospital/\"+value.replace(\" \",\"_\")",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital",
+              "curie": "ont:Hospital"
+            }
+          ],
+          "links": [
+            {
+              "uri": "hasprovider_ID",
+              "curie": ":hasprovider_ID",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Provider ID"
+              }
+            },
+            {
+              "uri": "hasname",
+              "curie": ":hasname",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Name"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress",
+              "curie": "ont:hasFullAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Full_Address/\"+value.replace(\" \",\"_\")",
+                "isRowNumberCell": false,
+                "columnName": "Full Address",
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress",
+                    "curie": "ont:FullAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+                    "curie": "ont:hasaddress",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"Address/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "Address",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity",
+                    "curie": "ont:hasCity",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"City/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "City",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City",
+                          "curie": "ont:City"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty",
+                          "curie": "ont:partOfCounty",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "County Name",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState",
+                          "curie": "ont:partOfState",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "State",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty",
+                    "curie": "ont:hasCounty",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "County Name",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County",
+                          "curie": "ont:County"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState",
+                    "curie": "ont:hasState",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "State",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State",
+                          "curie": "ont:State"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "haspostalCode",
+                    "curie": ":haspostalCode",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"ZIP_Code/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "ZIP Code",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "hastelephone",
+              "curie": ":hastelephone",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Phone Number"
+              }
+            },
+            {
+              "uri": "hashospital_Type",
+              "curie": ":hashospital_Type",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Type"
+              }
+            },
+            {
+              "uri": "hashospital_Ownership",
+              "curie": ":hashospital_Ownership",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Ownership"
+              }
+            },
+            {
+              "uri": "hasemergency_Services",
+              "curie": ":hasemergency_Services",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Emergency Services"
+              }
+            },
+            {
+              "uri": "hasaggregateRating",
+              "curie": ":hasaggregateRating",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital overall rating"
+              }
+            },
+            {
+              "uri": "hasMortality_national_comparison",
+              "curie": ":hasMortality_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Mortality national comparison"
+              }
+            },
+            {
+              "uri": "hasSafety_of_care_national_comparison",
+              "curie": ":hasSafety_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Safety of care national comparison"
+              }
+            },
+            {
+              "uri": "hasReadmission_national_comparison",
+              "curie": ":hasReadmission_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Readmission national comparison"
+              }
+            },
+            {
+              "uri": "hasPatient_experience_national_comparison",
+              "curie": ":hasPatient_experience_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Patient experience national comparison"
+              }
+            },
+            {
+              "uri": "hasEffectiveness_of_care_national_comparison",
+              "curie": ":hasEffectiveness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Effectiveness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasTimeliness_of_care_national_comparison",
+              "curie": ":hasTimeliness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Timeliness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasEfficient_use_of_medical_imaging_national_comparison",
+              "curie": ":hasEfficient_use_of_medical_imaging_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Efficient use of medical imaging national comparison"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+              "curie": "ont:hasaddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Address",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "resource",
+          "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+              "curie": "ont:Location"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Meets criteria for meaningful use of EHRs",
+    "columnName": "Meets criteria for meaningful use of EHRs"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.smart-US.GP04-LDATA.org/US/resource/",
+      "prefixes": [
+        {
+          "name": "ont",
+          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"Hospital/\"+value.replace(\" \",\"_\")",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital",
+              "curie": "ont:Hospital"
+            }
+          ],
+          "links": [
+            {
+              "uri": "hasprovider_ID",
+              "curie": ":hasprovider_ID",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Provider ID"
+              }
+            },
+            {
+              "uri": "hasname",
+              "curie": ":hasname",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Name"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress",
+              "curie": "ont:hasFullAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Full_Address/\"+value.replace(\" \",\"_\")",
+                "isRowNumberCell": false,
+                "columnName": "Full Address",
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress",
+                    "curie": "ont:FullAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+                    "curie": "ont:hasaddress",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"Address/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "Address",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity",
+                    "curie": "ont:hasCity",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"City/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "City",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City",
+                          "curie": "ont:City"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty",
+                          "curie": "ont:partOfCounty",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "County Name",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState",
+                          "curie": "ont:partOfState",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "State",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty",
+                    "curie": "ont:hasCounty",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "County Name",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County",
+                          "curie": "ont:County"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState",
+                    "curie": "ont:hasState",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "State",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State",
+                          "curie": "ont:State"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "haspostalCode",
+                    "curie": ":haspostalCode",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"ZIP_Code/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "ZIP Code",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "hastelephone",
+              "curie": ":hastelephone",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Phone Number"
+              }
+            },
+            {
+              "uri": "hashospital_Type",
+              "curie": ":hashospital_Type",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Type"
+              }
+            },
+            {
+              "uri": "hashospital_Ownership",
+              "curie": ":hashospital_Ownership",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Ownership"
+              }
+            },
+            {
+              "uri": "hasemergency_Services",
+              "curie": ":hasemergency_Services",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Emergency Services"
+              }
+            },
+            {
+              "uri": "hasaggregateRating",
+              "curie": ":hasaggregateRating",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital overall rating"
+              }
+            },
+            {
+              "uri": "hasMortality_national_comparison",
+              "curie": ":hasMortality_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Mortality national comparison"
+              }
+            },
+            {
+              "uri": "hasSafety_of_care_national_comparison",
+              "curie": ":hasSafety_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Safety of care national comparison"
+              }
+            },
+            {
+              "uri": "hasReadmission_national_comparison",
+              "curie": ":hasReadmission_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Readmission national comparison"
+              }
+            },
+            {
+              "uri": "hasPatient_experience_national_comparison",
+              "curie": ":hasPatient_experience_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Patient experience national comparison"
+              }
+            },
+            {
+              "uri": "hasEffectiveness_of_care_national_comparison",
+              "curie": ":hasEffectiveness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Effectiveness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasTimeliness_of_care_national_comparison",
+              "curie": ":hasTimeliness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Timeliness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasEfficient_use_of_medical_imaging_national_comparison",
+              "curie": ":hasEfficient_use_of_medical_imaging_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Efficient use of medical imaging national comparison"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+              "curie": "ont:hasaddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Address",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "resource",
+          "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+              "curie": "ont:Location"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.smart-US.GP04-LDATA.org/US/resource/",
+      "prefixes": [
+        {
+          "name": "ont",
+          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"Hospital/\"+value.replace(\" \",\"_\")",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital",
+              "curie": "ont:Hospital"
+            }
+          ],
+          "links": [
+            {
+              "uri": "hasprovider_ID",
+              "curie": ":hasprovider_ID",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Provider ID"
+              }
+            },
+            {
+              "uri": "hasname",
+              "curie": ":hasname",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Name"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress",
+              "curie": "ont:hasFullAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Full_Address/\"+value.replace(\" \",\"_\")",
+                "isRowNumberCell": false,
+                "columnName": "Full Address",
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress",
+                    "curie": "ont:FullAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+                    "curie": "ont:hasaddress",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"Address/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "Address",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity",
+                    "curie": "ont:hasCity",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"City/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "City",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City",
+                          "curie": "ont:City"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty",
+                          "curie": "ont:partOfCounty",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "County Name",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState",
+                          "curie": "ont:partOfState",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "State",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty",
+                    "curie": "ont:hasCounty",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "County Name",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County",
+                          "curie": "ont:County"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState",
+                    "curie": "ont:hasState",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "State",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State",
+                          "curie": "ont:State"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "haspostalCode",
+                    "curie": ":haspostalCode",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"ZIP_Code/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "ZIP Code",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "hastelephone",
+              "curie": ":hastelephone",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Phone Number"
+              }
+            },
+            {
+              "uri": "hashospital_Type",
+              "curie": ":hashospital_Type",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Type"
+              }
+            },
+            {
+              "uri": "hashospital_Ownership",
+              "curie": ":hashospital_Ownership",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Ownership"
+              }
+            },
+            {
+              "uri": "hasemergency_Services",
+              "curie": ":hasemergency_Services",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Emergency Services"
+              }
+            },
+            {
+              "uri": "hasaggregateRating",
+              "curie": ":hasaggregateRating",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital overall rating"
+              }
+            },
+            {
+              "uri": "hasMortality_national_comparison",
+              "curie": ":hasMortality_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Mortality national comparison"
+              }
+            },
+            {
+              "uri": "hasSafety_of_care_national_comparison",
+              "curie": ":hasSafety_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Safety of care national comparison"
+              }
+            },
+            {
+              "uri": "hasReadmission_national_comparison",
+              "curie": ":hasReadmission_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Readmission national comparison"
+              }
+            },
+            {
+              "uri": "hasPatient_experience_national_comparison",
+              "curie": ":hasPatient_experience_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Patient experience national comparison"
+              }
+            },
+            {
+              "uri": "hasEffectiveness_of_care_national_comparison",
+              "curie": ":hasEffectiveness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Effectiveness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasTimeliness_of_care_national_comparison",
+              "curie": ":hasTimeliness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Timeliness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasEfficient_use_of_medical_imaging_national_comparison",
+              "curie": ":hasEfficient_use_of_medical_imaging_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Efficient use of medical imaging national comparison"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+              "curie": "ont:hasaddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Address/\"+value",
+                "isRowNumberCell": false,
+                "columnName": "Address",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "resource",
+          "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+              "curie": "ont:Location"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column UniqueState at index 5 based on column State using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "UniqueState",
+    "columnInsertIndex": 5,
+    "baseColumnName": "State",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/blank-down",
+    "description": "Blank down cells in column UniqueState",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "UniqueState"
+  },
+  {
+    "op": "core/recon",
+    "description": "Reconcile cells in column UniqueState to type Q35657",
+    "columnName": "UniqueState",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://tools.wmflabs.org/openrefine-wikidata/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q35657",
+        "name": "state of the United States"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column URI of UniqueState from Wikidata at index 6 based on column UniqueState using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "URI of UniqueState from Wikidata",
+    "columnInsertIndex": 6,
+    "baseColumnName": "UniqueState",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.smart-US.GP04-LDATA.org/US/resource/",
+      "prefixes": [
+        {
+          "name": "ont",
+          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"Hospital/\"+value.replace(\" \",\"_\")",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital",
+              "curie": "ont:Hospital"
+            }
+          ],
+          "links": [
+            {
+              "uri": "hasprovider_ID",
+              "curie": ":hasprovider_ID",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Provider ID"
+              }
+            },
+            {
+              "uri": "hasname",
+              "curie": ":hasname",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Name"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress",
+              "curie": "ont:hasFullAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Full_Address/\"+value.replace(\" \",\"_\")",
+                "isRowNumberCell": false,
+                "columnName": "Full Address",
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress",
+                    "curie": "ont:FullAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+                    "curie": "ont:hasaddress",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"Address/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "Address",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity",
+                    "curie": "ont:hasCity",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"City/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "City",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City",
+                          "curie": "ont:City"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty",
+                          "curie": "ont:partOfCounty",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "County Name",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState",
+                          "curie": "ont:partOfState",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "State",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty",
+                    "curie": "ont:hasCounty",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "County Name",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County",
+                          "curie": "ont:County"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState",
+                    "curie": "ont:hasState",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "State",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State",
+                          "curie": "ont:State"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                          "curie": "owl:sameAs",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "columnName": "URI of UniqueState from Wikidata"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "haspostalCode",
+                    "curie": ":haspostalCode",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"ZIP_Code/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "ZIP Code",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "hastelephone",
+              "curie": ":hastelephone",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Phone Number"
+              }
+            },
+            {
+              "uri": "hashospital_Type",
+              "curie": ":hashospital_Type",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Type"
+              }
+            },
+            {
+              "uri": "hashospital_Ownership",
+              "curie": ":hashospital_Ownership",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Ownership"
+              }
+            },
+            {
+              "uri": "hasemergency_Services",
+              "curie": ":hasemergency_Services",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Emergency Services"
+              }
+            },
+            {
+              "uri": "hasaggregateRating",
+              "curie": ":hasaggregateRating",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital overall rating"
+              }
+            },
+            {
+              "uri": "hasMortality_national_comparison",
+              "curie": ":hasMortality_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Mortality national comparison"
+              }
+            },
+            {
+              "uri": "hasSafety_of_care_national_comparison",
+              "curie": ":hasSafety_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Safety of care national comparison"
+              }
+            },
+            {
+              "uri": "hasReadmission_national_comparison",
+              "curie": ":hasReadmission_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Readmission national comparison"
+              }
+            },
+            {
+              "uri": "hasPatient_experience_national_comparison",
+              "curie": ":hasPatient_experience_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Patient experience national comparison"
+              }
+            },
+            {
+              "uri": "hasEffectiveness_of_care_national_comparison",
+              "curie": ":hasEffectiveness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Effectiveness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasTimeliness_of_care_national_comparison",
+              "curie": ":hasTimeliness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Timeliness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasEfficient_use_of_medical_imaging_national_comparison",
+              "curie": ":hasEfficient_use_of_medical_imaging_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Efficient use of medical imaging national comparison"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+              "curie": "ont:hasaddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Address/\"+value",
+                "isRowNumberCell": false,
+                "columnName": "Address",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "resource",
+          "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+              "curie": "ont:Location"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.smart-US.GP04-LDATA.org/US/resource/",
+      "prefixes": [
+        {
+          "name": "ont",
+          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"Hospital/\"+value.replace(\" \",\"_\")",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital",
+              "curie": "ont:Hospital"
+            }
+          ],
+          "links": [
+            {
+              "uri": "hasprovider_ID",
+              "curie": ":hasprovider_ID",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Provider ID"
+              }
+            },
+            {
+              "uri": "hasname",
+              "curie": ":hasname",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Name"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress",
+              "curie": "ont:hasFullAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Full_Address/\"+value.replace(\" \",\"_\")",
+                "isRowNumberCell": false,
+                "columnName": "Full Address",
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress",
+                    "curie": "ont:FullAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+                    "curie": "ont:hasaddress",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"Address/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "Address",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity",
+                    "curie": "ont:hasCity",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"City/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "City",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City",
+                          "curie": "ont:City"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty",
+                          "curie": "ont:partOfCounty",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "County Name",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState",
+                          "curie": "ont:partOfState",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "State",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty",
+                    "curie": "ont:hasCounty",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "County Name",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County",
+                          "curie": "ont:County"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState",
+                    "curie": "ont:hasState",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "State",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State",
+                          "curie": "ont:State"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                          "curie": "owl:sameAs",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "columnName": "URI of UniqueState from Wikidata"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "haspostalCode",
+                    "curie": ":haspostalCode",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"ZIP_Code/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "ZIP Code",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "hastelephone",
+              "curie": ":hastelephone",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Phone Number"
+              }
+            },
+            {
+              "uri": "hashospital_Type",
+              "curie": ":hashospital_Type",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Type"
+              }
+            },
+            {
+              "uri": "hashospital_Ownership",
+              "curie": ":hashospital_Ownership",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Ownership"
+              }
+            },
+            {
+              "uri": "hasemergency_Services",
+              "curie": ":hasemergency_Services",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Emergency Services"
+              }
+            },
+            {
+              "uri": "hasaggregateRating",
+              "curie": ":hasaggregateRating",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital overall rating"
+              }
+            },
+            {
+              "uri": "hasMortality_national_comparison",
+              "curie": ":hasMortality_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Mortality national comparison"
+              }
+            },
+            {
+              "uri": "hasSafety_of_care_national_comparison",
+              "curie": ":hasSafety_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Safety of care national comparison"
+              }
+            },
+            {
+              "uri": "hasReadmission_national_comparison",
+              "curie": ":hasReadmission_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Readmission national comparison"
+              }
+            },
+            {
+              "uri": "hasPatient_experience_national_comparison",
+              "curie": ":hasPatient_experience_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Patient experience national comparison"
+              }
+            },
+            {
+              "uri": "hasEffectiveness_of_care_national_comparison",
+              "curie": ":hasEffectiveness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Effectiveness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasTimeliness_of_care_national_comparison",
+              "curie": ":hasTimeliness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Timeliness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasEfficient_use_of_medical_imaging_national_comparison",
+              "curie": ":hasEfficient_use_of_medical_imaging_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Efficient use of medical imaging national comparison"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+              "curie": "ont:hasaddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Address/\"+value",
+                "isRowNumberCell": false,
+                "columnName": "Address",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "resource",
+          "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+              "curie": "ont:Location"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://www.smart-US.GP04-LDATA.org/US/resource/",
+      "prefixes": [
+        {
+          "name": "ont",
+          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"Hospital/\"+value.replace(\" \",\"_\")",
+          "isRowNumberCell": true,
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital",
+              "curie": "ont:Hospital"
+            }
+          ],
+          "links": [
+            {
+              "uri": "hasprovider_ID",
+              "curie": ":hasprovider_ID",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Provider ID"
+              }
+            },
+            {
+              "uri": "hasname",
+              "curie": ":hasname",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Name"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress",
+              "curie": "ont:hasFullAddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Full_Address/\"+value.replace(\" \",\"_\")",
+                "isRowNumberCell": false,
+                "columnName": "Full Address",
+                "rdfTypes": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress",
+                    "curie": "ont:FullAddress"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+                    "curie": "ont:hasaddress",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"Address/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "Address",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity",
+                    "curie": "ont:hasCity",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"City/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "City",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City",
+                          "curie": "ont:City"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty",
+                          "curie": "ont:partOfCounty",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "County Name",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState",
+                          "curie": "ont:partOfState",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                            "isRowNumberCell": false,
+                            "columnName": "State",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty",
+                    "curie": "ont:hasCounty",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"County/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "County Name",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County",
+                          "curie": "ont:County"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState",
+                    "curie": "ont:hasState",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"State/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "State",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State",
+                          "curie": "ont:State"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+                          "curie": "rdfs:subClassOf",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+                            "rdfTypes": [],
+                            "links": []
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2002/07/owl#sameAs",
+                          "curie": "owl:sameAs",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "columnName": "URI of UniqueState from Wikidata"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "haspostalCode",
+                    "curie": ":haspostalCode",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "\"ZIP_Code/\"+value.replace(\" \",\"_\")",
+                      "isRowNumberCell": false,
+                      "columnName": "ZIP Code",
+                      "rdfTypes": [],
+                      "links": []
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "hastelephone",
+              "curie": ":hastelephone",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Phone Number"
+              }
+            },
+            {
+              "uri": "hashospital_Type",
+              "curie": ":hashospital_Type",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Type"
+              }
+            },
+            {
+              "uri": "hashospital_Ownership",
+              "curie": ":hashospital_Ownership",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital Ownership"
+              }
+            },
+            {
+              "uri": "hasemergency_Services",
+              "curie": ":hasemergency_Services",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Emergency Services"
+              }
+            },
+            {
+              "uri": "hasaggregateRating",
+              "curie": ":hasaggregateRating",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Hospital overall rating"
+              }
+            },
+            {
+              "uri": "hasMortality_national_comparison",
+              "curie": ":hasMortality_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Mortality national comparison"
+              }
+            },
+            {
+              "uri": "hasSafety_of_care_national_comparison",
+              "curie": ":hasSafety_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Safety of care national comparison"
+              }
+            },
+            {
+              "uri": "hasReadmission_national_comparison",
+              "curie": ":hasReadmission_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Readmission national comparison"
+              }
+            },
+            {
+              "uri": "hasPatient_experience_national_comparison",
+              "curie": ":hasPatient_experience_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Patient experience national comparison"
+              }
+            },
+            {
+              "uri": "hasEffectiveness_of_care_national_comparison",
+              "curie": ":hasEffectiveness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Effectiveness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasTimeliness_of_care_national_comparison",
+              "curie": ":hasTimeliness_of_care_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Timeliness of care national comparison"
+              }
+            },
+            {
+              "uri": "hasEfficient_use_of_medical_imaging_national_comparison",
+              "curie": ":hasEfficient_use_of_medical_imaging_national_comparison",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Efficient use of medical imaging national comparison"
+              }
+            },
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress",
+              "curie": "ont:hasaddress",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"Address/\"+value",
+                "isRowNumberCell": false,
+                "columnName": "Address",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "resource",
+          "value": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+          "rdfTypes": [
+            {
+              "uri": "http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location",
+              "curie": "ont:Location"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  }
+]

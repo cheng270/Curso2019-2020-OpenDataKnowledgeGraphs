@@ -1,0 +1,1565 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column @id using expression grel:value.replace(\"http://environment.data.gov.uk/water-quality/data/\", \"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "@id",
+    "expression": "grel:value.replace(\"http://environment.data.gov.uk/water-quality/data/\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column sample.samplingPoint using expression grel:value.replace(\"http://environment.data.gov.uk/water-quality/id/\", \"\")",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.samplingPoint",
+    "expression": "grel:value.replace(\"http://environment.data.gov.uk/water-quality/id/\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column sample.samplingPoint.notation",
+    "columnName": "sample.samplingPoint.notation"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column codedResultInterpretation.interpretation",
+    "columnName": "codedResultInterpretation.interpretation"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column sample.sampleDateTime using expression value.toDate()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sample.sampleDateTime",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_label",
+              "curie": "wq:Determinand_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_definition",
+              "curie": "wq:Determinand_definition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_notation",
+              "curie": "wq:Determinand_notation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.notation"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Result_value",
+              "curie": "wq:Result_value",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_unit",
+              "curie": "wq:Determinand_unit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#MaterialType_label",
+              "curie": "wq:MaterialType_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Unique_samplingPoint at index 2 based on column sample.samplingPoint using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Unique_samplingPoint",
+    "columnInsertIndex": 2,
+    "baseColumnName": "sample.samplingPoint",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/blank-down",
+    "description": "Blank down cells in column Unique_samplingPoint",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unique_samplingPoint"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_label",
+              "curie": "wq:Determinand_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_definition",
+              "curie": "wq:Determinand_definition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_notation",
+              "curie": "wq:Determinand_notation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.notation"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Result_value",
+              "curie": "wq:Result_value",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_unit",
+              "curie": "wq:Determinand_unit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#MaterialType_label",
+              "curie": "wq:MaterialType_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_easting",
+              "curie": "wq:SamplingPoint_easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_northing",
+              "curie": "wq:SamplingPoint_northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_label",
+              "curie": "wq:Determinand_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_definition",
+              "curie": "wq:Determinand_definition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_notation",
+              "curie": "wq:Determinand_notation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.notation"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Result_value",
+              "curie": "wq:Result_value",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand_unit",
+              "curie": "wq:Determinand_unit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#MaterialType_label",
+              "curie": "wq:MaterialType_label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_easting",
+              "curie": "wq:SamplingPoint_easting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint_northing",
+              "curie": "wq:SamplingPoint_northing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.samplingPoint to samplingPoint",
+    "oldColumnName": "sample.samplingPoint",
+    "newColumnName": "samplingPoint"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.samplingPoint.label to samplingPoint.label",
+    "oldColumnName": "sample.samplingPoint.label",
+    "newColumnName": "samplingPoint.label"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column sample.sampleDateTime to sampleDateTime",
+    "oldColumnName": "sample.sampleDateTime",
+    "newColumnName": "sampleDateTime"
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column determinand.label",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.label",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "2,3,5,6 TETR",
+          "2,3,5,6-Tetr"
+        ],
+        "to": "2,3,5,6 TeTr"
+      }
+    ]
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Unique_determinand at index 8 based on column determinand.notation using expression grel:value",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "newColumnName": "Unique_determinand",
+    "columnInsertIndex": 8,
+    "baseColumnName": "determinand.notation",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Unique_determinand using expression grel:\"determinand/\" + value",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Unique_determinand",
+    "expression": "grel:\"determinand/\" + value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/row-reorder",
+    "description": "Reorder rows",
+    "mode": "record-based",
+    "sorting": {
+      "criteria": [
+        {
+          "reverse": false,
+          "caseSensitive": false,
+          "column": "Unique_determinand",
+          "valueType": "string",
+          "blankPosition": 2,
+          "errorPosition": 1
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/blank-down",
+    "description": "Blank down cells in column Unique_determinand",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Unique_determinand"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "determinand.notation"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "determinand.notation"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Unique_determinand",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column determinand.notation using expression value.toString()",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "isBlank(value)",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Unique_determinand",
+          "omitBlank": false,
+          "columnName": "Unique_determinand",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "determinand.notation",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://group05.com/resource/",
+      "prefixes": [
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "wq",
+          "uri": "http://group05.com/ontology/Water-Quality#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "@id",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Measurement",
+              "curie": "wq:Measurement"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasSamplingPoint",
+              "curie": "wq:hasSamplingPoint",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "samplingPoint",
+                "rdfTypes": [
+                  {
+                    "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+                    "curie": "wq:SamplingPoint"
+                  }
+                ],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasResult",
+              "curie": "wq:hasResult",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#double",
+                "columnName": "result"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasMaterialType",
+              "curie": "wq:hasMaterialType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.sampledMaterialType.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasPurpose",
+              "curie": "wq:hasPurpose",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.purpose.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDateTime",
+              "curie": "wq:hasDateTime",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "columnName": "sampleDateTime"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#isComplianceSample",
+              "curie": "wq:isComplianceSample",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#boolean",
+                "columnName": "sample.isComplianceSample"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDeterminand",
+              "curie": "wq:hasDeterminand",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Unique_determinand",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_samplingPoint",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#SamplingPoint",
+              "curie": "wq:SamplingPoint"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "sample.samplingPoint.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasEasting",
+              "curie": "wq:hasEasting",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.easting"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasNorthing",
+              "curie": "wq:hasNorthing",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "sample.samplingPoint.northing"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "columnName": "Unique_determinand",
+          "rdfTypes": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#Determinand",
+              "curie": "wq:Determinand"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#determinandLabel",
+              "curie": "wq:determinandLabel",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.label"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasDefinition",
+              "curie": "wq:hasDefinition",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.definition"
+              }
+            },
+            {
+              "uri": "http://group05.com/ontology/Water-Quality#hasUnit",
+              "curie": "wq:hasUnit",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "determinand.unit.label"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
