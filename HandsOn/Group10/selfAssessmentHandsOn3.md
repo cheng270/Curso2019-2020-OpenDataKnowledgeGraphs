@@ -15,7 +15,7 @@ Every URI in the RDF files:
 
 Every individual in the RDF files:
 - [] Has a label with the name of the individual
-- [] Has a type
+- [x] Has a type
 
 Every value in the RDF files:
 - [x] Is not empty (i.e., “”)
