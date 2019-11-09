@@ -11,7 +11,7 @@ from flask_cors import CORS
 g = Graph()
 g.parse("with_links_ttl.ttl", format="turtle")
 id = 8641
-    
+
 # implementacion del servicio
 app = Flask(__name__)
 CORS(app)
@@ -79,9 +79,9 @@ def obtainIndiceWiki(distrito):
     wikidata = {}
     query = "SELECT DISTINCT ?hasValue " \
             "WHERE { " \
-            "{ <http://www.grupo09.upm.es/new-york-hotspot/hotspot/BoroName/" + distrito + "> ?property ?hasValue } " \
-                                                                                           "} ORDER BY (!BOUND(?hasValue)) " \
-                                                                                           "?property ?hasValue ?isValueOf"
+            "{ <"+ distrito + "> ?property ?hasValue } } " \
+                              "ORDER BY (!BOUND(?hasValue)) " \
+                              "?property ?hasValue ?isValueOf"
     response = g.query(query)
     for datar in response:
         print(datar[0])
