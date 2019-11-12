@@ -1,0 +1,399 @@
+---
+title: "Road Accidents in Leeds City - An Analysis with Linked Data"
+author: "Raymond Banks, Houda Briwa, Emre Hangül, Hugo Nugra"
+output:
+  bookdown::html_document2:
+    number_sections: true
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    theme: spacelab
+bibliography:  OpenData.bib
+link-citations: yes
+---
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 15px;
+  }
+td {  /* Table  */
+  font-size: 12px;
+}
+h1.title {
+  font-size: 32px;
+  color: DarkBlue;
+}
+h1 { /* Header 1 */
+  font-size: 22px;
+  color: DarkBlack;
+}
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlack;
+}
+h3 { /* Header 3 */
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlack;
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+
+*Published on 7th of November, 2019*
+
+```{r setup, include=FALSE}
+library(magrittr)
+library(DT)
+library(nnet)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(leaflet)
+library(htmltools)
+library(rdflib)
+
+knitr::opts_chunk$set(echo = TRUE)
+
+#read data from csv
+d_original <- read.csv("Leeds_RTC_2017.csv")
+d_updated <- read.csv("last.csv") #read the data
+
+```
+
+*The application of this project can be downloaded from [here](https://expo.io/artifacts/b32e6977-9bf0-4e41-bb11-e734ae4121ee)*
+
+
+# . Introduction 
+
+>*The purpose of this study is to to do a practice on how to link a dataset with the other open source data on the world wide web, in other words, how to generate a Linked Data. The dataset to be used contains information about the road accidents in 2017 in Leeds City, UK. The guidelines on the steps for the generation of Linked Data will be explicitly explained with the usage of Google's Open Refine and its RDF extension. *
+
+# . Guidelines
+
+There are several steps to be followed throughout the analysis of the Leeds City Road Accidents dataset, which can be summarized as follows: *(@smartcity)*
+
+## *Selecting the Data Source*
+
+The dataset of the interest comprises of information about the road accidents in Leeds City in the year of 2017. This data set can be found [here](https://www.europeandataportal.eu/data/datasets/road-traffic-accidents?locale=en). 
+
+There are numerous factors that effected the decision to select this dataset to be used in this study. First, the data is easily accesible and it is in an easy machine-processable format, namely *csv*. Furthermore, the online page includes a comprehensive description of the dataset, as well as the descriptions for each feature in the data. The license for the dataset is also clearly written and easy to access. Another reason for choosing this dataset is the fact that it would be easily used for the generation of *Linked Data*, as the features of the dataset include information about, for instance, the locations of each accident.
+
+## *Obtaining Access to the Data Source*
+
+The Leeds City Road Accidents' dataset is downloaded from its online [page](https://www.europeandataportal.eu/data/datasets/road-traffic-accidents?locale=en). The dataset is easily obtained since it is an open source data with the license provided by the stakeholders allows downloading of the data from its online page.
+
+## *Analyzing License of the Data Source*
+
+The license for the dataset is issued by the *nationalarchives.org* which allows access to dataset freely and flexibly, under the condition of providing a link to the license in wherever it might be used. Thus, the license can be found via this [link.](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+
+Looking at the license, one can summarize the license and its conditions as follows:
+
+- The data set is published by the UK Government under the Open Government License for public sector information.
+
+- The license is compatible with the Creative Commons Attribution (CC-BY) license and is maintained by the National Archives.
+
+- The license allows us to use the dataset freely under the proposed application.
+
+## *Analyzing the Data source*
+
+A quick look at the Leeds City Road Accidents dataset is as follows:
+
+```{r echo=FALSE}
+# a datatable for the original data
+d_original %>%datatable(rownames=FALSE,
+                        caption="Leeds City Road Accidents Dataset-2017",
+                        options = list(lengthMenu=c(5,10,20,50),
+                              scrollX=TRUE,
+                              initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#CCF', 'color': '#000'});",
+    "}"))) # change the datatable colors, 2 r color palette codes 
+```
+
+The road accident dataset consists of 2203 observations of accidents that happened in Leeds City in 2017, with each observation having 15 different features that are explained below:
+
+*Features(variables) that hold integer values*:
+
+- **Grid Ref(erence) : Easting** — Denotes geographical location of an accident, horizontally.
+
+- **Grid Ref(erence): Northing** — Denotes geographical location of an accident, vertically.
+
+- **Number of Vehicles** — Denotes number of vehicles involved in an accident (ranges from 1 to 7).
+
+- **Time (24 Hour Format)** — Time (hours, minutes) of an accident in a day with 24-hour format .
+
+- **Age of Casualty** — Age of the person that had a casualty due to an accident (ranges from 1 to 96).
+
+*Features(variables) that hold string values*:
+
+- **Reference Number** — Denotes a reference number for an accident (1711 different accidents with remaining 492 accidents having multiple crash reports at once).
+
+- **Accident Date** — Date of the accident in a month-day-year format (all in 2017).
+
+- **1st Road Class & No** — Class and name of the road that an accident happened in (52 different roads).
+
+- **Road Surface — Quality** of the surface of the road in an accident with 3 levels as dry, frost/ice snow or wet/damp.
+
+- **Lighting Conditions** — Lighting conditions on the road in an accident, with 6 different possibilities: *Daylight: Street lights present*, *Darkness: Street lights present but unlit*, *Darkness: Street lights present and lit and lit*, *Darkness: Street lights present and lit*, *Darkness: Street lighting unknown or Darkness: No street lighting*.
+
+- **Weather Conditions** — Weather conditions during an accident with 8 different possibilities: *Fine with high winds*, *Fine without high winds*, *Fog or mist (if hazard)*, *Other*, *Raining with high winds*, *Raining without high winds*, *Snowing with high winds* or *Snowing without high winds*.
+
+- **Type of the Vehicle** — Type of a vehicle that was involved in an accident with 16 different possibilities, ranging from *car and taxi* to *pedal cycle* and *motorcycle*.
+
+- **Casualty Class** — Denotes the class of a casualty due to an accident with 3 different possibilities: *Driver or rider*, *Pedestrian or Vehicle* or *pillion passenger*.
+
+- **Casualty Severity** — Denotes severity of a casualty due to an accident with 3 different possibilities: *fatal*, *serious* or *slight*.
+
+- **Sex of Casualty** — Sex of a casualty due to an accident with 2 possibilities: *males* or *females*.
+
+After some thought process, it is determined that some of the features should be transformed to better fit the aims of the study. For instance, the *Grid Ref:Easting* and *Grid Ref:Northing* features are transformed into *Latitude* and *Longitude* which have much wider usage in terms of determining the locations of an observation. Other changes include formatting the *Time* column, simplifying the values of *Type of Vehicle* column and creating a new column named *StreetName* which holds the string values as the addresses of the accident that correspond to the *latitude* and *longitude* values. This extraction of new information about street names is possible due to a feature called *reconciliation*. More information on this feature will be given in chapter \@ref(linked).
+
+Here is a quick look at the dataset after these transformation are done:
+
+```{r echo=FALSE}
+#a datatable for the updated data
+d_updated %>% datatable(rownames=FALSE,
+                        caption="Leeds City Road Accidents Dataset-2017(Updated)",
+                        options = list(lengthMenu=c(5,10,20,50),
+                              scrollX=TRUE,
+                              initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#CCF', 'color': '#000'});",
+    "}")))
+```
+
+Furthermore, using the now available *StreetName*, *latitude* and *longitude* values, the accidents can be visualized through a map. Below is an interactive map that shows the exact addresses of each accident by using different colors of circles for different severities for casualties. The street names can be seen by clicking of any of the circles. Note that most of the casualties are classified as *slight* and very few of them are classified as *fatal*. 
+
+```{r echo=FALSE, include=FALSE}
+
+#remove blank values from data frame
+cleanedD <- na.omit(d_updated)
+locations <- data.frame(
+  label = cleanedD$StreetName,
+  latitude = cleanedD$Latitude,
+  longitude = cleanedD$Longitude
+)
+#construct palette_fn function. the input is "domain"
+palette_fn <- colorFactor(palette = "Set1", domain = cleanedD$Casualty.Severity)
+```
+
+
+```{r echo=FALSE}
+#create an object named html that is then used to construct the map. leaflet package is used. The tile used is OpenStreetMap. Label(street names), latitude and longitude values are defined.
+ html <- leaflet(data = locations) %>% # specify the data you want to add as a layer
+  addProviderTiles(providers$OpenStreetMap) %>%
+  setView(lng = -1.5021, lat = 53.8002, zoom = 11) %>% # focus on Leeds City
+  addCircles(
+    lat = ~latitude,   # a formula specifying the column to use for latitude
+    lng = ~ longitude, # a formula specifying the column to use for longitude
+    popup = ~label,    # a formula specifying the information to pop up
+    radius = 350,      # radius for the circles, in meters
+    color = ~palette_fn(cleanedD$Casualty.Severity),
+    stroke = FALSE     # remove the outline from each circle
+  ) %>% 
+  addLegend(
+  position = "bottomright",
+  title = "Severities of Casualties",
+  pal = palette_fn, # the color palette described by the legend
+  values = ~cleanedD$Casualty.Severity, # the data values described by the legend
+  opacity = 1
+)
+
+#construct the map
+htmltools::tagList(html)
+```
+
+## *Defining Resource Naming Strategy*
+
+For the purpose of the generation of Linked Data, there are 4 principles defined (@bernersLee) as follows:
+
++ Use URIs as names for things.
++ Use HTTP URIs so that people can look up those names.
++ When someone looks up a URI, provide useful information using the standards (RDF, SPARQL).
++ Include links to other URIs so that they can discover more things.
+
+Furthermore, there are 2 general forms of URI: A *Hash URI (#)* and a *Slash URI(/)*. Several different principles are defined worldwide to choose which URI style should be used (@uri) in which situation. Following one of the common patterns, the resource naming strategy used in this study is as follows:
+
+- The URI domain to be used is **http://group03.org/ .** This domain is chosen because it's available.
+
+- Ontology model classes: the classes in the ontology will have the form **http://www.group03.org/saferoads/TrafficAccidentsontology#ClassNAME**.
+
+- Ontology model properties: the properties in the ontology will have the form **http://www.group03.org/saferoads/TrafficAccidentsontology#PropertyNAME**.
+
+- Instances: the instances in the ontology will have the form **http://www.group03.org/saferoads/TrafficAccidentsontology/resource/ClassNAME#IDENTIFIER**.
+
+## *Developing Ontology*
+
+To construct the ontology for this road accident dataset, the first thing to do is to decide on what the *classes*, *properties* and *instances* of the ontology would be according to the road accident dataset. After some thought processes, these features are defined as the following:
+
+* All of the 15 features of the dataset are divided into classes as:
+
+    + 11 classes without any *subclasses*:
+        - *Accident* 
+        - *city* 
+        - *Environment*
+        - *Latitude*
+        - *Lighting-Conditions*
+        - *Longitude*
+        - *Postal_code*
+        - *Road_profile*
+        - *Street*
+        - *surface-condition*
+        - *Weather_condition*
+
+    + 4 classes with *subclasses* of the classes *Casualty* and *Vehicle*:
+        - *class(casualty)*
+        - *severity(casualty)*
+        - *sex(casualty)*
+        - *type(vehicle)*
+        
+* 7 properties with no sub-properties: (with their *domains* and *ranges* are in the parantheses as (domain:range)):
+    
+    - *has_city*(Accident:city) 
+    - *has_datetime* (Accident:time,Accident:date)
+    - *has_latitude* (Accident:Latitude)
+    - *has_longitude* (Accident: Longitude)
+    - *has_postal_code* (Accident: Postal_code)
+    - *has_street* (Accident: Street)
+    - *has_type_of_vehicle* (Accident:type)
+
+* 2 properties *has_casualty* (Accident:Casualty) , *has_environment* (Accident:environment) with 7 sub-properties:
+    
+    - *has_age* (Casualty:age)
+    - *has_class* (Casualt:class)
+    - *has_gender* (Casualty:sex)
+    - *has_level_of_severity* (Casualty:severity)
+    - *has_lightning_condition* (environment:lightning_conditions)
+    - *has_surface_condition* (environment:surface_condition)
+    - *has_weather_condition* (environment:Weather_condition)
+
+* 25 instances of the classes, namely: (individual:class)
+
+    - Car, Motorcycle, Pedal_cycleCar, Taxi/Private_hireCar : *Type*
+    - Fine_with_high_winds, fine_without_high_winds, raining_with_high_winds, raining_without_high_winds, snowing_with_high_winds, snowing_without_high_winds : *weather_condition*
+    - Dry, Frost/Ice, Snow, Wet/Damp : *surface_condition*
+    - Darkness:_no_street_lightning, Darkness:_Street_lights_present_and_lit, Daylight:Street_lights_present : *Lighting_Conditions*
+    - Driver_or_rider, Pedestrian, Vehicle_or_pillion_passenger : *casualty_class*
+    - Fatal, serious, slight : *casualty_Severity*
+    - Female, male : *casualty_sex*
+
+The second part for the development of the road accident ontology is searching for possible existing ontologies that could suit best for the values of the dataset. This process is mostly done via the online site *Linked Open Vocabularies (LOV)* which can be found [here](https://lov.linkeddata.es/dataset/lov/).  
+
+The ontology for the road accidents are created by using an ontology creation tool, *Protege*. Furthermore, the resulting ontology is visualized by the "VOWL Viewer" tool of the Protege. A screenshot of the ontology is given below.  
+
+![Road Accident Ontology](http://www.imgim.com/ontology.png)
+
+## *Transforming Data Source*{#linked}
+
+To start the transformation of the dataset to RDF, some preliminary steps are done as follows:
+
++ Clustering the types of vehicle into 4 classes
++ Joining the date and time into a unique value of datetime
++ Reconciliating the kind of vehicle
++ Transforming *Northing* and *Easting* coordinates into *Latitude* and *Longitude*
++ Acquiring the names of the streets, postal code and the city that the accidents takes place in; using a reconciliation based on latitude and longitude
+
+After these steps are followed, the road accident dataset is transformed to have a *Resource Desciption Framework (RDF)* data. This process is done using the Google's free open source for several Data Wrangling purposes, *Open Refine*. Using the latest version of the Open Refine, the transformation to RDF is done via RDF Skeleton tab that is installed as an extension to Open Refine. A quick look at the RDF Skeleton is as follows:
+
+```{r}
+
+#create rdf object
+red <- as_rdf(d_original,prefix="last.ttl")
+
+#create serializations
+serialized_xml <- rdf_serialize(red,format = "rdfxml")
+
+```
+
+![RDF Skeleton (Road Accidents Dataset)](http://www.imgim.com/rdfskeleton.png)
+
+# . A Data Analysis: Factors that Effect Severity
+
+By using the road accidents dataset, it can be found how much the features of the *environment* affects the severity of the accidents. There are 3 different values for the casualty severity variable: *fatal*, *serious* and *slight*. Since there are 3 different categorical outputs for the target variable of *casualty severity*, a *multinomial regression* can be done and the probability of a severity of an accident can be found with respect to different *environment* features. 
+
+After the multinomial logistic regression model is set and the best model is found via the lowest *AIC* model, the resulting statistically significant variables are *Road.Surface.Condition*, *Type.of.Vehicle*, *Casualty.Class*, *Sex.of.Casualty* and *Age.of.Casualty*. The respective coefficients for the variables are found as follows:
+
+```{r modelcreation, echo=FALSE, include=FALSE}
+
+#rename col names for simplicity
+d_updated <- d_updated %>% rename(n=Number.of.Vehicles,
+                     sc=Road.Surface.Condition,
+                     lc=Lighting.Conditions,
+                     wc=Weather.Conditions,
+                     tov=Type.of.Vehicle,
+                     cc=Casualty.Class,
+                     cs=Casualty.Severity,
+                     soc=Sex.of.Casualty,
+                     aoc=Age.of.Casualty)
+
+#create train and validation sets
+nsample <- sample(nrow(d_updated),nrow(d_updated)*0.8)
+trainData <- d_updated[nsample,]
+validationData <- d_updated[-nsample,]
+
+#multionomial model
+model1 <- multinom(formula=cs~sc+lc+wc+tov+cc+soc+aoc,data=trainData) 
+anova(update(model1, . ~ . - soc), model1)
+bestModel<- step(model1, trace=0,k=2)
+
+#bestModel is named as model2
+model2 <- multinom(formula=cs~sc+tov+cc+soc+aoc,data=trainData) 
+```
+
+```{r coefs, echo=FALSE}
+
+#coefficients for the variables
+exp(coef(model2)[,-1]) %>% round(3) %>% datatable(rownames=c("Severity-Serious","Severity-Slight"), 
+                                caption="Coefficients of the Variables",
+                                colnames = c("Surface Condition-Frost/Ice","Surface Condition-Snow","Surface Condition-Wet/Damp","Type of Vehicle-Car","Type of Vehicle-Motorcycle","Type of Vehice-Taxi","Casualty Class-Pedestrian","Casualty Class-Vehicle","Sex of Casualty-Male","Age of Casualty"),
+                                options = list(lengthMenu=c(5,10,20,50),
+                                scrollX=TRUE,
+                                initComplete = JS(
+                "function(settings, json) {",
+          "$(this.api().table().header()).css({'background-color': '#CCF', 'color': '#000'});",
+    "}"))) # change the datatable colors, 2 r color palette codes 
+```
+
+As it can be seen from the table above, for example, the *odds* of switching from *dry* surface conditions to *wet/damp* surface conditions is **`r exp(coef(model2)[,-1])[1,3] %>% round(3)`** for the accident being *fatal* vs being *serious*. 
+
+
+```{r validation, echo=FALSE}
+
+#accuracies with the validation dataset
+validationData$predicted <- predict(model2, newdata = validationData, "class")
+ctable <- table(validationData$cs, validationData$predicted)
+
+#construct frequency tabke for actual and predicted classes
+rownames(ctable) <- c("Actual-Fatal","Actual-Serious","Actual-Slight")
+ctable %>% knitr::kable(caption="Frequency Table of Actual vs Predicted Severities",
+                        col.names = c("Predicted-Fatal","Predicted-Serious","Predicted-Slight"))
+```
+
+From the frequency table of the actual severity values and the predicted values from the multinomial model, it can be seen that the accuracy of the model is **`r round((sum(diag(ctable))/sum(ctable))*100,2)`%**, therefore the model is a great (accurate) model. The predicted probabilities of the model are given below.
+
+```{r echo=FALSE}
+#create predictions and the datatable
+predictions <- predict(model2,newdata = validationData,"probs")
+predictions %>% round(3) %>% datatable(rownames=TRUE,
+                                       colnames = c("Accident No","Fatal","Serious","Slight"),
+                                          caption="Fitted Probabilities",
+                                          options = list(lengthMenu=c(5,10,20,50),
+                                          scrollX=TRUE,
+                                          initComplete = JS(
+                "function(settings, json) {",
+          "$(this.api().table().header()).css({'background-color': '#CCF', 'color': '#000'});",
+    "}"))) # change the datatable colors, 2 r color palette codes 
+```
+
+# . Conclusion
+
+In this project, OpenRefine is used to transform and generate linked smart city related data. A multinomial logistic regression is done and an application is built that allows the reader to visualize the result on an interactive map and predict the safety situation of a city traffic. 
+Futhermore using semantic web and more specifically knowledge graph in the project allows for the ability to share the data and make it available for use in other applications.
+
+# Bibliography {-}
+
