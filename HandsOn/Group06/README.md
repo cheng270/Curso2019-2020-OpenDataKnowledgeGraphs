@@ -7,4 +7,4 @@ This Open Data and Knowledge Graphs project is made by:
 * Cristina Rios (www.github.com/Cristina-Rios)
 * Giorgio Polla (www.github.com/GiorgioPolla)
 
-The project is updated at the Hands On Assignment 3 (HOA3).
+The project is updated at the last Hands On Assignment (HOA4+).
