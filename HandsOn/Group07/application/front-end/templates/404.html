@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/cloud,png') }}">
 </head>
 <body>
-<p>Page not found</p>
+    <p>Page not found!</p>
+    <button onclick="window.location.href = '{{ url_for('templates', filename='index.html') }}'">Home</button>
 </body>
 </html>

@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Air quality Madrid</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/cloud.png') }}">
+
 </head>
 <body>
-<p>home page</p>
-<button onclick="window.location.href='./test'">TEST</button>
+<div id="canvas" className="canvas" onmousemove="onDocumentMouseMove(event)"></div>
+<div id="popup" style="display:none;" class="absolute-popup-right">
+    <h2 id="district-name"></h2>
+    <h1 id="district-postal"></h1>
+    <hr class="margin-left">
+    <h5 id="loading">Loading data...</h5>
+    <div id="pollutants">
+    </div>
+    
+    
+</div>
+<div class="absolute-title">
+    <hr>
+    <h1>3DAIRQ</h1>
+    <p>Mouse over the 3D model shows the different city areas and displays the air quality data for each one (each area
+        is covered by one measure device)</p>
+    <p>You can choose the date by using the bottom slider</p>
+</div>
 
-<script src="{{ url_for('static', filename='lib/js/test.js') }}"></script>
+<div class="absolute-slider">
+  <input oninput="sliderChange()" type="range" min="1" max="19" value="1" class="slider" id="date-slider">
+  <h2 id="date">2018-01-01</h2>
+</div>
+
+<script type="text/javascript" src="../static/lib/js/three.js"></script>
+<script type="text/javascript" src="../static/lib/js/OBJLoader.js"></script>
+<script type="text/javascript" src="../static/lib/js/OrbitControls.js"></script>
+<script type="text/javascript" src="../static/js/main.js"></script>
+<script type="text/javascript" src="../static/js/districts.js"></script>
 </body>
 </html>
