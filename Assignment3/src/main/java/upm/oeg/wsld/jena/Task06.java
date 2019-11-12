@@ -8,7 +8,9 @@ import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.util.FileManager;
+import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.VCARD;
 
 /**
@@ -45,23 +47,38 @@ public class Task06
 		OntClass researcher = model.createClass(ns+"Researcher");
 		
 		// ** TASK 6.1: Create a new class named "University" **
-		
+		OntClass University = model.createClass(ns+"University");
 		
 		// ** TASK 6.2: Add "Researcher" as a subclass of "Person" **
-		
+		OntClass Person = model.createClass(ns+"Person");
+		Person.setSubClass(researcher);
 		
 		// ** TASK 6.3: Create a new property named "worksIn" **
-		
+		Property worksIn = model.createProperty(ns+"worksIn");
 		
 		// ** TASK 6.4: Create a new individual of Researcher named "Jane Smith" **
-		
-		
-		// ** TASK 6.5: Add to the individual JaneSmith the fullName, given and family names **
-		
-		
-		// ** TASK 6.6: Add UPM as the university where John Smith works **
-		
-		
+
+		String JaneURI = ns+"JaneSmith";
+		Individual JaneSmith = researcher.createIndividual(JaneURI);
+
+//		// ** TASK 6.5: Add to the individual JaneSmith the fullName, given and family names **
+		String fullName = "Jane Smith";
+		Property vacfn = model.createProperty("http://www.w3.org/2001/vcard-rdf/3.0#FN");
+		JaneSmith.addLiteral(vacfn,fullName);
+
+		String Family = "Smith";
+		Property vacfam = model.createProperty("http://www.w3.org/2001/vcard-rdf/3.0#Family");
+		JaneSmith.addLiteral(vacfam,Family);
+
+		String Given = "Smith";
+		Property vacgiv = model.createProperty("http://www.w3.org/2001/vcard-rdf/3.0#Given");
+		JaneSmith.addLiteral(vacgiv,Given);
+
+//		// ** TASK 6.6: Add UPM as the university where Jane Smith works **\
+		String upmURI = ns+"UPM";
+		Individual UPM = University.createIndividual(upmURI);
+		JaneSmith.addProperty(worksIn,UPM);
+
 		model.write(System.out, "RDF/XML-ABBREV");
 	}
 }
