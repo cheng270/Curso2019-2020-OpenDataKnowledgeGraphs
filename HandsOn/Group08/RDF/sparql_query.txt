@@ -1,0 +1,53 @@
+SELECT SUBSTR(STR(?sensor), 49,15),str(?numberPedestrians) as ?numberPedestriansString ,str(?date) as ?dateString ,str(?hour) as ?hourString,
+str(?districtWikidata) as ?districtWikidataString ,str(?districtName) as ?districtNameString ,str(?streetWikidata) as ?streetWikidataString, str(?districtNumber) as ?districtNumberString, 
+str(?streetName) as ?streetNameString ,str(?streetNumber) as ?streetNumberString ,str(?postalCode) as ?postalCodeString ,str(?geoLongitude) as ?geoLongitudeString ,str(?geoLatitude) as ?geoLatitudeString
+
+WHERE {
+
+?sensor <http://sandbox.linkeddata.es/sparql/pedestrians/hasMeasure> ?measure .
+
+    ?measure <http://sandbox.linkeddata.es/sparql/pedestrians/numberPedestrians> 
+?numberPedestrians .
+    ?measure <http://sandbox.linkeddata.es/sparql/pedestrians/date> ?date .
+    ?measure <http://sandbox.linkeddata.es/sparql/pedestrians/hour> ?hour .
+
+?sensor <http://sandbox.linkeddata.es/sparql/pedestrians/isAtLocation> ?location .
+
+    ?location <http://sandbox.linkeddata.es/sparql/pedestrians/hasDistrict> ?districtWikidata .
+    ?districtWikidata <http://sandbox.linkeddata.es/sparql/pedestrians/districtNumber> ?districtNumber.
+
+         ?districtWikidata <http://sandbox.linkeddata.es/sparql/pedestrians/districtName> ?districtName.
+    ?location <http://sandbox.linkeddata.es/sparql/pedestrians/hasStreet> ?streetWikidata .
+         ?streetWikidata <http://sandbox.linkeddata.es/sparql/pedestrians/streetName> ?streetName .
+    ?location <http://sandbox.linkeddata.es/sparql/pedestrians/streetNumber> ?streetNumber .
+    ?location <http://sandbox.linkeddata.es/sparql/pedestrians/postalCode> ?postalCode .
+    ?location <http://sandbox.linkeddata.es/sparql/pedestrians/geoLongitude> ?geoLongitude .
+    ?location <http://sandbox.linkeddata.es/sparql/pedestrians/geoLatitude> ?geoLatitude .
+
+}
+
+=======================
+This is the schema for the query results
+[
+{"name": "sensorString", "dataType": "STRING"},
+{"name": "numberPedestriansString", "dataType":"STRING"},
+{"name": "dateString", "dataType":"STRING",
+    'semantics': {
+      'conceptType': 'METRIC',
+      'semanticGroup': 'DATETIME',
+      'semanticType': 'YEAR_MONTH_DAY'
+    }},
+{"name": "hourString", "dataType":"STRING"},
+{"name": "districtWikidataString", "dataType":"STRING"},
+{"name": "districtNameString", "dataType":"STRING"},
+{"name": "streetWikidataString", "dataType":"STRING"},
+{"name": "districtNumberString", "dataType":"STRING"},
+{"name": "streetNameString", "dataType":"STRING"},
+{"name": "streetNumberString", "dataType":"STRING"},
+{"name": "postalCodeString", "dataType":"STRING"},
+{"name": "geoLongitudeString", "dataType":"STRING"},
+{"name": "geoLatitudeString", "dataType":"STRING"}
+]
+
+
+

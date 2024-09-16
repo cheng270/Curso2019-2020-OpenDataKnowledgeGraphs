@@ -1,0 +1,210 @@
+@prefix : <http://www.smart-city.GP04-LDATA.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.smart-city.GP04-LDATA.org/> .
+
+<http://www.smart-city.GP04-LDATA.org/> rdf:type owl:Ontology ;
+                                         owl:versionIRI <urn:absolute:1.0> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCity> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                       rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress> ;
+                                                                                       rdfs:range <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasCounty> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                         rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress> ;
+                                                                                         rdfs:range <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasFullAddress> rdf:type owl:ObjectProperty ;
+                                                                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                              rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                              rdfs:range <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasState> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                        rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress> ;
+                                                                                        rdfs:range <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfCounty> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                            rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City> ;
+                                                                                            rdfs:range <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#partOfState> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                           rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City> ;
+                                                                                           rdfs:range <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#hasaddress> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                          rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress> ;
+                                                                                          rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasEffectiveness_of_care_national_comparison
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasEffectiveness_of_care_national_comparison> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                              rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                              rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasEfficient_use_of_medical_imaging_national_comparison
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasEfficient_use_of_medical_imaging_national_comparison> rdf:type owl:DatatypeProperty ;
+                                                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                         rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                                         rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasMortality_national_comparison
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasMortality_national_comparison> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                  rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                  rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasPatient_experience_national_comparison
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasPatient_experience_national_comparison> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                           rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                           rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasReadmission_national_comparison
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasReadmission_national_comparison> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                    rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                    rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasSafety_of_care_national_comparison
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasSafety_of_care_national_comparison> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                       rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                       rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasTimeliness_of_care_national_comparison
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasTimeliness_of_care_national_comparison> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                           rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                                           rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasaggregateRating
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasaggregateRating> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                    rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                    rdfs:range xsd:integer .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasemergency_Services
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasemergency_Services> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                       rdfs:range xsd:boolean .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hashospital_Ownership
+<http://www.smart-US.GP04-LDATA.org/US/resource/hashospital_Ownership> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                       rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hashospital_Type
+<http://www.smart-US.GP04-LDATA.org/US/resource/hashospital_Type> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                  rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                  rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasname
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasname> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City> ,
+                                                                     <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County> ,
+                                                                     <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ,
+                                                                     <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State> ;
+                                                         rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/haspostalCode
+<http://www.smart-US.GP04-LDATA.org/US/resource/haspostalCode> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress> ;
+                                                               rdfs:range xsd:string .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hasprovider_ID
+<http://www.smart-US.GP04-LDATA.org/US/resource/hasprovider_ID> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                                rdfs:range xsd:integer .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/resource/hastelephone
+<http://www.smart-US.GP04-LDATA.org/US/resource/hastelephone> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                              rdfs:domain <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> ;
+                                                              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#City> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#County> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#FullAddress> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location> .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Hospital> rdf:type owl:Class .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location> rdf:type owl:Class .
+
+
+###  http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State
+<http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#State> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.smart-US.GP04-LDATA.org/US/ontology/Hospital_general_informations#Location> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

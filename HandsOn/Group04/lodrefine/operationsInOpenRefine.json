@@ -1,0 +1,57 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Location",
+    "columnName": "Location"
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column County Name to position 5",
+    "columnName": "County Name",
+    "index": 5
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Full address at index 7 based on column ZIP Code using expression grel:cells[\"Address\"].value+\", \"+cells[\"City\"].value+\", \"+cells[\"State\"].value+\", \"+cells[\"ZIP Code\"].value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "Full address",
+    "columnInsertIndex": 7,
+    "baseColumnName": "ZIP Code",
+    "expression": "grel:cells[\"Address\"].value+\", \"+cells[\"City\"].value+\", \"+cells[\"State\"].value+\", \"+cells[\"ZIP Code\"].value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Readmission national comparison footnote",
+    "columnName": "Readmission national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Patient experience national comparison footnote",
+    "columnName": "Patient experience national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Effectiveness of care national comparison footnote",
+    "columnName": "Effectiveness of care national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Timeliness of care national comparison footnote",
+    "columnName": "Timeliness of care national comparison footnote"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Efficient use of medical imaging national comparison footnote",
+    "columnName": "Efficient use of medical imaging national comparison footnote"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Full address to Location",
+    "oldColumnName": "Full address",
+    "newColumnName": "Location"
+  }
+]

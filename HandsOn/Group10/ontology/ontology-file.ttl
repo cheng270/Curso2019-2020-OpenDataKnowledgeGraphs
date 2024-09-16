@@ -1,0 +1,396 @@
+@prefix : <http://www.semanticweb.org/ontologies/cultural-activities/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix km4c: <http://www.disit.org/km4city/schema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cultOntology: <http://www.semanticweb.org/ontologies/cultural-activities#> .
+@prefix cultResource: <http://www.semanticweb.org/ontologies/cultural-activities/resource/> .
+@base <http://www.madridcultural.es/cultural-activities#> .
+
+<http://www.madridcultural.es/cultural-activities#> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#ID
+xsd:ID rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/hasDistrict
+:hasDistrict rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isTheLocationOf ;
+             rdfs:domain km4c:Cultural_centre ;
+             rdfs:range :AdministrativeArea .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/hasFacility
+:hasFacility rdf:type owl:ObjectProperty ;
+             owl:inverseOf :holdsEvent ;
+             rdfs:domain km4c:Event ;
+             rdfs:range km4c:Cultural_centre .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/holdsEvent
+:holdsEvent rdf:type owl:ObjectProperty ;
+            rdfs:domain km4c:Cultural_centre ;
+            rdfs:range km4c:Event .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/includes
+:includes rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isPartOfActivity ;
+          rdfs:domain <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> ;
+          rdfs:range km4c:Event .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/isPartOfActivity
+:isPartOfActivity rdf:type owl:ObjectProperty ;
+                  rdfs:domain km4c:Event ;
+                  rdfs:range <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/isTheLocationOf
+:isTheLocationOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :AdministrativeArea ;
+                 rdfs:range km4c:Cultural_centre .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.disit.org/km4city/schema#time
+km4c:time rdf:type owl:DatatypeProperty ;
+          rdfs:domain km4c:Event ;
+          rdfs:range xsd:time .
+
+
+###  http://www.madridcultural.es/cultural-activities#officialWebsite
+:officialWebsite rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :AdministrativeArea ;
+                 rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/activityName
+:activityName rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/activityURL
+:activityURL rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> ;
+             rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/audience
+:audience rdf:type owl:DatatypeProperty ;
+          rdfs:domain km4c:Event ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/costs
+:costs rdf:type owl:DatatypeProperty ;
+       rdfs:domain km4c:Event ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/daysExcluded
+:daysExcluded rdf:type owl:DatatypeProperty ;
+              rdfs:domain km4c:Event ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/daysOfWeek
+:daysOfWeek rdf:type owl:DatatypeProperty ;
+            rdfs:domain km4c:Event ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/facilityName
+:facilityName rdf:type owl:DatatypeProperty ;
+              rdfs:domain km4c:Cultural_centre ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/facilityURL
+:facilityURL rdf:type owl:DatatypeProperty ;
+             rdfs:domain km4c:Cultural_centre ;
+             rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/finishDate
+:finishDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain km4c:Event ;
+            rdfs:range xsd:date .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/hasId
+:hasId rdf:type owl:DatatypeProperty ;
+       rdfs:domain km4c:Event ;
+       rdfs:range xsd:ID .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/hasTitle
+:hasTitle rdf:type owl:DatatypeProperty ;
+          rdfs:domain km4c:Event ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/isLongTerm
+:isLongTerm rdf:type owl:DatatypeProperty ;
+            rdfs:domain km4c:Event ;
+            rdfs:range xsd:base64Binary .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/startingDate
+:startingDate rdf:type owl:DatatypeProperty ;
+              rdfs:domain km4c:Event ;
+              rdfs:range xsd:date .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/urlEvent
+:urlEvent rdf:type owl:DatatypeProperty ;
+          rdfs:domain km4c:Event ;
+          rdfs:range xsd:anyURI .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+             rdfs:domain km4c:Event ;
+             rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+geo:lat rdf:type owl:DatatypeProperty ;
+        rdfs:domain km4c:Cultural_centre ;
+        rdfs:range xsd:float .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lon
+geo:lon rdf:type owl:DatatypeProperty ;
+        rdfs:domain km4c:Cultural_centre ;
+        rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.disit.org/km4city/schema#Cultural_centre
+km4c:Cultural_centre rdf:type owl:Class .
+
+
+###  http://www.disit.org/km4city/schema#Event
+km4c:Event rdf:type owl:Class .
+
+
+###  http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity
+<http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/AdministrativeArea
+:AdministrativeArea rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Camps
+:Camps rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/CinemaAudiovisualActivities
+:CinemaAudiovisualActivities rdf:type owl:Class ;
+                             rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/CircusMagic
+:CircusMagic rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/CityDistrict
+:CityDistrict rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/CommemorationsTributes
+:CommemorationsTributes rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/CompetitionsContests
+:CompetitionsContests rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/ConferencesColoquiums
+:ConferencesColoquiums rdf:type owl:Class ;
+                       rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/CongressesDays
+:CongressesDays rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/CoursesWorkshops
+:CoursesWorkshops rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Dancing
+:Dancing rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Expositions
+:Expositions rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Fair
+:Fair rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Festivals
+:Festivals rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Festivities
+:Festivities rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/FestivitiesCarnivals
+:FestivitiesCarnivals rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/FestivitiesChristmassWiseKings
+:FestivitiesChristmassWiseKings rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/FestivitiesEaster
+:FestivitiesEaster rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/FestivitiesRamadan
+:FestivitiesRamadan rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/FestivitiesSanIsidro
+:FestivitiesSanIsidro rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Gastronomy
+:Gastronomy rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/ItinerariesAmbientalActivities
+:ItinerariesAmbientalActivities rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Lgtbi
+:Lgtbi rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/Music
+:Music rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/RecitalsPresentationsLiterary
+:RecitalsPresentationsLiterary rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/ReligiousActs
+:ReligiousActs rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/SchoolChildrenActivities
+:SchoolChildrenActivities rdf:type owl:Class ;
+                          rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/SolidaryActs
+:SolidaryActs rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/SportActivities
+:SportActivities rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/StorytellersPuppetsMarionettes
+:StorytellersPuppetsMarionettes rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/StreetUrbanArtActivities
+:StreetUrbanArtActivities rdf:type owl:Class ;
+                          rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/TheaterPerformance
+:TheaterPerformance rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/TripsItinerariesWorkshops
+:TripsItinerariesWorkshops rdf:type owl:Class ;
+                           rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/VeranosDeLaVilla
+:VeranosDeLaVilla rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/YoungCultutalBond
+:YoungCultutalBond rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  http://www.semanticweb.org/ontologies/cultural-activities/ZOposiciones
+:ZOposiciones rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.madridcultural.es/www.disit.org/km4city/schema#CulturalActivity> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

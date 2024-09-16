@@ -1,0 +1,201 @@
+@prefix : <http://www.grupo09.upm.es/new-york-hotspot/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.grupo09.upm.es/new-york-hotspot> .
+
+<http://www.grupo09.upm.es/new-york-hotspot> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasAbvrBorough
+:hasAbvrBorough rdf:type owl:ObjectProperty ;
+                rdfs:domain :Location ;
+                rdfs:range :Borough .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasActivatedDate
+:hasActivatedDate rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Hotspot ;
+                  rdfs:range :ActivatedDate .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasBoroCode
+:hasBoroCode rdf:type owl:ObjectProperty ;
+             rdfs:domain :Location ;
+             rdfs:range :Borough .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasBoroName
+:hasBoroName rdf:type owl:ObjectProperty ;
+             rdfs:domain :Location ;
+             rdfs:range :Borough .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasLatitude
+:hasLatitude rdf:type owl:ObjectProperty ;
+             rdfs:domain :Hotspot ;
+             rdfs:range :Location .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasLocationT
+:hasLocationT rdf:type owl:ObjectProperty ;
+              rdfs:domain :Hotspot ;
+              rdfs:range :Location .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasLongitude
+:hasLongitude rdf:type owl:ObjectProperty ;
+              rdfs:domain :Hotspot ;
+              rdfs:range :Location .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasObjectId
+:hasObjectId rdf:type owl:ObjectProperty ;
+             rdfs:domain :Hotspot ;
+             rdfs:range :Location .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasPostCode
+:hasPostCode rdf:type owl:ObjectProperty ;
+             rdfs:domain :Location ;
+             rdfs:range :Borough .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasProvider
+:hasProvider rdf:type owl:ObjectProperty ;
+             rdfs:domain :Provider ;
+             rdfs:range :Hotspot .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasRemarks
+:hasRemarks rdf:type owl:ObjectProperty ;
+            rdfs:domain :Hotspot ;
+            rdfs:range :Location .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasSsid
+:hasSsid rdf:type owl:ObjectProperty ;
+         rdfs:domain :Hotspot ;
+         rdfs:range :Location .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#hasType
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:domain :Hotspot ;
+         rdfs:range :Location .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#isLocated
+:isLocated rdf:type owl:ObjectProperty ;
+           rdfs:domain :Hotspot ;
+           rdfs:range :Location .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.grupo09.upm.es/new-york-hotspot#abrv_borough
+:abrv_borough rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Borough ;
+              rdfs:range xsd:string .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#borocode
+:borocode rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Borough ;
+          rdfs:range xsd:int .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#boroname
+:boroname rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Borough ;
+          rdfs:range xsd:string .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#latitude
+:latitude rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Location ;
+          rdfs:range xsd:double .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#location_t
+:location_t rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Location ;
+            rdfs:range xsd:string .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#longitude
+:longitude rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Location ;
+           rdfs:range xsd:double .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#objectid
+:objectid rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Hotspot ;
+          rdfs:range xsd:int .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#postcode
+:postcode rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Location ;
+          rdfs:range xsd:string .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#remarks
+:remarks rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Hotspot ;
+         rdfs:range xsd:string .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#ssid
+:ssid rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Hotspot ;
+      rdfs:range xsd:string .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Hotspot ;
+      rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.grupo09.upm.es/new-york-hotspot#ActivatedDate
+:ActivatedDate rdf:type owl:Class .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#Borough
+:Borough rdf:type owl:Class .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#City
+:City rdf:type owl:Class .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#Hotspot
+:Hotspot rdf:type owl:Class .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#Location
+:Location rdf:type owl:Class .
+
+
+###  http://www.grupo09.upm.es/new-york-hotspot#Provider
+:Provider rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,258 @@
+Column,OBJECTID,STREET_NAM,street_name_URI,Divided,LTS,ExisFacil,Shape__Length,osm_type,osm_id,lat,lon,importance
+0,228,Adams Street,Adams-Street,no,3,SLM,110.100489632546,way,506126419,42.2713823,-71.0681607,0.41
+1,204,Albany Street,Albany-Street,no,3,BL,104.216507856868,way,48941599,42.3467181,-71.0609504,0.41
+2,2576,Albany Street Connector,Albany-Street-Connector,no,1,SUP,978.3095051097189,,,,,
+3,191,Alford Street,Alford-Street,yes,4,SLM,191.416051331252,way,38783470,42.3896109,-71.0711719,0.41
+4,72,American Legion Highway,American-Legion-Highway,yes,2,BFBL,281.859177874188,way,426627262,42.285904,-71.109802,0.51
+5,346,Antwerp St,Antwerp-St,no,2,BL,84.7833610556958,way,8644264,42.3591092,-71.1401905,0.41
+6,1991,Arborway,Arborway,yes,3,BL,404.16933485613504,way,8652438,42.3091309,-71.1209069,0.32
+7,1158,Arlington Street,Arlington-Street,no,4,SLM,63.2410494875231,way,89641249,42.3546476,-71.0720688,0.41
+8,2509,Arnold Arboretum Trails,Arnold-Arboretum-Trails,no,1,SUP,821.157523802044,,,,,
+9,223,Ashmont Street,Ashmont-Street,no,3,SLM,118.293986042421,way,426678900,42.2858079,-71.0640963,0.42
+10,266,A Street,A-Street,no,2,BL,53.2189231674535,way,712375229,42.348726,-71.0497423,0.41
+11,269,Atlantic Avenue,Atlantic-Avenue,no,3,BL,130.447352609683,way,591136308,42.3526659,-71.0553675,0.41
+12,2936,Babcock Street,Babcock-Street,no,3,SLM,55.302052511381504,way,533506541,42.351794,-71.121279,0.41
+13,18,Baker Street,Baker-Street,no,3,BL,128.568572643539,way,630213533,42.287972,-71.171569,0.41
+14,164,Ballou Avenue,Ballou-Avenue,no,1,NW,477.48916621665995,way,8642540,42.285293,-71.082747,0.41
+15,2571,Barry Playground Path,Barry-Playground-Path,no,1,SUP,510.398057388025,,,,,
+16,13,Beacon Street,Beacon-Street,no,2,BFBL,77.4158091967962,way,89641250,42.3554337,-71.0725717,0.41
+17,333,Beech Street,Beech-Street,no,3,SLM,71.82974256062091,way,435203976,42.283289,-71.144897,0.41
+18,33,Belgrade Avenue,Belgrade-Avenue,no,3,BL,93.21228389283769,way,312345520,42.2869647,-71.130392,0.41
+19,2721,Belle Isle Marsh Path,Belle-Isle-Marsh-Path,no,1,SUC,224.89562420303398,,,,,
+20,1129,Belvidere Street,Belvidere-Street,no,3,BL,112.75517896875,way,591278029,42.345339,-71.08171,0.41
+21,260,Bennington Street,Bennington-Street,yes,4,SLM,164.142459870301,way,579180077,42.3879014,-71.0024661,0.41
+22,2530,Blackwell Path,Blackwell-Path,no,1,NSUP,828.8739492694,,,,,
+23,2528,Blossom Street Shared-Use Bridge,Blossom-Street-Shared-Use-Bridge,no,1,WALK,249.46922501937001,,,,,
+24,2024,Blue Hill Avenue,Blue-Hill-Avenue,yes,4,SLM,129.486651709922,way,426467420,42.2918647,-71.089014,0.51
+25,2868,Bold Knob Path,Bold-Knob-Path,no,1,SUP,224.95905033096,,,,,
+26,2177,Border Street,Border-Street,no,3,BL,29.1330536976215,way,575422180,42.374995,-71.0398458,0.41
+27,2573,Boston Bike Pike,Boston-Bike-Pike,no,1,SUP,123.461480470718,,,,,
+28,2659,Boston Harbor Islands Trails,Boston-Harbor-Islands-Trails,no,1,SUC,17.673942372443896,,,,,
+29,2519,Boston Harborwalk,Boston-Harborwalk,no,1,SUC,1825.74980330293,way,570185090,42.3538789,-71.0478489,0.42
+30,1360,Boston University Bridge,Boston-University-Bridge,no,3,BL,363.81172160929805,way,327284817,42.3509682,-71.1108575,0.52
+31,146,Boylston Street,Boylston-Street,no,4,CL,122.037327213244,way,8645818,42.3484393,-71.0834401,0.66
+32,1004,Brighton Avenue,Brighton-Avenue,yes,3,PSL,79.11592804946771,way,533612833,42.3532515,-71.1336842,0.41
+33,1231,Broad Street,Broad-Street,no,3,SLM,10.0015043616416,way,485292838,42.3586486,-71.0543732,0.41
+34,1993,Brookley Road,Brookley-Road,no,2,TC,106.412150757864,way,8647920,42.303562,-71.10696,0.41
+35,426,Brookline Avenue,Brookline-Avenue,no,4,CL,37.0219841752181,way,426645900,42.337956,-71.10831,0.41
+36,1008,Cambridge Street,Cambridge-Street,yes,3,BFBL,77.0215156794266,way,426456661,42.3611729,-71.0624697,0.41
+37,1429,Causeway Street,Causeway-Street,no,1,SBL,66.70890417032561,way,578921207,42.3654548,-71.0611524,0.41
+38,1266,Central Square,Central-Square,no,3,SLM,29.7255394610496,node,358260234,42.3750202,-71.0393784,0.46
+39,39,Centre Street,Centre-Street,no,2,BL,102.535943020804,way,8650878,42.2951573,-71.1349834,0.41
+40,2869,Chamberlain Path,Chamberlain-Path,no,1,SUP,530.20964690729,,,,,
+41,2753,Charles River/Harborwalk Connection,Charles-River/Harborwalk-Connection,no,1,SUP,85.60012492832959,,,,,
+42,2538,Charles River Bike Path,Charles-River-Bike-Path,no,1,SUP,2895.03435117362,,,,,
+43,2643,Charles River Dam Sidepath,Charles-River-Dam-Sidepath,no,1,SUC,311.41277444530203,,,,,
+44,2506,Charles River Locks,Charles-River-Locks,no,1,WALK,285.985699317201,,,,,
+45,2843,Charles River Path,Charles-River-Path,no,1,SUC,274.320405975327,,,,,
+46,913,Charles Street Circle,Charles-Street-Circle,yes,4,SLM,84.009864853719,way,8650751,42.3003827,-71.0624746,0.6
+47,1243,Chelsea Street,Chelsea-Street,no,3,BL,98.0856121089213,way,291408608,42.3712986,-71.0371543,0.41
+48,24,Chestnut Hill Avenue,Chestnut-Hill-Avenue,no,4,SLM,159.090144768593,node,69495717,42.338352,-71.1528837,0.59
+49,75,Chestnut Street,Chestnut-Street,yes,2,BL,186.34821799069198,way,276561829,42.3221251,-71.1195233,0.41
+50,241,City Square,City-Square,no,3,BL,38.8566979716095,way,217801044,42.3718654,-71.0612168,0.41
+51,1154,Colonial Avenue,Colonial-Avenue,no,2,TC,272.619250445332,way,8648552,42.290479,-71.076648,0.41
+52,2025,Columbia Road,Columbia-Road,yes,3,BL,79.4577978541513,way,31492980,42.3214435,-71.0520767,0.41
+53,117,Columbus Avenue,Columbus-Avenue,no,3,SBL,69.65483498818111,way,426462215,42.3402989,-71.082099,0.41
+54,257,Commercial Street,Commercial-Street,no,1,SBL,78.5528502173043,way,217801046,42.3672741,-71.0580335,0.41
+55,2012,Commonwealth Avenue,Commonwealth-Avenue,yes,3,BL,10.041164361699598,way,8646670,42.3519534,-71.1234233,0.41
+56,1007,Commonwealth Avenue Frontage Road Eb,Commonwealth-Avenue-Frontage-Road-Eb,yes,2,NW-U,129.576118972624,,,,,
+57,339,Commonwealth Avenue Frontage Road Wb,Commonwealth-Avenue-Frontage-Road-Wb,yes,2,NW-U,255.773796021599,way,8647419,42.345976,-71.141727,0.71
+58,274,Congress Street,Congress-Street,no,1,SBL,191.55970901111698,way,290281426,42.349352,-71.0445405,0.41
+59,2812,Connection to North Station,Connection-to-North-Station,no,1,SUC,276.65310125257196,,,,,
+60,2616,ConRAC Multi-Use Path,ConRAC-Multi-Use-Path,no,1,SUP,196.868118361222,,,,,
+61,2913,Constitution Beach Footbridge,Constitution-Beach-Footbridge,no,1,WALK,224.972911399986,,,,,
+62,2136,Constitution Road,Constitution-Road,no,2,NW,180.112742539831,way,217801048,42.3736173,-71.0581112,0.41
+63,2924,Constitution Road to Navy Yard Connection,Constitution-Road-to-Navy-Yard-Connection,no,1,SUP,27.096769748203002,,,,,
+64,376,Corinth Street,Corinth-Street,no,4,SLM,115.251317905667,way,139439562,42.2868203,-71.1311278,0.41
+65,279,Cross Street,Cross-Street,no,3,BL,92.2057561892464,way,591310041,42.3638137,-71.0576726,0.41
+66,50,Cummins Highway,Cummins-Highway,no,3,BL,196.247556943969,way,34729474,42.2698698,-71.0975656,0.41
+67,1459,Dalton Street,Dalton-Street,no,3,CL,108.26594994919,way,426831644,42.3478661,-71.0855635,0.41
+68,1152,Darlington Street,Darlington-Street,no,2,TC,207.536937742972,way,8645161,42.2887584,-71.0755955,0.41
+69,187,Dartmouth Street,Dartmouth-Street,no,3,BL,60.60568381188249,way,40016861,42.3473135,-71.0759078,0.41
+70,2508,Dartmouth Street Shared-Use Bridge,Dartmouth-Street-Shared-Use-Bridge,no,1,WALK,184.647486662898,,,,,
+71,268,Devonshire Street,Devonshire-Street,no,2,SLM,196.66589843971298,way,684028385,42.3550138,-71.0575114,0.41
+72,1188,Dexter Row,Dexter-Row,no,3,BL,107.39730363644699,way,690296523,42.3752967,-71.0639845,0.41
+73,200,Dorchester Avenue,Dorchester-Avenue,no,3,SLM,107.594728884954,way,426677240,42.3079919,-71.0583042,0.42
+74,2460,Drydock Avenue,Drydock-Avenue,no,2,BL,246.88998927566,way,591136331,42.3446312,-71.0372076,0.41
+75,259,D Street,D-Street,no,4,CL,111.205030223047,way,297218449,42.3470451,-71.0413343,0.41
+76,2153,D Street Extension,D-Street-Extension,yes,4,SLM,93.4869304844975,,,,,
+77,154,Dungarven Road,Dungarven-Road,no,2,TC,96.0482258606069,way,8641206,42.3056357,-71.1054737,0.41
+78,2541,East Boston Greenway,East-Boston-Greenway,no,1,SUP,10.7406741035956,way,291406890,42.3795524,-71.0248169,0.49
+79,2599,East Boston Greenway Connector,East-Boston-Greenway-Connector,no,1,SUP,1273.22781549388,way,667459874,42.3789931,-71.0244222,0.59
+80,2619,East Boston Memorial Park Path,East-Boston-Memorial-Park-Path,no,1,SUP,98.76353924053811,,,,,
+81,2515,East Boundary Path,East-Boundary-Path,no,1,SUP,1695.1365132042001,,,,,
+82,2808,East First Street Path,East-First-Street-Path,no,1,SUP,825.294872166994,way,591217312,42.3382196,-71.031435,0.51
+83,1989,Eliot Street,Eliot-Street,no,2,TC,88.1931654096331,way,8651962,42.3117356,-71.1175594,0.41
+84,2587,Ellis Memorial Childrens Park Path,Ellis-Memorial-Childrens-Park-Path,no,1,SUP,118.95524273817,,,,,
+85,1712,Elm Hill Entrance,Elm-Hill-Entrance,no,1,SUP,285.008216636771,,,,,
+86,2744,Emerald Necklace,Emerald-Necklace,no,1,SUP,206.701867672425,way,485282202,42.3442371,-71.0915617,0.39
+87,2513,Emerald Necklace Trail,Emerald-Necklace-Trail,no,1,SUP,715.484265487348,,,,,
+88,2579,Emerald Necklace Trail/Route 9 Crossing,Emerald-Necklace-Trail/Route-9-Crossing,no,1,SUP,247.758775938243,,,,,
+89,2745,Emerald Necklace Trail/Sears Rotary,Emerald-Necklace-Trail/Sears-Rotary,no,1,SUP,246.738031852429,,,,,
+90,1081,Essex Street,Essex-Street,no,3,BL,28.489706147672898,way,591677201,42.352513,-71.059397,0.41
+91,40,Everett Street,Everett-Street,no,3,CL,17.4919871573298,way,26428915,42.3571565,-71.1381512,0.41
+92,2561,Fairfield Street Shared-Use Bridge,Fairfield-Street-Shared-Use-Bridge,no,1,WALK,216.465408530286,,,,,
+93,9,Faneuil Street,Faneuil-Street,no,3,BL,50.886694286454706,way,591284846,42.352585,-71.161601,0.42
+94,2386,Ferndale Street,Ferndale-Street,no,2,TC,219.282067637101,way,8650635,42.288629,-71.077269,0.41
+95,2507,Fiedler Shared-Use Bridge,Fiedler-Shared-Use-Bridge,no,1,WALK,279.810570721325,,,,,
+96,2560,Fiedler Shared-Use Bridge to Beacon St Connector,Fiedler-Shared-Use-Bridge-to-Beacon-St-Connector,no,1,SUP,78.2498669538664,,,,,
+97,2815,Fifth Street/Bunker Hill Street Connector,Fifth-Street/Bunker-Hill-Street-Connector,no,1,SUP,97.99345599127192,,,,,
+98,909,First Avenue,First-Avenue,no,1,NW,34.352400668154395,way,8651989,42.3754626,-71.053528,0.41
+99,1400,Forbes Street,Forbes-Street,no,2,TC,603.766829635047,way,8645338,42.321045,-71.106676,0.41
+100,96,Forest Hills Entrance Drive,Forest-Hills-Entrance-Drive,no,3,BL,438.12657064991896,,,,,
+101,487,Forsyth Street,Forsyth-Street,no,2,BL,33.472754314731695,way,8651581,42.340475,-71.0909834,0.41
+102,125,Forsyth Way,Forsyth-Way,yes,3,BL,141.868680321536,way,426595823,42.3389463,-71.0924369,0.41
+103,2630,Franklin Park Path,Franklin-Park-Path,no,1,SUP,864.3614792866499,node,153943947,40.0759005,-82.2270897,0.39
+104,1992,Franklin Park Service Road,Franklin-Park-Service-Road,no,1,SRd,342.390681882837,way,494970975,42.2971182,-71.0987182,0.61
+105,46,Franklin Street,Franklin-Street,no,2,NW,51.5781737212974,way,426489268,42.3554532,-71.0575834,0.41
+106,249,Freeport Street,Freeport-Street,no,2,BL,68.9375817205332,way,504639456,42.2948819,-71.0472863,0.41
+107,2301,Gartland Street,Gartland-Street,no,2,TC,153.690479859865,way,8639176,42.306175,-71.106119,0.41
+108,2524,Gavin Path,Gavin-Path,no,1,SUP,590.043698801372,,,,,
+109,194,Geneva Avenue,Geneva-Avenue,no,3,SLM,69.6270447998953,way,591252056,42.301298,-71.067873,0.41
+110,158,Glen Lane,Glen-Lane,no,1,SUP,245.35196839904202,way,8645328,42.304681,-71.090916,0.39
+111,1592,Gordon Street,Gordon-Street,yes,2,NW-U,74.8057308131602,way,578462204,42.3494561,-71.1399399,0.41
+112,2355,Harrison Avenue,Harrison-Avenue,no,3,CL,99.5946104378597,way,101439779,42.3280082,-71.0829258,0.41
+113,1304,Harvard Avenue,Harvard-Avenue,no,3,BL,11.8077141708218,node,69489609,42.3502469,-71.1314516,0.49
+114,1389,Hemenway Street,Hemenway-Street,yes,3,BL,72.47567797227549,way,246500791,42.345405,-71.089517,0.41
+115,2014,Hereford Street,Hereford-Street,no,4,SLM,62.86519529426721,way,580417128,42.3503532,-71.086427,0.41
+116,270,High Street,High-Street,no,3,BL,102.821443364511,way,426491214,42.3536248,-71.0561898,0.41
+117,55,Huntington Avenue,Huntington-Avenue,yes,4,SLM,84.76940487688609,way,8647376,42.3319495,-71.1126977,0.41
+118,95,James Shea Circle,James-Shea-Circle,yes,1,SBL,55.8263523723018,,,,,
+119,90,Jewish War Veterans Drive,Jewish-War-Veterans-Drive,no,3,BL,781.240918957863,way,93123246,42.3011976,-71.1044142,0.61
+120,291,John F. Fitzgerald Surface Road,John-F.-Fitzgerald-Surface-Road,no,3,BL,44.9638274996993,way,591908557,42.3589471,-71.0522628,0.71
+121,2846,John W. Weeks Bridge,John-W.-Weeks-Bridge,no,1,SUB,198.572558156272,,,,,
+122,480,Kenton Road,Kenton-Road,no,2,TC,106.08982451995001,way,8652220,42.306641,-71.10555,0.41
+123,275,Kilby Street,Kilby-Street,no,3,BL,33.9428624717167,way,103553906,42.3582478,-71.0555669,0.41
+124,212,Kneeland Street,Kneeland-Street,no,1,SBL,77.9446145865335,way,426492390,42.3501019,-71.0596026,0.41
+125,2209,Knight Street,Knight-Street,no,1,SUP,86.8450695092812,way,8644787,42.2457412,-71.1333347,0.41
+126,4,Lake Street,Lake-Street,no,2,SLM,185.77592613021,way,8644753,42.347005,-71.16168,0.41
+127,2632,Langone Park Path,Langone-Park-Path,no,1,SUP,96.63664523952829,,,,,
+128,2124,Liberty Square,Liberty-Square,no,2,SLM,46.761838580402696,way,103548394,42.35787875,-71.0552968824964,0.46
+129,1014,Litchfield Street,Litchfield-Street,no,2,BL,158.933345415049,way,261142520,42.3603488,-71.1406603,0.41
+130,2447,Lomasney Way,Lomasney-Way,yes,3,BL,143.914883784951,way,426456709,42.3644691,-71.0635963,0.41
+131,2069,Longfellow Bridge,Longfellow-Bridge,yes,2,SBL,751.1079143087089,way,244444287,42.3615936,-71.0753737,0.3
+132,425,Longwood Avenue,Longwood-Avenue,no,3,CL,81.3780142098608,way,301420931,42.3382665,-71.106161,0.41
+133,2750,Lovejoy Wharf Harborwalk,Lovejoy-Wharf-Harborwalk,no,1,SUP,155.68900541973102,,,,,
+134,215,Main Street,Main-Street,no,3,BL,33.7431157941466,way,8647620,42.3847377,-71.0743171,0.41
+135,163,Maitland Street,Maitland-Street,no,3,SLM,108.73715068659,way,8642453,42.347144,-71.101567,0.41
+136,2076,Malden Street,Malden-Street,no,3,SLM,35.2759268983383,way,8652311,42.3401342,-71.0684272,0.41
+137,1482,Mallard Avenue,Mallard-Avenue,no,2,TC,226.30674066213402,way,320201552,42.2913014,-71.0759357,0.41
+138,459,Marcella Street,Marcella-Street,no,2,SLM,205.80824202911,way,8649456,42.321471,-71.094299,0.41
+139,302,Marginal Street,Marginal-Street,no,3,SRd,125.92047065828001,way,290287162,42.3639593,-71.0302454,0.41
+140,28,Market Street,Market-Street,no,3,BL,24.584262245443696,way,34963601,42.3580348,-71.1479387,0.41
+141,1119,Martin Luther King Boulevard,Martin-Luther-King-Boulevard,yes,3,BL,17.7012281481884,,,,,
+142,120,Massachusetts Avenue,Massachusetts-Avenue,no,2,SBL,90.1322633136831,way,286489353,42.350064,-71.0890979,0.42
+143,2594,Mass Ave Shared-Use Bridge,Mass-Ave-Shared-Use-Bridge,no,1,WALK,161.74307242883498,,,,,
+144,2572,MassPike Bike-Ped Bridge,MassPike-Bike-Ped-Bridge,no,1,SUP,244.32621456863498,,,,,
+145,292,Maverick Street,Maverick-Street,no,3,BL,172.834640033588,way,591493101,42.3700631,-71.0388361,0.41
+146,2595,MBTA Redline Path,MBTA-Redline-Path,no,1,SUC,324.01686655928904,,,,,
+147,1238,Mercantile Street,Mercantile-Street,no,4,SLM,68.81608724376879,way,199584098,42.3608488,-71.0529427,0.41
+148,300,Meridian Street,Meridian-Street,no,3,CL,117.981566062408,way,591493027,42.375144,-71.039103,0.41
+149,2603,Metropolitan Ave Footbridge,Metropolitan-Ave-Footbridge,no,1,WALK,257.264322348691,,,,,
+150,273,Milk Street,Milk-Street,no,2,BL,66.4846800655113,way,104210747,42.3573374,-71.0549013,0.61
+151,2542,Miller's Creek Path,Miller's-Creek-Path,no,1,SUP,516.904892237441,,,,,
+152,2597,Moakley Park Path,Moakley-Park-Path,no,1,SUP,1191.0763690385302,,,,,
+153,202,Monsignor Reynolds Way,Monsignor-Reynolds-Way,no,4,SLM,84.2969592287128,way,426470703,42.3403161,-71.0692782,0.51
+154,2729,Morrissey Boulevard Bike/Ped Bridge,Morrissey-Boulevard-Bike/Ped-Bridge,no,1,SUP,308.131702681893,,,,,
+155,433,Morton Street,Morton-Street,yes,4,BFBL,912.94495340732,node,404724816,42.2806486,-71.0857381,0.47
+156,2578,Moss Bank Path,Moss-Bank-Path,no,1,SUP,302.589199767473,,,,,
+157,113,Mountfort Street,Mountfort-Street,no,2,SLM,100.807271311845,way,485279628,42.348007,-71.103764,0.41
+158,1222,Mount Vernon Street,Mount-Vernon-Street,yes,1,SBL,491.804076719798,way,541860544,42.3208772,-71.0509891,0.51
+159,160,Mozart Street,Mozart-Street,no,2,TC,97.7573523818948,way,8650777,42.320834,-71.104624,0.41
+160,1088,Museum Road,Museum-Road,no,3,SLM,275.249884827716,way,8651231,42.3385602,-71.0957012,0.41
+161,2554,Nashua Street Park Path,Nashua-Street-Park-Path,no,1,SUP,384.488295027361,,,,,
+162,284,Neponset Avenue,Neponset-Avenue,no,3,CL,99.3502899903273,way,60239171,42.2854179,-71.0416265,0.42
+163,2640,Neponset River Greenway,Neponset-River-Greenway,no,1,SUP,75.8008140146807,way,76611331,42.2791948,-71.05009,0.49
+164,2516,Neponset River Trail,Neponset-River-Trail,no,1,SUP,387.974902082472,way,132181996,42.2343189,-71.1226938,0.53
+165,2363,New England Avenue,New-England-Avenue,no,2,NW,101.43384142712,way,8652145,42.290726,-71.077999,0.51
+166,399,New Washington Street,New-Washington-Street,yes,1,SBL,165.40671648449,way,8646856,42.2725848,-71.0695058,0.41
+167,1998,Norfolk Street,Norfolk-Street,no,3,BL,85.4626169409079,way,591278122,42.281649,-71.086975,0.41
+168,2748,North Bank Shared-Use Bridge,North-Bank-Shared-Use-Bridge,no,1,SUP,431.11376075764997,,,,,
+169,568,North Beverly Street,North-Beverly-Street,no,2,NW-U,90.65989740041461,,,,,
+170,298,Northern Avenue,Northern-Avenue,no,4,SLM,80.8151489449757,way,290083775,42.3480331,-71.0369182,0.41
+171,1009,North Harvard Street,North-Harvard-Street,no,3,CL,108.68815027187901,way,86295762,42.3684495,-71.1236104,0.51
+172,277,North Washington Street,North-Washington-Street,no,4,SLM,48.3278681915943,way,426659112,42.3700328,-71.06081,0.51
+173,286,Old Colony Avenue,Old-Colony-Avenue,yes,3,BFBL,22.907889058435803,way,296968945,42.333812,-71.0545479,0.51
+174,2023,Old Road,Old-Road,no,3,BL,87.90147822878879,way,285001939,42.3026032,-71.0847756,0.41
+175,1420,Old Trail Road,Old-Trail-Road,no,1,SUP,44.1540568650033,way,8647113,42.308671,-71.091258,0.48
+176,880,Oliver Street,Oliver-Street,no,4,SLM,123.128062404795,way,8651566,42.3560441,-71.0532149,0.41
+177,1817,Otis Street,Otis-Street,no,2,SLM,169.58787886803,way,289631068,42.3547363,-71.0579809,0.41
+178,2870,Overbrook Path,Overbrook-Path,no,1,SUP,831.4599436528321,,,,,
+179,2310,Overland Street,Overland-Street,no,3,SLM,174.10750033441502,way,327660233,42.3467195,-71.1008498,0.41
+180,2733,Overpass,Overpass,no,1,SUP,111.714496607221,way,86479062,42.3476795,-71.0922711,0.51
+181,444,Palace Road,Palace-Road,no,1,SLM,128.00651587124702,way,8640507,42.3375409,-71.0999768,0.41
+182,2840,Pappas Sidepath,Pappas-Sidepath,no,1,SUP,1132.37331477203,,,,,
+183,1045,Park Drive,Park-Drive,no,3,BL,20.048070734996,way,479772694,42.3427452,-71.1032566,0.41
+184,2810,Paul Dudley White Charles River Bike Path,Paul-Dudley-White-Charles-River-Bike-Path,no,1,SUP,744.755163056844,,,,,
+185,155,Paul Gore Street,Paul-Gore-Street,no,2,TC,97.7513986226266,way,8648743,42.319301,-71.107528,0.51
+186,2813,Paul Revere Landing Park,Paul-Revere-Landing-Park,no,1,SRd,168.92441292295499,way,172440085,42.3701282,-71.0623059780046,0.66
+187,2832,Paul Revere Park,Paul-Revere-Park,no,1,SUP,168.835114673742,,,,,
+188,288,Pearl Street,Pearl-Street,no,4,SLM,89.8438710058006,way,485292839,42.3562498,-71.055075,0.41
+189,2739,Pearl Street Extension,Pearl-Street-Extension,no,1,SRd,174.38390212819598,,,,,
+190,37,Perkins Street,Perkins-Street,yes,3,BL,105.7031688692,way,8646922,42.3219114,-71.1100666,0.41
+191,415,Pierpoint Road,Pierpoint-Road,yes,3,BL,146.321515250904,,,,,
+192,2504,Pier Point Road,Pier-Point-Road,no,1,SRd,118.48178370322701,,,,,
+193,1703,Playstead Road,Playstead-Road,no,1,SRd,691.032929811701,way,504665060,42.309276,-71.094059,0.41
+194,601,Post Office Square,Post-Office-Square,no,3,BL,124.06280180371701,way,8648451,42.3574875,-71.0563285,0.51
+195,271,Purchase Street,Purchase-Street,no,2,BL,21.12264800411,way,591217318,42.3544781,-71.0534469,0.41
+196,230,Quincy Street,Quincy-Street,no,3,SLM,142.48475992038001,way,8649656,42.310303,-71.067843,0.41
+197,2641,Readville to Neponset,Readville-to-Neponset,no,1,SUP,116.924086366572,,,,,
+198,458,Ritchie Street,Ritchie-Street,no,2,SLM,249.261158098036,way,8646073,42.322028,-71.096976,0.41
+199,49,River Street,River-Street,no,3,CL,52.8132654068047,way,211853001,42.2678342,-71.0933535,0.41
+200,2525,Rooney Rock Path,Rooney-Rock-Path,no,1,SUP,1668.66374540183,,,,,
+201,2263,Rossmore Street,Rossmore-Street,no,2,TC,304.506027046516,way,312613641,42.3051952,-71.108198407258,0.31
+202,2010,Ruggles Street,Ruggles-Street,no,3,SLM,52.96712458690371,way,426493703,42.3375516,-71.0951983,0.41
+203,2833,Rutherford Trail Project,Rutherford-Trail-Project,no,1,SUP,26.668543781915698,,,,,
+204,440,Saint Alphonsus Street,Saint-Alphonsus-Street,no,3,BL,219.79853693355,way,301468440,42.3353816,-71.09982,0.51
+205,282,Salem Street,Salem-Street,no,1,NW,42.4635199393664,way,63107745,42.3664741,-71.0546855,0.41
+206,331,Saratoga Street,Saratoga-Street,no,3,BL,51.3601667370487,way,448610072,42.3863519,-71.0058908,0.41
+207,2783,Saratoga Street Bridge,Saratoga-Street-Bridge,no,3,BL,117.89605204360501,way,448610072,42.3863519,-71.0058908,0.41
+208,295,Seaport Boulevard,Seaport-Boulevard,no,4,SLM,147.71942012158001,way,427635744,42.3546936,-71.0513353,0.41
+209,91,Seaver Street,Seaver-Street,yes,3,BFBL,246.932550352589,way,591278011,42.308054,-71.089603,0.41
+210,2511,Silber Way Shared-Use Bridge,Silber-Way-Shared-Use-Bridge,no,1,WALK,163.693422960982,,,,,
+211,2552,Southbay Harbor Trail,Southbay-Harbor-Trail,no,1,SUP,595.5795464391381,,,,,
+212,2826,South Bay Harbor Trail,South-Bay-Harbor-Trail,no,1,SUP,478.38143081675696,way,660628019,42.3548658,-71.0442829,0.58
+213,2934,South Campus Drive,South-Campus-Drive,no,1,SBL,197.65488615773899,,,,,
+214,1153,Southern Avenue,Southern-Avenue,no,2,TC,91.345612366929,way,8646236,42.290215,-71.074928,0.41
+215,54,South Huntington Avenue,South-Huntington-Avenue,no,2,BL,97.38600525803619,way,485257980,42.3300757,-71.111291,0.51
+216,82,South Street,South-Street,no,3,SLM,24.883146324295897,way,42512002,42.3398175,-71.1575632,0.49
+217,2558,South Street Path,South-Street-Path,no,1,SUP,156.79989234278298,way,42512002,42.3398175,-71.1575632,0.49
+218,2520,Southwest Corridor,Southwest-Corridor,no,1,SUC,1237.3066376800698,way,29863508,42.30237525,-71.1150222275858,0.31
+219,2499,Staniford,Staniford,yes,3,BL,55.816768152232704,way,426456745,42.3637254,-71.0635134,0.31
+220,2484,Staniford Street,Staniford-Street,no,1,SBL,137.349100722044,way,426456745,42.3637254,-71.0635134,0.41
+221,214,St James Avenue,St-James-Avenue,no,4,SLM,74.8875235781912,way,591236019,42.349644,-71.0756182,0.51
+222,2523,Stony Brook Path,Stony-Brook-Path,no,1,SUP,1834.1520797994,,,,,
+223,2588,Stony Brook Reservation Trail,Stony-Brook-Reservation-Trail,no,1,SUP,52.444288401437504,way,29859850,42.26093765,-71.1395156818709,0.41
+224,1142,Stuart Street,Stuart-Street,no,3,BL,251.12597564346,way,591236027,42.347965,-71.0779367,0.41
+225,1144,Sullivan Square,Sullivan-Square,no,4,BFBL,67.3346795663597,node,69505297,42.3843004,-71.0770317,0.31
+226,2404,Summer Street,Summer-Street,no,1,SRd,109.402288346933,way,8648094,42.3446018,-71.0394271,0.41
+227,267,Surface Artery,Surface-Artery,no,3,BL,20.3283917415763,node,1399796278,42.3504038,-71.0597395,0.31
+228,2022,Talbot Avenue,Talbot-Avenue,no,3,BL,347.514846658992,way,570200605,42.2939592,-71.0847041,0.41
+229,296,Taylor Street,Taylor-Street,no,1,SUP,217.499507633546,way,8647813,42.287054,-71.039882,0.41
+230,2517,Tenean Beach Path,Tenean-Beach-Path,no,1,SUP,556.101665780516,,,,,
+231,1587,Tenean Street,Tenean-Street,no,2,NW-U,184.424210257719,way,8649941,42.2892813,-71.041955,0.41
+232,460,Thornton Street,Thornton-Street,no,1,SLM,74.11045760778751,way,485257982,42.321747,-71.093239,0.41
+233,109,Tremont Street,Tremont-Street,no,3,SLM,162.159609426307,way,138827717,42.3582926,-71.0602525,0.67
+234,1990,Truman Highway,Truman-Highway,no,4,BFBL,127.012881122529,,,,,
+235,2567,Truman Highway Sidepath,Truman-Highway-Sidepath,no,1,SUP,1379.25744278232,,,,,
+236,1395,Ukraine Way,Ukraine-Way,yes,3,BL,119.323373944729,way,139333583,42.298091,-71.1154154,0.41
+237,2290,Valentine Street,Valentine-Street,no,1,SLM,108.193005712874,way,485257983,42.322554,-71.093106,0.41
+238,3,Veterans Of Foreign Wars Parkway,Veterans-Of-Foreign-Wars-Parkway,yes,3,BL,109.76653353431,way,426634818,42.290481,-71.168107,0.71
+239,81,Walk Hill Street,Walk-Hill-Street,no,3,SLM,110.073950558968,way,649230086,42.284538,-71.102694,0.51
+240,2008,Walnut Avenue,Walnut-Avenue,no,3,SLM,104.994684264746,way,591278014,42.323999,-71.082702,0.41
+241,1995,Walnut Entrance,Walnut-Entrance,no,1,SUP,66.9763358821686,way,8652406,42.311637,-71.096404,0.39
+242,63,Walter Street,Walter-Street,no,3,BL,22.205496206649,way,591277994,42.2959968,-71.1294206,0.41
+243,2027,Warren Street,Warren-Street,no,3,SLM,87.13344727411379,node,69489300,42.3484068,-71.140445,0.47
+244,1996,Washington Street,Washington-Street,no,3,SLM,24.967502846522603,node,69485017,42.3440542,-71.1426459,0.46
+245,2135,Water Street,Water-Street,no,2,NW-U,10.995310541715698,way,426489348,42.3575841,-71.0564128,0.41
+246,201,West Dedham Street,West-Dedham-Street,no,4,CL,43.323702966877605,way,8640321,42.341709,-71.07256,0.51
+247,26,Western Avenue,Western-Avenue,no,3,CL,80.1851148948672,way,541013777,42.361545,-71.1462272,0.41
+248,119,Westland Avenue,Westland-Avenue,no,1,SBL,204.59452605535301,way,426623435,42.3440103,-71.0901672,0.41
+249,1483,Whitfield Street,Whitfield-Street,no,2,TC,62.4892436981153,way,320201553,42.2903553,-71.0738581,0.41
+250,1224,William Day Boulevard,William-Day-Boulevard,no,3,BFBL,824.4901042596131,,,,,
+251,97,Williams Street,Williams-Street,no,2,TC,96.25075507403861,way,148495801,42.3048438,-71.1057102,0.41
+252,1114,Willowwood Street,Willowwood-Street,no,1,NW,97.37726814893959,way,8644290,42.28451,-71.086218,0.41
+253,330,Winship Street,Winship-Street,no,3,BL,86.95049721807051,way,149701300,42.3490448,-71.1506574,0.41
+254,2406,Winter Street,Winter-Street,no,1,SRd,14.3045537871257,way,435347908,42.3080665,-71.0625902,0.41
+255,162,Wyman Street,Wyman-Street,no,2,TC,52.5479468088667,way,8648821,42.320366,-71.105214,0.41
+256,2543,Zakim Bridge Path,Zakim-Bridge-Path,no,1,SUC,251.210222869286,,,,,

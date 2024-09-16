@@ -1,0 +1,2740 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix street: <http://www.bostonbikenetwork.com/resource/StreetSegment/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bbn: <http://www.bostonbikenetwork.com/ontology/BikeOntology#> .
+
+
+street:Adams-Street a bbn:StreetSegment ;
+	bbn:streetName "Adams Street" ;
+	rdfs:label "Adams-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "110.100489632546"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "506126419"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2713823"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0681607"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Albany-Street a bbn:StreetSegment ;
+	bbn:streetName "Albany Street" ;
+	rdfs:label "Albany-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "104.216507856868"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "48941599"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3467181"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0609504"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Albany-Street-Connector a bbn:StreetSegment ;
+	bbn:streetName "Albany Street Connector" ;
+	rdfs:label "Albany-Street-Connector" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "978.3095051097189"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Alford-Street a bbn:StreetSegment ;
+	bbn:streetName "Alford Street" ;
+	rdfs:label "Alford-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "191.416051331252"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "38783470"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3896109"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0711719"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:American-Legion-Highway a bbn:StreetSegment ;
+	bbn:streetName "American Legion Highway" ;
+	rdfs:label "American-Legion-Highway" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "281.859177874188"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426627262"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.285904"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.109802"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Antwerp-St a bbn:StreetSegment ;
+	bbn:streetName "Antwerp St" ;
+	rdfs:label "Antwerp-St" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "84.7833610556958"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8644264"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3591092"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1401905"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Arborway a bbn:StreetSegment ;
+	bbn:streetName "Arborway" ;
+	rdfs:label "Arborway" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "404.16933485613504"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8652438"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3091309"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1209069"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.32"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Arlington-Street a bbn:StreetSegment ;
+	bbn:streetName "Arlington Street" ;
+	rdfs:label "Arlington-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "63.2410494875231"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "89641249"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3546476"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0720688"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Arnold-Arboretum-Trails a bbn:StreetSegment ;
+	bbn:streetName "Arnold Arboretum Trails" ;
+	rdfs:label "Arnold-Arboretum-Trails" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "821.157523802044"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Ashmont-Street a bbn:StreetSegment ;
+	bbn:streetName "Ashmont Street" ;
+	rdfs:label "Ashmont-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "118.293986042421"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426678900"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2858079"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0640963"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.42"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:A-Street a bbn:StreetSegment ;
+	bbn:streetName "A Street" ;
+	rdfs:label "A-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "53.2189231674535"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "712375229"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.348726"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0497423"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Atlantic-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Atlantic Avenue" ;
+	rdfs:label "Atlantic-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "130.447352609683"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591136308"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3526659"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0553675"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Babcock-Street a bbn:StreetSegment ;
+	bbn:streetName "Babcock Street" ;
+	rdfs:label "Babcock-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "55.302052511381504"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "533506541"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.351794"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.121279"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Baker-Street a bbn:StreetSegment ;
+	bbn:streetName "Baker Street" ;
+	rdfs:label "Baker-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "128.568572643539"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "630213533"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.287972"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.171569"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Ballou-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Ballou Avenue" ;
+	rdfs:label "Ballou-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "477.48916621665995"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8642540"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.285293"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.082747"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Barry-Playground-Path a bbn:StreetSegment ;
+	bbn:streetName "Barry Playground Path" ;
+	rdfs:label "Barry-Playground-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "510.398057388025"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Beacon-Street a bbn:StreetSegment ;
+	bbn:streetName "Beacon Street" ;
+	rdfs:label "Beacon-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "77.4158091967962"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "89641250"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3554337"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0725717"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Beech-Street a bbn:StreetSegment ;
+	bbn:streetName "Beech Street" ;
+	rdfs:label "Beech-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "71.82974256062091"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "435203976"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.283289"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.144897"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Belgrade-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Belgrade Avenue" ;
+	rdfs:label "Belgrade-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "93.21228389283769"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "312345520"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2869647"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.130392"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Belle-Isle-Marsh-Path a bbn:StreetSegment ;
+	bbn:streetName "Belle Isle Marsh Path" ;
+	rdfs:label "Belle-Isle-Marsh-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "224.89562420303398"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Belvidere-Street a bbn:StreetSegment ;
+	bbn:streetName "Belvidere Street" ;
+	rdfs:label "Belvidere-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "112.75517896875"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591278029"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.345339"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.08171"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Bennington-Street a bbn:StreetSegment ;
+	bbn:streetName "Bennington Street" ;
+	rdfs:label "Bennington-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "164.142459870301"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "579180077"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3879014"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0024661"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Blackwell-Path a bbn:StreetSegment ;
+	bbn:streetName "Blackwell Path" ;
+	rdfs:label "Blackwell-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "828.8739492694"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Blossom-Street-Shared-Use-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Blossom Street Shared-Use Bridge" ;
+	rdfs:label "Blossom-Street-Shared-Use-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "249.46922501937001"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Blue-Hill-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Blue Hill Avenue" ;
+	rdfs:label "Blue-Hill-Avenue" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "129.486651709922"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426467420"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2918647"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.089014"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Bold-Knob-Path a bbn:StreetSegment ;
+	bbn:streetName "Bold Knob Path" ;
+	rdfs:label "Bold-Knob-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "224.95905033096"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Border-Street a bbn:StreetSegment ;
+	bbn:streetName "Border Street" ;
+	rdfs:label "Border-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "29.1330536976215"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "575422180"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.374995"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0398458"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Boston-Bike-Pike a bbn:StreetSegment ;
+	bbn:streetName "Boston Bike Pike" ;
+	rdfs:label "Boston-Bike-Pike" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "123.461480470718"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Boston-Harbor-Islands-Trails a bbn:StreetSegment ;
+	bbn:streetName "Boston Harbor Islands Trails" ;
+	rdfs:label "Boston-Harbor-Islands-Trails" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "17.673942372443896"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Boston-Harborwalk a bbn:StreetSegment ;
+	bbn:streetName "Boston Harborwalk" ;
+	rdfs:label "Boston-Harborwalk" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1825.74980330293"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "570185090"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3538789"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0478489"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.42"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Boston-University-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Boston University Bridge" ;
+	rdfs:label "Boston-University-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "363.81172160929805"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "327284817"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3509682"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1108575"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.52"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Boylston-Street a bbn:StreetSegment ;
+	bbn:streetName "Boylston Street" ;
+	rdfs:label "Boylston-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "122.037327213244"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8645818"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3484393"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0834401"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.66"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Brighton-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Brighton Avenue" ;
+	rdfs:label "Brighton-Avenue" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "79.11592804946771"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "533612833"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3532515"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1336842"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Broad-Street a bbn:StreetSegment ;
+	bbn:streetName "Broad Street" ;
+	rdfs:label "Broad-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "10.0015043616416"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "485292838"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3586486"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0543732"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Brookley-Road a bbn:StreetSegment ;
+	bbn:streetName "Brookley Road" ;
+	rdfs:label "Brookley-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "106.412150757864"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8647920"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.303562"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.10696"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Brookline-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Brookline Avenue" ;
+	rdfs:label "Brookline-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "37.0219841752181"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426645900"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.337956"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.10831"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Cambridge-Street a bbn:StreetSegment ;
+	bbn:streetName "Cambridge Street" ;
+	rdfs:label "Cambridge-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "77.0215156794266"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426456661"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3611729"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0624697"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Causeway-Street a bbn:StreetSegment ;
+	bbn:streetName "Causeway Street" ;
+	rdfs:label "Causeway-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "66.70890417032561"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "578921207"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3654548"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0611524"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Central-Square a bbn:StreetSegment ;
+	bbn:streetName "Central Square" ;
+	rdfs:label "Central-Square" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "29.7255394610496"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "358260234"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3750202"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0393784"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.46"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Centre-Street a bbn:StreetSegment ;
+	bbn:streetName "Centre Street" ;
+	rdfs:label "Centre-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "102.535943020804"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8650878"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2951573"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1349834"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Chamberlain-Path a bbn:StreetSegment ;
+	bbn:streetName "Chamberlain Path" ;
+	rdfs:label "Chamberlain-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "530.20964690729"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/Charles-River/Harborwalk-Connection> a bbn:StreetSegment ;
+	bbn:streetName "Charles River/Harborwalk Connection" ;
+	rdfs:label "Charles-River/Harborwalk-Connection" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "85.60012492832959"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Charles-River-Bike-Path a bbn:StreetSegment ;
+	bbn:streetName "Charles River Bike Path" ;
+	rdfs:label "Charles-River-Bike-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "2895.03435117362"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Charles-River-Dam-Sidepath a bbn:StreetSegment ;
+	bbn:streetName "Charles River Dam Sidepath" ;
+	rdfs:label "Charles-River-Dam-Sidepath" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "311.41277444530203"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Charles-River-Locks a bbn:StreetSegment ;
+	bbn:streetName "Charles River Locks" ;
+	rdfs:label "Charles-River-Locks" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "285.985699317201"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Charles-River-Path a bbn:StreetSegment ;
+	bbn:streetName "Charles River Path" ;
+	rdfs:label "Charles-River-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "274.320405975327"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Charles-Street-Circle a bbn:StreetSegment ;
+	bbn:streetName "Charles Street Circle" ;
+	rdfs:label "Charles-Street-Circle" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "84.009864853719"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8650751"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3003827"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0624746"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.6"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Chelsea-Street a bbn:StreetSegment ;
+	bbn:streetName "Chelsea Street" ;
+	rdfs:label "Chelsea-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "98.0856121089213"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "291408608"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3712986"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0371543"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Chestnut-Hill-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Chestnut Hill Avenue" ;
+	rdfs:label "Chestnut-Hill-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "159.090144768593"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "69495717"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.338352"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1528837"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.59"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Chestnut-Street a bbn:StreetSegment ;
+	bbn:streetName "Chestnut Street" ;
+	rdfs:label "Chestnut-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "186.34821799069198"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "276561829"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3221251"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1195233"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:City-Square a bbn:StreetSegment ;
+	bbn:streetName "City Square" ;
+	rdfs:label "City-Square" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "38.8566979716095"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "217801044"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3718654"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0612168"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Colonial-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Colonial Avenue" ;
+	rdfs:label "Colonial-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "272.619250445332"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8648552"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.290479"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.076648"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Columbia-Road a bbn:StreetSegment ;
+	bbn:streetName "Columbia Road" ;
+	rdfs:label "Columbia-Road" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "79.4577978541513"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "31492980"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3214435"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0520767"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Columbus-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Columbus Avenue" ;
+	rdfs:label "Columbus-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "69.65483498818111"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426462215"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3402989"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.082099"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Commercial-Street a bbn:StreetSegment ;
+	bbn:streetName "Commercial Street" ;
+	rdfs:label "Commercial-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "78.5528502173043"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "217801046"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3672741"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0580335"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Commonwealth-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Commonwealth Avenue" ;
+	rdfs:label "Commonwealth-Avenue" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "10.041164361699598"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8646670"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3519534"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1234233"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Commonwealth-Avenue-Frontage-Road-Eb a bbn:StreetSegment ;
+	bbn:streetName "Commonwealth Avenue Frontage Road Eb" ;
+	rdfs:label "Commonwealth-Avenue-Frontage-Road-Eb" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "129.576118972624"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Commonwealth-Avenue-Frontage-Road-Wb a bbn:StreetSegment ;
+	bbn:streetName "Commonwealth Avenue Frontage Road Wb" ;
+	rdfs:label "Commonwealth-Avenue-Frontage-Road-Wb" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "255.773796021599"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8647419"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.345976"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.141727"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.71"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Congress-Street a bbn:StreetSegment ;
+	bbn:streetName "Congress Street" ;
+	rdfs:label "Congress-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "191.55970901111698"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "290281426"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.349352"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0445405"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Connection-to-North-Station a bbn:StreetSegment ;
+	bbn:streetName "Connection to North Station" ;
+	rdfs:label "Connection-to-North-Station" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "276.65310125257196"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:ConRAC-Multi-Use-Path a bbn:StreetSegment ;
+	bbn:streetName "ConRAC Multi-Use Path" ;
+	rdfs:label "ConRAC-Multi-Use-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "196.868118361222"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Constitution-Beach-Footbridge a bbn:StreetSegment ;
+	bbn:streetName "Constitution Beach Footbridge" ;
+	rdfs:label "Constitution-Beach-Footbridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "224.972911399986"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Constitution-Road a bbn:StreetSegment ;
+	bbn:streetName "Constitution Road" ;
+	rdfs:label "Constitution-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "180.112742539831"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "217801048"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3736173"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0581112"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Constitution-Road-to-Navy-Yard-Connection a bbn:StreetSegment ;
+	bbn:streetName "Constitution Road to Navy Yard Connection" ;
+	rdfs:label "Constitution-Road-to-Navy-Yard-Connection" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "27.096769748203002"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Corinth-Street a bbn:StreetSegment ;
+	bbn:streetName "Corinth Street" ;
+	rdfs:label "Corinth-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "115.251317905667"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "139439562"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2868203"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1311278"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Cross-Street a bbn:StreetSegment ;
+	bbn:streetName "Cross Street" ;
+	rdfs:label "Cross-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "92.2057561892464"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591310041"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3638137"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0576726"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Cummins-Highway a bbn:StreetSegment ;
+	bbn:streetName "Cummins Highway" ;
+	rdfs:label "Cummins-Highway" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "196.247556943969"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "34729474"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2698698"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0975656"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Dalton-Street a bbn:StreetSegment ;
+	bbn:streetName "Dalton Street" ;
+	rdfs:label "Dalton-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "108.26594994919"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426831644"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3478661"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0855635"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Darlington-Street a bbn:StreetSegment ;
+	bbn:streetName "Darlington Street" ;
+	rdfs:label "Darlington-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "207.536937742972"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8645161"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2887584"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0755955"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Dartmouth-Street a bbn:StreetSegment ;
+	bbn:streetName "Dartmouth Street" ;
+	rdfs:label "Dartmouth-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "60.60568381188249"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "40016861"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3473135"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0759078"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Dartmouth-Street-Shared-Use-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Dartmouth Street Shared-Use Bridge" ;
+	rdfs:label "Dartmouth-Street-Shared-Use-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "184.647486662898"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Devonshire-Street a bbn:StreetSegment ;
+	bbn:streetName "Devonshire Street" ;
+	rdfs:label "Devonshire-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "196.66589843971298"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "684028385"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3550138"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0575114"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Dexter-Row a bbn:StreetSegment ;
+	bbn:streetName "Dexter Row" ;
+	rdfs:label "Dexter-Row" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "107.39730363644699"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "690296523"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3752967"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0639845"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Dorchester-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Dorchester Avenue" ;
+	rdfs:label "Dorchester-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "107.594728884954"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426677240"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3079919"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0583042"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.42"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Drydock-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Drydock Avenue" ;
+	rdfs:label "Drydock-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "246.88998927566"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591136331"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3446312"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0372076"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:D-Street a bbn:StreetSegment ;
+	bbn:streetName "D Street" ;
+	rdfs:label "D-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "111.205030223047"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "297218449"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3470451"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0413343"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:D-Street-Extension a bbn:StreetSegment ;
+	bbn:streetName "D Street Extension" ;
+	rdfs:label "D-Street-Extension" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "93.4869304844975"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Dungarven-Road a bbn:StreetSegment ;
+	bbn:streetName "Dungarven Road" ;
+	rdfs:label "Dungarven-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "96.0482258606069"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8641206"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3056357"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1054737"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:East-Boston-Greenway a bbn:StreetSegment ;
+	bbn:streetName "East Boston Greenway" ;
+	rdfs:label "East-Boston-Greenway" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "10.7406741035956"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "291406890"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3795524"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0248169"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.49"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:East-Boston-Greenway-Connector a bbn:StreetSegment ;
+	bbn:streetName "East Boston Greenway Connector" ;
+	rdfs:label "East-Boston-Greenway-Connector" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1273.22781549388"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "667459874"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3789931"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0244222"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.59"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:East-Boston-Memorial-Park-Path a bbn:StreetSegment ;
+	bbn:streetName "East Boston Memorial Park Path" ;
+	rdfs:label "East-Boston-Memorial-Park-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "98.76353924053811"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:East-Boundary-Path a bbn:StreetSegment ;
+	bbn:streetName "East Boundary Path" ;
+	rdfs:label "East-Boundary-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1695.1365132042001"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:East-First-Street-Path a bbn:StreetSegment ;
+	bbn:streetName "East First Street Path" ;
+	rdfs:label "East-First-Street-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "825.294872166994"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591217312"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3382196"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.031435"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Eliot-Street a bbn:StreetSegment ;
+	bbn:streetName "Eliot Street" ;
+	rdfs:label "Eliot-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "88.1931654096331"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8651962"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3117356"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1175594"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Ellis-Memorial-Childrens-Park-Path a bbn:StreetSegment ;
+	bbn:streetName "Ellis Memorial Childrens Park Path" ;
+	rdfs:label "Ellis-Memorial-Childrens-Park-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "118.95524273817"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Elm-Hill-Entrance a bbn:StreetSegment ;
+	bbn:streetName "Elm Hill Entrance" ;
+	rdfs:label "Elm-Hill-Entrance" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "285.008216636771"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Emerald-Necklace a bbn:StreetSegment ;
+	bbn:streetName "Emerald Necklace" ;
+	rdfs:label "Emerald-Necklace" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "206.701867672425"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "485282202"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3442371"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0915617"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.39"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Emerald-Necklace-Trail a bbn:StreetSegment ;
+	bbn:streetName "Emerald Necklace Trail" ;
+	rdfs:label "Emerald-Necklace-Trail" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "715.484265487348"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/Emerald-Necklace-Trail/Route-9-Crossing> a bbn:StreetSegment ;
+	bbn:streetName "Emerald Necklace Trail/Route 9 Crossing" ;
+	rdfs:label "Emerald-Necklace-Trail/Route-9-Crossing" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "247.758775938243"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/Emerald-Necklace-Trail/Sears-Rotary> a bbn:StreetSegment ;
+	bbn:streetName "Emerald Necklace Trail/Sears Rotary" ;
+	rdfs:label "Emerald-Necklace-Trail/Sears-Rotary" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "246.738031852429"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Essex-Street a bbn:StreetSegment ;
+	bbn:streetName "Essex Street" ;
+	rdfs:label "Essex-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "28.489706147672898"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591677201"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.352513"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.059397"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Everett-Street a bbn:StreetSegment ;
+	bbn:streetName "Everett Street" ;
+	rdfs:label "Everett-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "17.4919871573298"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "26428915"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3571565"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1381512"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Fairfield-Street-Shared-Use-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Fairfield Street Shared-Use Bridge" ;
+	rdfs:label "Fairfield-Street-Shared-Use-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "216.465408530286"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Faneuil-Street a bbn:StreetSegment ;
+	bbn:streetName "Faneuil Street" ;
+	rdfs:label "Faneuil-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "50.886694286454706"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591284846"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.352585"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.161601"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.42"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Ferndale-Street a bbn:StreetSegment ;
+	bbn:streetName "Ferndale Street" ;
+	rdfs:label "Ferndale-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "219.282067637101"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8650635"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.288629"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.077269"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Fiedler-Shared-Use-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Fiedler Shared-Use Bridge" ;
+	rdfs:label "Fiedler-Shared-Use-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "279.810570721325"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Fiedler-Shared-Use-Bridge-to-Beacon-St-Connector a bbn:StreetSegment ;
+	bbn:streetName "Fiedler Shared-Use Bridge to Beacon St Connector" ;
+	rdfs:label "Fiedler-Shared-Use-Bridge-to-Beacon-St-Connector" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "78.2498669538664"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/Fifth-Street/Bunker-Hill-Street-Connector> a bbn:StreetSegment ;
+	bbn:streetName "Fifth Street/Bunker Hill Street Connector" ;
+	rdfs:label "Fifth-Street/Bunker-Hill-Street-Connector" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "97.99345599127192"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:First-Avenue a bbn:StreetSegment ;
+	bbn:streetName "First Avenue" ;
+	rdfs:label "First-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "34.352400668154395"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8651989"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3754626"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.053528"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Forbes-Street a bbn:StreetSegment ;
+	bbn:streetName "Forbes Street" ;
+	rdfs:label "Forbes-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "603.766829635047"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8645338"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.321045"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.106676"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Forest-Hills-Entrance-Drive a bbn:StreetSegment ;
+	bbn:streetName "Forest Hills Entrance Drive" ;
+	rdfs:label "Forest-Hills-Entrance-Drive" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "438.12657064991896"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Forsyth-Street a bbn:StreetSegment ;
+	bbn:streetName "Forsyth Street" ;
+	rdfs:label "Forsyth-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "33.472754314731695"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8651581"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.340475"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0909834"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Forsyth-Way a bbn:StreetSegment ;
+	bbn:streetName "Forsyth Way" ;
+	rdfs:label "Forsyth-Way" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "141.868680321536"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426595823"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3389463"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0924369"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Franklin-Park-Path a bbn:StreetSegment ;
+	bbn:streetName "Franklin Park Path" ;
+	rdfs:label "Franklin-Park-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "864.3614792866499"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "153943947"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "40.0759005"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-82.2270897"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.39"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Franklin-Park-Service-Road a bbn:StreetSegment ;
+	bbn:streetName "Franklin Park Service Road" ;
+	rdfs:label "Franklin-Park-Service-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "342.390681882837"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "494970975"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2971182"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0987182"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.61"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Franklin-Street a bbn:StreetSegment ;
+	bbn:streetName "Franklin Street" ;
+	rdfs:label "Franklin-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "51.5781737212974"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426489268"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3554532"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0575834"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Freeport-Street a bbn:StreetSegment ;
+	bbn:streetName "Freeport Street" ;
+	rdfs:label "Freeport-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "68.9375817205332"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "504639456"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2948819"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0472863"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Gartland-Street a bbn:StreetSegment ;
+	bbn:streetName "Gartland Street" ;
+	rdfs:label "Gartland-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "153.690479859865"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8639176"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.306175"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.106119"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Gavin-Path a bbn:StreetSegment ;
+	bbn:streetName "Gavin Path" ;
+	rdfs:label "Gavin-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "590.043698801372"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Geneva-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Geneva Avenue" ;
+	rdfs:label "Geneva-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "69.6270447998953"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591252056"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.301298"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.067873"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Glen-Lane a bbn:StreetSegment ;
+	bbn:streetName "Glen Lane" ;
+	rdfs:label "Glen-Lane" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "245.35196839904202"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8645328"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.304681"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.090916"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.39"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Gordon-Street a bbn:StreetSegment ;
+	bbn:streetName "Gordon Street" ;
+	rdfs:label "Gordon-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "74.8057308131602"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "578462204"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3494561"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1399399"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Harrison-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Harrison Avenue" ;
+	rdfs:label "Harrison-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "99.5946104378597"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "101439779"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3280082"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0829258"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Harvard-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Harvard Avenue" ;
+	rdfs:label "Harvard-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "11.8077141708218"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "69489609"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3502469"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1314516"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.49"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Hemenway-Street a bbn:StreetSegment ;
+	bbn:streetName "Hemenway Street" ;
+	rdfs:label "Hemenway-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "72.47567797227549"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "246500791"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.345405"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.089517"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Hereford-Street a bbn:StreetSegment ;
+	bbn:streetName "Hereford Street" ;
+	rdfs:label "Hereford-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "62.86519529426721"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "580417128"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3503532"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.086427"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:High-Street a bbn:StreetSegment ;
+	bbn:streetName "High Street" ;
+	rdfs:label "High-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "102.821443364511"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426491214"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3536248"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0561898"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Huntington-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Huntington Avenue" ;
+	rdfs:label "Huntington-Avenue" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "84.76940487688609"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8647376"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3319495"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1126977"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:James-Shea-Circle a bbn:StreetSegment ;
+	bbn:streetName "James Shea Circle" ;
+	rdfs:label "James-Shea-Circle" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "55.8263523723018"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Jewish-War-Veterans-Drive a bbn:StreetSegment ;
+	bbn:streetName "Jewish War Veterans Drive" ;
+	rdfs:label "Jewish-War-Veterans-Drive" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "781.240918957863"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "93123246"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3011976"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1044142"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.61"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/John-F.-Fitzgerald-Surface-Road> a bbn:StreetSegment ;
+	bbn:streetName "John F. Fitzgerald Surface Road" ;
+	rdfs:label "John-F.-Fitzgerald-Surface-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "44.9638274996993"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591908557"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3589471"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0522628"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.71"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/John-W.-Weeks-Bridge> a bbn:StreetSegment ;
+	bbn:streetName "John W. Weeks Bridge" ;
+	rdfs:label "John-W.-Weeks-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "198.572558156272"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Kenton-Road a bbn:StreetSegment ;
+	bbn:streetName "Kenton Road" ;
+	rdfs:label "Kenton-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "106.08982451995001"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8652220"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.306641"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.10555"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Kilby-Street a bbn:StreetSegment ;
+	bbn:streetName "Kilby Street" ;
+	rdfs:label "Kilby-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "33.9428624717167"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "103553906"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3582478"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0555669"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Kneeland-Street a bbn:StreetSegment ;
+	bbn:streetName "Kneeland Street" ;
+	rdfs:label "Kneeland-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "77.9446145865335"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426492390"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3501019"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0596026"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Knight-Street a bbn:StreetSegment ;
+	bbn:streetName "Knight Street" ;
+	rdfs:label "Knight-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "86.8450695092812"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8644787"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2457412"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1333347"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Lake-Street a bbn:StreetSegment ;
+	bbn:streetName "Lake Street" ;
+	rdfs:label "Lake-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "185.77592613021"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8644753"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.347005"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.16168"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Langone-Park-Path a bbn:StreetSegment ;
+	bbn:streetName "Langone Park Path" ;
+	rdfs:label "Langone-Park-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "96.63664523952829"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Liberty-Square a bbn:StreetSegment ;
+	bbn:streetName "Liberty Square" ;
+	rdfs:label "Liberty-Square" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "46.761838580402696"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "103548394"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.35787875"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0552968824964"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.46"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Litchfield-Street a bbn:StreetSegment ;
+	bbn:streetName "Litchfield Street" ;
+	rdfs:label "Litchfield-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "158.933345415049"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "261142520"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3603488"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1406603"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Lomasney-Way a bbn:StreetSegment ;
+	bbn:streetName "Lomasney Way" ;
+	rdfs:label "Lomasney-Way" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "143.914883784951"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426456709"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3644691"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0635963"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Longfellow-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Longfellow Bridge" ;
+	rdfs:label "Longfellow-Bridge" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "751.1079143087089"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "244444287"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3615936"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0753737"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.3"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Longwood-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Longwood Avenue" ;
+	rdfs:label "Longwood-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "81.3780142098608"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "301420931"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3382665"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.106161"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Lovejoy-Wharf-Harborwalk a bbn:StreetSegment ;
+	bbn:streetName "Lovejoy Wharf Harborwalk" ;
+	rdfs:label "Lovejoy-Wharf-Harborwalk" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "155.68900541973102"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Main-Street a bbn:StreetSegment ;
+	bbn:streetName "Main Street" ;
+	rdfs:label "Main-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "33.7431157941466"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8647620"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3847377"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0743171"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Maitland-Street a bbn:StreetSegment ;
+	bbn:streetName "Maitland Street" ;
+	rdfs:label "Maitland-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "108.73715068659"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8642453"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.347144"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.101567"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Malden-Street a bbn:StreetSegment ;
+	bbn:streetName "Malden Street" ;
+	rdfs:label "Malden-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "35.2759268983383"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8652311"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3401342"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0684272"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Mallard-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Mallard Avenue" ;
+	rdfs:label "Mallard-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "226.30674066213402"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "320201552"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2913014"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0759357"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Marcella-Street a bbn:StreetSegment ;
+	bbn:streetName "Marcella Street" ;
+	rdfs:label "Marcella-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "205.80824202911"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8649456"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.321471"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.094299"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Marginal-Street a bbn:StreetSegment ;
+	bbn:streetName "Marginal Street" ;
+	rdfs:label "Marginal-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "125.92047065828001"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "290287162"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3639593"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0302454"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Market-Street a bbn:StreetSegment ;
+	bbn:streetName "Market Street" ;
+	rdfs:label "Market-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "24.584262245443696"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "34963601"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3580348"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1479387"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Martin-Luther-King-Boulevard a bbn:StreetSegment ;
+	bbn:streetName "Martin Luther King Boulevard" ;
+	rdfs:label "Martin-Luther-King-Boulevard" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "17.7012281481884"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Massachusetts-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Massachusetts Avenue" ;
+	rdfs:label "Massachusetts-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "90.1322633136831"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "286489353"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.350064"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0890979"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.42"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Mass-Ave-Shared-Use-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Mass Ave Shared-Use Bridge" ;
+	rdfs:label "Mass-Ave-Shared-Use-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "161.74307242883498"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:MassPike-Bike-Ped-Bridge a bbn:StreetSegment ;
+	bbn:streetName "MassPike Bike-Ped Bridge" ;
+	rdfs:label "MassPike-Bike-Ped-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "244.32621456863498"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Maverick-Street a bbn:StreetSegment ;
+	bbn:streetName "Maverick Street" ;
+	rdfs:label "Maverick-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "172.834640033588"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591493101"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3700631"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0388361"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:MBTA-Redline-Path a bbn:StreetSegment ;
+	bbn:streetName "MBTA Redline Path" ;
+	rdfs:label "MBTA-Redline-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "324.01686655928904"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Mercantile-Street a bbn:StreetSegment ;
+	bbn:streetName "Mercantile Street" ;
+	rdfs:label "Mercantile-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "68.81608724376879"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "199584098"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3608488"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0529427"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Meridian-Street a bbn:StreetSegment ;
+	bbn:streetName "Meridian Street" ;
+	rdfs:label "Meridian-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "117.981566062408"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591493027"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.375144"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.039103"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Metropolitan-Ave-Footbridge a bbn:StreetSegment ;
+	bbn:streetName "Metropolitan Ave Footbridge" ;
+	rdfs:label "Metropolitan-Ave-Footbridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "257.264322348691"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Milk-Street a bbn:StreetSegment ;
+	bbn:streetName "Milk Street" ;
+	rdfs:label "Milk-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "66.4846800655113"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "104210747"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3573374"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0549013"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.61"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/Miller's-Creek-Path> a bbn:StreetSegment ;
+	bbn:streetName "Miller's Creek Path" ;
+	rdfs:label "Miller's-Creek-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "516.904892237441"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Moakley-Park-Path a bbn:StreetSegment ;
+	bbn:streetName "Moakley Park Path" ;
+	rdfs:label "Moakley-Park-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1191.0763690385302"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Monsignor-Reynolds-Way a bbn:StreetSegment ;
+	bbn:streetName "Monsignor Reynolds Way" ;
+	rdfs:label "Monsignor-Reynolds-Way" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "84.2969592287128"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426470703"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3403161"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0692782"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.bostonbikenetwork.com/resource/StreetSegment/Morrissey-Boulevard-Bike/Ped-Bridge> a bbn:StreetSegment ;
+	bbn:streetName "Morrissey Boulevard Bike/Ped Bridge" ;
+	rdfs:label "Morrissey-Boulevard-Bike/Ped-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "308.131702681893"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Morton-Street a bbn:StreetSegment ;
+	bbn:streetName "Morton Street" ;
+	rdfs:label "Morton-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "912.94495340732"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "404724816"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2806486"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0857381"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.47"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Moss-Bank-Path a bbn:StreetSegment ;
+	bbn:streetName "Moss Bank Path" ;
+	rdfs:label "Moss-Bank-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "302.589199767473"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Mountfort-Street a bbn:StreetSegment ;
+	bbn:streetName "Mountfort Street" ;
+	rdfs:label "Mountfort-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "100.807271311845"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "485279628"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.348007"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.103764"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Mount-Vernon-Street a bbn:StreetSegment ;
+	bbn:streetName "Mount Vernon Street" ;
+	rdfs:label "Mount-Vernon-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "491.804076719798"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "541860544"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3208772"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0509891"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Mozart-Street a bbn:StreetSegment ;
+	bbn:streetName "Mozart Street" ;
+	rdfs:label "Mozart-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "97.7573523818948"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8650777"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.320834"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.104624"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Museum-Road a bbn:StreetSegment ;
+	bbn:streetName "Museum Road" ;
+	rdfs:label "Museum-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "275.249884827716"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8651231"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3385602"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0957012"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Nashua-Street-Park-Path a bbn:StreetSegment ;
+	bbn:streetName "Nashua Street Park Path" ;
+	rdfs:label "Nashua-Street-Park-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "384.488295027361"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Neponset-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Neponset Avenue" ;
+	rdfs:label "Neponset-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "99.3502899903273"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "60239171"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2854179"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0416265"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.42"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Neponset-River-Greenway a bbn:StreetSegment ;
+	bbn:streetName "Neponset River Greenway" ;
+	rdfs:label "Neponset-River-Greenway" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "75.8008140146807"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "76611331"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2791948"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.05009"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.49"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Neponset-River-Trail a bbn:StreetSegment ;
+	bbn:streetName "Neponset River Trail" ;
+	rdfs:label "Neponset-River-Trail" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "387.974902082472"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "132181996"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2343189"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1226938"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.53"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:New-England-Avenue a bbn:StreetSegment ;
+	bbn:streetName "New England Avenue" ;
+	rdfs:label "New-England-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "101.43384142712"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8652145"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.290726"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.077999"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:New-Washington-Street a bbn:StreetSegment ;
+	bbn:streetName "New Washington Street" ;
+	rdfs:label "New-Washington-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "165.40671648449"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8646856"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2725848"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0695058"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Norfolk-Street a bbn:StreetSegment ;
+	bbn:streetName "Norfolk Street" ;
+	rdfs:label "Norfolk-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "85.4626169409079"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591278122"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.281649"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.086975"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:North-Bank-Shared-Use-Bridge a bbn:StreetSegment ;
+	bbn:streetName "North Bank Shared-Use Bridge" ;
+	rdfs:label "North-Bank-Shared-Use-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "431.11376075764997"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:North-Beverly-Street a bbn:StreetSegment ;
+	bbn:streetName "North Beverly Street" ;
+	rdfs:label "North-Beverly-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "90.65989740041461"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Northern-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Northern Avenue" ;
+	rdfs:label "Northern-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "80.8151489449757"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "290083775"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3480331"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0369182"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:North-Harvard-Street a bbn:StreetSegment ;
+	bbn:streetName "North Harvard Street" ;
+	rdfs:label "North-Harvard-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "108.68815027187901"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "86295762"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3684495"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1236104"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:North-Washington-Street a bbn:StreetSegment ;
+	bbn:streetName "North Washington Street" ;
+	rdfs:label "North-Washington-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "48.3278681915943"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426659112"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3700328"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.06081"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Old-Colony-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Old Colony Avenue" ;
+	rdfs:label "Old-Colony-Avenue" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "22.907889058435803"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "296968945"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.333812"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0545479"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Old-Road a bbn:StreetSegment ;
+	bbn:streetName "Old Road" ;
+	rdfs:label "Old-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "87.90147822878879"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "285001939"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3026032"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0847756"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Old-Trail-Road a bbn:StreetSegment ;
+	bbn:streetName "Old Trail Road" ;
+	rdfs:label "Old-Trail-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "44.1540568650033"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8647113"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.308671"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.091258"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.48"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Oliver-Street a bbn:StreetSegment ;
+	bbn:streetName "Oliver Street" ;
+	rdfs:label "Oliver-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "123.128062404795"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8651566"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3560441"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0532149"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Otis-Street a bbn:StreetSegment ;
+	bbn:streetName "Otis Street" ;
+	rdfs:label "Otis-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "169.58787886803"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "289631068"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3547363"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0579809"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Overbrook-Path a bbn:StreetSegment ;
+	bbn:streetName "Overbrook Path" ;
+	rdfs:label "Overbrook-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "831.4599436528321"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Overland-Street a bbn:StreetSegment ;
+	bbn:streetName "Overland Street" ;
+	rdfs:label "Overland-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "174.10750033441502"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "327660233"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3467195"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1008498"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Overpass a bbn:StreetSegment ;
+	bbn:streetName "Overpass" ;
+	rdfs:label "Overpass" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "111.714496607221"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "86479062"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3476795"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0922711"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Palace-Road a bbn:StreetSegment ;
+	bbn:streetName "Palace Road" ;
+	rdfs:label "Palace-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "128.00651587124702"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8640507"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3375409"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0999768"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Pappas-Sidepath a bbn:StreetSegment ;
+	bbn:streetName "Pappas Sidepath" ;
+	rdfs:label "Pappas-Sidepath" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1132.37331477203"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Park-Drive a bbn:StreetSegment ;
+	bbn:streetName "Park Drive" ;
+	rdfs:label "Park-Drive" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "20.048070734996"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "479772694"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3427452"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1032566"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Paul-Dudley-White-Charles-River-Bike-Path a bbn:StreetSegment ;
+	bbn:streetName "Paul Dudley White Charles River Bike Path" ;
+	rdfs:label "Paul-Dudley-White-Charles-River-Bike-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "744.755163056844"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Paul-Gore-Street a bbn:StreetSegment ;
+	bbn:streetName "Paul Gore Street" ;
+	rdfs:label "Paul-Gore-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "97.7513986226266"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8648743"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.319301"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.107528"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Paul-Revere-Landing-Park a bbn:StreetSegment ;
+	bbn:streetName "Paul Revere Landing Park" ;
+	rdfs:label "Paul-Revere-Landing-Park" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "168.92441292295499"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "172440085"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3701282"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0623059780046"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.66"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Paul-Revere-Park a bbn:StreetSegment ;
+	bbn:streetName "Paul Revere Park" ;
+	rdfs:label "Paul-Revere-Park" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "168.835114673742"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Pearl-Street a bbn:StreetSegment ;
+	bbn:streetName "Pearl Street" ;
+	rdfs:label "Pearl-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "89.8438710058006"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "485292839"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3562498"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.055075"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Pearl-Street-Extension a bbn:StreetSegment ;
+	bbn:streetName "Pearl Street Extension" ;
+	rdfs:label "Pearl-Street-Extension" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "174.38390212819598"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Perkins-Street a bbn:StreetSegment ;
+	bbn:streetName "Perkins Street" ;
+	rdfs:label "Perkins-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "105.7031688692"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8646922"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3219114"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1100666"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Pierpoint-Road a bbn:StreetSegment ;
+	bbn:streetName "Pierpoint Road" ;
+	rdfs:label "Pierpoint-Road" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "146.321515250904"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Pier-Point-Road a bbn:StreetSegment ;
+	bbn:streetName "Pier Point Road" ;
+	rdfs:label "Pier-Point-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "118.48178370322701"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Playstead-Road a bbn:StreetSegment ;
+	bbn:streetName "Playstead Road" ;
+	rdfs:label "Playstead-Road" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "691.032929811701"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "504665060"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.309276"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.094059"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Post-Office-Square a bbn:StreetSegment ;
+	bbn:streetName "Post Office Square" ;
+	rdfs:label "Post-Office-Square" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "124.06280180371701"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8648451"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3574875"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0563285"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Purchase-Street a bbn:StreetSegment ;
+	bbn:streetName "Purchase Street" ;
+	rdfs:label "Purchase-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "21.12264800411"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591217318"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3544781"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0534469"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Quincy-Street a bbn:StreetSegment ;
+	bbn:streetName "Quincy Street" ;
+	rdfs:label "Quincy-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "142.48475992038001"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8649656"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.310303"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.067843"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Readville-to-Neponset a bbn:StreetSegment ;
+	bbn:streetName "Readville to Neponset" ;
+	rdfs:label "Readville-to-Neponset" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "116.924086366572"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Ritchie-Street a bbn:StreetSegment ;
+	bbn:streetName "Ritchie Street" ;
+	rdfs:label "Ritchie-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "249.261158098036"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8646073"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.322028"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.096976"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:River-Street a bbn:StreetSegment ;
+	bbn:streetName "River Street" ;
+	rdfs:label "River-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "52.8132654068047"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "211853001"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2678342"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0933535"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Rooney-Rock-Path a bbn:StreetSegment ;
+	bbn:streetName "Rooney Rock Path" ;
+	rdfs:label "Rooney-Rock-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1668.66374540183"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Rossmore-Street a bbn:StreetSegment ;
+	bbn:streetName "Rossmore Street" ;
+	rdfs:label "Rossmore-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "304.506027046516"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "312613641"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3051952"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.108198407258"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.31"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Ruggles-Street a bbn:StreetSegment ;
+	bbn:streetName "Ruggles Street" ;
+	rdfs:label "Ruggles-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "52.96712458690371"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426493703"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3375516"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0951983"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Rutherford-Trail-Project a bbn:StreetSegment ;
+	bbn:streetName "Rutherford Trail Project" ;
+	rdfs:label "Rutherford-Trail-Project" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "26.668543781915698"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Saint-Alphonsus-Street a bbn:StreetSegment ;
+	bbn:streetName "Saint Alphonsus Street" ;
+	rdfs:label "Saint-Alphonsus-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "219.79853693355"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "301468440"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3353816"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.09982"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Salem-Street a bbn:StreetSegment ;
+	bbn:streetName "Salem Street" ;
+	rdfs:label "Salem-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "42.4635199393664"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "63107745"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3664741"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0546855"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Saratoga-Street a bbn:StreetSegment ;
+	bbn:streetName "Saratoga Street" ;
+	rdfs:label "Saratoga-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "51.3601667370487"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "448610072"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3863519"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0058908"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Saratoga-Street-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Saratoga Street Bridge" ;
+	rdfs:label "Saratoga-Street-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "117.89605204360501"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "448610072"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3863519"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0058908"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Seaport-Boulevard a bbn:StreetSegment ;
+	bbn:streetName "Seaport Boulevard" ;
+	rdfs:label "Seaport-Boulevard" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "147.71942012158001"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "427635744"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3546936"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0513353"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Seaver-Street a bbn:StreetSegment ;
+	bbn:streetName "Seaver Street" ;
+	rdfs:label "Seaver-Street" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "246.932550352589"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591278011"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.308054"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.089603"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Silber-Way-Shared-Use-Bridge a bbn:StreetSegment ;
+	bbn:streetName "Silber Way Shared-Use Bridge" ;
+	rdfs:label "Silber-Way-Shared-Use-Bridge" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "163.693422960982"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Southbay-Harbor-Trail a bbn:StreetSegment ;
+	bbn:streetName "Southbay Harbor Trail" ;
+	rdfs:label "Southbay-Harbor-Trail" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "595.5795464391381"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:South-Bay-Harbor-Trail a bbn:StreetSegment ;
+	bbn:streetName "South Bay Harbor Trail" ;
+	rdfs:label "South-Bay-Harbor-Trail" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "478.38143081675696"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "660628019"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3548658"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0442829"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.58"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:South-Campus-Drive a bbn:StreetSegment ;
+	bbn:streetName "South Campus Drive" ;
+	rdfs:label "South-Campus-Drive" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "197.65488615773899"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Southern-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Southern Avenue" ;
+	rdfs:label "Southern-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "91.345612366929"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8646236"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.290215"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.074928"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:South-Huntington-Avenue a bbn:StreetSegment ;
+	bbn:streetName "South Huntington Avenue" ;
+	rdfs:label "South-Huntington-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "97.38600525803619"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "485257980"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3300757"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.111291"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:South-Street a bbn:StreetSegment ;
+	bbn:streetName "South Street" ;
+	rdfs:label "South-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "24.883146324295897"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "42512002"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3398175"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1575632"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.49"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:South-Street-Path a bbn:StreetSegment ;
+	bbn:streetName "South Street Path" ;
+	rdfs:label "South-Street-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "156.79989234278298"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "42512002"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3398175"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1575632"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.49"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Southwest-Corridor a bbn:StreetSegment ;
+	bbn:streetName "Southwest Corridor" ;
+	rdfs:label "Southwest-Corridor" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1237.3066376800698"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "29863508"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.30237525"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1150222275858"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.31"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Staniford a bbn:StreetSegment ;
+	bbn:streetName "Staniford" ;
+	rdfs:label "Staniford" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "55.816768152232704"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426456745"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3637254"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0635134"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.31"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Staniford-Street a bbn:StreetSegment ;
+	bbn:streetName "Staniford Street" ;
+	rdfs:label "Staniford-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "137.349100722044"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426456745"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3637254"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0635134"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:St-James-Avenue a bbn:StreetSegment ;
+	bbn:streetName "St James Avenue" ;
+	rdfs:label "St-James-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "74.8875235781912"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591236019"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.349644"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0756182"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Stony-Brook-Path a bbn:StreetSegment ;
+	bbn:streetName "Stony Brook Path" ;
+	rdfs:label "Stony-Brook-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1834.1520797994"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Stony-Brook-Reservation-Trail a bbn:StreetSegment ;
+	bbn:streetName "Stony Brook Reservation Trail" ;
+	rdfs:label "Stony-Brook-Reservation-Trail" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "52.444288401437504"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "29859850"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.26093765"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1395156818709"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Stuart-Street a bbn:StreetSegment ;
+	bbn:streetName "Stuart Street" ;
+	rdfs:label "Stuart-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "251.12597564346"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591236027"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.347965"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0779367"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Sullivan-Square a bbn:StreetSegment ;
+	bbn:streetName "Sullivan Square" ;
+	rdfs:label "Sullivan-Square" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "67.3346795663597"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "69505297"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3843004"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0770317"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.31"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Summer-Street a bbn:StreetSegment ;
+	bbn:streetName "Summer Street" ;
+	rdfs:label "Summer-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "109.402288346933"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8648094"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3446018"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0394271"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Surface-Artery a bbn:StreetSegment ;
+	bbn:streetName "Surface Artery" ;
+	rdfs:label "Surface-Artery" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "20.3283917415763"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "1399796278"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3504038"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0597395"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.31"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Talbot-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Talbot Avenue" ;
+	rdfs:label "Talbot-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "347.514846658992"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "570200605"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2939592"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0847041"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Taylor-Street a bbn:StreetSegment ;
+	bbn:streetName "Taylor Street" ;
+	rdfs:label "Taylor-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "217.499507633546"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8647813"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.287054"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.039882"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Tenean-Beach-Path a bbn:StreetSegment ;
+	bbn:streetName "Tenean Beach Path" ;
+	rdfs:label "Tenean-Beach-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "556.101665780516"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Tenean-Street a bbn:StreetSegment ;
+	bbn:streetName "Tenean Street" ;
+	rdfs:label "Tenean-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "184.424210257719"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8649941"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2892813"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.041955"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Thornton-Street a bbn:StreetSegment ;
+	bbn:streetName "Thornton Street" ;
+	rdfs:label "Thornton-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "74.11045760778751"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "485257982"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.321747"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.093239"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Tremont-Street a bbn:StreetSegment ;
+	bbn:streetName "Tremont Street" ;
+	rdfs:label "Tremont-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "162.159609426307"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "138827717"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3582926"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0602525"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.67"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Truman-Highway a bbn:StreetSegment ;
+	bbn:streetName "Truman Highway" ;
+	rdfs:label "Truman-Highway" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "127.012881122529"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Truman-Highway-Sidepath a bbn:StreetSegment ;
+	bbn:streetName "Truman Highway Sidepath" ;
+	rdfs:label "Truman-Highway-Sidepath" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "1379.25744278232"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Ukraine-Way a bbn:StreetSegment ;
+	bbn:streetName "Ukraine Way" ;
+	rdfs:label "Ukraine-Way" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "119.323373944729"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "139333583"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.298091"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1154154"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Valentine-Street a bbn:StreetSegment ;
+	bbn:streetName "Valentine Street" ;
+	rdfs:label "Valentine-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "108.193005712874"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "485257983"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.322554"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.093106"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Veterans-Of-Foreign-Wars-Parkway a bbn:StreetSegment ;
+	bbn:streetName "Veterans Of Foreign Wars Parkway" ;
+	rdfs:label "Veterans-Of-Foreign-Wars-Parkway" ;
+	bbn:divided "yes" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "109.76653353431"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426634818"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.290481"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.168107"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.71"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Walk-Hill-Street a bbn:StreetSegment ;
+	bbn:streetName "Walk Hill Street" ;
+	rdfs:label "Walk-Hill-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "110.073950558968"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "649230086"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.284538"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.102694"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Walnut-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Walnut Avenue" ;
+	rdfs:label "Walnut-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "104.994684264746"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591278014"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.323999"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.082702"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Walnut-Entrance a bbn:StreetSegment ;
+	bbn:streetName "Walnut Entrance" ;
+	rdfs:label "Walnut-Entrance" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "66.9763358821686"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8652406"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.311637"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.096404"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.39"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Walter-Street a bbn:StreetSegment ;
+	bbn:streetName "Walter Street" ;
+	rdfs:label "Walter-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "22.205496206649"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "591277994"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2959968"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1294206"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Warren-Street a bbn:StreetSegment ;
+	bbn:streetName "Warren Street" ;
+	rdfs:label "Warren-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "87.13344727411379"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "69489300"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3484068"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.140445"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.47"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Washington-Street a bbn:StreetSegment ;
+	bbn:streetName "Washington Street" ;
+	rdfs:label "Washington-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "24.967502846522603"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "node" ;
+	bbn:osmId "69485017"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3440542"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1426459"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.46"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Water-Street a bbn:StreetSegment ;
+	bbn:streetName "Water Street" ;
+	rdfs:label "Water-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "10.995310541715698"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426489348"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3575841"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0564128"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:West-Dedham-Street a bbn:StreetSegment ;
+	bbn:streetName "West Dedham Street" ;
+	rdfs:label "West-Dedham-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "43.323702966877605"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8640321"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.341709"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.07256"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.51"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Western-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Western Avenue" ;
+	rdfs:label "Western-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "80.1851148948672"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "541013777"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.361545"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1462272"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Westland-Avenue a bbn:StreetSegment ;
+	bbn:streetName "Westland Avenue" ;
+	rdfs:label "Westland-Avenue" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "204.59452605535301"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "426623435"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3440103"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0901672"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Whitfield-Street a bbn:StreetSegment ;
+	bbn:streetName "Whitfield Street" ;
+	rdfs:label "Whitfield-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "62.4892436981153"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "320201553"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.2903553"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0738581"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:William-Day-Boulevard a bbn:StreetSegment ;
+	bbn:streetName "William Day Boulevard" ;
+	rdfs:label "William-Day-Boulevard" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "824.4901042596131"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Williams-Street a bbn:StreetSegment ;
+	bbn:streetName "Williams Street" ;
+	rdfs:label "Williams-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "96.25075507403861"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "148495801"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3048438"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1057102"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Willowwood-Street a bbn:StreetSegment ;
+	bbn:streetName "Willowwood Street" ;
+	rdfs:label "Willowwood-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "97.37726814893959"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8644290"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.28451"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.086218"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Winship-Street a bbn:StreetSegment ;
+	bbn:streetName "Winship Street" ;
+	rdfs:label "Winship-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "86.95049721807051"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "149701300"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3490448"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.1506574"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Winter-Street a bbn:StreetSegment ;
+	bbn:streetName "Winter Street" ;
+	rdfs:label "Winter-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "14.3045537871257"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "435347908"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.3080665"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.0625902"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Wyman-Street a bbn:StreetSegment ;
+	bbn:streetName "Wyman Street" ;
+	rdfs:label "Wyman-Street" ;
+	bbn:divided "no" ;
+	bbn:ltsType "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "52.5479468088667"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:osmType "way" ;
+	bbn:osmId "8648821"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:medianLatitude "42.320366"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:medianLongitude "-71.105214"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	bbn:importance "0.41"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+street:Zakim-Bridge-Path a bbn:StreetSegment ;
+	bbn:streetName "Zakim Bridge Path" ;
+	rdfs:label "Zakim-Bridge-Path" ;
+	bbn:divided "no" ;
+	bbn:ltsType "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	bbn:shapeLength "251.210222869286"^^<http://www.w3.org/2001/XMLSchema#double> .

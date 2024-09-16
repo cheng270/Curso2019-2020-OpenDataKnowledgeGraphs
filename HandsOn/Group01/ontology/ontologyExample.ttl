@@ -1,0 +1,57 @@
+@prefix : <http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#> .
+@prefix yess: <http://smartcity.linkeddata.es/YESS/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+: a owl:Ontology .
+
+# Classes
+
+:Segment a owl:Class ;
+   rdfs:label "Segment" ;
+   rdfs:subclassof :Street .
+
+:Street a owl:Class ;
+   rdfs:label "Street" ;
+   rdfs:subclassof owl:Thing .
+
+:Measurement a owl:Class ;
+   rdfs:label "Measurement" ;
+   rdfs:subclassof owl:Thing .
+
+# Object Properties
+:onStreet a owl:ObjectProperty ;
+   rdfs:range :Street ;
+   rdfs:domain :Segment .
+
+:toStreet a owl:ObjectProperty ;
+   rdfs:range :Street ;
+   rdfs:domain :Segment .
+
+:fromStreet a owl:ObjectProperty ;
+   rdfs:range :Street ;
+   rdfs:domain :Segment .
+
+:measuredIn a owl:ObjectProperty ;
+   rdfs:range :Segment ;
+   rdfs:domain :Measurement .
+
+:startPoint a owl:ObjectProperty ;
+   rdfs:range wgs:Point ;
+   rdfs:domain :Segment .
+
+:endPoint a owl:ObjectProperty ;
+   rdfs:range wgs:Point ;
+   rdfs:domain :Segment .
+
+# Datatype Properties
+
+:timeStamp a owl:DatatypeProperty ;
+   rdfs:range xsd:dateTime ;
+   rdfs:domain :Measurement .
+
+:speed a owl:DatatypeProperty ;
+   rdfs:range xsd:integer ;
+   rdfs:domain :Measurement .

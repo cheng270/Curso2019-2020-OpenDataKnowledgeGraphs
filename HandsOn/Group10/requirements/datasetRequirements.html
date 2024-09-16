@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<h2>Actividades Culturales y de Ocio Municipal en los próximos 100 días</h2>
+<h3>List of Requirements</h3>
+<p>
+The four .csv datasets come from the same publisher (Ayuntamiento de Madrid) and match the following requirements:
+</p>
+<form action="/action_page.php" method="get">
+  <input type="checkbox" checked>R1. Data are in one of the selected smart city domains: The data come from the open data portal of the city of Madrid. 
+  <br>
+  <input type="checkbox" checked>R2. Data are available as a CSV file: The datasets have been downloaded in the .csv format.
+  <br>
+  <input type="checkbox" checked>R3. Data have an open license so they can be published: The license is open and allows for publication. The license is analyzed in the following section.
+  <br>
+  <input type="checkbox" checked>R4. Data can be easily linked with generic real-world entities: For example, real buildings or city districts.
+  <br>
+  <input type="checkbox" checked>R5. Documentation exists for the data (optional): The documentation can be found in the following <a href="https://datos.madrid.es/FWProjects/egob/Catalogo/XComun/Ficheros/Estructura_conjunto_datos_www%20madrid%20es_v7%20(1).pdf">link.</a>
+  <br>
+  <input type="checkbox" unchecked>R6. Data can come from multiple data sources (optional).
+  <br>
+</form>  
+
+<h3>Dataset License</h3>
+<p>
+The four .csv datasets come from the same publisher (Ayuntamiento de Madrid) and share the same license:
+</p>
+<p>
+ Condiciones generales para la modalidad general de puesta a disposición de los documentos reutilizables del Ayuntamiento de Madrid:
+<a
+ href="https://datos.madrid.es/portal/site/egob/menuitem.3efdb29b813ad8241e830cc2a8a409a0/?vgnextoid=108804d4aab90410VgnVCM100000171f5a0aRCRD&vgnextchannel=b4c412b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default">Link to the license
+</a>
+</p>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<h3>Linkable Entities</h3>
+<p>The following entities of the main dataset can be linked with these other entities and vice versa.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Main Dataset</th>
+    <th>Main Dataset Entity</th> 
+    <th>Linkable Dataset</th>
+    <th>Linkable Dataset Entity</th>
+  </tr>
+  <tr>
+    <td rowspan="4">Actividades Culturales y de Ocio Municipal en los próximos 100 días</td>  
+    <td rowspan="3">NOMBRE-INSTALACION</td>
+    <td>
+       <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=fc8a034270603410VgnVCM1000000b205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default">
+          Centros Culturales Municipales (incluyen Socioculturales y Juveniles)
+       </a>
+    <td>NOMBRE</td>
+  </tr>  
+  <tr>
+    <td>
+       <a href="https://datos.madrid.es/sites/v/index.jsp?vgnextoid=2b25f4c22d4a1510VgnVCM1000000b205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD">
+          Salas de estudio y lectura
+       </a>
+    </td>
+    <td>NOMBRE</td>
+  </tr>
+  <tr>
+    <td>
+       <a href="https://datos.madrid.es/sites/v/index.jsp?vgnextoid=a73ecfba69326410VgnVCM1000000b205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD">
+          Juntas Municipales de Distrito
+       </a>
+    </td>
+    <td>NOMBRE</td>
+  </tr>
+  <tr>
+    <td>DISTRITO</td>
+    <td>
+       <a href="https://www.wikidata.org/wiki/Q2807">
+          Wikidata:Madrid:Contains administrative territorial entity
+       </a>
+    </td>
+    <td>District Name</td>
+  </tr>
+</table>
+</body>
+</html>
